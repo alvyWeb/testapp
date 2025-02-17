@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/layouts/Layout.module.scss";
 import "./global.css";
+import "./layout.css";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -101,7 +102,7 @@ export default function RootLayout({ children }) {
       <body
         className={
           rubik.className +
-          ` ${dark ? "light" : "dark"}` +
+          ` light` +
           " " +
           ` ${rtl ? "isrtl" : "isltr"}`
         }
@@ -113,15 +114,26 @@ export default function RootLayout({ children }) {
           dark={dark}
         >
           <div className={styles.container}>
-            {isShowNav && !isOnlyNav && (
+            {/* {isShowNav && !isOnlyNav && (
               <ProfileHeader
                 dark={dark}
                 setDark={setDark}
                 rtl={rtl}
                 setRtl={setRtl}
               />
-            )}
-            <div style={{ height: childrenHeight, overflowY: "scroll" }}>
+            )} */}
+            <ProfileHeader
+                dark={dark}
+                setDark={setDark}
+                rtl={rtl}
+                setRtl={setRtl}
+              />
+            <div className="mainlayoutb" style={{ 
+              // maxHeight: childrenHeight || "100%", 
+              maxHeight: "calc(100vh - 190px)",
+              overflowY: "auto", 
+              paddingBottom: "100px"
+            }}>
               {loading ? <Loader /> : children}
             </div>
 
