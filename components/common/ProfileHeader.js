@@ -2,21 +2,24 @@ import { MainContext } from "@/context";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import styles from "../../styles/common/ProfileHeader.module.scss";
+
 const Navbar = ({ dark, setDark, rtl, setRtl }) => {
   const {
     user: { data },
   } = useContext(MainContext);
 
-  // const { firstName, lastName, avatar } = data?.data || {};
+  // Destructure the necessary user data (first name, last name, and avatar)
   const { displayName: firstName, lastName, photoURL: avatar } = data || {};
   const router = useRouter();
 
   const handleMode = () => {
+    // Toggle dark mode and store the preference in localStorage
     setDark((prev) => !prev);
     localStorage.setItem("dark", !dark);
   };
 
   const handleProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
     router.push("/profile");
   };
 
@@ -26,21 +29,18 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
         <div id={styles.dp}>
           <img
             onClick={handleProfile}
-            src={`${avatar ?? "/Stock/Stockdp.png"} `}
-            alt="Noam Penn"
+            src={avatar ?? "/user-Image/p1.png"}
+            alt={firstName ? `${firstName} ${lastName}` : "משתמש"}
           />
         </div>
         <div id={styles.intro}>
           <p className={styles.username}>
-            {firstName} {lastName}
+            {firstName && lastName ? `${firstName} ${lastName}` : "נועם פן (פנתר)"}
           </p>
-          <p className={styles.moreinfo}>A Tennis Player</p>
+          <p className={styles.moreinfo}>שחקן טניס</p>
         </div>
-        {/* <div className={styles.rtlbox} onClick={() => setRtl(!rtl)}>
-          {rtl ? "RTL" : "LTR"}
-        </div> */}
-        <div
-          className={`theme-toggle-item ${dark ? "dark" : "light"}`}
+        {/* <div
+          className={`theme-toggle-item ${light ? "dark" : "dark"}`}
           onClick={handleMode}
         >
           <svg
@@ -52,7 +52,7 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
           >
             <mask className="moon" id="moon-mask">
               <rect x="0" y="0" width="100%" height="100%" fill="white" />
-              <circle cx="0" cy="10" r="6" fill="black" />
+              <circle cx="0" cy="10" r="6" fill="white" />
             </mask>
             <circle
               className="sun"
@@ -60,9 +60,9 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
               cy="12"
               r="6"
               mask="url(#moon-mask)"
-              fill="currentColor"
+              fill="white"
             />
-            <g className="sun-beams" stroke="currentColor">
+            <g className="sun-beams" stroke="white">
               <line x1="12" y1="1" x2="12" y2="3" />
               <line x1="12" y1="21" x2="12" y2="23" />
               <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
@@ -73,10 +73,10 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </g>
           </svg>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
-2;
+
 export default Navbar;
