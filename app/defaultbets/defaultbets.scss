@@ -1,0 +1,145 @@
+@import '../../styles/shared/var.scss';
+
+.rank_container {
+    @include weight_height(390px, auto);
+
+    .head_container {
+        padding: 12px 18px;
+        background: linear-gradient(to bottom,
+                #4775A929,
+                #FFFFFF00);
+        ;
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row-reverse, center, normal, 20px);
+
+        .level_pr {
+            @include item_flex(flex, row-reverse, center, normal, 22px);
+
+            p {
+                color: var(--text-color);
+                @include fix-font(14px, 400, 12.25px);
+            }
+
+            span {
+                svg {
+                    @include weight_height(14px, 14px);
+                    path {
+                        fill: var(--text-color);
+                    }
+                }
+            }
+        }
+span._svg{
+    @include item_flex(flex, row-reverse, center, normal, 12px);
+    svg {
+        @include weight_height(14px, 14px);
+        path {
+            fill: var(--text-color);
+        }
+    }
+}
+        
+    }
+
+    .body_container {
+        padding-left: 6px;
+        border-top: 1px solid #EEEEEE;
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row-reverse, center, space-between, 0px);
+
+        .fBody {
+            @include item_flex(flex, row, center, normal, 0px);
+
+            :first-child{
+                padding: 20px 0px;
+                text-align: center;
+                background: #6CB7F012;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(26px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(2){
+                padding: 20px 0px;
+                text-align: center;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(26px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(3){
+                padding: 20px 0px;
+                text-align: center;
+                background: #6CB7F012;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(26px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(4){
+                padding: 20px 0px;
+                text-align: center;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(26px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(5){
+                padding: 20px 0px;
+                text-align: center;
+                background: #6CB7F012;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(26px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(6){
+                padding: 20px 0px;
+                text-align: center;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include weight_height(40px, auto);
+                @include fix-font(12px, 400, 10.5px);
+            }
+            :nth-child(7){
+                padding: 20px 0px;
+                text-align: center;
+                background: #6CB7F012;
+                color: var(--text-color);
+                border-left: 1px solid #EEEEEE;
+                @include fix-font(12px, 400, 10.5px);
+                @include weight_height(56px, auto);
+            }
+            
+        }
+
+        .lBody {
+            @include item_flex(flex, row-reverse, center, normal, 4px);
+
+            p {
+                color: var(--text-color);
+                @include fix-font(12px, 500, 10.5px);
+            }
+
+            span {
+                position: relative;
+                img {
+                    padding: 2px;
+                    border-radius: 50%;
+                    border: 2px solid $icon_blue;
+                    @include weight_height(30px, 30px);
+                }
+
+                img._country {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 4px;
+                    border: none;
+                    padding: 0px;
+                    border-radius: 0px;
+                    @include weight_height(14px, 10.17px);
+                }
+            }
+        }
+    }
+}

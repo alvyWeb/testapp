@@ -1,0 +1,63 @@
+.resultcontainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: 0;
+  margin: 0;
+
+  nav {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+    border-bottom: none;
+    z-index: 99;
+    button {
+      width: 50%;
+      height: 40px;
+      border: 0.1px solid var(--bg-color);
+      background-color: var(--bg-color);
+      padding: 0;
+      margin: 0;
+      font-size: 17px;
+      color: rgba(200, 200, 200, 0.51);
+      transition: color 1s, border-bottom 1s;
+      &:hover {
+        cursor: pointer;
+      }
+
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+}
+
+.section {
+  display: none; /* Hide all sections by default */
+  height: 100%; /* Fixed height for independent scrolling */
+  overflow-y: auto; /* Enable scrolling within the section */
+}
+
+.sectionActive {
+  color: var(--bg-color);
+  display: block; /* Show only the active section */
+
+  h1 {
+    color: aquamarine;
+  }
+  p {
+    color: var(--text-black);
+  }
+}
+
+#worldbuttoonActive {
+  color: #ffffff; // This sets the active button text color to white
+  border: none;
+  border-bottom: 3px solid #186fad;
+}
+#worldbuttoonActive {
+  color: var(--text-grey); // This sets the active button text color to white
+  border: none;
+  border-bottom: 3px solid #186fad;
+}

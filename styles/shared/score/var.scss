@@ -1,0 +1,44 @@
+$text_color: #ffff;
+$red_color: #E32929;
+$gray: #6B6B6B;
+$dark_gray: #313035;
+$blue_: #145E94;
+
+@mixin score_font ($size_, $weight_, $line_) {
+    font-size: $size_;
+    font-weight: $weight_;
+    line-height: $line_;
+}
+
+@mixin width_height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin margin_($marge_t, $marge_r, $marge_b, $marge_l) {
+    margin-top: $marge_t;
+    margin-right: $marge_r;
+    margin-bottom: $marge_b;
+    margin-left: $marge_l;
+}
+
+@mixin padd_($padd_t, $padd_r, $padd_b, $padd_l) {
+    padding-top: $padd_t;
+    padding-right: $padd_r;
+    padding-bottom: $padd_b;
+    padding-left: $padd_l;
+}
+
+@mixin flex_row ($spaces) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $spaces;
+}
+
+@mixin flex_column ($spaces) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spaces;
+}

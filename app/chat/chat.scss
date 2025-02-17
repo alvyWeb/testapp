@@ -1,0 +1,192 @@
+@import '../../styles/shared/var.scss';
+
+.chat_container {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, normal, 12px);
+
+    .chat_head_content {
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--content-border);
+        @include weight_height(fill, auto);
+        @include content_padd(24px, 0px, 8px, 0px);
+        @include item_flex(flex, column, center, normal, 12px);
+
+        .chat_head {
+            border-bottom: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+            @include content_padd(8px, 24px, 8px, 24px);
+            @include item_flex(flex, row, center, space-between, 8px);
+
+            p {
+                color: var(--item-color);
+                @include fix-font(18px, 400, 15.75px);
+            }
+
+            svg {
+                path {
+                    fill: var(--text-color);
+                }
+            }
+        }
+        .head_body {
+            padding: 0px 24px;
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, flex-start, 0px);
+
+            svg {
+                path {
+                    fill: var(--text-color);
+                }
+            }
+
+            .active_player {
+                @include weight_height(fill, auto);
+                @include item_flex(flex, row, center, center, 8px);
+
+                .player {
+                    position: relative;
+
+                    img {
+                        border-radius: 50%;
+                        padding: 1px;
+                        border: 1px solid var(--item-color);
+                        @include weight_height(32.8px, 32.8px);
+                    }
+
+                    svg {
+                        position: absolute;
+                        bottom: 4px;
+                        right: 2px;
+                    }
+                }
+            }
+
+        }
+    }
+    .chat_body_content{
+        @include block_display(16px);
+        .team_text {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, flex-end, normal, 4px);
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+                @include weight_height(28px, 28px);
+            }
+
+            .text {
+                border-radius: 8px;
+                padding: 12px;
+                border-bottom-left-radius: 0px;
+                position: relative;
+                background: var(--item-bg);
+                border: 1px solid var(--content-border);
+                @include weight_height(241.25px, auto);
+                @include item_flex(flex, column, flex-start, normal, 12px);
+                :first-child {
+                    color: var(--text-color);
+                    @include fix-font(16px, 500, 14px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix-font(16px, 300, 14px);
+                }
+
+                :nth-child(3) {
+                    text-align: end;
+                    color: var(--text-color);
+                    @include weight_height(fill, auto);
+                    @include fix-font(12px, 400, 10.5px);
+                }
+            }
+        }
+        .my_text{
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row-reverse, flex-end, normal, 4px);
+            img{
+                border-radius: 50%;
+                object-fit: cover;
+                @include weight_height(28px, 28px);
+            }
+            .text {
+                padding: 12px;
+                border-radius: 8px;
+                border-bottom-right-radius: 0px;
+                position: relative;
+                border: 1px solid var(--content-border);
+                background: var(--chat-bg);
+                @include item_flex(flex, column, flex-start, normal, 12px);
+                @include weight_height(241.25px, auto);
+                :first-child {
+                    color: #FCFCFC;
+                    @include fix-font(16px, 500, 18px);
+                }
+
+                :nth-child(2) {
+                    color: #FCFCFC;
+                    @include fix-font(16px, 300, 14px);
+                }
+
+                :nth-child(3) {
+                    color: #FCFCFC;
+                    @include fix-font(12px, 400, 10.5px);
+                }
+                svg{
+                    position: absolute;
+                    bottom: -14px;
+                    right: -8px;
+                    path{
+                        fill: #3498DB;
+                    }
+                }
+            }
+        }
+    }
+    .chat_footer_content {
+        background: var(--bg-color);
+        border-top: 1px solid var(--content-border);
+        @include weight_height(fill, auto);
+        @include content_padd(8px, 24px, 0px, 24px);
+        @include item_flex(flex, row, center, normal, 12px);
+
+        svg {
+            @include weight_height(18px, 18px);
+            path{
+                fill: var(--item-color);
+            }
+        }
+
+        .message_send {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-between, 8px);
+
+            input {
+                border: none;
+                outline: none;
+                color: var(--text-color);
+                background: var(--bg-color);
+                @include weight_height(fill, auto);
+            }
+
+            ::-webkit-input-placeholder {
+                color: var(--text-grey);
+                @include fix-font(16px, 400, 14px);
+            }
+
+            span {
+                border-radius: 50%;
+                background: var(--item-color);
+                @include weight_height(42px, 36px);
+                @include item_flex(flex, row, center, center, 0px);
+                svg{
+                    path{
+                        fill: var(--send-color);
+                    }
+                }
+                
+            }
+        }
+        margin-bottom: 100px;
+    }
+}

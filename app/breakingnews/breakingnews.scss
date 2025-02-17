@@ -1,0 +1,219 @@
+@import'../../styles/shared/var.scss';
+
+.breaking_container {
+    @include weight_height(390px, auto);
+
+    .news_profile {
+        position: relative;
+
+        img {
+            object-fit: cover;
+            @include weight_height(390px, 328px);
+        }
+
+        span {
+            padding: 44px 24px;
+            position: absolute;
+            top: 0px;
+            @include weight_height(fill, fill);
+            @include item_flex(flex, row, flex-start, space-between, 0px);
+        }
+    }
+
+    .main_news_body {
+        position: relative;
+        top: -100px;
+        @include block_display(12px);
+
+        .news_body {
+            border-radius: 12px;
+            background: var(--item-bg);
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+            @include content_padd(16px, 16px, 16px, 20px);
+
+            p {
+                color: var(--text-color);
+                @include fix_font(18px, 500, 24.84px);
+            }
+
+            .body_details {
+                @include item_flex(flex, column, flex-start, normal, 8px);
+
+                p {
+                    color: var(--text-grey);
+                    @include fix_font(14px, 400, 19.11px);
+                }
+
+                .details {
+                    @include item_flex(flex, row, center, normal, 8px);
+
+                    img {
+                        padding: 2px;
+                        border-radius: 50%;
+                        border: 1px solid var(--item-color);
+                        @include weight_height(44.44px, 44.44px);
+                    }
+
+                    .details_title {
+                        @include item_flex(flex, column, flex-start, normal, 8px);
+
+                        p {
+                            color: var(--text-color);
+                            @include fix_font(16px, 400, 14px);
+                        }
+
+                        .content_row {
+                            @include item_flex(flex, row, center, normal, 8px);
+
+                            span {
+                                @include item_flex(flex, row, center, normal, 2px);
+
+                                .calender_icon{
+                                    svg {
+                                        path {
+                                            stroke: var(--item-color);
+                                            fill: var(--item-color);
+                                        }
+                                    }
+                                }
+                                .time_icon{
+                                    svg {
+                                        path {
+                                            fill: var(--item-color);
+                                        }
+                                    }
+                                }
+                                .show_icon{
+                                    svg {
+                                        path {
+                                            fill: var(--item-color);
+                                        }
+                                    }
+                                }
+                                p {
+                                    color: var(--text-grey);
+                                    @include fix_font(12px, 400, 12.25px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .news {
+                p {
+                    color: var(--text-color);
+                    @include fix_font(14px, 300, 25.41px);
+                }
+            }
+        }
+
+        .send_yourfeedback {
+            padding: 20px 18px;
+            border-radius: 12px;
+            background: var(--item-bg);
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 28px);
+
+            .player_comment {
+                @include weight_height(fill, auto);
+                @include item_flex(flex, column, flex-start, normal, 8px);
+
+                .border_b {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid var(--content-border);
+                    @include weight_height(fill, auto);
+                    @include item_flex(flex, column, flex-start, normal, 4px);
+
+                    .enter_comment {
+                        @include weight_height(fill, auto);
+                        @include item_flex(flex, row, center, space-between, 0px);
+
+                        .feedback_title {
+                            span {
+                                @include item_flex(flex, row, center, normal, 4px);
+
+                                svg {
+                                    @include weight_height(14px, 14px);
+
+                                    path {
+                                        stroke: var(--text-color);
+                                    }
+                                }
+
+                                p {
+                                    color: var(--text-color);
+                                    @include fix_font(16px, 400, 25.6px);
+                                }
+                            }
+                        }
+
+                        p {
+                            color: var(--text-grey);
+                            @include fix_font(14px, 400, 12.25px);
+                        }
+                    }
+
+                    .feedback_body {
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid var(--content-border);
+                        @include weight_height(65%, auto);
+                        @include item_flex(flex, row, flex-end, normal, 8px);
+
+                        img {
+                            object-fit: cover;
+                            border-radius: 50%;
+                            @include weight_height(29px, 29px);
+                        }
+
+                        input {
+                            border: none;
+                            outline: none;
+                            background: none;
+                            color: var(--text-color);
+                            @include weight_height(80%, auto);
+                            @include item_flex(flex, row, center, center, 0px);
+                        }
+
+                        ::-webkit-input-placeholder {
+                            color: var(--text-grey);
+                            @include fix_font(14px, 400, 12.25px);
+                        }
+                    }
+                }
+
+
+                .member_fedback {
+                    @include item_flex(flex, column, flex-start, normal, 8px);
+
+                    .member {
+                        @include item_flex(flex, row, center, normal, 8px);
+
+                        img {
+                            object-fit: cover;
+                            border-radius: 50%;
+                            @include weight_height(29px, 29px);
+                        }
+
+                        :first-child {
+                            color: var(--text-color);
+                            @include fix_font(16px, 400, 14px);
+                        }
+
+                        :nth-child(3) {
+                            color: var(--text-grey);
+                            @include fix_font(14px, 400, 12.25px);
+                        }
+                    }
+
+                    p {
+                        color: var(--text-color);
+                        @include fix_font(14px, 400, 19.46px);
+                    }
+                }
+            }
+        }
+    }
+}

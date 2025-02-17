@@ -1,0 +1,125 @@
+@import "../../styles/shared/var.scss";
+
+// Scss Start.
+.main-container {
+  padding-bottom: 100px;
+  .return {
+    @include item_flex(flex, row, center, normal, 15.75px);
+    padding: 20px;
+    text-decoration: none;
+
+    p {
+      color: var(--text-color);
+      @include fix-font(18px, 400, 15.75px);
+    }
+  }
+  .search_input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    input[type="search"] {
+      border: none;
+      padding: 12px 12px;
+      outline: none;
+      border-radius: 10px;
+      color: var(--color-light);
+      background-color: transparent;
+    }
+
+    span {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      color: var(--color-light);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .table-container {
+    margin: 20px 0;
+    overflow-x: scroll;
+    color: var(--text-color);
+    text-align: center;
+    padding: 0 16px;
+
+    table {
+      border-collapse: collapse;
+
+      thead {
+        th {
+          padding: 10px 5px;
+          border: 0.5px solid var(--content-border);
+        }
+      }
+      tbody {
+        padding-top: 10px;
+        .table-data {
+          padding: 10px 5px;
+          border: 0.5px solid var(--content-border);
+
+          .edit-pen {
+            color: var(--color-blue);
+            font-size: 12px;
+            padding-right: 3px;
+            cursor: pointer;
+          }
+        }
+        .user-data {
+          min-width: 160px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+
+          .user-info {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+
+            .user-imgs {
+              position: relative;
+              width: 30px;
+              height: 35px;
+              .user-img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+              }
+              .country-img {
+                position: absolute;
+                bottom: 5px;
+                right: 4px;
+                padding: 0px;
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .button {
+    display: block;
+    width: 90%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to left, #34506d, #3498db);
+  }
+}

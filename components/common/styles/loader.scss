@@ -1,0 +1,133 @@
+.animation-container {
+  max-width: 390px;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  z-index: 9;
+  transform: translate(-50%, -50%);
+
+  .ball {
+    height: 40px;
+    width: 40px;
+    animation: bounce 1s ease-in-out infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+  }
+
+  .ground-shadow {
+    border-radius: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    content: "";
+    background-color: var(--text-color);
+    filter: blur(2px);
+    width: 45px;
+    height: 5px;
+    animation: shadow 1s ease-in-out infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateY(-120px) scaleX(90.5%) scaleY(80%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shadow {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scale(0);
+    }
+    to {
+      opacity: 0.5;
+      transform: translateX(-50%) scale(100%);
+    }
+  }
+}
+
+// .animation-container {
+//   height: 90vh;
+//   max-width: 390px;
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   z-index: 9;
+//   transform: translate(-50%, -50%);
+
+//   .ball {
+//     height: 45px;
+//     width: 45px;
+//     position: absolute;
+//     left: 50%;
+//     animation: bounce 1s ease-in-out infinite;
+//     animation-fill-mode: both;
+//     animation-direction: alternate;
+//   }
+
+//   .ground-shadow {
+//     border-radius: 100%;
+//     bottom: 32.5%;
+//     position: absolute;
+//     left: 50%;
+//     content: "";
+//     background-color: var(--text-color);
+//     filter: blur(2px);
+//     width: 50px;
+//     height: 5px;
+//     animation: shadow 1s ease-in-out infinite;
+//     animation-fill-mode: both;
+//     animation-direction: alternate;
+//   }
+
+//   @keyframes bounce {
+//     from {
+//       top: 40%;
+//       transform: scaleX(79.5%) scaleY(65%) translateX(-50%);
+//     }
+//     to {
+//       top: 60%;
+//       transform: translateX(-50%);
+//     }
+//   }
+
+//   @keyframes shadow {
+//     from {
+//       opacity: 0;
+//       transform: translateX(-50%) scale(0);
+//     }
+//     to {
+//       opacity: 0.5;
+//       transform: translateX(-50%) scale(100%);
+//     }
+//   }
+// }
+
+// .loader-container {
+//   position: fixed;
+//   top: 50%;
+//   left: 50%;
+//   z-index: 9;
+//   transform: translate(-50%, -50%);
+// }
+
+// .tennis-ball {
+//   width: 30px;
+//   height: auto;
+//   border-radius: 50%;
+//   animation: ball-bounce 1.5s ease infinite;
+// }
+
+// @keyframes ball-bounce {
+//   0%,
+//   100% {
+//     transform: translateY(0);
+//   }
+//   50% {
+//     transform: translateY(-30px);
+//   }
+// }

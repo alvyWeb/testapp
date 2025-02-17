@@ -1,0 +1,50 @@
+@import'../../../styles/shared/var.scss';
+
+$atp_rank_input_color : var(--input-bg);
+$place_holder: #B0AAAA;
+$border_: #313035;
+
+.sitemap_container {
+    @include weight_height(390px, fit-content);
+
+    .sitemap_head {
+        @include content_padd(28px, 12px, 12px, 12px);
+        @include item-flex(flex, row, center, space-between, 0px);
+
+        .pname_theme {
+            @include weight_height(270px, auto);
+            @include item-flex(flex, row, center, space-between, 0px);
+
+            p {
+                color: var(--text-color);
+                @include fix-font(12px, 500, 10.5px);
+            }
+        }
+
+        p {
+            color: var(--text-color);
+            @include fix-font(12px, 500, 10.5px);
+        }
+
+    }
+
+    .sitemap_body {
+        .addp_yn {
+            border-top: 1px solid #313035;
+            @include content_padd(12px, 12px, 12px, 12px);
+            @include item-flex(flex, row, center, space-between, 0px);
+            .addp_ {
+                @include weight_height(250px, auto);
+                @include item-flex(flex, row, center, space-between, 0px);
+                p {
+                    color: var(--text-color);
+                    @include fix-font(14px, 300, 12.25px);
+                }
+            }
+                p {
+                    color: var(--text-color);
+                    @include fix-font(14px, 300, 12.25px);
+            }
+        }
+    }
+}

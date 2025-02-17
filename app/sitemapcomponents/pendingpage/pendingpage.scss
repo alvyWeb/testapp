@@ -1,0 +1,182 @@
+$atp_rank_input_color : var(--input-bg);
+$place_holder: #B0AAAA;
+$border_: #313035;
+
+:root{
+    --background-white: #FCFAFA;
+    --text-black: #000000;
+    --text-grey: #B0AAAA;
+    --color-light: #ffff;
+    --color-blue: #145E94;
+}
+
+@mixin ranking_font($font_size, $font_weight, $line_height) {
+    font-size: $font_size;
+    font-weight: $font_weight;
+    line-height: $line_height;
+}
+
+@mixin width_height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin img_w_h {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin _space_bet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px auto;
+}
+
+@mixin _mar ($margin-top, $margin-left, $margin-bottom, $margin-right) {
+    margin-top: $margin-top;
+    margin-left: $margin-left;
+    margin-bottom: $margin-bottom;
+    margin-right: $margin-right;
+}
+
+@mixin _pad ($padding-top, $padding-left, $padding-bottom, $padding-right) {
+    padding-top: $padding-top;
+    padding-left: $padding-left;
+    padding-bottom: $padding-bottom;
+    padding-right: $padding-right;
+}
+
+@mixin flex_row($gap) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex_col($gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap;
+}
+
+// Scss Start.
+.search_input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input[type="search"] {
+        border: none;
+        padding: 12px 12px;
+        color: var(--color-light);
+        background-color: var(--input-bg);
+        @include ranking_font(16px, 300, 20px);
+    }
+
+    span {
+        position: absolute;
+        top: 8px;
+        right: 32px;
+        width: 28px;
+        height: 28px;
+        color: var(--color-light);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Start_Rank_Page.
+._container {
+    margin: 24px 0px;
+    padding: 0px;
+
+    a{
+        text-decoration: none;
+        color: var(--color-light);
+    }
+
+    // Rank_Chart.
+    .border_bottom_table {
+        border-top: 1px solid var(--list-saparator-line);
+        border-bottom: 1px solid var(--list-saparator-line);
+        color:var(--text-color);
+        @include _pad(8px, 0px, 8px, 0px);
+
+        @include _space_bet;
+
+        tbody {
+            @include _space_bet;
+
+            tr {
+                @include _space_bet;
+
+                td {
+                    @include _space_bet;
+                    padding: 0px 24px;
+
+                    ._ranking {
+                        @include flex_row(20px);
+
+                        ._number {
+                            width: 44px;
+                            @include ranking_font(12px, 300, 12px)
+                        }
+
+                        .country_name {
+                            @include flex_row(12px);
+                            
+                            ._country {
+                                @include width_height(24px, 24px);
+
+                                svg,img {
+                                    @include width_height(100%, 100%);
+                                    object-fit: contain;
+                                }
+                            }
+
+                            ._name {
+                                @include ranking_font(12px, 300, 12px)
+                            }
+                        }
+                    }
+
+                    ._points {
+                        @include ranking_font(12px, 300, 12px)
+                    }
+                }
+            }
+        }
+    }
+    .border_bottom_table._cut_bottom {
+        border-bottom: none;
+    }
+    .heading_table {
+        @include _space_bet;
+        @include _pad(12px, 0px, 12px, 0px);
+
+        thead {
+            @include _space_bet;
+
+            tr {
+                @include _space_bet;
+                @include _pad(0px, 16px, 0px, 16px);
+
+                th {
+                    @include flex_row(20px);
+
+                    ._ranking {
+                        @include ranking_font(12px, 500, 12px)
+                    }
+                }
+            }
+        }
+    }
+}

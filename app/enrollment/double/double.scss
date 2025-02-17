@@ -1,0 +1,329 @@
+@import "../../../styles/shared/var.scss";
+
+.enrollment {
+  .enrollment_head {
+    // max-width: 390px;
+    height: auto;
+    box-sizing: border-box;
+
+    .head_body {
+      margin-top: 24px;
+      border-bottom: 1px solid var(--content-border);
+      @include weight_height(fill, auto);
+      @include content_padd(0px, 20px, 13px, 20px);
+      @include weight_height(fill, auto);
+      @include item_flex(flex, row, center, normal, 8px);
+
+      span.dtae_hour {
+        border: 1px solid var(--content-border);
+        border-radius: 48px;
+        background: var(--item-bg);
+        @include weight_height(182px, auto);
+        @include content_padd(8px, 12px, 8px, 20px);
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          color: var(--text-color);
+          @include fix-font(14px, 400, 12.25px);
+        }
+      }
+
+      svg {
+        path {
+          fill: var(--item-color);
+        }
+      }
+    }
+
+    .head_body_bottom {
+      @include content_padd(13px, 20px, 0px, 20px);
+      @include item_flex(flex, row, center, normal, 8px);
+
+      .d_games {
+        border-radius: 26px;
+        border: 1px solid #03506f;
+        background: var(--item-bg);
+        padding: 12px;
+        color: var(--text-color);
+        @include fix-font(14px, 400, 12.25px);
+        @include item_flex(flex, row, center, center, 0px);
+      }
+
+      .s_games {
+        border-radius: 26px;
+        border: 1px solid var(--content-border);
+        background: var(--item-bg);
+        padding: 12px;
+        color: var(--text-grey);
+        @include fix-font(14px, 400, 12.25px);
+        @include item_flex(flex, row, center, center, 0px);
+      }
+    }
+  }
+
+  .enrollment_container {
+    @include weight_height(360px, auto);
+    margin: 16px auto;
+    box-sizing: border-box;
+    background: var(--item-bg);
+
+    .container_heading {
+      border: 1px solid var(--content-border);
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      background: var(--item-bg);
+      @include weight_height(fill, auto);
+      @include content_padd(16px, 12px, 12px, 20px);
+      @include item_flex(flex, column, flex-start, normal, 8px);
+
+      .container_top_head {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          color: var(--text-color);
+          @include fix-font(16px, 400px, 14px);
+        }
+
+        svg {
+          path {
+            fill: var(--item-color);
+          }
+        }
+      }
+
+      .container_bottom_head {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, normal, 12px);
+
+        ._calender {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          svg {
+            path {
+              fill: var(--item-color);
+              stroke: var(--item-color);
+            }
+          }
+        }
+
+        ._time {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          svg {
+            path {
+              fill: var(--item-color);
+            }
+          }
+        }
+
+        ._comment {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          svg {
+            path {
+              stroke: var(--item-color);
+            }
+          }
+        }
+      }
+    }
+
+    .container_body {
+      border-left: 1px solid var(--content-border);
+      border-right: 1px solid var(--content-border);
+      background: var(--item-bg);
+      @include content_padd(16px, 16px, 14px, 16px);
+      @include item_flex(flex, row, center, space-between, 0px);
+
+      .current_player {
+        @include item_flex(flex, row, center, center, 8px);
+
+        ._kabir {
+          @include item_flex(flex, column, center, center, 8px);
+
+          span {
+            position: relative;
+
+            :first-child {
+              padding: 2px;
+              object-fit: cover;
+              border-radius: 50%;
+              background: var(--item-bg);
+              border: 1px solid var(--item-color);
+              @include weight_height(51.57px, 51.57px);
+            }
+
+            :last-child {
+              position: absolute;
+              bottom: 4px;
+              right: 8px;
+              border-radius: 2px;
+              @include weight_height(19px, 14.38px);
+            }
+          }
+
+          ._name {
+            color: var(--text-color);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          ._rank {
+            color: var(--text-grey);
+            @include fix-font(12px, 400px, 10.5px);
+          }
+        }
+
+        ._jone {
+          @include item_flex(flex, column, center, center, 8px);
+
+          span {
+            position: relative;
+
+            :first-child {
+              padding: 2px;
+              object-fit: cover;
+              border-radius: 50%;
+              background: var(--item-bg);
+              border: 1px solid var(--item-color);
+              @include weight_height(51.57px, 51.57px);
+            }
+
+            :last-child {
+              position: absolute;
+              bottom: 4px;
+              right: 8px;
+              border-radius: 2px;
+              @include weight_height(19px, 14.38px);
+            }
+          }
+
+          ._name {
+            color: var(--text-color);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          ._rank {
+            color: var(--text-grey);
+            @include fix-font(12px, 400px, 10.5px);
+          }
+        }
+      }
+
+      span {
+        position: relative;
+
+        p {
+          position: absolute;
+          top: -26px;
+          left: -16px;
+          color: var(--item-color);
+          @include fix-font(21px, 400, 18.38px);
+        }
+      }
+
+      .add_player {
+        @include item_flex(flex, row, center, center, 8px);
+
+        ._add {
+          @include item_flex(flex, column, center, center, 8px);
+
+          span {
+            padding: 2px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: var(--item-bg);
+            border: 1px dotted var(--item-color);
+            @include weight_height(51.57px, 51.57px);
+            @include weight_height(51.57px, 51.57px);
+            @include item_flex(flex, column, center, center, 0px);
+          }
+
+          ._name {
+            color: var(--text-color);
+            @include fix-font(14px, 400px, 12.25px);
+          }
+
+          ._rank {
+            color: var(--text-grey);
+            @include fix-font(12px, 400px, 10.5px);
+          }
+        }
+      }
+    }
+
+    .container_footer {
+      border: 1px solid var(--content-border);
+      padding-left: 20px;
+      background: var(--item-bg);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      @include item_flex(flex, row, center, space-between, 0px);
+
+      ._item {
+        @include item_flex(flex, column, flex-start, normal, 4px);
+
+        .precipitation {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          svg {
+            path {
+              fill: var(--item-color);
+            }
+          }
+        }
+
+        .weather {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          svg {
+            path {
+              fill: var(--item-color);
+            }
+          }
+        }
+      }
+
+      a {
+        border-bottom-right-radius: 6px;
+        background: linear-gradient(to right, #3498db, #34506d);
+
+        button {
+          border: none;
+          color: #ffffff;
+          border-bottom-right-radius: 8px;
+          @include weight_height(130px, 52px);
+          @include fix-font(16px, 400, 14px);
+          background: none;
+        }
+      }
+    }
+  }
+
+  padding-bottom: 65px;
+}

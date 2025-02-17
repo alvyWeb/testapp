@@ -1,0 +1,29 @@
+@import "../../styles/shared/var.scss";
+
+.content_fixer {
+  inset: 0;
+  position: fixed;
+  backdrop-filter: brightness(0.6);
+  @include weight_height(390px, fill);
+  @include content_mar(0px, auto, 74px, auto);
+  @include item_flex(flex, column, center, flex-end, 0px);
+  .main_container {
+    background: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    border-top-right-radius: 62px;
+    border-top-left-radius: 62px;
+    border: 1px solid var(--content-border);
+    box-shadow: 0 3px 0px rgb(0 0 0 / 0.2);
+    @include weight_height(390px, fit-content);
+
+    .modal_content {
+      background: var(--bg-color);
+      width: 100%;
+      border-top-right-radius: 62px;
+      border-top-left-radius: 62px;
+      @include block_display(12px);
+      @include weight_height(360px, fit-content);
+    }
+  }
+}

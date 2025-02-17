@@ -1,0 +1,129 @@
+@import '../../../styles/shared/var.scss';
+
+.bettingboard_container {
+    .bettingboard_head {
+        padding: 12px 14px;
+        @include item-flex(flex, row, center, flex-end, 44px);
+        background: linear-gradient(to bottom,
+                #4775A929,
+                #FFFFFF00);
+
+        .icon_cash {
+            @include item-flex(flex, row, center, center, 0px);
+
+            svg {
+                path {
+                    stroke: var(--text-color);
+                }
+
+            }
+        }
+        .tofee_d_like {
+            @include item-flex(flex, row, center, center, 28px);
+            .icon {
+                @include item-flex(flex, row, center, center, 0px);
+
+                svg {
+                    path {
+                        fill: var(--text-color);
+                    }
+
+                }
+            }
+        }
+
+        p {
+            color: var(--text-color);
+            @include fix-font(14px, 400, 12.25px);
+        }
+    }
+
+    .bettingboard_body {
+        padding-left: 8px;
+        border-top: 1px solid var(--content-border);
+        @include weight_height(fill, fit-content);
+        @include item-flex(flex, row, center, space-between, 0px);
+
+        .profile {
+            z-index: 1;
+            position: relative;
+            @include item-flex(flex, row, center, normal, 4px);
+
+            img {
+                padding: 1.5px;
+                border-radius: 50%;
+                border: 1px solid var(--item-color);
+                @include weight_height(30px, 30px);
+            }
+
+            img.country {
+                border: none;
+                padding: 0px;
+                border-radius: 0.8px;
+                position: absolute;
+                top: 20px;
+                left: 12px;
+                @include weight_height(14px, 10.17px);
+            }
+
+            p {
+                color: var(--text-color);
+                @include fix-font(10px, 600, 10.5px);
+            }
+        }
+
+        .board_det {
+            @include item-flex(flex, row, center, normal, 0px);
+
+            .money {
+                padding: 18px 0px;
+                background: #6CB7F012;
+                border-left: 1px solid var(--content-border);
+                border-right: 1px solid var(--content-border);
+                @include weight_height(78px, auto);
+                @include item-flex(flex, row, center, center, 0px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix-font(12px, 400, 10.5px);
+                }
+            }
+
+            .toffee {
+                padding: 18px 0px;
+                border-right: 1px solid var(--content-border);
+                @include weight_height(40px, auto);
+                @include item-flex(flex, row, center, center, 0px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix-font(12px, 400, 10.5px);
+                }
+            }
+
+            .dlike {
+                padding: 18px 0px;
+                background: #6CB7F012;
+                border-right: 1px solid var(--content-border);
+                @include weight_height(40px, auto);
+                @include item-flex(flex, row, center, center, 0px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix-font(12px, 400, 10.5px);
+                }
+            }
+
+            .open {
+                padding: 18px 0px;
+                @include weight_height(62px, auto);
+                @include item-flex(flex, row, center, center, 0px);
+
+                P {
+                    color: var(--text-color);
+                    @include fix-font(12px, 400, 10.5px);
+                }
+            }
+        }
+    }
+}

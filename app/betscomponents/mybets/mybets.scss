@@ -1,0 +1,306 @@
+@import "../../../styles/shared/var.scss";
+
+.mybets_container {
+  background: var(--item-bg);
+  border-radius: 8px;
+  border: 1px solid var(--content-border);
+  @include block_display(8px);
+  margin-top: 16px;
+  padding: 0px;
+  width: 345px;
+
+  @media (min-width: 400px) {
+    .mybets_container {
+      width: 360px;
+    }
+  }
+
+  .mybet_head {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--content-border);
+    @include weight_height(fill, auto);
+    @include item-flex(flex, row, center, space-between, 0px);
+
+    p.head_title {
+      color: var(--text-color);
+      @include fix-font(12px, 400, 10.5px);
+    }
+
+    p.head_edit {
+      color: var(--text-grey);
+      @include fix-font(12px, 400, 10.5px);
+    }
+  }
+
+  .mybet_body {
+    padding: 0px 8px;
+    @include weight_height(fill, auto);
+    @include item-flex(flex, column, flex-start, normal, 12px);
+
+    .body_head {
+      @include weight_height(fill, auto);
+      @include item-flex(flex, row, center, space-between, 0px);
+
+      .fteam {
+        @include item-flex(flex, row, center, space-between, 4px);
+
+        .fteam_img {
+          @include item-flex(flex, row, center, normal, 4px);
+
+          span.img_country {
+            position: relative;
+
+            img {
+              border-radius: 50%;
+              @include weight_height(22.22px, 22.22px);
+            }
+
+            img.country {
+              position: absolute;
+              top: 16px;
+              right: 2px;
+              border-radius: 0.5px;
+              @include weight_height(8.18px, 6.19px);
+            }
+          }
+        }
+
+        .playe_name {
+          @include item-flex(flex, column, flex-start, normal, 4px);
+
+          p {
+            color: var(--text-color);
+            @include fix-font(10px, 400, 8.75px);
+          }
+        }
+      }
+
+      .v_s {
+        svg {
+          padding: 9px 10px;
+          border-radius: 26px;
+          border: 1px solid var(--content-border);
+          path {
+            fill: var(--text-color);
+          }
+        }
+
+        p {
+          padding: 7px 14px;
+          border-radius: 26px;
+          border: 1px solid var(--content-border);
+          color: var(--text-color);
+          @include fix-font(10.54px, 400, 9.22px);
+        }
+      }
+
+      .steam {
+        @include item-flex(flex, row, center, space-between, 4px);
+
+        .fteam_img {
+          @include item-flex(flex, row, center, normal, 4px);
+
+          span.img_country {
+            position: relative;
+
+            img {
+              border-radius: 50%;
+              @include weight_height(22.22px, 22.22px);
+            }
+
+            img.country {
+              position: absolute;
+              top: 16px;
+              right: 2px;
+              border-radius: 0.5px;
+              @include weight_height(8.18px, 6.19px);
+            }
+          }
+        }
+
+        .playe_name {
+          @include item-flex(flex, column, flex-start, normal, 4px);
+
+          p {
+            color: var(--text-color);
+            @include fix-font(10px, 400, 8.75px);
+          }
+        }
+      }
+    }
+
+    .body_footer {
+      @include weight_height(fill, auto);
+      @include item-flex(flex, row, center, space-between, 0px);
+
+      .increase {
+        @include item-flex(flex, row, center, center, 8px);
+
+        p {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 10.5px);
+
+          svg {
+            path {
+            }
+          }
+        }
+      }
+
+      .decrease {
+        @include item-flex(flex, row, center, center, 8px);
+
+        p {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 10.5px);
+
+          svg {
+            path {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mybet_footer {
+    border-top: 1px solid var(--content-border);
+    @include weight_height(fill, auto);
+    @include item-flex(flex, row, center, space-between, 0px);
+
+    .footer_score {
+      padding: 10px 8px;
+      border-right: 1px solid var(--content-border);
+      @include weight_height(179px, auto);
+      @include item-flex(flex, row, center, center, 0px);
+
+      p {
+        color: var(--text-grey);
+        @include fix-font(12px, 400, 10.5px);
+      }
+    }
+
+    .footer_cash {
+      padding: 8px 8px;
+      @include weight_height(179px, auto);
+      @include item-flex(flex, row, center, center, 8px);
+
+      span.f_money {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: #60bf64;
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+          }
+        }
+      }
+
+      svg {
+        path {
+        }
+      }
+
+      span.smoney {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: #60bf64;
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+          }
+        }
+      }
+    }
+    .red_cash {
+      padding: 8px 8px;
+      @include weight_height(179px, auto);
+      @include item-flex(flex, row, center, center, 8px);
+
+      span.f_money {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: #e44c4c;
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+            stroke: #e44c4c;
+          }
+        }
+      }
+
+      .red_arrow {
+        path {
+          stroke: #e44c4c;
+          fill: #e44c4c;
+        }
+      }
+
+      span.smoney {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: #e44c4c;
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+            stroke: #e44c4c;
+          }
+        }
+      }
+    }
+    .grey_cash {
+      padding: 8px 8px;
+      @include weight_height(179px, auto);
+      @include item-flex(flex, row, center, center, 8px);
+
+      span.f_money {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+            stroke: var(--text-grey);
+          }
+        }
+      }
+
+      .grey_arrow {
+        path {
+          stroke: var(--text-grey);
+          fill: var(--text-grey);
+        }
+      }
+
+      span.smoney {
+        @include item-flex(flex, row, center, normal, 4px);
+
+        p {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 10.5px);
+        }
+
+        svg {
+          path {
+            stroke: var(--text-grey);
+          }
+        }
+      }
+    }
+  }
+}

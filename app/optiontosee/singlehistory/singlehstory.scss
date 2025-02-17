@@ -1,0 +1,364 @@
+@import "../../../styles/shared/var.scss";
+
+.gamestory_container {
+    box-sizing: border-box;
+    background: var(--bg-color);
+    @include weight_height(390px, auto);
+
+    .headimage_content {
+        position: relative;
+
+        img {
+            @include weight_height(fill, 300px);
+        }
+
+        .content {
+            position: absolute;
+            top: 0px;
+            @include weight_height(fill, fill);
+            @include content_padd(54px, 24px, 84px, 24px);
+            @include item_flex(flex, column, center, space-between, 0px);
+
+            .menu_go {
+                @include weight_height(fill, auto);
+                @include item_flex(flex, row, center, space-between, 0px);
+            }
+
+            img {
+                @include weight_height(188.58px, 79.04px);
+            }
+        }
+    }
+
+    .gamestory_body {
+        position: relative;
+        top: -56px;
+        @include block_display(16px);
+        padding: 0px;
+
+        .head_body {
+            border-radius: 12px;
+            background: var(--bg-color);
+            border: 1px solid #EEEEEE;
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 0px);
+
+            .head {
+                border-bottom: 1px solid #EEEEEE;
+                @include weight_height(fill, auto);
+                @include content_padd(12px, 24px, 16px, 24px);
+                @include item_flex(flex, column, flex-start, normal, 8px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix_font(18px, 400, 15.75px);
+                }
+
+                .time_date {
+                    @include weight_height(fill, auto);
+                    @include item_flex(flex, row, center, normal, 12px);
+
+                    p {
+                        color: var(--text-color);
+                        @include fix_font(16px, 400, 14px);
+                    }
+                }
+            }
+
+            .body {
+                @include weight_height(fill, auto);
+                @include content_padd(8px, 0px, 8px, 0px);
+                @include item_flex(flex, row, center, space-between, 0px);
+
+                .body_content {
+                    @include weight_height(77px, auto);
+                    @include content_padd(12px, 28px, 8px, 28px);
+                    @include item_flex(flex, column, center, normal, 12px);
+
+                    :first-child {
+                        color: var(--color-blue);
+                        @include fix_font(14px, 400, 12.25px);
+                    }
+
+                    :nth-child(2) {
+                        color: var(--text-color);
+                        @include fix_font(16px, 400, 14px);
+                    }
+                }
+
+                ._border {
+                    border-right: 1px solid #EEEEEE;
+                    border-left: 1px solid #EEEEEE;
+                    @include content_padd(12px, 16px, 8px, 16px);
+                }
+            }
+        }
+
+        .feature_body {
+            border-radius: 12px;
+            border: 1px solid #EEEEEE;
+            background: var(--bg-color);
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 12px);
+
+            .head_content {
+                padding-bottom: 12px;
+                padding: 12px;
+                border-bottom: 1px solid #EEEEEE;
+                @include weight_height(fill, auto);
+
+                .content {
+                    @include weight_height(fill, auto);
+                    @include item_flex(flex, row, center, normal, 44px);
+
+                    :first-child {
+                        color: var(--text-color);
+                        @include fix_font(14px, 400, 12.25px);
+                    }
+
+                    :nth-child(2) {
+                        color: var(--text-color);
+                        @include fix_font(18px, 400, 15.75px);
+                    }
+                }
+            }
+
+            .body_content {
+                @include weight_height(fill, auto);
+                @include content_padd(0px, 12px, 0px, 12px);
+                @include item_flex(flex, row, center, space-around, 4px);
+
+                .my_team {
+                    @include item_flex(flex, row, center, space-between, 0px);
+
+                    ._me {
+                        @include item_flex(flex, column, center, normal, 4px);
+
+                        .player_profile {
+                            position: relative;
+
+                            :first-child {
+                                padding: 2px;
+                                border-radius: 50%;
+                                border: 2px solid var(--color-blue);
+                                @include weight_height(53px, 53px);
+                            }
+
+                            :nth-child(2) {
+                                position: absolute;
+                                bottom: 5px;
+                                right: 6px;
+                                @include weight_height(21px, 15.89px);
+                            }
+                        }
+
+                        .name_text {
+                            color: var(--text-color);
+                            @include fix_font(14px, 400, 12.25px);
+                        }
+
+                        .rancking_text {
+                            color: var(--text-grey);
+                            @include fix_font(12px, 400, 10.5px);
+                        }
+
+                        ._name {
+                            position: normal;
+                            @include item_flex(flex, row, center, normal, 4px);
+
+                            img {
+                                @include weight_height(12px, 12px);
+                            }
+                        }
+                    }
+
+                    ._teamate {
+                        @include item_flex(flex, column, center, normal, 4px);
+
+                        .player_profile {
+                            position: relative;
+
+                            :first-child {
+                                padding: 2px;
+                                border-radius: 50%;
+                                border: 2px solid var(--color-blue);
+                                @include weight_height(53px, 53px);
+                            }
+
+                            :nth-child(2) {
+                                position: absolute;
+                                bottom: 5px;
+                                right: 6px;
+                                @include weight_height(21px, 15.89px);
+                            }
+                        }
+
+                        .name_text {
+                            color: var(--text-color);
+                            @include fix_font(14px, 400, 12.25px);
+                        }
+
+                        .rancking_text {
+                            color: var(--text-grey);
+                            @include fix_font(12px, 400, 10.5px);
+                        }
+                    }
+                }
+
+                .score_details {
+                    p {
+                        position: relative;
+                        border-radius: 43px;
+                        top: -16px;
+                        right: -2px;
+                        color: var(--text-color);
+                        background: var(--bg-color);
+                        border: 1px solid #EEEEEE;
+                        @include weight_height(59px, 33px);
+                        @include item_flex(flex, column, center, center, 0px);
+                    }
+                }
+            }
+
+            .bottom_content {
+                @include weight_height(fill, auto);
+                @include content_padd(0px, 12px, 12px, 12px);
+                @include item_flex(flex, row, center, space-between, 0px);
+
+                ._content {
+                    border-radius: 8px;
+                    border: 1px solid #EEEEEE;
+                    @include weight_height(132px, auto);
+                    @include content_padd(0px, 0px, 0px, 8px);
+                    @include item_flex(flex, row, center, space-between, 0px);
+
+                    :first-child {
+                        color: var(--text-grey);
+                        border-right: 1px solid #EEEEEE;
+                        @include fix_font(14px, 400, 12.25px);
+                        @include content_padd(6px, 8px, 6px, 8px);
+                    }
+
+                    :nth-child(2) {
+                        color: var(--text-color);
+                        @include fix_font(14px, 400, 12.25px);
+                    }
+                }
+            }
+        }
+
+        .body_bottom {
+            background: var(--bg-color);
+            border-radius: 12px;
+            border: 1px solid #EEEEEE;
+
+            .bottom_head {
+                border-bottom: 1px solid #EEEEEE;
+                @include item_flex(flex, row, center, normal, 0px);
+
+                p {
+                    color: var(--color-blue);
+                    padding: 8px 0px;
+                    border-right: 1px solid #EEEEEE;
+                    @include weight_height(35px, auto);
+                    @include fix_font(14px, 400, 12.25px);
+                    @include item_flex(flex, row, center, center, 0px);
+                }
+            }
+
+            .bottom_s_body {
+                @include item_flex(flex, row, center, normal, 0px);
+
+                .item {
+                    @include item_flex(flex, row, center, normal, 0px);
+
+                    p {
+                        color: var(--text-color);
+                        padding: 13px 0px;
+                        border-right: 1px solid #EEEEEE;
+                        @include weight_height(35px, auto);
+                        @include fix_font(16px, 400, 12.25px);
+                        @include item_flex(flex, row, center, center, 0px);
+                    }
+
+                    span {
+                        position: relative;
+
+                        :first-child {
+                            color: var(--text-color);
+                            padding: 13px 0px;
+                            border-right: 1px solid #EEEEEE;
+                            @include weight_height(35px, auto);
+                            @include fix_font(16px, 400, 12.25px);
+                            @include item_flex(flex, row, center, center, 0px);
+                        }
+
+                        :nth-child(2) {
+                            position: absolute;
+                            top: -8px;
+                            right: -6px;
+                            color: var(--text-color);
+                            border: none;
+                            @include fix_font(6.86px, 400, 6px);
+                        }
+                    }
+
+                    :last-child {
+                        color: var(--text-color);
+                        padding: 12px 0px;
+                        border-right: 1px solid #EEEEEE;
+                        @include weight_height(35px, auto);
+                        @include fix_font(16px, 500, 14px);
+                        @include item_flex(flex, row, center, center, 0px);
+                    }
+                }
+
+                span {
+                    p {
+                        padding: 4px 4px;
+                        color: var(--color-blue);
+                        @include fix_font(14px, 400, 12.25px);
+                    }
+                }
+            }
+        }
+
+        .all_button {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, center, normal, 12px);
+            a {
+                text-decoration: none;
+                border-radius: 8px;
+                border: 1px solid var(--color-blue);
+                @include weight_height(fill, auto);
+
+                :hover {
+                    border-radius: 6px;
+                    color: #FFFFFF;
+                    background: linear-gradient(to left,
+                            #34506D,
+                            #3498DB);
+
+                }
+
+                button {
+                    border: none;
+                    background: none;
+                    padding: 12px 0px;
+                    color: var(--text-color);
+                    @include weight_height(fill, auto);
+                    @include fix_font(16px, 400, 14px);
+                    @include item_flex(flex, row, center, center, 4px);
+                    svg{
+                        @include weight_height(16px, 16px);
+                        path{
+                            stroke: var(--text-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        padding-bottom: 30px;
+    }
+}

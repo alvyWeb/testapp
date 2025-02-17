@@ -1,0 +1,19 @@
+.container {
+  min-min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  margin: auto;
+  position: relative;
+
+  @media (min-width: 390px) {
+    width: 100%; // For small screens and above (390px and wider), keep full width
+  }
+
+  @media (min-width: 500px) {
+    width: 390px; // For medium screens (768px and wider), set to 500px
+  }
+
+  @media (min-width: 1024px) {
+    width: 390px; // For large screens (1024px and wider), set to 500px
+  }
+}

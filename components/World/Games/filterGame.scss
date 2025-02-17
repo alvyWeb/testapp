@@ -1,0 +1,78 @@
+@import "../../../styles/shared/var.scss";
+
+.filter-container {
+  width: 360px;
+
+  .filter-header {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .return-button,
+    .reset-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &.return-button {
+        color: var(--color-blue);
+      }
+
+      &.reset-button {
+        color: var(--text-color);
+        opacity: 0.6;
+      }
+    }
+    .header {
+      color: var(--text-color);
+    }
+  }
+
+  .filter-body {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .filter-content {
+      label {
+        padding-bottom: 5px;
+        display: block;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        padding-left: 12px;
+        border-radius: 8px;
+        border: 1px solid var(--content-border);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+
+        &:focus {
+          border: 1px solid var(--color-blue);
+          outline: 0;
+        }
+      }
+      .date {
+        width: 92%;
+      }
+    }
+
+    .select-content {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+
+      .hour {
+        width: 30%;
+      }
+      .location {
+        width: 60%;
+      }
+    }
+  }
+  .filter-footer {
+    padding-top: 20px;
+  }
+}

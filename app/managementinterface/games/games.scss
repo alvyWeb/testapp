@@ -1,0 +1,169 @@
+@import "../../../styles/shared/var.scss";
+
+.games_container {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, normal, 8px);
+    .container_head {
+        @include weight_height(fill, auto);
+        @include content_padd(20px, 12px, 0px, 12px);
+        @include item_flex(flex, column, flex-start, normal, 24px);
+        .return {
+            @include item_flex(flex, row, center, normal, 20px);
+
+            svg {
+                path {}
+            }
+
+            p {
+                color: var(--text-grey);
+                @include fix_font(16px, 400, 14px);
+            }
+        }
+
+        .profile {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            .details {
+                @include item_flex(flex, row, center, normal, 8px);
+
+                span {
+                    position: relative;
+
+                    :first-child {
+                        border-radius: 50%;
+                        @include weight_height(34px, 34px);
+                        border: 2px solid var(--color-blue);
+                    }
+
+                    :nth-child(2) {
+                        position: absolute;
+                        bottom: 4px;
+                        right: 2px;
+                        border-radius: 2px;
+                        @include weight_height(16px, 12.28px);
+                    }
+                }
+
+                .name_bio {
+                    @include item_flex(flex, column, flex-start, normal, 4px);
+
+                    :first-child {
+                        color: var(--text-color);
+                        @include fix_font(16px, 400, 14px);
+                    }
+
+                    :nth-child(2) {
+                        color: var(--text-grey);
+                        @include fix_font(14px, 400, 12.25px);
+                    }
+                }
+            }
+
+            .cash {
+                @include item_flex(flex, column, flex-end, normal, 4px);
+
+                :first-child {
+                    color: var(--text-color);
+                    @include fix_font(14px, 400, 12.25px);
+                }
+
+                :nth-child(2) {
+                    color: var(--color-blue);
+                    @include fix_font(14px, 500, 12.25px);
+                }
+            }
+        }
+    }
+
+    .games_balances {
+        padding: 0px 12px;
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, normal, 12px);
+
+        :first-child {
+            text-decoration: none;
+
+            p {
+                padding: 12px 24px;
+                border-radius: 26px;
+                color: var(--color-blue);
+                border: 1px solid var(--color-blue);
+                @include fix_font(14px, 400, 12.25px);
+            }
+        }
+
+        :nth-child(2) {
+            text-decoration: none;
+
+            p {
+                padding: 12px 24px;
+                border-radius: 26px;
+                color: var(--text-grey);
+                border: 1px solid var(--text-grey);
+                @include fix_font(14px, 400, 12.25px);
+            }
+        }
+    }
+
+    .container_body {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, flex-start, normal, 0px);
+
+        .body_heading {
+            background: linear-gradient(to bottom,
+                    #4775A929,
+                    #FFFFFF00);
+            border-bottom: 1px solid #EEEEEE;
+            @include weight_height(fill, auto);
+            @include content_padd(12px, 44px, 12px, 64px);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            span{
+                @include item_flex(flex, row, center, normal, 61px);
+                :first-child{
+                    color: var(--text-color);
+                    @include fix_font(14px, 500, 12.25px);
+                }
+                :nth-child(2){
+                    color: var(--text-color);
+                    @include fix_font(14px, 500, 12.25px);
+                }
+            }
+            p{
+                color: var(--text-color);
+                @include fix_font(14px, 500, 12.25px);
+            }
+        }
+
+        .body_data {
+            background: var(--bg-color);
+            border-bottom: 1px solid #EEEEEE;
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, normal, 0px);
+
+            :first-child{
+                padding: 12px 0px;
+                text-align: center;
+                color: var(--text-color);
+                border-right: 1px solid #EEEEEE;
+                @include weight_height(120px, auto);
+                @include fix_font(12px, 400, 10.25px);
+            }
+            :nth-child(2){
+                padding: 12px 0px;
+                text-align: center;
+                color: var(--text-color);
+                border-right: 1px solid #EEEEEE;
+                @include weight_height(80px, auto);
+                @include fix_font(12px, 400, 10.25px);
+            }
+            :nth-child(3){
+                text-align: center;
+                color: var(--text-color);
+                @include weight_height(180px, auto);
+                @include fix_font(12px, 400, 10.25px);
+            }
+        }
+    }
+}

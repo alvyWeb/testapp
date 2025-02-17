@@ -1,0 +1,126 @@
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  // bottom: 0;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: var(--gray-100);
+  color: var(--text-color);
+  // padding: 10px 10px;
+  z-index: 1000;
+  margin: auto;
+  border-top: none;
+
+  @media (min-width: 390px) {
+    width: 100%;
+  }
+
+  @media (min-width: 500px) {
+    width: 390px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 390px;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; // Stack icon and text vertically
+    justify-content: space-around;
+    align-items: center;
+    // Center align the content
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    height: 48px;
+    width: 60px;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+    div {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      margin: -8px;
+      padding: 0;
+
+      // img:nth-child(1) {
+      //   display: block;
+      // }
+      // img:nth-child(2) {
+      //   display: none;
+      // }
+    }
+
+    a div img:nth-child(1) {
+      width: 20px;
+    }
+
+    .register img {
+      width: 10px;
+    }
+
+    p {
+      font-family: "Poppins Sans", sans-serif;
+      font-weight: 400;
+      color: var(--text-color);
+    }
+
+    // Icon style (assuming you use something like FontAwesome)
+    // &:hover {
+    //   color: #145e94; // Lighter color on hover
+    //   div {
+    //     img:nth-child(1) {
+    //       display: none;
+    //     }
+    //     img:nth-child(2) {
+    //       display: block;
+    //     }
+    //   }
+    //   p {
+    //     color: #145e94;
+    //   }
+    // }
+  }
+
+  a:active {
+    color: #145e94; // Lighter color on hover
+    div {
+      img:nth-child(1) {
+        display: none;
+      }
+      img:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar {
+    width: 100%;
+
+    a {
+      div {
+        width: 24px;
+        height: 24px;
+
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

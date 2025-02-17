@@ -1,0 +1,14 @@
+@import '../../styles/shared/var.scss';
+.opentennis_app{
+    @include weight_height(390px, 844px);
+    position: relative;
+    .tennis_logo{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        @include weight_height(100%, 100%);
+        img{
+            @include weight_height(fill, fill);
+        }
+    }
+}

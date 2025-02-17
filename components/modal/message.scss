@@ -1,0 +1,55 @@
+@import "../../styles/shared/var.scss";
+
+.message_container {
+  .content {
+    @include block_display(12px);
+    padding: 16px;
+    border-radius: 12px;
+    background: #1c1c1e;
+    border: 1px solid #000000;
+    textarea {
+      resize: none;
+      outline: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: transparent;
+      color: white;
+      @include weight_height(fill, 69px);
+    }
+
+    textarea::-webkit-input-placeholder {
+      word-spacing: -5px;
+      @include fix-font(16px, 400, 14px);
+    }
+
+    a {
+      @include weight_height(fill, auto);
+
+      :hover {
+        background: linear-gradient(to left, #34506d, #3498db);
+        color: #fcfcfc;
+      }
+
+      button {
+        cursor: pointer;
+        background: none;
+        color: var(--color-blue);
+        padding: 16px 0px;
+        border-radius: 12px;
+        border: 1px solid var(--color-blue);
+        @include fix-font(16px, 400, 14px);
+        @include weight_height(fill, auto);
+      }
+    }
+  }
+}
+
+.light .content {
+  background-color: #fcfcfc;
+  background: #fcfcfc;
+  border: 1px solid #eeeeee;
+
+  textarea {
+    color: black;
+  }
+}

@@ -1,0 +1,63 @@
+$icon-blue: #145e94;
+$text-color: #000000;
+$text-grey: #b0aaaa;
+$color-white: #ffff;
+
+:root {
+  --background-white: #fcfafa;
+  --text-black: #000000;
+  --text-grey: #b0aaaa;
+  --color-light: #ffff;
+  --color-blue: #145e94;
+}
+
+@mixin fix-font($font_size, $font_weight, $line_height) {
+  font-size: $font_size;
+  font-weight: $font_weight;
+  line-height: $line_height;
+}
+
+@mixin item_flex(
+  $make_display,
+  $flex_direction,
+  $aligned_item,
+  $justify-content,
+  $in_between_space
+) {
+  display: $make_display;
+  flex-direction: $flex_direction;
+  align-items: $aligned_item;
+  justify-content: $justify-content;
+  gap: $in_between_space;
+}
+
+@mixin weight_height($content_weight, $content_height) {
+  width: $content_weight;
+  height: $content_height;
+}
+
+@mixin block_display($space) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space;
+  width: 360px;
+  height: auto;
+  margin: 0px auto;
+  padding: 24px 0px;
+  box-sizing: border-box;
+}
+
+@mixin content_mar($top_mar, $left_mar, $bottom_mar, $right_mar) {
+  margin-top: $top_mar;
+  margin-left: $left_mar;
+  margin-bottom: $bottom_mar;
+  margin-right: $right_mar;
+}
+
+@mixin content_padd($top_padd, $left_padd, $bottom_padd, $right_padd) {
+  padding: $top_padd;
+  padding-left: $left_padd;
+  padding-bottom: $bottom_padd;
+  padding-right: $right_padd;
+}

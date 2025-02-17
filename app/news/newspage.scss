@@ -1,0 +1,372 @@
+@import "../../styles/shared/var.scss";
+
+.news_container {
+  @include block_display(21px);
+  color: var(--color-light);
+  padding: 20px 10px;
+
+  .b_border {
+    @include weight_height(100%, auto);
+    @include item_flex(flex, column, center, normal, 21px);
+
+    .news_head {
+      position: relative;
+
+      .head_img {
+        @include weight_height(340px, auto);
+
+        img {
+          @include weight_height(fill, fit-content);
+        }
+      }
+
+      .head_bodyContent {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        @include weight_height(fill, fill);
+        @include item_flex(flex, column, flex-start, space-between, 0px);
+        @include content_padd(12px, 14px, 14px, 14px);
+      }
+
+      .head_bodyContent {
+        .head_text {
+          @include item_flex(flex, column, flex-start, normal, 4px);
+
+          p {
+            color: #ffffff;
+            @include fix-font(16px, 500, 19.68px);
+          }
+
+          .head_text_sm {
+            @include item_flex(flex, row, center, normal, 8px);
+
+            .ft_span {
+              p {
+                color: #ffffff;
+                @include fix-font(14px, 300, 12.25px);
+              }
+            }
+
+            .sd_span {
+              @include item_flex(flex, row, center, normal, 8px);
+
+              .pointer_ {
+                @include item_flex(flex, row, center, normal, 0px);
+              }
+
+              .timer_ {
+                @include item_flex(flex, row, center, normal, 0px);
+              }
+
+              p {
+                color: #ffffff;
+                @include fix-font(14px, 300, 12.25px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ._article {
+      padding: 6px;
+      .sm_tennis_img {
+        border-radius: 12px;
+        @include weight_height(180px, 84px);
+        img {
+          object-fit: cover;
+          border-radius: 12px;
+          @include weight_height(fill, fill);
+        }
+      }
+
+      @include item_flex(flex, row, flex-end, normal, 4px);
+
+      .news_text {
+        @include item_flex(flex, column, flex-start, normal, 4px);
+
+        p.article_news_head {
+          color: var(--item-color);
+          @include fix-font(14px, 400, 12.25px);
+        }
+
+        p.article_news_para {
+          color: var(--text-color);
+          @include fix-font(16px, 400, 19.12px);
+        }
+
+        .time_comment {
+          @include item_flex(flex, row, center, normal, 8px);
+
+          ._hour {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+            .clock_time {
+              svg {
+                path {
+                  fill: var(--item-color);
+                }
+              }
+            }
+          }
+
+          ._comment {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+            .comments_icon {
+              svg {
+                path {
+                  stroke: var(--item-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .play_tennis {
+      border-radius: 12px;
+      background: var(--item-bg);
+      @include weight_height(100%, auto);
+      border: 1px solid var(--content-border);
+      .play_tennis_head_contant {
+        @include content_padd(8px, 16px, 8px, 16px);
+        @include weight_height(fill, auto);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        @include item_flex(flex, column, flex-start, normal, 8px);
+
+        .head_tennis {
+          @include item_flex(flex, row, center, space-between, 0px);
+          @include weight_height(100%, auto);
+
+          p {
+            color: var(--text-color);
+            @include fix-font(16px, 400, 14px);
+          }
+          svg {
+            path {
+              fill: var(--item-color);
+            }
+          }
+        }
+
+        .col_can_com {
+          @include item_flex(flex, row, center, normal, 8px);
+
+          .calender_ {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+            .calender_icon {
+              svg {
+                path {
+                  stroke: var(--item-color);
+                  fill: var(--item-color);
+                }
+              }
+            }
+          }
+
+          .clock_ {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+            .clock_time {
+              svg {
+                path {
+                  fill: var(--item-color);
+                }
+              }
+            }
+          }
+
+          .comment_ {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+            .comments_icon {
+              svg {
+                path {
+                  stroke: var(--item-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dua_playing {
+      border-top: 1px solid var(--content-border);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      @include content_padd(8px, 6px, 8px, 6px);
+      @include item_flex(flex, row, center, space-between, 0px);
+      @include weight_height(fill, auto);
+
+      .jone_list {
+        .data_gap {
+          @include item_flex(flex, column, center, normal, 4px);
+          img {
+            border-radius: 50%;
+          }
+        }
+
+        @include item_flex(flex, column, center, normal, 4px);
+
+        .jone_profile {
+          position: relative;
+
+          img {
+            padding: 2px;
+            border-radius: 50%;
+            @include weight_height(40px, 40px);
+            border: 1px solid var(--item-color);
+          }
+
+          @media (min-width: 450px) {
+            img {
+              @include weight_height(53px, 53px);
+            }
+          }
+
+          .jone_country {
+            position: absolute;
+            top: 34px;
+            right: 8px;
+
+            img {
+              border: none;
+              padding: 0px;
+              border-radius: 2px;
+              @include weight_height(15px, 12.89px);
+            }
+
+            @media (min-width: 450px) {
+              .jone_country {
+                position: absolute;
+                top: 44px;
+                img {
+                  @include weight_height(21px, 15.89px);
+                }
+              }
+            }
+          }
+        }
+
+        .name_ {
+          color: var(--text-color);
+          @include item_flex(flex, row, center, normal, 4px);
+
+          .hanry_c {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+          }
+
+          @include fix-font(14px, 400, 12.25px);
+        }
+
+        .ranking_ {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 10.5px);
+        }
+      }
+
+      .player_score {
+        @include item_flex(flex, column, center, normal, 4px);
+
+        .active_score {
+          p {
+            @include fix-font(18.18px, 500, 15.91px);
+            color: var(--text-color);
+          }
+        }
+
+        ._score {
+          box-sizing: border-box;
+
+          p {
+            border: 1px solid #eeeeee;
+            border-radius: 12px;
+            @include content_padd(4px, 8px, 4px, 8px);
+            @include fix-font(14px, 400, 12.25px);
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+
+    .news_footer {
+      border-radius: 12px;
+      background: var(--item-bg);
+      border: 1px solid var(--content-border);
+      @include content_padd(8px, 16px, 8px, 16px);
+      @include item_flex(flex, column, flex-start, normal, 8px);
+
+      .head_message {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          @include fix-font(14px, 400, 12.25px);
+          color: var(--item-color);
+        }
+        svg {
+          path {
+            fill: var(--item-color);
+          }
+        }
+      }
+
+      p {
+        @include fix-font(16px, 400, 19.12px);
+        color: var(--text-color);
+      }
+
+      .span {
+        @include item_flex(flex, row, center, normal, 4px);
+
+        p {
+          @include fix-font(14px, 400, 12.25px);
+          color: var(--text-grey);
+        }
+        .clock_time {
+          display: flex;
+          svg {
+            path {
+              fill: var(--item-color);
+            }
+          }
+        }
+      }
+    }
+    svg {
+      rect {
+        fill: var(--content-border);
+      }
+    }
+  }
+  margin-bottom: 65px;
+}

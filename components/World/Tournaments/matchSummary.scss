@@ -1,0 +1,330 @@
+@import "../../../styles/shared/score/var.scss";
+
+.match-container {
+  // margin-bottom: 100px;
+  .match-header {
+    // background-color: #261a7e;
+    background-color: #145e94;
+
+    padding-top: 20px;
+    .top-info {
+      display: flex;
+      padding: 0 10px;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+
+      .notification-follow-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+          font-size: 20px;
+        }
+
+        button {
+          background-color: #3e318b;
+          color: white;
+          padding: 6px 10px;
+          border-radius: 6px;
+          border: none;
+        }
+      }
+    }
+
+    .player-info {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      h2 {
+        // color: #588db3;
+        color: white;
+        opacity: 0.4;
+        padding: 5px 10px;
+        font-size: 24px;
+        text-transform: uppercase;
+      }
+      img {
+        width: 70px;
+        height: 100px;
+        margin-bottom: -4px;
+      }
+
+      .match-status {
+        color: white;
+        p {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .match-info {
+    background-color: var(--gray-100);
+    margin: 25px 20px;
+    margin-bottom: 0;
+    border-radius: 8px;
+
+    .info-top {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-color);
+      opacity: 0.6;
+      padding: 0 16px;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      font-size: 12px;
+
+      .time {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+    }
+
+    ._live_playing {
+      @include flex_row(0px);
+      justify-content: space-between;
+      padding: 8px 16px;
+      // background: var(--gray-100);
+
+      .live-score {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--text-color);
+        font-size: 12px;
+
+        .set-value {
+          opacity: 0.7;
+        }
+        .score-value {
+          background-color: var(--gray-500);
+          width: 18px;
+          height: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      ._profile {
+        @include flex_row(10px);
+
+        .profile_img {
+          .stats-flag {
+            width: 20px;
+            height: 15px;
+          }
+          .im_con {
+            position: relative;
+            @include flex_row(0px);
+
+            .side {
+              padding-left: 5px;
+            }
+          }
+        }
+
+        .im_con {
+          position: relative;
+          @include flex_row(4px);
+
+          .pro_img {
+            @include flex_row(0px);
+            position: relative;
+            img {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+            }
+
+            .flag {
+              position: absolute;
+              bottom: -2px;
+              right: 0px;
+              width: 10px;
+              height: 8px;
+              border-radius: 1px !important;
+            }
+          }
+
+          span.con_svg {
+            position: absolute;
+            bottom: -3px;
+            left: 10px;
+          }
+        }
+
+        .nam_turn {
+          p {
+            color: var(--text-color);
+            @include score_font(12px, 300, 12px);
+          }
+          .ball-serve {
+            display: none;
+          }
+          .ball-serve-active {
+            display: inline;
+            fill: var(--text-color);
+          }
+
+          @include flex_row(8px);
+        }
+      }
+
+      .round_socre {
+        @include flex_row(4px);
+        position: relative;
+
+        ._active {
+          color: var(--text-color);
+        }
+
+        ._disable {
+          color: var(--text-color);
+          opacity: 0.6;
+        }
+        p {
+          @include score_font(12px, 300, 12px);
+        }
+
+        ._round {
+          color: #706d7c;
+          width: 24px;
+          height: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        ._score {
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 12px;
+        }
+        ._square_s {
+          position: absolute;
+          top: 0;
+          right: 2px;
+          font-size: 9px;
+          font-weight: 300;
+          line-height: 12px;
+        }
+      }
+    }
+    ._live_playing {
+      ._profile {
+        .nam_turn {
+          span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+        }
+
+        ._disable {
+          opacity: 0.9;
+        }
+      }
+
+      ._square {
+        position: relative;
+
+        ._square_s {
+          position: absolute;
+          top: 0px;
+          right: 2px;
+          @include score_font(9px, 400, 12px);
+        }
+      }
+
+      ._round {
+        padding: 0;
+        span._match {
+          color: white;
+        }
+      }
+
+      ._active {
+        color: var(--text-color);
+        font-weight: 400;
+      }
+      ._disable {
+        color: var(--text-color);
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .match-stats {
+    .stats-head {
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 20px;
+      padding-top: 25px;
+      padding-bottom: 10px;
+      font-size: 16px;
+
+      span {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+      .active-stats {
+        opacity: 1;
+        // border-bottom: 1px solid;
+        // padding-bottom: 2px;
+      }
+    }
+
+    .stats-summary {
+      .summary-head {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-color);
+        background-color: var(--gray-100);
+        padding: 10px 20px;
+
+        .summary-info {
+          display: flex;
+          gap: 30px;
+          display: flex;
+          gap: 30px;
+          width: 25%;
+          text-align: center;
+          justify-content: space-around;
+        }
+      }
+      .summary-body {
+        color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--content-border);
+
+        .body-item {
+          opacity: 0.6;
+        }
+
+        .body-info {
+          display: flex;
+          gap: 30px;
+          display: flex;
+          gap: 30px;
+          width: 25%;
+          text-align: center;
+          justify-content: space-around;
+        }
+      }
+
+      .summary-body:last-child {
+        border: none !important;
+      }
+    }
+  }
+}

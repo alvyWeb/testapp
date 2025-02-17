@@ -1,0 +1,21 @@
+.container {
+  min-min-height: 100vh;
+  width: 100%;
+  background-color: black;
+  margin: auto;
+}
+@media (min-width: 390px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  .container {
+    width: 390px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 390px;
+  }
+} /*# sourceMappingURL=Layout.module.css.map */

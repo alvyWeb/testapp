@@ -1,0 +1,206 @@
+@import "../../../styles/shared/score/var.scss";
+
+.match-container {
+  margin-bottom: 100px;
+  .match-header {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
+    svg {
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      z-index: 99;
+      opacity: 0.99;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .match-info {
+    background-color: var(--gray-100);
+    margin: 20px;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    .info-top {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-color);
+      opacity: 0.6;
+      padding-bottom: 5px;
+      font-size: 12px;
+
+      .time {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+    }
+
+    ._live_playing {
+      @include flex_row(0px);
+      justify-content: space-between;
+      padding: 8px 0px;
+      background: var(--gray-100);
+
+      .live-score {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--text-color);
+        font-size: 12px;
+
+        .set-value {
+          opacity: 0.7;
+        }
+        .score-value {
+          background-color: var(--gray-500);
+          width: 18px;
+          height: 18px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      ._profile {
+        @include flex_row(10px);
+
+        ._disable {
+          color: #b0aaaa;
+        }
+
+        .profile_img {
+          .im_con {
+            position: relative;
+            @include flex_row(0px);
+
+            .side {
+              padding-left: 5px;
+            }
+          }
+        }
+
+        .im_con {
+          position: relative;
+          @include flex_row(4px);
+
+          .pro_img {
+            @include flex_row(0px);
+            position: relative;
+            img {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+            }
+
+            .flag {
+              position: absolute;
+              bottom: -2px;
+              right: 0px;
+              width: 10px;
+              height: 8px;
+              border-radius: 1px !important;
+            }
+          }
+
+          span.con_svg {
+            position: absolute;
+            bottom: -3px;
+            left: 10px;
+          }
+        }
+
+        .nam_turn {
+          p {
+            color: var(--text-color);
+            @include score_font(12px, 300, 12px);
+          }
+          .ball-serve {
+            display: none;
+          }
+          .ball-serve-active {
+            display: inline;
+          }
+
+          @include flex_row(8px);
+        }
+      }
+
+      .round_socre {
+        @include flex_row(4px);
+
+        ._active {
+          color: var(--text-color);
+        }
+
+        p {
+          @include score_font(12px, 300, 12px);
+        }
+
+        ._round {
+          color: #706d7c;
+          padding: 6px 10px;
+        }
+
+        ._score {
+          background: #706d7c;
+          color: var(--text-color);
+          padding: 6px 10px;
+        }
+      }
+
+      ._head_c {
+        // background: #6b6b6b;
+      }
+    }
+  }
+
+  .match-stats {
+    .stats-head {
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 20px;
+      padding-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .stats-summary {
+      .summary-head {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-color);
+        background-color: var(--gray-100);
+        padding: 10px 20px;
+
+        .summary-info {
+          display: flex;
+          gap: 30px;
+        }
+      }
+
+      .summary-body {
+        color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--content-border);
+
+        .body-item {
+          opacity: 0.6;
+        }
+
+        .body-info {
+          display: flex;
+          gap: 30px;
+        }
+      }
+    }
+  }
+}

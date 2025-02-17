@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+.container nav {
+  position: sticky;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  border-bottom: 1px solid #313035;
+}
+.container nav button {
+  width: 33.33%;
+  height: 40px;
+  border: 0.1px solid black;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  color: rgba(200, 200, 200, 0.51);
+  transition: color 1s, border-bottom 1s;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container nav button:hover {
+  cursor: pointer;
+}
+
+.section {
+  display: none; /* Hide all sections by default */
+  height: 100%; /* Fixed height for independent scrolling */
+  overflow-y: auto; /* Enable scrolling within the section */
+}
+
+.sectionActive {
+  color: white;
+  display: block; /* Show only the active section */
+}
+.sectionActive h1 {
+  color: aquamarine;
+}
+.sectionActive p {
+  color: plum;
+}
+
+#worldbuttoonActive {
+  color: white;
+  border-bottom: 3px solid #186fad;
+} /*# sourceMappingURL=tab.css.map */

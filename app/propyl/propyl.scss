@@ -1,0 +1,684 @@
+@import '../../styles/shared/var.scss';
+
+.propyl_container {
+    .cover_container {
+        .cover_img {
+            object-fit: cover;
+            @include weight_height(390px, 217px);
+        }
+
+        position: relative;
+        @include weight_height(fill, auto);
+
+        .logo_go {
+            padding: 26px 20px;
+            position: absolute;
+            top: 0px;
+            @include weight_height(fill, fill);
+            @include item_flex(flex, column, flex-end, space-between, 0px);
+
+            .cover_head {
+                @include weight_height(fill, auto);
+                @include item_flex(flex, row, center, space-between, 0px);
+            }
+        }
+    }
+
+    .my_account {
+        position: relative;
+        top: -124px;
+        @include block_display(20px);
+
+        .my_profile {
+            @include weight_height(fill, auto);
+            .main_profile {
+                padding: 12px;
+                @include item_flex(flex, row, flex-end, normal, 44px);
+
+                .profile_img {
+                    position: relative;
+
+                    .profile_img {
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 8px solid #FCFCFC;
+                        @include weight_height(118.14px, 118.14px);
+                    }
+
+                    .add_profile {
+                        position: absolute;
+                        top: 8px;
+                        right: 12px;
+                        border-radius: 50%;
+                        border: 1px solid #000000;
+                        background: #FCFCFC;
+                        @include weight_height(28px, 28px);
+                        @include item_flex(flex, row, center, center, 0px);
+
+                        img {
+                            @include weight_height(15px, 12.86px);
+                        }
+                    }
+
+                    .add_toffe {
+                        position: absolute;
+                        bottom: 8px;
+                        left: 8px;
+                        border-radius: 50%;
+                        border: 1px solid #EEEEEE;
+                        background: #FCFCFC;
+                        @include weight_height(32px, 32px);
+                        @include item_flex(flex, column, center, center, 0px);
+
+                        img {
+                            @include weight_height(20px, 20px);
+                        }
+                    }
+
+                    .change_country {
+                        position: absolute;
+                        bottom: 8px;
+                        right: 12px;
+
+                        img {
+                            object-fit: fill;
+                            border-radius: 4px;
+                            @include weight_height(38px, 28px);
+                        }
+                    }
+                }
+
+                .cash {
+                    @include item_flex(flex, row, center, normal, 4px);
+
+                    p {
+                        color: var(--text-color);
+                        @include fix-font(18px, 400, 15.75px);
+                    }
+
+                    svg {
+                        path {
+                            stroke: var(--text-color);
+                        }
+                    }
+                }
+            }
+
+            .lavel_name {
+                @include item_flex(flex, column, center, normal, 8px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix-font(19px, 400, 16.63px);
+                }
+
+                .container {
+                    ._flex {
+                        p {
+                            color: var(--text-grey);
+                        }
+                    }
+                }
+            }
+        }
+
+        .rating_container {
+            border-radius: 12px;
+            background: var(--item-bg);
+            border: 1px solid var(--content-border);
+            padding: 12px 20px;
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            .player_rating {
+                padding: 24px 8px;
+                border-right: 1px solid var(--content-border);
+                @include item_flex(flex, column, center, center, 8px);
+
+                :first-child {
+                    color: var(--item-color);
+                    @include fix-font(14px, 400, 12.25px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix-font(16px, 500, 14px);
+                }
+            }
+
+            .player_ability {
+                padding: 24px 8px;
+                border-right: 1px solid var(--content-border);
+                @include item_flex(flex, column, center, center, 8px);
+
+                :first-child {
+                    color: var(--item-color);
+                    @include fix-font(14px, 400, 12.25px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix-font(16px, 500, 14px);
+                }
+            }
+
+            .height {
+                padding: 24px 8px;
+                border-right: 1px solid var(--content-border);
+                @include item_flex(flex, column, center, center, 8px);
+
+                :first-child {
+                    color: var(--item-color);
+                    @include fix-font(14px, 400, 12.25px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix-font(16px, 500, 14px);
+                }
+            }
+
+            .player_age {
+                padding: 24px 8px;
+                @include item_flex(flex, column, center, center, 8px);
+
+                :first-child {
+                    color: var(--item-color);
+                    @include fix-font(14px, 400, 12.25px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix-font(16px, 500, 14px);
+                }
+            }
+        }
+
+        .weekly_achievements_content {
+            border-radius: 12px;
+            background: var(--item-bg);
+            padding: 12px 20px;
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, center, center, 16px);
+
+            p {
+                text-align: center;
+                color: var(--text-color);
+                padding-bottom: 16px;
+                border-bottom: 1px solid var(--content-border);
+                @include weight_height(fill, auto);
+                @include fix-font(16px, 400, 14px);
+            }
+
+            .body {
+                @include weight_height(fill, auto);
+                @include item_flex(flex, row, flex-start, space-between, 0px);
+
+                .victory {
+                    @include item_flex(flex, column, center, center, 8px);
+
+                    p {
+                        border-bottom: none;
+                        color: var(--text-color);
+                        @include fix-font(12px, 400, 10.5px);
+                        @include content_padd(8px, 8px, 8px, 8px);
+                    }
+
+                    span.increase {
+                        :nth-child(2) {
+                            color: var(--text-grey);
+                        }
+
+                        @include weight_height(fill, 26.5px);
+                        @include item_flex(flex, row, center, normal, 0px);
+                    }
+
+                    span.decrease {
+                        :nth-child(2) {
+                            color: var(--text-grey);
+                        }
+
+                        @include item_flex(flex, row, center, space-between, 0px);
+                    }
+                }
+
+                ._gap {
+                    @include item_flex(flex, column, center, center, 16px);
+                }
+            }
+        }
+
+        .profiles_bodys {
+            background: var(--item-bg);
+            @include weight_height(fill, auto);
+
+            .body_content {
+                border-radius: 12px;
+                border: 1px solid var(--content-border);
+                padding: 12px 20px;
+
+                .content {
+                    padding: 12px 20px;
+                    border-bottom: 1px solid var(--content-border);
+                    @include weight_height(fill, auto);
+                    @include item_flex(flex, row, center, space-between, 0px);
+
+                    :first-child {
+                        color: var(--text-color);
+                        @include fix-font(16px, 400, 14px);
+                    }
+
+                    :nth-child(2) {
+                        color: var(--item-color);
+                        @include fix-font(16px, 400, 14px);
+                    }
+                }
+
+                :last-child {
+                    border-bottom: none;
+                }
+            }
+
+        }
+
+        .select_content {
+            background: var(--item-bg);
+            border-radius: 12px;
+            padding: 24px 16px;
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            select {
+                border: none;
+                outline: none;
+                appearance: none;
+                color: var(--text-color);
+                background: var(--item-bg);
+                @include weight_height(fill, auto);
+                @include fix-font(16px, 400, 14px);
+            }
+
+            svg {
+                path {
+                    fill: var(--text-color);
+                }
+            }
+        }
+
+        .opponent_team {
+            @include item_flex(flex, column, flex-start, normal, 12px);
+
+            p {
+                color: var(--text-color);
+                @include fix-font(18px, 400, 15.75px);
+            }
+
+            .items {
+                overflow: hidden;
+                @include weight_height(375px, auto);
+                @include item_flex(flex, row, center, normal, 8px);
+
+                .opponent_body {
+                    border-radius: 8px;
+                    position: relative;
+                    border: 1px solid var(--content-border);
+                    background: var(--item-bg);
+                    padding-bottom: 8px;
+                    background: var(--item-bg);
+                    @include weight_height(148px, auto);
+                    @include item_flex(flex, column, flex-start, normal, 8px);
+
+                    :first-child {
+                        object-fit: cover;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                        @include weight_height(fill, 80px);
+                    }
+
+                    :nth-child(2) {
+                        object-fit: fill;
+                        border-radius: 3px;
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                        @include weight_height(30px, 22.39px);
+                    }
+
+                    :nth-child(3) {
+                        padding-left: 4px;
+                        color: var(--text-color);
+                        @include fix-font(14px, 400, 12.25px);
+                    }
+
+                    :last-child {
+                        padding-left: 4px;
+                        color: var(--text-grey);
+                        @include fix-font(14px, 400, 12.25px);
+                    }
+                }
+            }
+        }
+
+        .most_against {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 12px);
+            p {
+                color: var(--text-color);
+                @include fix-font(18px, 400, 15.75px);
+            }
+
+            .main_body {
+                overflow: hidden;
+                @include weight_height(375px, auto);
+                @include item_flex(flex, row, center, normal, 164px);
+
+                .body_content {
+                    position: relative;
+
+                    .against_img {
+                        z-index: 99;
+                        position: relative;
+
+                        :first-child {
+                            padding: 8px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            background: var(--item-bg);
+                            border: 1px solid var(--content-border);
+                            @include weight_height(75px, 74px);
+                        }
+
+                        :nth-child(2) {
+                            position: absolute;
+                            left: 8px;
+                            bottom: 12px;
+                            object-fit: fill;
+                            border-radius: 2px;
+                            @include weight_height(30px, 22.39px);
+                        }
+                    }
+
+                    .item_text {
+                        position: absolute;
+                        top: 1px;
+                        left: 55px;
+                        background: var(--item-bg);
+                        border: 1px solid var(--content-border);
+                        border-top-right-radius: 12px;
+                        border-bottom-right-radius: 12px;
+                        @include weight_height(128.9px, 88px);
+                        @include content_padd(0px, 48px, 0px, 8px);
+                        @include item_flex(flex, column, flex-start, center, 4px);
+
+                        :first-child {
+                            color: var(--text-color);
+                            @include fix-font(16px, 400, 14px);
+                        }
+
+                        :nth-child(2) {
+                            color: var(--text-grey);
+                            @include fix-font(14px, 400, 12.25px);
+                        }
+
+                        :nth-child(3) {
+                            color: var(--text-grey);
+                            @include fix-font(14px, 400, 12.25px);
+                        }
+
+                        :nth-child(4) {
+                            color: var(--text-grey);
+                            @include fix-font(14px, 400, 12.25px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .close_container {
+            p{
+                color: var(--text-color);
+            }
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 12px);
+            .main_close {
+                overflow: hidden;
+                @include weight_height(375px, auto);
+                @include item_flex(flex, row, flex-start, normal, 12px);
+
+                .close_game {
+                    padding: 8px 12px;
+                    border-radius: 12px;
+                    background: var(--item-bg);
+                    border: 1px solid var(--content-border);
+                    @include item_flex(flex, row, center, normal, 12px);
+
+                    img {
+                        object-fit: cover;
+                        border-radius: 8px;
+                        @include weight_height(64px, 64px);
+                    }
+
+                    .close_content {
+                        @include item_flex(flex, column, flex-start, normal, 12px);
+
+                        p {
+                            color: var(--text-color);
+                            @include fix-font(16px, 400, 14px);
+                        }
+
+                        .content_row {
+                            @include item_flex(flex, row, center, normal, 12px);
+
+                            span {
+                                @include item_flex(flex, row, center, normal, 4px);
+                                svg{
+                                    path{
+                                        stroke: var(--item-color);
+                                        fill: var(--item-color);
+                                    }
+                                }
+
+                                p {
+                                    color: var(--text-color);
+                                    @include fix-font(14px, 400, 12.25px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .last_match_container{
+            @include weight_height(fill, auto);
+            @include item_flex(flex, column, flex-start, normal, 12px);
+            p{
+                color: var(--text-color);
+                @include fix-font(16px, 400, 14px);
+            }
+            .everything_body {
+                .space_around {
+                    @include item_flex(flex, row, center, space-around, 0px);
+                }
+        
+                @include weight_height(fill, auto);
+        
+                .everything_head_body {
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                    background: var(--item-bg);
+                    border: 1px solid var(--content-border);
+                    border-bottom: none;
+                    @include weight_height(fill, auto);
+                    @include content_padd(14px, 12px, 12px, 20px);
+                    @include item_flex(flex, column, normal, normal, 8px);
+        
+                    .head_body {
+                        @include item_flex(flex, row, center, space-between, 0px);
+                        svg{
+                            path{
+                                fill: var(--item-color);
+                            }
+                        }
+        
+                        p {
+                            color: var(--item-color);
+                            @include fix-font(16px, 400, 14px);
+                        }
+                    }
+        
+                    .bttom_body {
+                        @include item_flex(flex, row, center, normal, 4px);
+        
+                        span {
+                            @include item_flex(flex, row, center, normal, 4px);
+                            .calender_icon{
+                                svg{
+                                    path{
+                                        stroke: var(--item-color);
+                                        fill: var(--item-color);
+                                    }
+                                }
+                            }
+                            .clock_time{
+                                svg{
+                                    path{
+                                        fill: var(--item-color);
+                                    }
+                                }
+                            }
+                            .comments_icon{
+                                svg{
+                                    path{
+                                        stroke: var(--item-color);
+                                    }
+                                }
+                            }
+                            
+                            p {
+                                color: var(--text-grey);
+                                @include fix-font(14px, 400, 12.25px);
+                            }
+                        }
+                    }
+                }
+                .everything_main_body {
+                    background: var(--item-bg);
+                    border: 1px solid var(--content-border);
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    @include weight_height(fill, auto);
+                    @include content_padd(8px, 20px, 8px, 20px);
+                    @include item_flex(flex, row, center, space-between, 0px);
+            
+                    .f_team {
+                        @include item_flex(flex, row, center, normal, 0px);
+            
+                        ._player {
+                            @include item_flex(flex, column, center, normal, 4px);
+            
+                            span {
+                                position: relative;
+            
+                                :first-child {
+                                    padding: 2px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    border: 1px solid var(--item-color);
+                                    @include weight_height(53px, 53px);
+                                }
+            
+                                :nth-child(2) {
+                                    position: absolute;
+                                    bottom: 4px;
+                                    right: 8px;
+                                    border-radius: 2px;
+                                    @include weight_height(21px, 15.89px);
+                                }
+                            }
+            
+                            ._name {
+                                color: var(--text-color);
+                                @include fix-font(14px, 400, 12.25px);
+                            }
+            
+                            ._ranking {
+                                color: var(--text-grey);
+                                @include fix-font(12px, 500, 10.5px);
+                            }
+                        }
+                    }
+            
+                    .team_score {
+                        @include item_flex(flex, column, center, normal, 4px);
+                        box-sizing: border-box;
+            
+                        .active {
+                            color: var(--text-color);
+                            @include fix-font(18px, 500, 16px);
+                        }
+            
+                        .point {
+                            padding: 4px 8px;
+                            border-radius: 43px;
+                            color: var(--text-color);
+                            border: 1px solid var(--content-border);
+                            background: var(--item-bg);
+                            @include fix-font(14px, 400, 12.25px);
+                        }
+                    }
+            
+                    .s_team {
+                        @include item_flex(flex, row, center, normal, 0px);
+            
+                        ._player {
+                            @include item_flex(flex, column, center, normal, 4px);
+            
+                            ._win {
+                                span {
+                                    position: relative;
+            
+                                    :first-child {
+                                        padding: 2px;
+                                        object-fit: cover;
+                                        border-radius: 50%;
+                                        border: 1px solid var(--item-color);
+                                        @include weight_height(53px, 53px);
+                                    }
+            
+                                    :nth-child(2) {
+                                        position: absolute;
+                                        bottom: 4px;
+                                        right: 8px;
+                                        border-radius: 2px;
+                                        @include weight_height(21px, 15.89px);
+                                    }
+            
+                                    :last-child {
+                                        position: absolute;
+                                        top: -48px;
+                                        right: 2px;
+                                        border-radius: 2px;
+                                        @include weight_height(21px, 15.89px);
+                                    }
+                                }
+                            }
+            
+                            ._name {
+                                color: var(--text-color);
+                                @include item_flex(flex, row, center, normal, 4px);
+                                @include fix-font(14px, 400, 12.25px);
+                            }
+            
+                            ._ranking {
+                                color: var(--text-grey);
+                                @include fix-font(12px, 500, 10.5px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+@import "../../../styles/shared/var.scss";
+
+.content_fixer {
+  inset: 0;
+  position: fixed;
+  backdrop-filter: brightness(0.6);
+  @include weight_height(390px, fill);
+  @include content_mar(0px, auto, 74px, auto);
+  @include item_flex(flex, column, center, flex-end, 0px);
+  .main_container {
+    background: var(--bg-color);
+    border-top-right-radius: 62px;
+    border-top-left-radius: 62px;
+    border: 1px solid var(--content-border);
+    box-shadow: 0 3px 0px rgb(0 0 0 / 0.2);
+    @include weight_height(390px, fit-content);
+
+    .modal_content {
+      background: var(--bg-color);
+      border-top-right-radius: 62px;
+      border-top-left-radius: 62px;
+      @include block_display(12px);
+      @include weight_height(360px, fit-content);
+
+      .head_ontent {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, center, space-around, 32px);
+
+        .popup_match {
+          @include weight_height(fill, auto);
+          @include item_flex(flex, row, center, space-around, 0px);
+
+          .player_profile {
+            @include item_flex(flex, column, center, center, 4px);
+
+            span {
+              position: relative;
+
+              :first-child {
+                padding: 1px;
+                object-fit: cover;
+                border-radius: 50%;
+                filter: grayscale(100%);
+                border: 2px solid var(--color-blue);
+                @include weight_height(53px, 53px);
+              }
+
+              :nth-child(2) {
+                position: absolute;
+                bottom: 8px;
+                right: 4px;
+                object-fit: fill;
+                border-radius: 2px;
+                filter: grayscale(100%);
+                @include weight_height(21px, 15.89px);
+              }
+            }
+
+            .name {
+              color: var(--text-color);
+              @include fix_font(14px, 400, 12.25px);
+            }
+
+            .rank {
+              color: var(--text-color);
+              @include fix_font(12px, 500, 10.5px);
+            }
+          }
+
+          p {
+            color: var(--color-blue);
+            @include fix_font(20px, 400, 17.5px);
+          }
+        }
+      }
+
+      .body_content {
+        @include item_flex(flex, column, flex-start, normal, 16px);
+        @include weight_height(fill, auto);
+
+        .score {
+          @include weight_height(fill, auto);
+          @include item_flex(flex, row, center, space-between, 8px);
+
+          .player_score {
+            border-radius: 8px;
+            padding: 0px 8px;
+            border: 1px solid #eeeeee;
+            @include weight_height(fill, 25px);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            :first-child {
+              color: var(--text-color);
+              border-right: 1px solid #eeeeee;
+              @include fix_font(14px, 400, 12.25px);
+              @include content_padd(7px, 0px, 7px, 8px);
+            }
+
+            :nth-child(2) {
+              color: var(--text-color);
+              @include fix_font(14px, 400, 12.25px);
+            }
+          }
+        }
+
+        .player_cash {
+          @include weight_height(fill, auto);
+          @include item_flex(flex, row, center, space-between, 0px);
+
+          span {
+            border-radius: 8px;
+            padding-bottom: 8px;
+            border: 1px solid #eeeeee;
+            @include weight_height(60px, 32px);
+            @include item_flex(flex, row, flex-end, center, 0px);
+
+            svg {
+              path {
+                fill: color(--text-gery);
+              }
+            }
+          }
+
+          p {
+            border-radius: 8px;
+            color: var(--text-color);
+            border: 1px solid #eeeeee;
+            @include weight_height(60px, 40px);
+            @include fix_font(16px, 400, 14px);
+            @include item_flex(flex, row, center, center, 0px);
+          }
+        }
+
+        .win_cash {
+          @include weight_height(fill, auto);
+          @include item_flex(flex, row, center, space-between, 0px);
+
+          p {
+            color: var(--text-grey);
+            @include fix_font(22.4px, 400, 19.61px);
+          }
+
+          span {
+            p {
+              color: var(--color-blue);
+              @include fix_font(22.4px, 400, 19.61px);
+            }
+
+            @include item_flex(flex, row, center, space-between, 8px);
+
+            svg {
+              path {
+                stroke: var(--color-blue);
+              }
+            }
+          }
+        }
+      }
+
+      .bet_button {
+        @include weight_height(fill, auto);
+
+        a {
+          @include weight_height(fill, auto);
+
+          :hover {
+            background: linear-gradient(to left, #34506d, #3498db);
+            color: #fcfcfc;
+          }
+
+          button {
+            border-radius: 8px;
+            cursor: pointer;
+            background: none;
+            padding: 14px 0px;
+            text-decoration: none;
+            background: linear-gradient(to left, #34506d, #3498db);
+            color: #fcfcfc;
+            border: 1px solid var(--color-blue);
+            @include fix_font(16px, 400, 14px);
+            @include weight_height(fill, auto);
+          }
+        }
+      }
+    }
+  }
+}

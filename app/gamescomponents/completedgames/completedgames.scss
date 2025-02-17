@@ -1,0 +1,244 @@
+@import "../../../styles/shared/var.scss";
+
+.everything_conatiner {
+  @include block_display(14px);
+
+  .head_content {
+    @include item_flex(flex, row, center, normal, 8px);
+
+    ._main {
+      padding: 12px;
+      color: var(--text-grey);
+      border-radius: 26px;
+      background: var(--item-bg);
+      border: 1px solid var(--content-border);
+      @include fix-font(14px, 400, 12.25px);
+    }
+
+    ._everything {
+      padding: 12px;
+      color: var(--text-color);
+      border-radius: 26px;
+      background: var(--item-bg);
+      border: 1px solid #03506f;
+      @include fix-font(14px, 400, 12.25px);
+    }
+  }
+
+  .everything_body {
+    .space_around {
+      @include item_flex(flex, row, center, space-around, 0px);
+    }
+
+    @include weight_height(fill, auto);
+
+    .everything_head_body {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      background: var(--item-bg);
+      border: 1px solid var(--content-border);
+      border-bottom: none;
+      @include weight_height(fill, auto);
+      @include content_padd(14px, 12px, 12px, 20px);
+      @include item_flex(flex, column, normal, normal, 8px);
+
+      .head_body {
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          color: var(--item-color);
+          @include fix-font(16px, 400, 14px);
+        }
+
+        svg {
+          path {
+            fill: var(--item-color);
+          }
+        }
+      }
+
+      .bttom_body {
+        @include item_flex(flex, row, center, normal, 4px);
+
+        span {
+          @include item_flex(flex, row, center, normal, 4px);
+
+          p {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          .calender_icon {
+            svg {
+              path {
+                stroke: var(--item-color);
+                fill: var(--item-color);
+              }
+            }
+          }
+        }
+
+        .clock_time {
+          svg {
+            path {
+              stroke: none;
+              fill: var(--item-color);
+            }
+          }
+        }
+
+        .comments_icon {
+          svg {
+            path {
+              fill: none;
+              stroke: var(--item-color);
+            }
+          }
+        }
+      }
+    }
+
+    .everything_main_body {
+      background: var(--item-bg);
+      border: 1px solid var(--content-border);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      @include weight_height(fill, auto);
+      @include content_padd(8px, 8px, 8px, 8px);
+      @include item_flex(flex, row, center, space-between, 0px);
+
+      .f_team {
+        @include item_flex(flex, row, center, normal, 0px);
+
+        ._player {
+          @include item_flex(flex, column, center, normal, 4px);
+
+          span {
+            position: relative;
+
+            :first-child {
+              padding: 2px;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 1px solid var(--item-color);
+              @include weight_height(53px, 53px);
+            }
+
+            :nth-child(2) {
+              position: absolute;
+              bottom: 4px;
+              right: 8px;
+              border-radius: 2px;
+              @include weight_height(21px, 15.89px);
+            }
+          }
+
+          ._name {
+            color: var(--text-color);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          ._ranking {
+            color: var(--text-grey);
+            @include fix-font(12px, 500, 10.5px);
+          }
+        }
+      }
+
+      .team_score {
+        @include item_flex(flex, column, center, normal, 4px);
+        box-sizing: border-box;
+
+        .active {
+          color: var(--text-color);
+          @include fix-font(18px, 500, 16px);
+        }
+
+        .point {
+          padding: 4px 8px;
+          border-radius: 43px;
+          color: var(--text-color);
+          background: var(--item-bg);
+          border: 1px solid var(--content-border);
+          @include fix-font(14px, 400, 12.25px);
+        }
+      }
+
+      .s_team {
+        @include item_flex(flex, row, center, normal, 0px);
+
+        ._player {
+          @include item_flex(flex, column, center, normal, 4px);
+
+          ._win {
+            span {
+              position: relative;
+
+              :first-child {
+                padding: 2px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid var(--item-color);
+                @include weight_height(53px, 53px);
+              }
+
+              :nth-child(2) {
+                position: absolute;
+                bottom: 4px;
+                right: 8px;
+                border-radius: 2px;
+                @include weight_height(21px, 15.89px);
+              }
+
+              :last-child {
+                position: absolute;
+                top: -48px;
+                right: 2px;
+                border-radius: 2px;
+                @include weight_height(21px, 15.89px);
+              }
+            }
+          }
+
+          ._name {
+            color: var(--text-color);
+            @include item_flex(flex, row, center, normal, 4px);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          ._ranking {
+            color: var(--text-grey);
+            @include fix-font(12px, 500, 10.5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .everything_conatiner {
+    @include weight_height(340px, auto);
+
+    ._player {
+      span {
+        :first-child {
+          @include weight_height(40px !important, 40px !important);
+        }
+        :nth-child(2) {
+          position: absolute;
+          @include weight_height(15px !important, 12px !important);
+        }
+      }
+      ._win {
+        span {
+          :last-child {
+            position: absolute;
+            top: -34px !important;
+            @include weight_height(21px, 15.89px);
+          }
+        }
+      }
+    }
+  }
+}

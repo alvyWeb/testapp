@@ -1,0 +1,87 @@
+@import "../../styles/shared/var.scss";
+
+.profile_container {
+  @include item_flex(flex, column, center, normal, 0px);
+  //   @include weight_height(390px, auto);
+  max-width: 390px;
+
+  .cover_img {
+    position: relative;
+    max-width: 390px;
+    // @include weight_height(390px, 217px);
+
+    :first-child {
+      width: 100%;
+    }
+
+    .cover_d {
+      svg {
+        @include weight_height(12.26px, 23.35px);
+      }
+
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      @include weight_height(fill, fit-content);
+      @include content_padd(42px, 20px, 42px, 20px);
+      @include item_flex(flex, row, center, normal, 15.74px);
+
+      p {
+        color: var(--text-black);
+        @include fix-font(18px, 400, 15px);
+      }
+    }
+  }
+
+  .profile_d {
+    @include block_display(20px);
+    width: 340px;
+    padding: 0 10px;
+    position: relative;
+    bottom: 116px;
+    @include item_flex(flex, column, center, center, 12px);
+
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      border: 8px solid #fcfcfc;
+      @include weight_height(118.14px, 118.14px);
+    }
+
+    p {
+      color: var(--text-color);
+      @include fix-font(26px, 400, 22.76px);
+    }
+
+    ._bio {
+      color: var(--text-grey);
+      @include fix-font(16px, 400, 14px);
+    }
+
+    .management_area {
+      @include weight_height(fill, fill);
+      @include item_flex(flex, row, center, space-between, 0px);
+
+      p {
+        color: var(--text-color);
+        @include fix-font(18px, 400, 15.75px);
+      }
+
+      .managment_icon {
+        a {
+          border-radius: 50%;
+          background: var(--item-color);
+          @include weight_height(40px, 40px);
+          @include item_flex(flex, column, center, center, 0px);
+        }
+
+        svg {
+          path {
+            fill: var(--send-color);
+          }
+          @include weight_height(20px, 20px);
+        }
+      }
+    }
+  }
+}

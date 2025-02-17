@@ -1,0 +1,78 @@
+@import "../../styles/shared/var.scss";
+
+.questionnaire_container {
+  .questionnaire {
+    position: relative;
+    img {
+      width: fill;
+      height: fill;
+    }
+
+    .questionnaire_data {
+      position: absolute;
+      top: 200px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      border: 1px solid #eeeeee;
+      @include item_flex(flex, column, flex-start, normal, 40px);
+      @include content_padd(16px, 10px, 64px, 16px);
+      .questionnaire_text {
+        @include item_flex(flex, column, center, normal, 12px);
+        .questionnaire_count {
+          color: var(--color-blue);
+          @include fix-font(16px, 400, 14px);
+        }
+
+        .questionnaire_head {
+          text-align: center;
+          color: var(--text-color);
+          @include fix-font(24px, 400, 26.89px);
+        }
+
+        .questionnaire_item {
+          @include item_flex(flex, column, flex-start, normal, 8px);
+          @include weight_height(fill, auto);
+          .item {
+            @include weight_height(fill, auto);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #eeeeee;
+            background: var(--bg-color);
+            @include item_flex(flex, row, center, normal, 12px);
+            .circle {
+              @include weight_height(22px, 22px);
+              border: 1px solid var(--text-grey);
+              border-radius: 22px;
+            }
+
+            .item_text {
+              color: var(--text-color);
+              @include fix-font(18px, 400, 15.75px);
+            }
+          }
+        }
+        .num_head {
+          @include item_flex(flex, column, center, normal, 14px);
+        }
+      }
+
+      .questionnaire_button {
+        margin-bottom: 40px;
+        padding: 11px 136px;
+        border-radius: 8px;
+        @include weight_height(fill, auto);
+        background: linear-gradient(to right, #3498db, #34506d);
+        @include item_flex(flex, column, center, normal, 0px);
+
+        button {
+          background: none;
+          border: none;
+          color: var(--color-light);
+          @include fix-font(18px, 400, 15.75px);
+        }
+      }
+    }
+  }
+}

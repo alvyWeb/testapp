@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  // min-height: 100vh;
+  background-color: var(--bg-color);
+  padding: 0;
+  margin: 0;
+
+  nav {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+    border-bottom: none;
+    z-index: 99;
+
+    button {
+      width: 33.33%;
+      height: 40px;
+      // border: 0.1px solid var(--bg-color);
+      border: none;
+      border-bottom: 3px solid var(--gray-200);
+      background-color: var(--bg-color);
+      padding: 0;
+      margin: 0;
+      font-size: 17px;
+      color: var(--text-color);
+      // transition: color 1s, border-bottom 1s;
+      &:hover {
+        cursor: pointer;
+      }
+
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+}
+
+.section {
+  display: none; /* Hide all sections by default */
+  height: 100%; /* Fixed height for independent scrolling */
+  overflow-y: auto; /* Enable scrolling within the section */
+}
+
+.sectionActive {
+  color: var(--text-color);
+  display: block; /* Show only the active section */
+
+  h1 {
+    color: aquamarine;
+  }
+  p {
+    color: plum;
+  }
+}
+
+#worldbuttoonActive {
+  color: var(--text-color);
+  // border-bottom: 3px solid #186fad;
+  border: none;
+  border-bottom: 3px solid var(--text-color);
+}

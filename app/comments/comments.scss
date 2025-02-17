@@ -1,0 +1,110 @@
+@import "../../styles/shared/var.scss";
+
+.comments_container {
+    @include block_display(20px);
+    .comments_head {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--content-border);
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, flex-start, normal, 12px);
+
+        .comments_arrow {
+            @include item_flex(flex, row, center, normal, 32px);
+
+            p {
+                color: var(--text-color);
+                @include fix_font(26px, 400, 22.76px);
+            }
+
+            svg {
+                path {
+                    fill: var(--text-color);
+                }
+            }
+        }
+
+        .comment_box {
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--content-border);
+            @include weight_height(65%, auto);
+            @include item_flex(flex, row, flex-end, normal, 8px);
+
+            img {
+                border-radius: 50%;
+                @include weight_height(29px, 29px);
+            }
+
+            input {
+                border: none;
+                outline: none;
+                background: none;
+                color: var(--text-color);
+                @include weight_height(80%, auto);
+            }
+
+            ::-webkit-input-placeholder {
+                color: var(--text-grey);
+                @include fix_font(14px, 400, 12.25px);
+            }
+        }
+    }
+
+    .comments_area {
+        @include item_flex(flex, column, flex-start, space-between, 8px);
+        .commenter_member {
+        @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-between, 0px);
+
+            span {
+                @include item_flex(flex, row, center, normal, 8px);
+
+                img {
+                    border-radius: 50%;
+                    @include weight_height(29px, 29px);
+                }
+
+                :nth-child(2) {
+                    color: var(--text-color);
+                    @include fix_font(16px, 400, 14px);
+                }
+
+                :nth-child(3) {
+                    color: var(--text-grey);
+                    @include fix_font(14px, 400, 12.25px);
+                }
+            }
+
+            svg {
+                path {
+                    fill: var(--item-color);
+                }
+            }
+        }
+
+        p {
+            color: var(--text-color);
+            @include fix_font(14px, 400, 19.46px);
+        }
+    }
+
+    .opinion {
+        @include item_flex(flex, row, center, normal, 16px);
+
+        .like {
+            @include item_flex(flex, row, center, normal, 4px);
+
+            a {
+                @include item_flex(flex, row, center, center, 0px);
+
+                svg {
+                    path {}
+                }
+            }
+
+            p {
+                color: var(--text-color);
+                @include fix_font(14px, 400, 21px);
+            }
+        }
+    }
+}

@@ -1,0 +1,327 @@
+$text_color: #ffff;
+$red_color: #e32929;
+$gray: #6b6b6b;
+$dark_gray: #313035;
+$blue_: #145e94;
+
+@mixin score_font($size_, $weight_, $line_) {
+  font-size: $size_;
+  font-weight: $weight_;
+  line-height: $line_;
+}
+
+@mixin width_height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin margin_($marge_t, $marge_r, $marge_b, $marge_l) {
+  margin-top: $marge_t;
+  margin-right: $marge_r;
+  margin-bottom: $marge_b;
+  margin-left: $marge_l;
+}
+
+@mixin padd_($padd_t, $padd_r, $padd_b, $padd_l) {
+  padding-top: $padd_t;
+  padding-right: $padd_r;
+  padding-bottom: $padd_b;
+  padding-left: $padd_l;
+}
+
+@mixin flex_row($spaces) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $spaces;
+}
+
+@mixin flex_column($spaces) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $spaces;
+}
+
+// VAR_MIX___.
+
+// SCORE_SCSS___.
+.score_app {
+  .s_container {
+    display: block;
+    width: 360px;
+    height: auto;
+    margin: 24px auto;
+    box-sizing: border-box;
+
+    .main_score {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .live_head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .score_player_available {
+        @include flex_row(8px);
+
+        .player_available {
+          p {
+            border: 1px solid #b0aaaa;
+            border-radius: 24px;
+            text-align: center;
+            @include padd_(10px, 20px, 10px, 20px);
+            color: $text_color;
+            @include score_font(14px, 400, 16px);
+          }
+
+          ._selected {
+            background: linear-gradient(to right, #3498db, #34506d);
+            border: none;
+            border-radius: 24px;
+            text-align: center;
+            @include padd_(10px, 20px, 10px, 20px);
+            color: $text_color;
+            @include score_font(14px, 400, 16px);
+          }
+        }
+        ._bord_no {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .select {
+            width: 0px;
+            height: 0px;
+          }
+        }
+      }
+
+      ._game_list {
+        @include flex_row(8px);
+
+        .game_sm_playlist {
+          background: $dark_gray;
+          border-radius: 24px;
+          border: none;
+          @include padd_(0px, 20px, 0px, 0px);
+
+          p {
+            color: $text_color;
+            @include flex_row(12px);
+            @include score_font(12px, 300, 16px);
+
+            ._all {
+              background: $blue_;
+              border-radius: 24px;
+              border: none;
+              @include padd_(10px, 20px, 10px, 20px);
+            }
+          }
+        }
+
+        .game_lg_playlist {
+          background: $dark_gray;
+          border-radius: 24px;
+          border: none;
+          @include padd_(0px, 20px, 0px, 0px);
+
+          p {
+            color: $text_color;
+            @include flex_row(12px);
+            @include score_font(12px, 300, 16px);
+
+            ._all {
+              background: $blue_;
+              border-radius: 24px;
+              border: none;
+              @include padd_(10px, 20px, 10px, 20px);
+            }
+          }
+        }
+      }
+
+      .tennis {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .tennis_stream {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .stream_ {
+            .heading_stream {
+              h1 {
+                color: $text_color;
+                margin-bottom: 0px;
+                @include score_font(18px, 500, 20px);
+              }
+            }
+
+            ._stream {
+              @include flex_row(0px);
+
+              .stream_head {
+                @include flex_row(0px);
+                justify-content: space-between;
+                @include padd_(8px, 12px, 8px, 12px);
+                background: $red_color;
+                border: none;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+                width: 100%;
+                height: auto;
+
+                p {
+                  color: $text_color;
+                  @include flex_row(8px);
+                  @include score_font(12px, 500, 16px);
+
+                  ._live {
+                    color: $text_color;
+                    @include flex_row(12px);
+                    @include score_font(12px, 500, 16px);
+                  }
+
+                  ._live_item {
+                    color: $text_color;
+                    @include flex_row(12px);
+                    @include score_font(12px, 300, 16px);
+                  }
+
+                  span {
+                    color: $text_color;
+                    @include score_font(12px, 300, 16px);
+                  }
+                }
+              }
+            }
+
+            ._live_playing {
+              @include flex_row(0px);
+              justify-content: space-between;
+              padding: 8px 12px;
+              background: #1c1c1e;
+
+              ._profile {
+                @include flex_row(8px);
+
+                .im_con {
+                  position: relative;
+
+                  .pro_img {
+                    @include flex_row(0px);
+                  }
+
+                  span.con_svg {
+                    position: absolute;
+                    bottom: -3px;
+                    left: 10px;
+                  }
+                }
+
+                .nam_turn {
+                  p {
+                    color: $text_color;
+                    @include score_font(12px, 300, 12px);
+                  }
+
+                  @include flex_row(8px);
+                }
+              }
+
+              .round_socre {
+                @include flex_row(4px);
+
+                p {
+                  @include score_font(12px, 300, 12px);
+                }
+
+                ._round {
+                  color: #706d7c;
+                  // padding: 6px 10px;
+                }
+
+                ._score {
+                  background: #706d7c;
+                  color: $text_color;
+                  // padding: 6px 10px;
+                }
+              }
+
+              ._head_c {
+                background: #6b6b6b;
+              }
+            }
+
+            .border_top {
+              border-top: 1px solid $dark_gray;
+              border-bottom-right-radius: 12px;
+              border-bottom-left-radius: 12px;
+            }
+          }
+
+          ._head_c {
+            ._stream {
+              .stream_head {
+                background: #6b6b6b;
+              }
+            }
+          }
+
+          ._head_c_d {
+            ._stream {
+              .stream_head {
+                background: $dark_gray;
+              }
+            }
+
+            ._live_playing {
+              ._profile {
+                .nam_turn {
+                  span {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                  }
+                }
+
+                ._disable {
+                  p {
+                    color: #b0aaaa;
+                  }
+                }
+              }
+
+              ._square {
+                position: relative;
+
+                ._square_s {
+                  position: absolute;
+                  top: -3px;
+                  right: 2px;
+                  @include score_font(9px, 300, 12px);
+                }
+              }
+
+              ._round {
+                span._match {
+                  color: white;
+                }
+              }
+
+              ._active {
+                color: $text_color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

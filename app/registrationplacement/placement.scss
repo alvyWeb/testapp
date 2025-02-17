@@ -1,0 +1,487 @@
+@import "../../styles/shared/var.scss";
+@import "../global.css";
+
+.placement_container {
+  @include block_display(28px);
+  padding: 24px 10px;
+
+  .message_whatsap {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, normal, 20px);
+
+    .return {
+      @include item_flex(flex, row, center, normal, 15.75px);
+
+      p {
+        color: var(--text-color);
+        @include fix-font(18px, 400, 15.75px);
+      }
+    }
+
+    .send_msg {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, normal, 11px);
+
+      label {
+        color: var(--text-color);
+        @include fix-font(16px, 400, 14px);
+      }
+
+      textarea {
+        resize: none;
+        outline: none;
+        border-radius: 8px;
+        color: var(--text-color);
+        border: 1px solid var(--content-border);
+        background: var(--item-bg);
+        @include weight_height(fill, 69px);
+        @include content_padd(12px, 16px, 12px, 16px);
+      }
+
+      textarea::-webkit-input-placeholder {
+        color: var(--text-grey);
+        @include fix-font(12px, 400, 14px);
+        word-spacing: -5px;
+      }
+
+      a {
+        @include weight_height(fill, auto);
+
+        button {
+          border: none;
+          background: linear-gradient(to left, #34506d, #3498db);
+          border-radius: 12px;
+          padding: 14px 0px;
+          text-align: center;
+          color: #fcfcfc;
+          @include fix-font(16px, 400, 14px);
+          @include weight_height(fill, auto);
+        }
+      }
+    }
+  }
+
+  .registration_time {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, normal, 16px);
+
+    p {
+      color: var(--text-color);
+      @include fix-font(18px, 400, 15.75px);
+    }
+
+    .day_time {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, row, center, space-between, 0px);
+
+      p {
+        color: var(--text-color);
+        @include fix-font(16px, 400, 14px);
+      }
+
+      .toggle_img {
+        @include item_flex(flex, row, center, normal, 8px);
+
+        img {
+          padding: 3px 3px;
+          border: 1px solid #eeeeee;
+          border-radius: 50%;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+
+  .weekly_game {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, normal, 12px);
+
+    .days_ {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, normal, 8px);
+
+      p {
+        color: var(--text-color);
+        @include fix-font(18px, 400, 15.75px);
+      }
+
+      .days_choosedate {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          color: var(--text-color);
+          @include fix-font(16px, 400, 14px);
+        }
+
+        .select_content {
+          position: relative;
+          padding: 8px 10px;
+          border-radius: 8px;
+          border: 1px solid var(--content-border);
+          background: var(--bg-color);
+          @include weight_height(182px, auto);
+          @include item_flex(flex, row, center, normal, 0px);
+
+          select {
+            border: none;
+            appearance: none;
+            outline: none;
+            color: var(--text-color);
+            background: var(--bg-color);
+            @include weight_height(100%, auto);
+
+            option {
+              color: var(--text-grey);
+              @include weight_height(100%, auto);
+              @include fix-font(14px, 400, 12.25px);
+            }
+          }
+
+          img {
+            position: absolute;
+            right: 16px;
+          }
+        }
+      }
+    }
+
+    .couples-singles {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, row, center, space-between, 20px);
+
+      a {
+        @include weight_height(fill, auto);
+
+        button {
+          border: none;
+          background: linear-gradient(to left, #34506d, #3498db);
+          border-radius: 12px;
+          padding: 14px 0px;
+          text-align: center;
+          color: #fcfcfc;
+          @include fix-font(16px, 400, 14px);
+          @include weight_height(fill, auto);
+        }
+      }
+    }
+
+    .create_match {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, normal, 12px);
+
+      a {
+        @include weight_height(fill, auto);
+
+        button {
+          border: none;
+          background: linear-gradient(to left, #34506d, #3498db);
+          border-radius: 12px;
+          padding: 14px 0px;
+          text-align: center;
+          color: #fcfcfc;
+          @include fix-font(16px, 400, 14px);
+          @include weight_height(fill, auto);
+        }
+      }
+    }
+  }
+
+  .new_game {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, space-between, 12px);
+
+    p {
+      color: var(--text-color);
+      @include fix-font(18px, 400, 15.75px);
+    }
+
+    .create_new_game {
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--content-border);
+      background: var(--item-bg);
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, space-between, 12px);
+
+      .date {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 0px);
+
+        p {
+          color: var(--text-color);
+          @include fix-font(16px, 400, 14px);
+        }
+
+        .date_select {
+          background: var(--item-bg);
+          @include weight_height(182px, auto);
+
+          select {
+            outline: none;
+            border: none;
+            appearance: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            color: var(--text-color);
+            background: var(--item-bg);
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+
+            option {
+            }
+          }
+        }
+
+        .houre_select {
+          background: var(--bg-color);
+          @include weight_height(95px, auto);
+
+          select {
+            outline: none;
+            border: none;
+            appearance: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            color: var(--text-color);
+            background: var(--item-bg);
+            border: 1px solid var(--content-border);
+            @include weight_height(fill, auto);
+
+            option {
+            }
+          }
+        }
+      }
+
+      .location_court {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 15px);
+
+        .location {
+          input {
+            outline: none;
+            border-radius: 8px;
+            padding: 11px 16px;
+            border: 1px solid var(--content-border);
+            background: var(--item-bg);
+            @include weight_height(210px, auto);
+          }
+
+          ::-webkit-input-placeholder {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+        }
+
+        .court {
+          input {
+            outline: none;
+            border-radius: 8px;
+            padding: 11px 16px;
+            border: 1px solid var(--content-border);
+            color: var(--text-color);
+            background: var(--item-bg);
+            @include weight_height(71px, auto);
+          }
+
+          ::-webkit-input-placeholder {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+        }
+      }
+
+      .couples_individuals {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, row, center, space-between, 15px);
+
+        .Couples {
+          input {
+            outline: none;
+            border-radius: 8px;
+            padding: 11px 16px;
+            border: 1px solid var(--content-border);
+            background: var(--item-bg);
+            @include weight_height(139px, auto);
+          }
+
+          ::-webkit-input-placeholder {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+        }
+      }
+
+      .add_player {
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, flex-start, normal, 32px);
+
+        .player_row {
+          @include weight_height(fill, auto);
+          @include item_flex(flex, row, center, space-between, 0px);
+
+          .player_img {
+            @include item_flex(flex, column, center, center, 14px);
+
+            a {
+              img {
+                padding: 18px 20px;
+                border-radius: 50%;
+                border: 1px dotted var(--item-color);
+                @include weight_height(53px, 53px);
+              }
+            }
+
+            p {
+              color: var(--text-color);
+              @include fix-font(14px, 400, 12.25px);
+            }
+          }
+        }
+      }
+
+      .create_game {
+        @include weight_height(fill, auto);
+        a {
+          @include weight_height(fill, auto);
+
+          button {
+            border: none;
+            background: linear-gradient(to left, #34506d, #3498db);
+            border-radius: 12px;
+            padding: 14px 0px;
+            text-align: center;
+            color: #fcfcfc;
+            @include fix-font(16px, 400, 14px);
+            @include weight_height(fill, auto);
+          }
+        }
+      }
+    }
+  }
+
+  .placing_match {
+    @include weight_height(fill, auto);
+    @include item_flex(flex, column, flex-start, space-between, 12px);
+
+    p.placing_ {
+      color: var(--text-color);
+      @include fix-font(26px, 400, 22.76px);
+    }
+
+    .bottom_content {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, space-between, 12px);
+
+      p.placing_day {
+        color: var(--text-grey);
+        @include fix-font(18px, 400, 15.75px);
+      }
+
+      .placing_dua_game {
+        border-radius: 12px;
+        border: 1px solid var(--content-border);
+        background: var(--item-bg);
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, flex-start, space-between, 8px);
+
+        .game_heading {
+          border-bottom: 1px solid var(--content-border);
+          @include weight_height(fill, auto);
+          @include content_padd(16px, 28px, 8px, 28px);
+          @include item_flex(flex, column, flex-start, normal, 6px);
+
+          p {
+            color: var(--text-color);
+            @include fix-font(16px, 400, 14px);
+          }
+
+          span {
+            @include item_flex(flex, row, center, normal, 8px);
+
+            p {
+              color: var(--text-grey);
+              @include fix-font(14px, 400, 12.25px);
+            }
+          }
+        }
+
+        .game_body {
+          @include weight_height(fill, auto);
+          @include content_padd(0px, 8px, 8px, 8px);
+          @include item_flex(flex, row, center, space-between, 0px);
+          .my_team {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-evenly, 0px);
+            .me {
+              span {
+                position: relative;
+                :first-child {
+                  padding: 2px;
+                  border: 1px solid var(--item-color);
+                  border-radius: 50%;
+                  @include weight_height(57px, 57px);
+                }
+
+                :nth-child(2) {
+                  position: absolute;
+                  bottom: 5px;
+                  right: 5px;
+                  border-radius: 2px;
+                  @include weight_height(21px, 15.89px);
+                }
+                :nth-child(3) {
+                  position: absolute;
+                  top: -45px;
+                  right: 5px;
+                  padding: 3px 3px;
+                  border: 1px solid var(--content-border);
+                  border-radius: 50%;
+                  background: #ffffff;
+                }
+              }
+              :nth-child(2) {
+                color: var(--text-color);
+                @include fix-font(14px, 400, 12.25px);
+              }
+              :nth-child(3) {
+                color: var(--text-grey);
+                @include fix-font(12px, 300, 10.5px);
+              }
+            }
+          }
+          .border {
+            @include item_flex(flex, column, center, normal, 0px);
+
+            svg {
+              fill: var(--content-border);
+            }
+          }
+          .add_player {
+            @include weight_height(fill, auto);
+            @include item_flex(flex, row, center, space-evenly, 0px);
+            .teamate {
+              img {
+                padding: 18px 20px;
+                border-radius: 50%;
+                border: 1px dotted var(--item-color);
+                @include weight_height(53px, 53px);
+              }
+              :nth-child(2) {
+                color: var(--text-color);
+                @include fix-font(14px, 400, 12.25pxs);
+              }
+              :nth-child(3) {
+                color: var(--text-grey);
+                @include fix-font(12px, 300, 10.5px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    padding-bottom: 100px;
+  }
+}

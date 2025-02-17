@@ -1,0 +1,195 @@
+@import "../../styles/shared/var.scss";
+
+.createprofile_container {
+  @include weight_height(fill, auto);
+
+  .cover_profile {
+    .cover {
+      position: relative;
+      max-width: 390px;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        // @include weight_height(fill, auto);
+      }
+
+      .body_cover {
+        padding: 24px 24px;
+        position: absolute;
+        top: 0px;
+        @include weight_height(fill, fill);
+        @include item_flex(flex, column, flex-end, space-between, 0px);
+
+        .return {
+          @include item_flex(flex, row, center, normal, 12px);
+
+          p {
+            color: #ffffff;
+            @include fix-font(18px, 400, 15.75px);
+          }
+        }
+
+        .add_cover {
+          img {
+            padding: 4px 6px;
+            border-radius: 50%;
+            background: none;
+            border: 1px solid #000000;
+            @include weight_height(13px, 17px);
+          }
+        }
+      }
+    }
+
+    .profile {
+      position: relative;
+      @include item_flex(flex, row, center, center, 12px);
+
+      :first-child {
+        object-fit: cover;
+        position: absolute;
+        border-radius: 50%;
+        bottom: -50px;
+        border: 8px solid var(--content-border);
+        @include weight_height(118.14px, 118.14px);
+      }
+
+      .add-profile img {
+        padding: 4px 6px;
+        border-radius: 50%;
+        position: absolute;
+        right: 150px;
+        bottom: -50px;
+        background: #fcfcfc;
+        border: 1px solid #000000;
+        @include weight_height(13px, 17px);
+      }
+    }
+  }
+
+  .createprofile_body {
+    @include block_display(20px);
+    padding: 0px 10px;
+    margin-top: 80px;
+
+    .f_n_name {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, row, center, normal, 16px);
+
+      .label_input {
+        padding-bottom: 4px;
+        color: var(--text-grey);
+        border-bottom: 1px solid var(--item-color);
+        @include weight_height(fill, auto);
+        @include item_flex(flex, column, flex-start, normal, 4px);
+
+        label {
+          @include fix-font(14px, 400, 12.25px);
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          color: var(--text-color);
+          @include weight_height(fill, auto);
+        }
+
+        ::-webkit-input-placeholder {
+          color: var(--text-grey);
+          @include fix-font(12px, 400, 12.25px);
+        }
+      }
+    }
+
+    .calender {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, normal, 8px);
+
+      p {
+        color: var(--text-color);
+        @include fix-font(14px, 400, 12.25px);
+      }
+
+      .date_input {
+        border-radius: 8px;
+        background: var(--bg-color);
+        border: 1px solid var(--content-border);
+        @include weight_height(fill, auto);
+
+        input {
+          border: none;
+          outline: none;
+          background: none;
+          color: var(--text-color);
+          @include weight_height(fill, auto);
+          @include fix-font(16px, 400, 14px);
+          @include content_padd(8px, 8px, 9px, 8px);
+        }
+      }
+    }
+
+    .body_datils {
+      @include weight_height(fill, auto);
+      @include item_flex(flex, column, flex-start, space-between, 12px);
+
+      .country_height {
+        @include weight_height(170px, auto);
+        @include item_flex(flex, row, flex-start, space-between, 16px);
+
+        .label_input {
+          padding-bottom: 8px;
+          border-bottom: 1px solid var(--item-color);
+
+          @include weight_height(fill, auto);
+          @include item_flex(flex, column, flex-start, normal, 8px);
+
+          label {
+            color: var(--text-grey);
+            @include fix-font(14px, 400, 12.25px);
+          }
+
+          input {
+            border: none;
+            outline: none;
+            background: none;
+            color: var(--text-color);
+            // @include weight_height(auto, auto);
+          }
+
+          span {
+            @include item_flex(flex, row, flex-start, normal, 4px);
+
+            input {
+              border: none;
+              outline: none;
+              background: none;
+              color: var(--text-color);
+              @include weight_height(fill, auto);
+            }
+
+            img {
+              @include weight_height(20px, 14px);
+            }
+          }
+        }
+      }
+    }
+    .create_button {
+      @include weight_height(fill, auto);
+
+      button {
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(to left, #34506d, #3498db);
+        border-radius: 12px;
+        color: #fcfcfc;
+        @include weight_height(fill, fill);
+        @include fix-font(18px, 400, 15.75px);
+        @include content_padd(14px, 0px, 14px, 0px);
+      }
+      margin-bottom: 100px;
+    }
+  }
+}
