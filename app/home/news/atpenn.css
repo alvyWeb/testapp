@@ -1,0 +1,123 @@
+.matchleadinfo{
+    padding: 20px 0;
+    width: 350px;
+    margin: auto;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.matchleadInfoSingle{
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 15px 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerflex{
+    padding: 0 15px 10px;
+}
+
+.headerflex h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.infoFlex{
+    justify-content: start;
+    padding: 0 15px 10px;
+}
+
+.infoFlex span{
+    font-size: 14px;
+    color: var(--text-grey);
+    line-height: 16px;
+}
+
+.infoFlex svg{
+    width: 12px;
+    height: 12px;
+}
+
+.infoFlex svg path{
+    fill: var(--item-color);
+}
+
+.infoFlex .flex{
+    gap: 5px;
+}
+
+.scoreboardInfo{
+    border-top: 1px solid #eee;
+    padding: 15px 8px 10px;
+    gap: 3px;
+    flex-direction: row-reverse;
+}
+
+.flagImg{
+    max-width: 22px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.relative{
+    width: 54px;
+    border: 1px solid var(--color-light);
+    height: 54px;
+    border-radius: 50%;
+    padding: 3px;
+    position: relative;
+}
+
+.userImg{
+    width: 100%;
+    display: block;
+}
+
+.sectionActive p.playerName{
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-light);
+    padding: 8px 0 5px;
+    text-align: center;
+}
+
+.sectionActive p.playerRole{
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--text-grey);
+    text-align: center;
+    font-weight: 500;
+}
+
+.numberInfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.numberInfo .text-xl{
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 700;
+    color: var(--color-light);
+    text-align: center;
+}
+
+.numberInfo .text-sm{
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-light);
+    text-align: center;
+    border: 1px solid var(--text-grey);
+    border-radius: 15px;
+    padding: 4px 9px;
+}

@@ -7,6 +7,7 @@ import { useState } from "react";
 import ATPRank from "./atp_rank/atprank";
 import News from "./news/news.js";
 import "./tab.scss";
+import SystemMessage from "./news/system";
 import Tournaments from "./tournaments/tournaments";
 
 const TabComponent = () => {
@@ -35,44 +36,10 @@ const TabComponent = () => {
 
   return (
     <div className="container">
-      <nav>
-        <button
-          id={activeSection === "news" ? "worldbuttoonActive" : "worldbuttoon"}
-          onClick={() => handleNavClick("news")}
-        >
-          News
-        </button>
-        <button
-          id={
-            activeSection === "tournament"
-              ? "worldbuttoonActive"
-              : "worldbuttoon"
-          }
-          onClick={() => handleNavClick("tournament")}
-        >
-          Tournaments
-        </button>
-        <button
-          id={activeSection === "ranks" ? "worldbuttoonActive" : "worldbuttoon"}
-          onClick={() => handleNavClick("ranks")}
-        >
-          ATP Rank
-        </button>
-      </nav>
-
       <div className="sectionActive">
-        {activeSection === "news" && <News newsData={newsData} />}
-        {activeSection === "tournament" && (
-          <Tournaments tournamentData={tournamentData} />
-        )}
-        {activeSection === "ranks" && (
-          <ATPRank
-            data={rankData}
-            activeRank={activeRank}
-            setActiveRank={setActiveRank}
-          />
-        )}
+        <News newsData={newsData} />
       </div>
+      <SystemMessage />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-import moment from "moment";
+// import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { LuDot } from "react-icons/lu";
+// import { LuDot } from "react-icons/lu";
 
 const Article = ({ article, index }) => {
   const {
@@ -13,8 +13,8 @@ const Article = ({ article, index }) => {
     publishedAt: publishDate,
   } = article || {};
 
-  const publishedAt = moment(publishDate).fromNow();
-  // const publishedAt = publishDate;
+  //const publishedAt = moment(publishDate).fromNow();
+  const publishedAt = publishDate;
   const isEven = index % 2 == 0;
   // const isEven = index === 0;
 
@@ -25,7 +25,7 @@ const Article = ({ article, index }) => {
 
   return (
     <>
-      {isEven && (
+      {index === 0 && (
         <Link href={url} target="_blank" className="container_lg_heading">
           <div className="container_lg_heading_img">
             <img
@@ -43,13 +43,12 @@ const Article = ({ article, index }) => {
 
             <div className="container_heading_lg_sm_text">
               {author && <p>{author?.title?.slice(0, 20)}</p>}
-              <LuDot color="white" />
+              {/* <LuDot color="white" /> */}
               <p>
                 <span className="time">
-                  {publishedAt}
                   <svg
-                    width="12"
-                    height="12"
+                    width="14"
+                    height="14"
                     viewBox="0 0 12 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,6 +69,7 @@ const Article = ({ article, index }) => {
                       </clipPath>
                     </defs>
                   </svg>
+                  <span className="timeInfo">{publishedAt}</span>
                 </span>
               </p>
             </div>
@@ -79,24 +79,18 @@ const Article = ({ article, index }) => {
 
       {!isEven && (
         <div onClick={handleDetails} className="container_sm_heading">
-          <Link href={url} target="_blank" className="container_sm_heading_img">
-            <img
-              src={urlToImage ?? "/home/news/news-image-b.png"}
-              alt={title}
-            />
-          </Link>
           <div className="container_sm_heading_text">
             <div className="container_heading_sm_text">
+              <span className="newTag">חדשות</span>
               <p>
-                {title?.slice(0, 40)}
-                {title?.length > 40 && "..."}
+                {title?.slice(0, 60)}
+                {title?.length > 60}
               </p>
             </div>
             <div className="container_heading_sm_sm_text">
-              <p className="description">{description?.slice(0, 25)}...</p>
+              {/* <p className="description">{description?.slice(0, 25)}...</p> */}
               <p>
                 <span className="time">
-                  {publishedAt}
                   <svg
                     width="12"
                     height="12"
@@ -114,10 +108,17 @@ const Article = ({ article, index }) => {
                       </clipPath>
                     </defs>
                   </svg>
+                  <span className="timeInfo">{publishedAt}</span>
                 </span>
               </p>
             </div>
           </div>
+          <Link href={url} target="_blank" className="container_sm_heading_img">
+            <img
+              src={urlToImage ?? "/home/news/news-image-b.png"}
+              alt={title}
+            />
+          </Link>
         </div>
       )}
     </>
