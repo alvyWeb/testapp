@@ -1,0 +1,13 @@
+.mainlayoutb {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.mainlayoutb::-webkit-scrollbar {
+  width: 0; /* Hide scrollbar for Chrome, Safari, and Opera */
+  background: transparent; /* Make scrollbar track transparent */
+}
+
+.mainlayoutb::-webkit-scrollbar-thumb {
+  background: transparent; /* Make scrollbar thumb transparent */
+}
