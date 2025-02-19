@@ -10,60 +10,60 @@ const News = ({ newsData }) => {
   // const isLoading = false;
   // const news = newsData;
 
-  const staticArticles = [
-    {
-      title: "לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
-      description: "לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle554.jpg",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "4 דק’ קריאה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
-    {
-      title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-      image: "/home/news/Rectangle491.png",
-      url: "#",
-      source: "אדמין",
-      publishedAt: "לפני שעה",
-    },
+  // const staticArticles = [
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     description: "לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle554.jpg",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "4 דק’ קריאה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
+  //   {
+  //     title: "לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
+  //     image: "/home/news/Rectangle491.png",
+  //     url: "#",
+  //     source: "אדמין",
+  //     publishedAt: "לפני שעה",
+  //   },
     
-    // Add more static articles as needed
-  ];
+  //   // Add more static articles as needed
+  // ];
 
   // const articlesToRender = useStaticContent ? staticArticles : newsData?.news;
 
@@ -73,9 +73,9 @@ const News = ({ newsData }) => {
         <NewsPageLoader />
       ) : (
         <div className="main_container">
-           {Array.isArray(staticArticles) && staticArticles.length > 0 ? (
+           {Array.isArray(newsData?.news) && newsData?.news.length > 0 ? (
             <div className="container">
-              {staticArticles.map((article, index) => {
+              {newsData?.news.map((article, index) => {
                 // Check if it's the third item (index 2, 5, 8, etc.)
                 const isAfterThirdItem = index % 4 === 3;
 
