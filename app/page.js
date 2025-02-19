@@ -8,16 +8,18 @@ import Games from "./gamescomponents/TabComponent";
 export default function Home() {
   const { user } = useContext(MainContext);
   const authenticateUser = user?.data?.data; // Check if user is authenticated
-  const [fragment, setFragment] = useState("");
+  const [fragment, setFragment] = useState(() => window.location.hash);
 
-  // Listen for hash changes
   useEffect(() => {
     const handleHashChange = () => {
-      setFragment(window.location.hash); // Update fragment state
-    };
+      const newHash = window.location.hash;
 
-    // Set initial hash
-    handleHashChange();
+      // Refresh page once when hash changes
+      if (sessionStorage.getItem("lastHash") !== newHash) {
+        sessionStorage.setItem("lastHash", newHash);
+        window.location.href = window.location.href; // Refresh the page once
+      }
+    };
 
     // Add event listener for hash changes
     window.addEventListener("hashchange", handleHashChange);
@@ -28,19 +30,11 @@ export default function Home() {
     };
   }, []);
 
-  // Log fragment and authentication state for debugging
-  useEffect(() => {
-    console.log("Current Fragment:", fragment);
-    console.log("Authenticated User:", authenticateUser);
-  }, [fragment, authenticateUser]);
-
   return (
     <main>
       {authenticateUser ? (
-        // If authenticated, always show Games
-        <Games />
+        <Games /> // Always show Games if user is authenticated
       ) : (
-        // If not authenticated, show component based on hash
         <>
           {fragment === "#0" && <Register />}
           {fragment === "#1" && <Games />}
