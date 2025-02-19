@@ -33,8 +33,8 @@ const SocialLogin = () => {
       lastName,
       avatar: photoUrl,
       socialConnected: {
-        isGoogleConnected: type === "google" ? true : false,
         isFacebookConnected: type === "facebook" ? true : false,
+        isGoogleConnected: type === "google" ? true : false,
       },
     };
 

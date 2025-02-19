@@ -53,11 +53,11 @@ const Register = ({ standins, setStandings }) => {
       <div className="register_container">
         <div className="head_container">
           {/* <img src="./Stock/register/scar.svg" alt="" /> */}
-          <p>Register</p>
+          <p>הרשמה</p>
         </div>
         <div className="input_body">
           <div className="label_input ">
-            <label htmlFor="">Email Address</label>
+            <label htmlFor="">כתובת אימייל:</label>
             <input
               type="email"
               id="email"
@@ -67,7 +67,7 @@ const Register = ({ standins, setStandings }) => {
             />
           </div>
           <div className="label_input">
-            <label htmlFor="">Password</label>
+            <label htmlFor="">סיסמה:</label>
             <input
               type="password"
               className="input_area"
@@ -76,7 +76,7 @@ const Register = ({ standins, setStandings }) => {
             />
           </div>
           <div className="label_input">
-            <label htmlFor="">Verify password:</label>
+            <label htmlFor="">אמת סיסמה:</label>
             <input
               type="password"
               className="input_area"
@@ -88,11 +88,11 @@ const Register = ({ standins, setStandings }) => {
           </div>
 
           <button type="submit" className="submit_button">
-            Register
+          הרשם
           </button>
         </div>
         <div className="footer">
-          <p>or register with</p>
+          <p>או הרשם עם</p>
           <SocialLogin />
         </div>
       </div>

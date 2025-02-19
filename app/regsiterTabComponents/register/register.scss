@@ -5,8 +5,8 @@
   padding: 20px 0px;
   padding-top: 50px;
   @include weight_height(360px, auto);
-  @include item_flex(flex, column, center, center, 24px);
-
+  @include item_flex(flex, column, center, center, 25px);
+  
   .head_container {
     padding-bottom: 20px;
     @include item_flex(flex, column, center, center, 24px);
@@ -22,7 +22,7 @@
     @include item_flex(flex, column, flex-start, center, 16px);
 
     .label_input {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       color: var(--text-color);
       @include item_flex(flex, column, flex-start, center, 12px);
       @include fix-font(16px, 400, 14px);
@@ -34,19 +34,20 @@
       border-radius: 12px;
       color: var(--text-color);
       border: 1px solid var(--item-color);
-      @include weight_height(fill, auto);
-      @include content_padd(20px, 20px, 14px, 0px);
+      @include weight_height(100%, auto);
+      @include content_padd(20px, 20px, 14px, 20px);
+      box-sizing: border-box;
     }
     ._email {
       background: none;
       border: 1px solid var(--item-color);
       border-radius: 12px;
       @include weight_height(fill, auto);
-      @include content_padd(17px, 20px, 17px, 0px);
+      @include content_padd(17px, 20px, 17px, 20px);
     }
 
     .submit_button {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       background: linear-gradient(to left, #34506d, #3498db);
       color: #ffffff;
       border-radius: 12px;
