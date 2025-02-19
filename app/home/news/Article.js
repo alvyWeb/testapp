@@ -1,4 +1,4 @@
-// import moment from "moment";
+import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 // import { LuDot } from "react-icons/lu";
@@ -13,8 +13,8 @@ const Article = ({ article, index }) => {
     publishedAt: publishDate,
   } = article || {};
 
-  //const publishedAt = moment(publishDate).fromNow();
-  const publishedAt = publishDate;
+  const publishedAt = moment(publishDate).fromNow();
+  //const publishedAt = publishDate;
   const isEven = index % 2 == 0;
   // const isEven = index === 0;
 
