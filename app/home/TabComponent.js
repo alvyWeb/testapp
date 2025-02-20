@@ -8,7 +8,6 @@ import ATPRank from "./atp_rank/atprank";
 import News from "./news/news.js";
 import "./tab.scss";
 import SystemMessage from "./news/system";
-import Tournaments from "./tournaments/tournaments";
 
 const TabComponent = () => {
   const router = useRouter();

@@ -41,7 +41,7 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section1")}
         >
-          Upcoming games
+          משחקים עתידיים
         </button>
         <button
           id={
@@ -49,7 +49,7 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section2")}
         >
-          Completed games
+          משחקים שנגמרו
         </button>
       </nav>
 

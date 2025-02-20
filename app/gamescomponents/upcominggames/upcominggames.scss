@@ -73,7 +73,7 @@
     @include item_flex(flex, column, flex-start, normal, 8px);
 
     .container_top_head {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, row, center, space-between, 0px);
       svg {
         path {
@@ -140,6 +140,7 @@
     border-left: 1px solid var(--content-border);
     border-right: 1px solid var(--content-border);
     background: var(--item-bg);
+    direction: ltr;
 
     @include content_padd(16px, 8px, 14px, 8px);
     @include item_flex(flex, column, center, space-between, 12px);
@@ -155,7 +156,7 @@
         @include item_flex(flex, row, center, space-between, 0px);
 
         .f_team {
-          @include item_flex(flex, row, center, normal, 0px);
+          @include item_flex(flex, row, center, normal, 10px);
 
           ._player {
             @include item_flex(flex, column, center, normal, 4px);
@@ -200,7 +201,7 @@
         }
 
         .s_team {
-          @include item_flex(flex, row, center, normal, 0px);
+          @include item_flex(flex, row, center, normal, 10px);
 
           ._player {
             @include item_flex(flex, column, center, normal, 4px);
@@ -349,19 +350,20 @@
           @include weight_height(31px, 31px);
         }
 
-        @include item_flex(flex, row, center, normal, 4px);
+        @include item_flex(flex, row, center, normal, 8px);
 
         span {
           @include item_flex(flex, column, flex-start, normal, 2px);
 
           ._title {
             color: var(--text-grey);
-            @include fix-font(14px, 400, 12.25px);
+            @include fix-font(14px, 400, 14px);
+            padding-bottom: 5px;
           }
 
           ._text {
             color: var(--text-color);
-            @include fix-font(14px, 400, 12.25px);
+            @include fix-font(14px, 400, 14px);
           }
         }
       }

@@ -3,7 +3,7 @@
     width: 350px;
     margin: auto;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    
 }
 
 .matchleadInfoSingle{
@@ -26,6 +26,7 @@
 .headerflex h2{
     font-size: 16px;
     font-weight: 400;
+    color: var(--color-light);
 }
 
 .infoFlex{
