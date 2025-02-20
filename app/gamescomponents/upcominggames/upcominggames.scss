@@ -33,7 +33,7 @@
       text-decoration: none;
     }
 
-    @include content_padd(13px, 20px, 0px, 20px);
+    @include content_padd(24px, 20px, 0px, 20px);
     @include item_flex(flex, row, center, normal, 8px);
 
     .d_games {
