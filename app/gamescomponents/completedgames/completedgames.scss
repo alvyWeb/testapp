@@ -105,7 +105,7 @@
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
       @include weight_height(fill, auto);
-      @include content_padd(8px, 8px, 8px, 8px);
+      @include content_padd(16px, 8px, 14px, 8px);
       @include item_flex(flex, row, center, space-around, 0px);
       direction: ltr;
 
