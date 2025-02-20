@@ -59,7 +59,7 @@
       }
 
       .bttom_body {
-        @include item_flex(flex, row, center, normal, 4px);
+        @include item_flex(flex, row, center, normal, 12px);
 
         span {
           @include item_flex(flex, row, center, normal, 4px);
