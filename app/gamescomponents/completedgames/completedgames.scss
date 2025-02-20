@@ -5,6 +5,7 @@
 
   .head_content {
     @include item_flex(flex, row, center, normal, 8px);
+    padding: 0 5px;
 
     ._main {
       padding: 12px;
