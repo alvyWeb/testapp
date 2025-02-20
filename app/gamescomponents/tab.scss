@@ -12,7 +12,7 @@
     margin: 0;
     z-index: 99;
     background-color: var(--background-white) !important;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee !important;
 
     button {
       width: 50%;
@@ -55,5 +55,5 @@
 #worldbuttoonActive {
   color: var(--text-color); // This sets the active button text color to white
   border: none;
-  border-bottom: 2px solid #03506f;
+  border-bottom: 2px solid #03506f !important;
 }
