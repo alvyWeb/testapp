@@ -4,7 +4,7 @@ import "./news.scss";
 import AtPennMessage from "./atpenn";
 import StateNews from "./statNews";
 
-const News = () => {
+const News = ({ newsData }) => {
   const staticArticles = [
     {
       title: "1 לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
@@ -53,10 +53,13 @@ const News = () => {
         {staticArticles.length > 0 ? (
           <div className="container">
             {/* Display first article normally if articleData is not available */}
-            {articleData ? (
-              <Article article={articleData} key={0} index={0} />
-            ) : (
-              <Article article={staticArticles[0]} key={0} index={0} />
+
+            {newsData?.news?.length > 0 && (
+              <div className="containerInner">
+                {newsData?.news?.map((article, index) => (
+                  <Article article={article} key={article?.uri} index={index} />
+                ))}
+              </div>
             )}
 
             {/* Loop through static articles in chunks of two */}

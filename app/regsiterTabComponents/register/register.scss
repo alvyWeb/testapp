@@ -3,10 +3,23 @@
 .register_container {
   margin: 0 auto;
   padding: 20px 0px;
-  padding-top: 50px;
+  padding-top: 80px;
   @include weight_height(360px, auto);
   @include item_flex(flex, column, center, center, 25px);
-  
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 45px; // Place at the top
+    left: 50%; // Move to center
+    transform: translateX(-50%); // Center align
+    width: 120px;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 20px;
+  }
+ 
   .head_container {
     padding-bottom: 20px;
     @include item_flex(flex, column, center, center, 24px);
@@ -63,6 +76,7 @@
         @include content_padd(16px, 0px, 16px, 0px);
       }
     }
+
   }
 
   .footer {
@@ -75,6 +89,10 @@
 
     ._icon {
       @include item_flex(flex, row, center, center, 24px);
+
+      a{
+        cursor: pointer;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ const useNews = (arg) => {
       setIsLoading(true);
       setError(null);
 
-      const response = await axios.get("https://gnews.io/api/v4/search?q=tennis&lang=en&country=us&max=10&apikey=4531de487cae7c54089fb73b9d9d5aec");
+      const response = await axios.get("https://gnews.io/api/v4/search?q=tennis&lang=en&country=us&max=1&apikey=4531de487cae7c54089fb73b9d9d5aec");
 
       if (response.status === 200) {
         const resData = response?.data?.articles;

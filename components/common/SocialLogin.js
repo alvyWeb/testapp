@@ -56,11 +56,11 @@ const SocialLogin = () => {
   return (
     <div>
       <span className="_icon">
-        <a onClick={() => handleSocialLogin("google")}>
-          <img src="./Stock/register/google.svg" alt="" />
-        </a>
         <a onClick={() => handleSocialLogin("facebook")}>
           <img src="./Stock/register/facebook.svg" alt="" />
+        </a>
+        <a onClick={() => handleSocialLogin("google")}>
+          <img src="./Stock/register/google.svg" alt="" />
         </a>
       </span>
     </div>

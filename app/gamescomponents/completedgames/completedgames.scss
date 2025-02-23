@@ -1,8 +1,7 @@
 @import "../../../styles/shared/var.scss";
 
-.everything_conatiner {
-  @include block_display(14px);
-
+.everything_new {
+  
   .head_content {
     @include item_flex(flex, row, center, normal, 8px);
 
@@ -26,11 +25,15 @@
   }
 
   .everything_body {
+      width: 350px;
+      height: auto;
+      margin: 0 auto 20px;
+
     .space_around {
       @include item_flex(flex, row, center, space-around, 0px);
     }
 
-    @include weight_height(100%, auto);
+    // @include weight_height(100%, auto);
 
     .everything_head_body {
       border-top-left-radius: 12px;
@@ -38,7 +41,8 @@
       background: var(--item-bg);
       border: 1px solid var(--content-border);
       border-bottom: none;
-      @include weight_height(fill, auto);
+      box-sizing: border-box;
+      @include weight_height(350px, auto);
       @include content_padd(14px, 12px, 12px, 20px);
       @include item_flex(flex, column, normal, normal, 8px);
 
@@ -58,7 +62,7 @@
       }
 
       .bttom_body {
-        @include item_flex(flex, row, center, normal, 4px);
+        @include item_flex(flex, row, center, normal, 12px);
 
         span {
           @include item_flex(flex, row, center, normal, 4px);
@@ -103,10 +107,11 @@
       border: 1px solid var(--content-border);
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      @include weight_height(fill, auto);
-      @include content_padd(8px, 8px, 8px, 8px);
+      @include weight_height(350px, auto);
+      @include content_padd(16px, 8px, 14px, 8px);
       @include item_flex(flex, row, center, space-around, 0px);
       direction: ltr;
+      box-sizing: border-box;
 
       .f_team {
         @include item_flex(flex, row, center, normal, 10px);

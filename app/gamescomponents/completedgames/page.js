@@ -196,20 +196,22 @@ const Complete = ({ standings, setStandings }) => {
   ];
   return (
     <main>
-      <div className="everything_conatiner">
-        <div className="head_content">
-          <button
-            onClick={() => setGame("mine")}
-            className={`${game === "mine" ? "_everything" : "_main"} `}
-          >
-            שלי
-          </button>
-          <button
-            onClick={() => setGame("everything")}
-            className={`${game === "everything" ? "_everything" : "_main"} `}
-          >
-            הכל
-          </button>
+      <div className="enrollment everything_new">
+        <div className="enrollment_head">
+          <div className="head_body_bottom">
+            <button
+              onClick={() => setGame("mine")}
+              className={`${game === "mine" ? "d_games" : "s_games"} `}
+            >
+              שלי
+            </button>
+            <button
+              onClick={() => setGame("everything")}
+              className={`${game === "everything" ? "d_games" : "s_games"} `}
+            >
+              הכל
+            </button>
+          </div>
         </div>
         {everyThing.map((item) => (
           <>

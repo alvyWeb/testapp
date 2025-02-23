@@ -9,7 +9,7 @@
     margin-top: 24px;
     border-bottom: 1px solid #eeeeee;
     @include weight_height(fill, auto);
-    @include content_padd(0px, 20px, 13px, 20px);
+    @include content_padd(15px, 20px, 15px, 20px);
     @include weight_height(fill, auto);
     @include item_flex(flex, row, center, normal, 8px);
 
@@ -33,14 +33,14 @@
       text-decoration: none;
     }
 
-    @include content_padd(13px, 20px, 0px, 20px);
+    @include content_padd(15px, 20px, 15px, 20px);
     @include item_flex(flex, row, center, normal, 8px);
 
     .d_games {
       border-radius: 26px;
       border: 1px solid #03506f;
       background: var(--item-bg);
-      padding: 12px;
+      padding: 11px 13px;
       color: var(--text-color);
       @include fix-font(14px, 400, 12.25px);
       @include item_flex(flex, row, center, center, 0px);
@@ -59,8 +59,8 @@
 }
 
 .enrollment_container {
-  @include weight_height(360px, auto);
-  margin: 16px auto;
+  @include weight_height(350px, auto);
+  margin: 0px auto 20px;
   box-sizing: border-box;
 
   .container_heading {

@@ -4,7 +4,16 @@ import { useRouter } from "next/navigation";
 // import { LuDot } from "react-icons/lu";
 
 const Article = ({ article, index }) => {
-  if (!article) return null; // If no article is provided, return nothing
+  //if (!article) return null; // If no article is provided, return nothing
+
+  const defaultArticle = {
+      title: "1 לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
+      description: "לורם איפסום הוא כינוי לטקסט כה חסר משמעות לחלוטין - הנקרא לפעמים",
+      image: "/home/news/Rectangle554.jpg",
+      url: "#",
+      source: "אדמין",
+      publishedAt: "4 דק’ קריאה",
+    };
 
   const {
     title,
@@ -13,11 +22,11 @@ const Article = ({ article, index }) => {
     url,
     source: author,
     publishedAt: publishDate,
-  } = article || {};
+  } = article ?? defaultArticle;
 
   const publishedAt = moment(publishDate).fromNow();
   //const publishedAt = publishDate;
-  const isEven = index % 2 == 0;
+  // const isEven = index % 2 == 0;
   // const isEven = index === 0;
 
   const router = useRouter;
@@ -27,7 +36,7 @@ const Article = ({ article, index }) => {
 
   return (
     <>
-      <Link href={url} target="_blank" className="container_lg_heading">
+      <Link href={url || "#"} target="_blank" className="container_lg_heading">
           <div className="container_lg_heading_img">
             <img
               src={urlToImage ?? "/home/news/news-image-h.png"}

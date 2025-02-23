@@ -1,5 +1,6 @@
 "use client";
 import Navbar from "@/components/common/Navbar";
+//import { useLocation } from "react-router-dom";
 import ProfileHeader from "@/components/common/ProfileHeader";
 import Loader from "@/components/common/loader/Loader";
 import { auth } from "@/firebase/firebase";
@@ -78,6 +79,16 @@ export default function RootLayout({ children }) {
     );
   }, [dark]);
 
+  const [showProfileHeader, setShowProfileHeader] = useState(true);
+
+  useEffect(() => {
+    if (window.location.hash === "#0") {
+      setShowProfileHeader(false);
+    } else {
+      setShowProfileHeader(true);
+    }
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -105,6 +116,7 @@ export default function RootLayout({ children }) {
           ` light` +
           " " +
           ` ${rtl ? "isrtl" : "isltr"}`
+          
         }
       >
         <MainProvider
@@ -122,12 +134,9 @@ export default function RootLayout({ children }) {
                 setRtl={setRtl}
               />
             )} */}
-            <ProfileHeader
-                dark={dark}
-                setDark={setDark}
-                rtl={rtl}
-                setRtl={setRtl}
-              />
+            {showProfileHeader && (
+              <ProfileHeader rtl={rtl} setRtl={setRtl} />
+            )}
             <div className="mainlayoutb" style={{ 
               // maxHeight: childrenHeight || "100%", 
               maxHeight: "calc(100vh - 190px)",
