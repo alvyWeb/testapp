@@ -33,11 +33,8 @@
       text-decoration: none;
     }
 
-<<<<<<< HEAD
     @include content_padd(15px, 20px, 15px, 20px);
-=======
-    @include content_padd(24px, 20px, 0px, 20px);
->>>>>>> 63478adb1ab6b442df9f43443e2bcbd3bf57266b
+    // @include content_padd(24px, 20px, 0px, 20px);
     @include item_flex(flex, row, center, normal, 8px);
 
     .d_games {
