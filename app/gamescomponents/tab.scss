@@ -11,19 +11,22 @@
     padding: 0;
     margin: 0;
     z-index: 99;
-    background-color: var(--background-white) !important;
-    border-bottom: 1px solid #eee !important;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #eee;
+    
 
     button {
       width: 50%;
-      height: 40px;
-      border: none !important;
-      background-color: transparent !important;
+      height: auto;
+      border: none;
+      background-color: var(--bg-color);
       padding: 0;
       margin: 0;
-      font-size: 17px;
-      color: #000 !important;
+      font-size: 16px;
+      line-height: 18px;
+      color: var(--text-color);
       transition: color 1s, border-bottom 1s;
+      padding: 30px 0 15px;
       &:hover {
         cursor: pointer;
       }
@@ -55,5 +58,5 @@
 #worldbuttoonActive {
   color: var(--text-color); // This sets the active button text color to white
   border: none;
-  border-bottom: 2px solid #03506f !important;
+  border-bottom: 2px solid #145E94;
 }
