@@ -11,18 +11,18 @@
     padding: 0;
     margin: 0;
     z-index: 99;
-    background-color: var(--bg-color);
-    border-bottom: 1px solid #eee;
+    background-color: var(--background-white) !important;
+    border-bottom: 1px solid #eee !important;
 
     button {
       width: 50%;
       height: 40px;
-      border: none;
-      background-color: var(--bg-color);
+      border: none !important;
+      background-color: transparent !important;
       padding: 0;
       margin: 0;
       font-size: 17px;
-      color: var(--text-color);
+      color: #000 !important;
       transition: color 1s, border-bottom 1s;
       &:hover {
         cursor: pointer;
@@ -55,5 +55,5 @@
 #worldbuttoonActive {
   color: var(--text-color); // This sets the active button text color to white
   border: none;
-  border-bottom: 2px solid #03506f;
+  border-bottom: 2px solid #03506f !important;
 }

@@ -4,6 +4,7 @@
   
   .head_content {
     @include item_flex(flex, row, center, normal, 8px);
+    padding: 0 5px;
 
     ._main {
       padding: 12px;
@@ -107,7 +108,11 @@
       border: 1px solid var(--content-border);
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
+<<<<<<< HEAD
       @include weight_height(350px, auto);
+=======
+      @include weight_height(fill, auto);
+>>>>>>> 63478adb1ab6b442df9f43443e2bcbd3bf57266b
       @include content_padd(16px, 8px, 14px, 8px);
       @include item_flex(flex, row, center, space-around, 0px);
       direction: ltr;
