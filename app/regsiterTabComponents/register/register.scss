@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 20px 0px;
   padding-top: 80px;
-  @include weight_height(360px, auto);
+  @include weight_height(280px, auto);
   @include item_flex(flex, column, center, center, 25px);
   position: relative;
 
@@ -21,7 +21,7 @@
   }
  
   .head_container {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     @include item_flex(flex, column, center, center, 24px);
 
     p {
@@ -32,12 +32,12 @@
 
   .input_body {
     @include weight_height(280px, auto);
-    @include item_flex(flex, column, flex-start, center, 16px);
+    @include item_flex(flex, column, flex-start, center, 15px);
 
     .label_input {
       @include weight_height(100%, auto);
       color: var(--text-color);
-      @include item_flex(flex, column, flex-start, center, 12px);
+      @include item_flex(flex, column, flex-start, center, 10px);
       @include fix-font(16px, 400, 14px);
     }
 
@@ -48,15 +48,19 @@
       color: var(--text-color);
       border: 1px solid var(--item-color);
       @include weight_height(100%, auto);
-      @include content_padd(20px, 20px, 14px, 20px);
+      @include content_padd(15px, 24px, 15px, 24px);
       box-sizing: border-box;
+      font-size: 14px;
+      line-height: 12px;
     }
     ._email {
       background: none;
       border: 1px solid var(--item-color);
       border-radius: 12px;
       @include weight_height(fill, auto);
-      @include content_padd(17px, 20px, 17px, 20px);
+      @include content_padd(15px, 24px, 15px, 24px);
+      font-size: 14px;
+      line-height: 12px;
     }
 
     .submit_button {

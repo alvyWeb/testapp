@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  direction: rtl;
 }
 
 :root {
@@ -51,6 +55,8 @@ body {
   background-color: var(--bg-color);
   overflow: hidden;
   overflow-y: scroll;
+  font-family: "Rubik", serif;
+  font-style: normal;
 }
 
 .theme-toggle-item {
@@ -243,3 +249,4 @@ body {
   --base-color: var(--loader-color) !important;
   --highlight-color: var(--content-border) !important;
 }
+

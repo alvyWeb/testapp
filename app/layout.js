@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
               // maxHeight: childrenHeight || "100%", 
               maxHeight: "calc(100vh - 190px)",
               overflowY: "auto", 
-              paddingBottom: "100px"
+              // paddingBottom: "100px"
             }}>
               {loading ? <Loader /> : children}
             </div>

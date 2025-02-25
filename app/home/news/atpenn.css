@@ -1,8 +1,9 @@
 .matchleadinfo{
     padding: 20px 0;
-    width: 350px;
+    /* width: 350px; */
     margin: auto;
     border-top: 1px solid #eee;
+    width: 100%;
     
 }
 
@@ -16,11 +17,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .headerflex{
-    padding: 0 15px 10px;
+    padding: 0 15px 10px; 
 }
 
 .headerflex h2{
@@ -55,7 +56,7 @@
 
 .scoreboardInfo{
     border-top: 1px solid #eee;
-    padding: 15px 8px 10px;
+    padding: 15px 11px 10px;
     gap: 3px;
     flex-direction: row-reverse;
 }
@@ -69,9 +70,9 @@
 }
 
 .relative{
-    width: 54px;
+    width: 58px;
     border: 1px solid var(--color-light);
-    height: 54px;
+    height: 58px;
     border-radius: 50%;
     padding: 3px;
     position: relative;
@@ -115,10 +116,10 @@
 
 .numberInfo .text-sm{
     font-size: 14px;
-    line-height: 14px;
+    line-height: 12px;
     color: var(--color-light);
     text-align: center;
-    border: 1px solid var(--text-grey);
+    border: 1px solid #EEEEEE;
     border-radius: 15px;
-    padding: 4px 9px;
+    padding: 3px 9px;
 }
