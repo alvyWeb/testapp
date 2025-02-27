@@ -146,10 +146,10 @@ const AtPennMessage = () => {
                                     <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
                                 </div>
                                 <div className="inforel">
-                                    <span className="absolute captainClass top-0 left-0 bg-red-500 text-white text-xs px-1 rounded-full">
+                                    <p className="playerName text-sm font-medium">
+                                        <span>{player.name}</span>
                                         <img src={player.captainImg} />
-                                    </span>
-                                    <p className="playerName text-sm font-medium">{player.name}</p>
+                                    </p>
                                     <p className="playerRole text-xs text-gray-500">({player.role})</p>
                                 </div>
                             </div>
