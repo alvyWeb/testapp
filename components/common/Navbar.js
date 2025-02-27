@@ -16,31 +16,31 @@ const Navbar = ({ light }) => {
   const menus = [
     {
       name: "חדשות",
-      hash: "",
+      hash: "/home",
       icon: `/NavIcons/news-white.svg`,
       activeIcon: `/NavIcons/news-active.svg`,
     },
     {
       name: "הרשמה",
-      hash: "#0",
+      hash: "/register",
       icon: `/NavIcons/world-white.svg`,
       activeIcon: `/NavIcons/world-active.svg`,
     },
     {
       name: "לוח משחקים",
-      hash: "#1",
+      hash: "/game",
       icon: `/NavIcons/game-white.svg`,
       activeIcon: `/NavIcons/game-active.svg`,
     },
     {
       name: "הימורים",
-      hash: "#2",
+      hash: "/bet",
       icon: `/NavIcons/bets-white.svg`,
       activeIcon: `/NavIcons/bets-active.svg`,
     },
     {
       name: "דירוגים",
-      hash: "#3",
+      hash: "/ranking",
       icon: `/NavIcons/rank-white.svg`,
       activeIcon: `/NavIcons/rank-active.svg`,
     },
