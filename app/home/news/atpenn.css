@@ -124,6 +124,6 @@
     padding: 3px 9px;
 }
 
-.commentInfo svg{
+.commentInfo svg path{
     fill: none;
 }
