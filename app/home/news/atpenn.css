@@ -89,6 +89,10 @@
     color: var(--color-light);
     padding: 8px 0 5px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .sectionActive p.playerRole{
