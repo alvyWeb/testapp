@@ -12,6 +12,7 @@ const News = ({ newsData }) => {
       image: "/home/news/Rectangle554.jpg",
       url: "#",
       source: "אדמין",
+      message: "26 תגובות",
       publishedAt: "4 דק’ קריאה",
     },
     {
@@ -19,6 +20,7 @@ const News = ({ newsData }) => {
       image: "/home/news/Rectangle491.png",
       url: "#",
       source: "אדמין",
+      message: "26 תגובות",
       publishedAt: "לפני שעה",
     },
     {
@@ -26,6 +28,7 @@ const News = ({ newsData }) => {
       image: "/home/news/Rectangle491.png",
       url: "#",
       source: "אדמין",
+      message: "26 תגובות",
       publishedAt: "לפני שעה",
     },
     {
@@ -33,6 +36,7 @@ const News = ({ newsData }) => {
       image: "/home/news/Rectangle491.png",
       url: "#",
       source: "אדמין",
+      message: "26 תגובות",
       publishedAt: "לפני שעה",
     },
     {
@@ -40,6 +44,7 @@ const News = ({ newsData }) => {
       image: "/home/news/Rectangle491.png",
       url: "#",
       source: "אדמין",
+      message: "26 תגובות",
       publishedAt: "לפני שעה",
     },
   ];
