@@ -69,7 +69,7 @@ const StatNews = ({ offset = 0, limit = 2 }) => {
                             </p>
                         </div>
                         <div className="container_heading_sm_sm_text">
-                            <p>
+                            <p class="container_heading_sm_info">
                                 <span className="time">
                                     <svg
                                         width="12"
