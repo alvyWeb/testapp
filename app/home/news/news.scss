@@ -181,6 +181,11 @@
       gap: 4px;
       @include font_lg_sm(14px, 16px, 300);
 
+      .container_heading_sm_info{
+        @include flex_row;
+        gap: 15px;
+      }
+
       .time {
         @include flex_row;
         gap: 4px;
@@ -192,7 +197,7 @@
           font-weight: bold;
         }
       }
-      
+
       .comment {
         @include flex_row;
         gap: 4px;
