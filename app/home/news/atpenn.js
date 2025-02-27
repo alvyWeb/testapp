@@ -42,8 +42,8 @@ const AtPennMessage = () => {
     };
     return (
         <div className="matchleadinfo bg-white p-4 rounded-xl shadow-md w-full max-w-lg mx-auto">
-        {/* Match Header */}
             <div className="matchleadInfoSingle">
+
                 <div className="flex headerflex items-center justify-between text-gray-700">
                     <h2 className="text-lg font-semibold">{matchInfo.location}</h2>
                     <svg
@@ -60,7 +60,6 @@ const AtPennMessage = () => {
                     </svg>
                 </div>
 
-                {/* Date & Time */}
                 <div className="flex infoFlex items-center space-x-2 text-gray-500 text-sm mt-1">
                     <div className="dateInfo flex">
                         <svg
@@ -118,49 +117,47 @@ const AtPennMessage = () => {
                     </div>
                 </div>
 
-                {/* Players & Score */}
                 <div className="flex scoreboardInfo items-center justify-between mt-4">
-                    {/* Left Players */}
                     <div className="flex space-x-2">
-                    {matchInfo.players.slice(0, 2).map((player, index) => (
-                        <div key={index} className="text-center">
-                        <div className="relative">
-                            <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
-                            <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
-                        </div>
-                        <p className="playerName text-sm font-medium">{player.name}</p>
-                        <p className="playerRole text-xs text-gray-500">({player.role})</p>
-                        </div>
-                    ))}
+                        {matchInfo.players.slice(0, 2).map((player, index) => (
+                            <div key={index} className="text-center">
+                                <div className="relative">
+                                    <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
+                                    <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
+                                </div>
+                                <p className="playerName text-sm font-medium">{player.name}</p>
+                                <p className="playerRole text-xs text-gray-500">({player.role})</p>
+                            </div>
+                        ))}
                     </div>
 
-                    {/* Score */}
                     <div className="text-center numberInfo">
-                    <p className="text-xl font-bold">{matchInfo.score}</p>
-                    {matchInfo.rounds.map((round, index) => (
-                        <p key={index} className="text-sm bg-gray-100 rounded-full px-2 mt-1">{round}</p>
-                    ))}
+                        <p className="text-xl font-bold">{matchInfo.score}</p>
+                        {matchInfo.rounds.map((round, index) => (
+                            <p key={index} className="text-sm bg-gray-100 rounded-full px-2 mt-1">{round}</p>
+                        ))}
                     </div>
 
-                    {/* Right Players */}
                     <div className="flex space-x-2">
-                    {matchInfo.players.slice(2, 4).map((player, index) => (
-                        <div key={index} className="text-center">
-                        <div className="relative">
-                            <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
-                            <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
-                        </div>
-                        <div className="inforel">
-                            <span className="absolute captainClass top-0 left-0 bg-red-500 text-white text-xs px-1 rounded-full">
-                                <img src={player.captainImg} />
-                            </span>
-                            <p className="playerName text-sm font-medium">{player.name}</p>
-                            <p className="playerRole text-xs text-gray-500">({player.role})</p>
-                        <div>
-                        </div>
-                    ))}
+                        {matchInfo.players.slice(2, 4).map((player, index) => (
+                            <div key={index} className="text-center">
+                                <div className="relative">
+                                    <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
+                                    <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
+                                </div>
+                                <div className="inforel">
+                                    <span className="absolute captainClass top-0 left-0 bg-red-500 text-white text-xs px-1 rounded-full">
+                                        <img src={player.captainImg} />
+                                    </span>
+                                    <p className="playerName text-sm font-medium">{player.name}</p>
+                                    <p className="playerRole text-xs text-gray-500">({player.role})</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
+
                 </div>
+
             </div>
         </div>
     );
