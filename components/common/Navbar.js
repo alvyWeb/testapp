@@ -16,39 +16,39 @@ const Navbar = ({ light }) => {
   const menus = [
     {
       name: "חדשות",
-      path: "/home",
+      hash: "",
       icon: `/NavIcons/news-white.svg`,
       activeIcon: `/NavIcons/news-active.svg`,
     },
     {
       name: "הרשמה",
-      path: "/register",
+      hash: "#0",
       icon: `/NavIcons/world-white.svg`,
       activeIcon: `/NavIcons/world-active.svg`,
     },
     {
       name: "לוח משחקים",
-      path: "/game",
+      hash: "#1",
       icon: `/NavIcons/game-white.svg`,
       activeIcon: `/NavIcons/game-active.svg`,
     },
     {
       name: "הימורים",
-      path: "/bet",
+      hash: "#2",
       icon: `/NavIcons/bets-white.svg`,
       activeIcon: `/NavIcons/bets-active.svg`,
     },
     {
       name: "דירוגים",
-      path: "/ranking",
+      hash: "#3",
       icon: `/NavIcons/rank-white.svg`,
       activeIcon: `/NavIcons/rank-active.svg`,
     },
   ];
 
-  const handleNavClick = (path) => {
-    if (window.location.hash !== path) {
-      window.location.hash = path;
+  const handleNavClick = (hash) => {
+    if (window.location.hash !== hash) {
+      window.location.hash = hash;
       setTimeout(() => {
         window.location.reload(); // Refresh page after hash change
       }, 100); // Small delay to allow hash update
@@ -59,12 +59,12 @@ const Navbar = ({ light }) => {
     <div className="navbar-container">
       <div className="navbar">
         {menus?.map((menu) => {
-          const isActive = activeHash === menu.path;
+          const isActive = activeHash === menu.hash;
           return (
           <button
             key={menu.name}
             className={`nav-menu ${isActive ? "active" : ""}`}
-            onClick={() => handleNavClick(menu.path)}
+            onClick={() => handleNavClick(menu.hash)}
           >
             <div className="menu-img">
               <img src={isActive ? menu.activeIcon : menu.icon} alt={menu.name} />
