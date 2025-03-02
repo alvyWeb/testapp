@@ -326,7 +326,7 @@
       }
 
       .couples_individuals {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, row, center, space-between, 15px);
 
         .Couples {
@@ -347,11 +347,11 @@
       }
 
       .add_player {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, column, flex-start, normal, 32px);
 
         .player_row {
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
           @include item_flex(flex, row, center, space-between, 0px);
 
           .player_img {
@@ -375,9 +375,10 @@
       }
 
       .create_game {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         a {
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
+          display: block;
 
           button {
             border: none;
