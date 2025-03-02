@@ -14,19 +14,21 @@
       padding: 12px 15px;
       border-radius: 12px;
       background: transparent;
-      color: white;
+      color: #B0AAAA;
       box-sizing: border-box;
       border: 1.2px solid light grey;
       @include weight_height(100%, 69px);
+      @include fix-font(16px, 400, 14px);
     }
 
     textarea::-webkit-input-placeholder {
       word-spacing: -5px;
       @include fix-font(16px, 400, 14px);
+      color: #B0AAAA;
     }
 
     a {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
 
       :hover {
         background: linear-gradient(to left, #34506d, #3498db);
