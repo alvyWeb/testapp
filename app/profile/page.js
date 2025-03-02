@@ -41,7 +41,7 @@ const Profile = ({ standings, setStandings }) => {
   const profileManager = [
     {
       message: "צור הודעת מערכת",
-      link: "",
+      link: "/chat",
       icon: (
         <svg
           width="18"
