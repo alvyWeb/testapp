@@ -6,7 +6,7 @@
   padding: 45px 20px;
 
   .message_whatsap {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, normal, 30px);
 
     .return {
@@ -25,7 +25,7 @@
     }
 
     .send_msg {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, column, flex-start, normal, 11px);
 
       label {
@@ -54,7 +54,7 @@
       }
 
       a {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
 
         button {
           cursor: pointer;
