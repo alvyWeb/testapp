@@ -114,12 +114,12 @@ const Placement = ({ standings, setStandings }) => {
 
         <div className="weekly_game">
           <div className="days_">
-            <p>Create a new weekly game</p>
+            <p>צור משחק שבועי חדש</p>
             <div className="days_choosedate">
-              <p>Days</p>
+              <p>ימים</p>
               <div className="select_content">
                 <select name="" id="">
-                  <option value="">Choose a date</option>
+                  <option value="">בחר יום</option>
                   <option value="">10/03/2024</option>
                   <option value="">10/04/2024</option>
                   <option value="">10/05/2024</option>
@@ -128,10 +128,10 @@ const Placement = ({ standings, setStandings }) => {
               </div>
             </div>
             <div className="days_choosedate">
-              <p>Hours</p>
+              <p>שעות</p>
               <div className="select_content">
                 <select name="" id="">
-                  <option value="">Time</option>
+                  <option value="">בחר שעה</option>
                   <option value="">02:30 AM</option>
                   <option value="">04:00 AM</option>
                   <option value="">09:00 AM</option>
@@ -140,10 +140,10 @@ const Placement = ({ standings, setStandings }) => {
               </div>
             </div>
             <div className="days_choosedate">
-              <p>Lavel</p>
+              <p>רמה</p>
               <div className="select_content">
                 <select name="" id="">
-                  <option value="">Lavel</option>
+                  <option value="">רמה</option>
                   <option value="">10 lv</option>
                   <option value="">20 lv</option>
                   <option value="">30 lv</option>
@@ -155,25 +155,25 @@ const Placement = ({ standings, setStandings }) => {
           <div className="create_match">
             <div className="couples-singles">
               <a href="">
-                <button>Couples</button>
+                <button>יחידים</button>
               </a>
               <a href="">
-                <button>Singles</button>
+                <button>זוגות</button>
               </a>
             </div>
             <a href="">
-              <button>Create a game</button>
+              <button>צור משחק</button>
             </a>
           </div>
         </div>
         <div className="new_game">
-          <p>Create a new game</p>
+          <p>צור משחק חדש</p>
           <div className="create_new_game">
             <div className="date">
-              <p>Date</p>
+              <p>תאריך</p>
               <div className="date_select">
                 <select name="" id="">
-                  <option value="">Choose a date</option>
+                  <option value="">בחר תאריך</option>
                   <option value="">10/03/2024</option>
                   <option value="">10/04/2024</option>
                   <option value="">10/05/2024</option>
@@ -181,7 +181,7 @@ const Placement = ({ standings, setStandings }) => {
               </div>
             </div>
             <div className="date">
-              <p>Hour</p>
+              <p>שעה</p>
               <div className="houre_select">
                 <select name="" id="">
                   <option value="">20:00</option>
@@ -193,18 +193,18 @@ const Placement = ({ standings, setStandings }) => {
             </div>
             <div className="location_court">
               <div className="location">
-                <input type="text" placeholder="location" />
+                <input type="text" placeholder="מיקום" />
               </div>
               <div className="court">
-                <input type="text" placeholder="court" />
+                <input type="text" placeholder="מגרש" />
               </div>
             </div>
             <div className="couples_individuals">
               <div className="Couples">
-                <input type="text" placeholder="Couples" />
+                <input type="text" placeholder="יחידים" />
               </div>
               <div className="Couples">
-                <input type="text" placeholder="Individuals" />
+                <input type="text" placeholder="זוגות" />
               </div>
             </div>
             <div className="add_player">
@@ -213,37 +213,37 @@ const Placement = ({ standings, setStandings }) => {
                   <a href="">
                     <img src="./placement/svg/add_player.svg" alt="" />
                   </a>
-                  <p>Player</p>
+                  <p>שחקן</p>
                 </div>
                 <div className="player_img">
                   <a href="">
                     <img src="./placement/svg/add_player.svg" alt="" />
                   </a>
-                  <p>Player</p>
+                  <p>שחקן</p>
                 </div>
                 <div className="player_img">
                   <a href="">
                     <img src="./placement/svg/add_player.svg" alt="" />
                   </a>
-                  <p>Player</p>
+                  <p>שחקן</p>
                 </div>
                 <div className="player_img">
                   <a href="">
                     <img src="./placement/svg/add_player.svg" alt="" />
                   </a>
-                  <p>Player</p>
+                  <p>שחקן</p>
                 </div>
               </div>
               <div className="create_game">
                 <a href="">
-                  <button>Create a game</button>
+                  <button>צור משחק</button>
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="placing_match">
-          <p className="placing_">Placing games</p>
+        {/* <div className="placing_match">
+          <p className="placing_">שיבוץ משחקים</p>
           {placementProfile.previousMatch.map((item, index) => (
             <div className="bottom_content">
               <p className="placing_day">{item.dayTime}</p>
@@ -323,7 +323,7 @@ const Placement = ({ standings, setStandings }) => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </main>
   );
