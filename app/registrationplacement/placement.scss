@@ -123,7 +123,7 @@
 
     .days_ {
       @include weight_height(100%, auto);
-      @include item_flex(flex, column, flex-start, normal, 8px);
+      @include item_flex(flex, column, flex-start, normal, 12px);
 
       p {
         color: var(--text-color);
