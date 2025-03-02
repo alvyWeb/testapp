@@ -70,7 +70,7 @@
     }
 
     .management_area {
-      @include weight_height(fill, fill);
+      @include weight_height(100%, fill);
       @include item_flex(flex, row, center, space-between, 0px);
 
       p {
