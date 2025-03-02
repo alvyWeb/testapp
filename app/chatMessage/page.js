@@ -3,7 +3,7 @@ import "./message.css";
 
 const chatMessage = () => {
     return (
-        <div className="chatMessage">
+        <div className="chatMessageblock">
             <div className="message_whatsap">
                 <Link className="return" href="/profile">
                     <div className="lft_arro">
