@@ -50,11 +50,11 @@ const Login = ({ standings, setStandings }) => {
       <div className="login_container">
         <div className="head">
           {/* <img src="./Stock/register/scar.svg" alt="" /> */}
-          <p>Log In</p>
+          <p>התחברות</p>
         </div>
         <div className="body">
           <div className="label_input ">
-            <label htmlFor="">Email Address</label>
+            <label htmlFor="">כתובת אימייל:</label>
             <input
               type="email"
               id="email"
@@ -64,7 +64,7 @@ const Login = ({ standings, setStandings }) => {
             />
           </div>
           <div className="label_input">
-            <label htmlFor="">Password</label>
+            <label htmlFor="">סיסמה:</label>
             <input
               type="password"
               className="input_area"
@@ -75,7 +75,7 @@ const Login = ({ standings, setStandings }) => {
 
           <div className="btn_fpass">
             <Link href="/registerTab">
-              <p>forgot your password?</p>
+              <p>שכחת את הסיסמה?</p>
             </Link>
 
             <button type="submit" className="submit_button">
@@ -83,12 +83,12 @@ const Login = ({ standings, setStandings }) => {
             </button>
           </div>
           <Link href="/registerTab">
-            <p>Don't have an account yet? the registrar</p>
+            <p>עדיין אין לך חשבון? <b>הרשם</b></p>
           </Link>
         </div>
 
         <div className="footer">
-          <p>or connect with</p>
+          <p>או התחבר עם</p>
           <SocialLogin />
         </div>
       </div>
