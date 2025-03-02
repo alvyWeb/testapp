@@ -119,7 +119,7 @@
 
   .weekly_game {
     @include weight_height(100%, auto);
-    @include item_flex(flex, column, flex-start, normal, 12px);
+    @include item_flex(flex, column, flex-start, normal, 9px);
 
     .days_ {
       @include weight_height(100%, auto);
@@ -178,11 +178,11 @@
     }
 
     .couples-singles {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, row, center, space-between, 20px);
 
       a {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
 
         button {
           border: none;
@@ -192,17 +192,17 @@
           text-align: center;
           color: #fcfcfc;
           @include fix-font(16px, 400, 14px);
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
         }
       }
     }
 
     .create_match {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, column, flex-start, normal, 12px);
 
       a {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
 
         button {
           border: none;
@@ -212,7 +212,7 @@
           text-align: center;
           color: #fcfcfc;
           @include fix-font(16px, 400, 14px);
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
         }
       }
     }
