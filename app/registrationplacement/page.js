@@ -95,7 +95,10 @@ const Placement = ({ standings, setStandings }) => {
           <p>ימי רישום</p>
           {placementProfile.ragistationTooggle.map((item, index) => (
             <div className="day_time">
-              <p>{item.daysTime}</p>
+              <div className="timeInfo">
+                <img src="./placement/svg/close.svg" alt="" />
+                <p>{item.daysTime}</p>
+              </div>
               <div className="toggle_img">
                 {/* TOGGLE_BUTTON */}
                 <div class="toggle">
@@ -104,7 +107,6 @@ const Placement = ({ standings, setStandings }) => {
                   <b class="b track"></b>
                 </div>
                 {/* T_BUTTON_END */}
-                <img src="./placement/svg/close.svg" alt="" />
               </div>
             </div>
           ))}
