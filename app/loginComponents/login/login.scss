@@ -107,6 +107,7 @@
       display: block;
       padding-top: 10px;
       text-align: center;
+      width: 100%;
 
       b{
         font-weight: 400;
@@ -125,7 +126,7 @@
   }
 
   .footer {
-    @include item_flex(flex, column, center, center, 12px);
+    @include item_flex(flex, column, center, center, 20px);
 
     p {
       color: var(--text-color);
