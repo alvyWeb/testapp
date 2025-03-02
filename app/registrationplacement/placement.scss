@@ -84,6 +84,10 @@
       @include weight_height(100%, auto);
       @include item_flex(flex, row, center, space-between, 0px);
 
+      .timeInfo{
+        @include item_flex(flex, row, center, start, 6px);
+      }
+
       p {
         color: var(--text-color);
         @include fix-font(16px, 400, 14px);
