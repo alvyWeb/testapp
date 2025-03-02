@@ -41,7 +41,7 @@ const Profile = ({ standings, setStandings }) => {
   const profileManager = [
     {
       message: "צור הודעת מערכת",
-      link: "/chatmessage",
+      link: "",
       icon: (
         <svg
           width="18"
@@ -158,7 +158,7 @@ const Profile = ({ standings, setStandings }) => {
   const router = useRouter();
   const handleClick = (item) => {
     if (item === "Disconnected") {
-      alert("Are you sure");
+      alert("אתה בטוח");
       signOut(auth)
         .then((res) => {
           Cookies.set("token", "");
@@ -169,9 +169,9 @@ const Profile = ({ standings, setStandings }) => {
         .catch((err) => {
           toast.warn(err?.message);
         });
-    } else if (item === "Change password") {
+    } else if (item === "שנה סיסמה") {
       handleModalOpen("changePassword");
-    } else if (item === "Create a system message") {
+    } else if (item === "צור הודעת מערכת") {
       handleModalOpen("chat");
     }
   };
