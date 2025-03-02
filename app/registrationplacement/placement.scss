@@ -388,7 +388,7 @@
             text-align: center;
             color: #fcfcfc;
             @include fix-font(16px, 400, 14px);
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
           }
         }
       }
