@@ -118,11 +118,11 @@
   }
 
   .weekly_game {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, normal, 12px);
 
     .days_ {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, column, flex-start, normal, 8px);
 
       p {
@@ -131,7 +131,7 @@
       }
 
       .days_choosedate {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, row, center, space-between, 0px);
 
         p {
