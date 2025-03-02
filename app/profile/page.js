@@ -204,11 +204,13 @@ const Profile = ({ standings, setStandings }) => {
           </div>
         </div>
         <div className="profile_d">
-          <img src={`${avatar ?? "./user-Image/profileN.png"}`} alt="" />
-          <p>
-            {firstName || lastName ? `${firstName || ""} ${lastName || ""}`.trim() : "נועם פן"}
-          </p>
-          <p className="_bio">{role}</p>
+          <div className="profileIntro">
+            <img src={`${avatar ?? "./user-Image/profileN.png"}`} alt="" />
+            <p>
+              {firstName || lastName ? `${firstName || ""} ${lastName || ""}`.trim() : "נועם פן"}
+            </p>
+            <p className="_bio">{`${role ?? "מנהל"}`}</p>
+          </div>
           {profileManager.map((item, idx) => (
             <div key={idx} className="management_area">
               <p>{item.message}</p>

@@ -35,17 +35,18 @@
 
   .profile_d {
     @include block_display(20px);
-    width: 340px;
+    max-width: 300px;
+    width: 100%;
     padding: 0 10px;
     position: relative;
-    bottom: 116px;
+    // bottom: 116px;
     @include item_flex(flex, column, center, center, 12px);
 
     img {
       object-fit: cover;
       border-radius: 50%;
-      border: 8px solid #fcfcfc;
-      @include weight_height(118.14px, 118.14px);
+      // border: 8px solid #fcfcfc;
+      @include weight_height(128px, 128px);
     }
 
     p {
