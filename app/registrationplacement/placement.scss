@@ -186,11 +186,13 @@
 
         button {
           border: none;
-          background: linear-gradient(to left, #34506d, #3498db);
-          border-radius: 12px;
-          padding: 14px 0px;
+          // background: linear-gradient(to left, #34506d, #3498db);
+          background-color: #fff;
+          border: 1px solid lightgray;
+          border-radius: 8px;
+          padding: 11px 0px;
           text-align: center;
-          color: #fcfcfc;
+          color: #B0AAAA;
           @include fix-font(16px, 400, 14px);
           @include weight_height(100%, auto);
         }
