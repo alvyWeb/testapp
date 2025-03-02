@@ -79,7 +79,7 @@ const Login = ({ standings, setStandings }) => {
             </Link>
 
             <button type="submit" className="submit_button">
-              Connect
+            התחבר
             </button>
           </div>
           <Link href="/registerTab">
