@@ -65,7 +65,8 @@
 
     .submit_button {
       @include weight_height(100%, auto);
-      background: linear-gradient(to left, #34506d, #3498db);
+      // background: linear-gradient(to left, #34506d, #3498db);
+      background: linear-gradient(270deg, #34506D 0%, #3498DB 100%);
       color: #ffffff;
       border-radius: 12px;
       padding: 15px;
