@@ -19,6 +19,7 @@
       border: 1.2px solid light grey;
       @include weight_height(100%, 69px);
       @include fix-font(16px, 400, 14px);
+      font-family: Rubik,serif;
     }
 
     textarea::-webkit-input-placeholder {
