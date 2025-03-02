@@ -206,7 +206,7 @@ const Profile = ({ standings, setStandings }) => {
         <div className="profile_d">
           <img src={`${avatar ?? "./user-Image/profileN.png"}`} alt="" />
           <p>
-            {firstName} {lastName}
+            {firstName || lastName ? `${firstName || ""} ${lastName || ""}`.trim() : "נועם פן"}
           </p>
           <p className="_bio">{role}</p>
           {profileManager.map((item, idx) => (
