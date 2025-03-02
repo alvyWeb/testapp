@@ -123,7 +123,11 @@
 
     .days_ {
       @include weight_height(100%, auto);
-      @include item_flex(flex, column, flex-start, normal, 12px);
+      @include item_flex(flex, column, flex-start, normal, 9px);
+
+      .sectionTitle{
+        padding-bottom: 3px;
+      }
 
       p {
         color: var(--text-color);

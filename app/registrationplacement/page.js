@@ -114,7 +114,7 @@ const Placement = ({ standings, setStandings }) => {
 
         <div className="weekly_game">
           <div className="days_">
-            <p>צור משחק שבועי חדש</p>
+            <p className="sectionTitle">צור משחק שבועי חדש</p>
             <div className="days_choosedate">
               <p>ימים</p>
               <div className="select_content">
