@@ -125,6 +125,10 @@
       p {
         color: $text-grey;
         @include fix-font(14px, 400, 12.25px);
+
+        &:hover{
+          color: var(--text-color);
+        }
       }
     }
   }
