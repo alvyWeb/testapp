@@ -81,7 +81,7 @@
     }
 
     .day_time {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, row, center, space-between, 0px);
 
       p {
