@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
     const path = window.location.pathname;
     const hash = window.location.hash;
 
-    if (hash === "#0" || path === "/login") {
+    if (hash === "#0" || path === "/login" || path === "/registerTab") {
       setShowProfileHeader(false);
     } else {
       setShowProfileHeader(true);

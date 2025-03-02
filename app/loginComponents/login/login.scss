@@ -70,8 +70,8 @@
     }
 
     .btn_fpass {
-      @include weight_height(fill, fit-content);
-      @include item_flex(flex, column, flex-start, center, 8px);
+      @include weight_height(100%, fit-content);
+      @include item_flex(flex, column, flex-start, center, 15px);
 
       a {
         text-decoration: none;
