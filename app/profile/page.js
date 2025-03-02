@@ -157,14 +157,14 @@ const Profile = ({ standings, setStandings }) => {
 
   const router = useRouter();
   const handleClick = (item) => {
-    if (item === "Disconnected") {
+    if (item === "התנתק") {
       alert("אתה בטוח");
       signOut(auth)
         .then((res) => {
           Cookies.set("token", "");
           onLogin();
           router.push("/login");
-          toast.success("Logout Successful");
+          toast.success("היציאה הצליחה");
         })
         .catch((err) => {
           toast.warn(err?.message);
