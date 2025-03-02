@@ -71,8 +71,9 @@
   }
 
   .registration_time {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, normal, 16px);
+    padding: 30px 0;
 
     p {
       color: var(--text-color);
