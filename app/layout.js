@@ -82,7 +82,10 @@ export default function RootLayout({ children }) {
   const [showProfileHeader, setShowProfileHeader] = useState(true);
 
   useEffect(() => {
-    if (window.location.hash === "#0" || window.location.hash === "login") {
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+
+    if (hash === "#0" || path === "/login") {
       setShowProfileHeader(false);
     } else {
       setShowProfileHeader(true);
