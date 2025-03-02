@@ -5,7 +5,7 @@ const MessageModal = ({ standings, setStandings }) => {
     <main>
       <div className="message_container">
         <div className="content">
-          <textarea name="" id="" placeholder="Enter a system message..." />
+          <textarea name="" id="" placeholder="הזן הודעת מערכת..." />
           <a>
             <button>Send a message</button>
           </a>
