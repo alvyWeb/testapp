@@ -30,7 +30,7 @@
 
     a {
       @include weight_height(100%, auto);
-
+      
       :hover {
         background: linear-gradient(to left, #34506d, #3498db);
         color: #fcfcfc;
@@ -38,13 +38,13 @@
 
       button {
         cursor: pointer;
-        background: none;
-        color: var(--color-blue);
+        color: #fff;
         padding: 16px 0px;
         border-radius: 12px;
-        border: 1px solid var(--color-blue);
+        border: 0;
         @include fix-font(16px, 400, 14px);
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
+        background: linear-gradient(270deg, #34506D 0%, #3498DB 100%);
       }
     }
   }
