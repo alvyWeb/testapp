@@ -40,7 +40,7 @@ const Profile = ({ standings, setStandings }) => {
   } = data || {};
   const profileManager = [
     {
-      message: "Create a system message",
+      message: "צור הודעת מערכת",
       link: "",
       icon: (
         <svg
@@ -58,7 +58,7 @@ const Profile = ({ standings, setStandings }) => {
       ),
     },
     {
-      message: "Registration and allocation",
+      message: "רישום ושיבוץ",
       link: "/registrationplacement",
       icon: (
         <svg
@@ -76,7 +76,7 @@ const Profile = ({ standings, setStandings }) => {
       ),
     },
     {
-      message: "User Management",
+      message: "ניהול משתמשים",
       link: "/user-management",
       icon: (
         <svg
@@ -96,7 +96,7 @@ const Profile = ({ standings, setStandings }) => {
       ),
     },
     {
-      message: "Games and balances",
+      message: "משחקים ויתרות",
       link: "/managementinterface/balances",
       icon: (
         <svg
@@ -114,7 +114,7 @@ const Profile = ({ standings, setStandings }) => {
       ),
     },
     {
-      message: "Change password",
+      message: "שנה סיסמה",
       link: "",
       icon: (
         <svg
@@ -132,7 +132,7 @@ const Profile = ({ standings, setStandings }) => {
       ),
     },
     {
-      message: "Disconnected",
+      message: "התנתק",
       link: "",
       icon: (
         <svg
@@ -200,11 +200,11 @@ const Profile = ({ standings, setStandings }) => {
               />
             </svg>
 
-            <p>Return</p>
+            <p>חזור</p>
           </div>
         </div>
         <div className="profile_d">
-          <img src={`${avatar ?? "./user-Image/Profile.jpg"}`} alt="" />
+          <img src={`${avatar ?? "./user-Image/profileN.png"}`} alt="" />
           <p>
             {firstName} {lastName}
           </p>
