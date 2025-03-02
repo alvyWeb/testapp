@@ -86,6 +86,16 @@
 
       .timeInfo{
         @include item_flex(flex, row, center, start, 6px);
+
+        img{
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+          background-color: #ffffff;
+          border: 1px solid lightgray;
+          padding: 3px;
+          box-sizing: border-box;
+        }
       }
 
       p {
