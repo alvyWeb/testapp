@@ -203,6 +203,7 @@
         button {
           border: none;
           // background: linear-gradient(to left, #34506d, #3498db);
+          background: none;
           background-color: #fff;
           border: 1px solid lightgray;
           border-radius: 8px;
@@ -219,8 +220,9 @@
   }
 
   .new_game {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, space-between, 12px);
+    padding: 32px 0;
 
     p {
       color: var(--text-color);
@@ -228,15 +230,15 @@
     }
 
     .create_new_game {
-      padding: 16px;
+      padding: 20px 25px;
       border-radius: 12px;
       border: 1px solid var(--content-border);
       background: var(--item-bg);
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, column, flex-start, space-between, 12px);
 
       .date {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, row, center, space-between, 0px);
 
         p {
@@ -257,7 +259,7 @@
             color: var(--text-color);
             background: var(--item-bg);
             border: 1px solid var(--content-border);
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
 
             option {
             }
@@ -277,7 +279,7 @@
             color: var(--text-color);
             background: var(--item-bg);
             border: 1px solid var(--content-border);
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
 
             option {
             }
@@ -286,7 +288,7 @@
       }
 
       .location_court {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, row, center, space-between, 15px);
 
         .location {
