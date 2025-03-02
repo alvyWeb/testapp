@@ -6,16 +6,16 @@ const Placement = ({ standings, setStandings }) => {
   const placementProfile = {
     ragistationTooggle: [
       {
-        daysTime: "Tuesday, 20:00 | Individuals",
-        heading: "Registration days",
+        daysTime: "שלישי, 20:00 | יחידים",
+        heading: "ימי רישום",
       },
       {
-        daysTime: "Tuesday, 20:00 | Individuals",
-        heading: "Registration days",
+        daysTime: "שלישי, 20:00 | יחידים",
+        heading: "ימי רישום",
       },
       {
-        daysTime: "Tuesday, 20:00 | Individuals",
-        heading: "Registration days",
+        daysTime: "שלישי, 20:00 | יחידים",
+        heading: "ימי רישום",
       },
     ],
     previousMatch: [
@@ -77,22 +77,22 @@ const Placement = ({ standings, setStandings }) => {
             <div className="lft_arro">
               <img src="./placement/svg/left arrow.svg" alt="" />
             </div>
-            <p>Return</p>
+            <p>חזור</p>
           </Link>
           <div className="send_msg">
-            <label htmlFor="">Send message to WhatsApp</label>
+            <label htmlFor="">הודעת שליחה ל-WhatsApp</label>
             <textarea
               name="message"
               id="message"
-              placeholder="Enter a text message..."
+              placeholder="הזן הודעת טקסט..."
             />
             <a href="">
-              <button>Send a message</button>
+              <button>שלח הודעה</button>
             </a>
           </div>
         </div>
         <div className="registration_time">
-          <p>Registration days</p>
+          <p>ימי רישום</p>
           {placementProfile.ragistationTooggle.map((item, index) => (
             <div className="day_time">
               <p>{item.daysTime}</p>
