@@ -41,7 +41,7 @@
     padding: 0;
     position: relative;
     // bottom: 116px;
-    @include item_flex(flex, column, center, center, 12px);
+    @include item_flex(flex, column, center, center, 18px);
 
     .profileIntro{
       display: flex;
