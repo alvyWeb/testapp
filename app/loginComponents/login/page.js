@@ -82,7 +82,7 @@ const Login = ({ standings, setStandings }) => {
             התחבר
             </button>
           </div>
-          <Link href="/registerTab">
+          <Link href="/registerTab" className="registerPage">
             <p>עדיין אין לך חשבון? <b>הרשם</b></p>
           </Link>
         </div>
