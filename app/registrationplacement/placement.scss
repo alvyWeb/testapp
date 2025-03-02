@@ -2,8 +2,8 @@
 @import "../global.css";
 
 .placement_container {
-  @include block_display(28px);
-  padding: 24px 10px;
+  // @include block_display(28px);
+  padding: 45px 20px;
 
   .message_whatsap {
     @include weight_height(fill, auto);
