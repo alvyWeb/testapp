@@ -430,8 +430,8 @@
   }
 
   .placing_match {
-    @include weight_height(fill, auto);
-    @include item_flex(flex, column, flex-start, space-between, 12px);
+    @include weight_height(100%, auto);
+    @include item_flex(flex, column, flex-start, space-between, 20px);
 
     p.placing_ {
       color: var(--text-color);
@@ -439,7 +439,7 @@
     }
 
     .bottom_content {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item_flex(flex, column, flex-start, space-between, 12px);
 
       p.placing_day {
@@ -451,12 +451,12 @@
         border-radius: 12px;
         border: 1px solid var(--content-border);
         background: var(--item-bg);
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, column, flex-start, space-between, 8px);
 
         .game_heading {
           border-bottom: 1px solid var(--content-border);
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
           @include content_padd(16px, 28px, 8px, 28px);
           @include item_flex(flex, column, flex-start, normal, 6px);
 
@@ -476,11 +476,11 @@
         }
 
         .game_body {
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
           @include content_padd(0px, 8px, 8px, 8px);
           @include item_flex(flex, row, center, space-between, 0px);
           .my_team {
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
             .me {
               span {
@@ -527,7 +527,7 @@
             }
           }
           .add_player {
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
             .teamate {
               img {
