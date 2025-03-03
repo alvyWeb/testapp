@@ -258,6 +258,7 @@
         .date_select {
           background: var(--item-bg);
           @include weight_height(182px, auto);
+          position: relative;
 
           select {
             outline: none;
@@ -271,8 +272,17 @@
             @include weight_height(100%, auto);
 
             option {
+              color: var(--text-grey);
+              @include weight_height(100%, auto);
+              @include fix-font(14px, 400, 12.25px);
             }
           }
+
+          img {
+            position: absolute;
+            left: 10px;
+          }
+
         }
 
         .houre_select {
