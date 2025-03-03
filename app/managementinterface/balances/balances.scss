@@ -62,6 +62,21 @@
                 }
             }
         }
+
+        .cash{
+            text-align: left;
+            @include item_flex(flex, column, flex-start, normal, 5px);
+
+            :first-child {
+                color: var(--text-color);
+                @include fix_font(14px, 400, 12.25px);
+            }
+
+            :nth-child(2) {
+                color: #145E94;
+                @include fix_font(14px, 500, 12.25px);
+            }
+        }
     }
 
     .games_balances{
