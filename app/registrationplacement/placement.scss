@@ -555,7 +555,7 @@
               
               :nth-child(2) {
                 color: var(--text-color);
-                @include fix-font(14px, 400, 12.25pxs);
+                @include fix-font(14px, 400, 12.25px);
               }
               :nth-child(3) {
                 color: var(--text-grey);
