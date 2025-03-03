@@ -483,7 +483,10 @@
           .my_team {
             @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
+
             .me {
+              @include item_flex(flex, column, center, space-between, 11px);
+
               span {
                 position: relative;
                 
