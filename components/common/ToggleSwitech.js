@@ -3,14 +3,11 @@ import "./toggleSwitch.scss";
 function ToggleSwitch({ checked, onChange }) {
   return (
     <>
-      <input
-        type="checkbox"
-        id="toggle"
-        checked={checked}
-        onChange={onChange}
-        className="toggle-checkbox"
-      />
-      <label htmlFor="toggle" className="toggle-switch"></label>
+      <div class="toggle">
+        <input type="checkbox" class="check" />
+        <b class="b switch"></b>
+        <b class="b track"></b>
+      </div>
     </>
   );
 }
