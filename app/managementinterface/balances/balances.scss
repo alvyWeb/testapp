@@ -1,17 +1,29 @@
 @import '../../../styles/shared/var.scss';
 
 .games_container {
-    @include weight_height(fill, auto);
-    @include item_flex(flex, column, flex-start, normal, 8px);
+    padding: 45px 0;
+
+    // @include weight_height(fill, auto);
+    // @include item_flex(flex, column, flex-start, normal, 8px);
+
     .container_head {
-        @include weight_height(fill, auto);
-        @include content_padd(20px, 12px, 0px, 12px);
-        @include item_flex(flex, column, flex-start, normal, 24px);
+        // @include weight_height(fill, auto);
+        // @include content_padd(20px, 12px, 0px, 12px);
+        // @include item_flex(flex, column, flex-start, normal, 24px);
+        padding: 0 20px;
+
+
         .return {
-            @include item_flex(flex, row, center, normal, 20px);
+            @include item_flex(flex, row, center, start, 15.75px);
+
+            img {
+                transform: scaleX(-1);
+                display: block;
+            }
+
             p {
-                color: var(--text-grey);
-                @include fix_font(16px, 400, 14px);
+                color: #b0aaaa;
+                @include fix_font(18px, 400, 15.75px);
             }
         }
 
