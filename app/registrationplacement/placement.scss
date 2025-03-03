@@ -466,7 +466,7 @@
           }
 
           span {
-            @include item_flex(flex, row, center, normal, 8px);
+            @include item_flex(flex, row, center, normal, 5px);
 
             p {
               color: var(--text-grey);
@@ -478,7 +478,8 @@
         .game_body {
           @include weight_height(100%, auto);
           @include content_padd(0px, 8px, 8px, 8px);
-          @include item_flex(flex, row, center, space-between, 0px);
+          @include item_flex(flex, row-reverse, center, space-between, 0px);
+          
           .my_team {
             @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
