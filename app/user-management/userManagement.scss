@@ -82,9 +82,18 @@
       }
       tbody {
         padding-top: 10px;
+
         .table-data {
           padding: 7px 10px;
           border: 1px solid var(--content-border);
+
+          p{
+            font-size: 14px;
+            line-height: 12.25px;
+            line-height: 12.25px;
+            font-family: Rubik,serif;
+            font-weight: 500;
+          }
 
           .edit-pen {
             color: var(--color-blue);
@@ -94,7 +103,7 @@
           }
         }
         .user-data {
-          padding: 0 10px;
+          padding: 7px 20px;
           // min-width: 160px;
           position: relative;
           display: flex;
