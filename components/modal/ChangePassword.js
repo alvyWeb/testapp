@@ -4,13 +4,13 @@ const ChangePassword = () => {
   return (
     <div className="pass_container">
       <div className="container">
-        <p>Change Password</p>
+        <h2>שינוי סיסמה</h2>
         <span>
-          <input type="text" placeholder="Current Password" />
-          <input type="text" placeholder="new password" />
-          <input type="text" placeholder="New password again" />
+          <input type="text" placeholder="סיסמה נוכחית" />
+          <input type="text" placeholder="סיסמה חדשה" />
+          <input type="text" placeholder="סיסמה חדשה בשנית" />
           <a>
-            <button className="btn btn1">Current Password</button>
+            <button className="btn btn1">שנה סיסמה</button>
           </a>
         </span>
       </div>
