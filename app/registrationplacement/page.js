@@ -36,35 +36,35 @@ const Placement = ({ standings, setStandings }) => {
         "": "",
       },
       {
-        dayTime: "Sunday 27.08",
-        headTitle: "Yarkon Park, Tel Aviv | Plot #2",
+        dayTime: "יום ראשון 27.08",
+        headTitle: "פארק הירקון, תל אביב | מגרש #2",
         logo: "./placement/png/peen_group.png",
-        matchDate: "February 24 | 14:00",
-        myImg: "./user-Image/Sabbir Sagar.png",
-        myCountry: "./flags/at.png",
+        matchDate: "24 בפברואר | 14:00 ",
+        myImg: "./user-Image/g3.png",
+        myCountry: "./flags/br.png",
         close: "./placement/svg/close.svg",
-        myName: "Penn N.",
-        myRank: "(panther)",
-        teaMateImg: "./user-Image/Sabbir Sagar.png",
-        teaMateCountry: "./flags/at.png",
-        teaMateName: "Penn N.",
-        teaMateRank: "(panther)",
+        myName: "פן נ.",
+        myRank: "(פנתר)",
+        teaMateImg: "./user-Image/g4.png",
+        teaMateCountry: "./flags/br.png",
+        teaMateName: "פן נ.",
+        teaMateRank: "(פנתר)",
         "": "",
       },
       {
-        dayTime: "Monday 27.08",
-        headTitle: "Yarkon Park, Tel Aviv | Plot #2",
+        dayTime: "יום ראשון 27.08",
+        headTitle: "פארק הירקון, תל אביב | מגרש #2",
         logo: "./placement/png/peen_group.png",
-        matchDate: "February 24 | 14:00",
-        myImg: "./user-Image/Sabbir Sagar.png",
-        myCountry: "./flags/at.png",
+        matchDate: "24 בפברואר | 14:00 ",
+        myImg: "./user-Image/g3.png",
+        myCountry: "./flags/br.png",
         close: "./placement/svg/close.svg",
-        myName: "Penn N.",
-        myRank: "(panther)",
-        teaMateImg: "./user-Image/Sabbir Sagar.png",
-        teaMateCountry: "./flags/at.png",
-        teaMateName: "Penn N.",
-        teaMateRank: "(panther)",
+        myName: "פן נ.",
+        myRank: "(פנתר)",
+        teaMateImg: "./user-Image/g4.png",
+        teaMateCountry: "./flags/br.png",
+        teaMateName: "פן נ.",
+        teaMateRank: "(פנתר)",
         "": "",
       },
     ],
@@ -265,8 +265,7 @@ const Placement = ({ standings, setStandings }) => {
                         <img src={item.myCountry} />
                         <img src={item.close} />
                       </span>
-                      <p>{item.myName}</p>
-                      <p>{item.myRank}</p>
+                      <p>{item.myName} {item.myRank}</p>
                     </div>
                     <div className="me">
                       <span>
@@ -274,8 +273,7 @@ const Placement = ({ standings, setStandings }) => {
                         <img src={item.teaMateCountry} />
                         <img src={item.close} />
                       </span>
-                      <p>{item.teaMateName}</p>
-                      <p>{item.teaMateRank}</p>
+                      <p>{item.teaMateName} {item.teaMateRank}</p>
                     </div>
                   </div>
                   <div className="border">
