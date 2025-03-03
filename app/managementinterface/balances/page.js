@@ -33,7 +33,7 @@ const Balances = ({ standings, setStandings }) => {
     },
     {
       date: "02/24/2023",
-      amount: "200",
+      amount: "200 ",
       remarks: "משחק טניס ביום שני",
     },
   ];
