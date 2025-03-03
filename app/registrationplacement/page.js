@@ -309,11 +309,15 @@ const Placement = ({ standings, setStandings }) => {
                   </div>
                   <div className="add_player">
                     <div className="teamate">
-                      <img src="./placement/svg/add_player.svg" alt="" />
+                      <div className="addImage">
+                        <img src="./placement/svg/add_player.svg" alt="" />
+                      </div>
                       <p>פן נ. (פנתר)</p>
                     </div>
                     <div className="teamate">
-                      <img src="./placement/svg/add_player.svg" alt="" />
+                      <div className="addImage">
+                        <img src="./placement/svg/add_player.svg" alt="" />
+                      </div>
                       <p>פן נ. (פנתר)</p>
                     </div>
                   </div>
