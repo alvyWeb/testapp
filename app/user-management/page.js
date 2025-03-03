@@ -59,31 +59,45 @@ const userManagement = ({}) => {
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <tr key={item}>
                 <td className="table-data">
-                  <span>johndoe@gmail.com</span>
+                  <div className="dateInfo">
+                    <span>johndoe@gmail.com</span>
+                  </div>
                 </td>
                 <td className="table-data">
-                  <span>0524876588</span>
+                  <div className="dateInfo">
+                    <span>0524876588</span>
+                  </div>
                 </td>
                 <td className="table-data">
-                  <span className="edit-pen">
-                    <LuPenLine />
-                  </span>
-                  <span>1</span>
+                  <div className="dateInfo">
+                    <span className="edit-pen">
+                      <LuPenLine />
+                    </span>
+                    <span>1</span>
+                  </div>
                 </td>
                 <td className="table-data">
-                  <span>1</span>
+                  <div className="dateInfo">
+                    <span>1</span>
+                  </div> 
                 </td>
                 <td className="table-data">
-                  <span className="edit-pen">
-                    <LuPenLine />
-                  </span>
-                  <span>#1</span>
+                  <div className="dateInfo">
+                    <span className="edit-pen">
+                      <LuPenLine />
+                    </span>
+                    <span>#1</span>
+                  </div>
                 </td>
                 <td className="table-data">
-                  <ToggleSwitch />
+                  <div className="dateInfo">
+                    <ToggleSwitch />
+                  </div>
                 </td>
                 <td className="table-data">
-                  <ToggleSwitch />
+                  <div className="dateInfo">
+                    <ToggleSwitch />
+                  </div>
                 </td>
                 <td className="table-data user-data">
                   <span className="user-info">
