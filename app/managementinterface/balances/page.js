@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 import "./balances.scss";
@@ -70,14 +71,14 @@ const Balances = ({ standings, setStandings }) => {
         <div className="games_balances">
           <a
             href="#"
-            className={activeTab === "games" ? "active" : ""}
+            className={`${activeTab === "games" ? "active" : ""} `}
             onClick={() => setActiveTab("games")}
           >
           משחקים
           </a>
           <a
             href="#"
-            className={activeTab === "balances" ? "active" : ""}
+            className={`${activeTab === "balances" ? "active" : ""} `}
             onClick={() => setActiveTab("balances")}
           >
           יתרות
