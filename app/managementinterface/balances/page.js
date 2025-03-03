@@ -58,35 +58,35 @@ const Balances = ({ standings, setStandings }) => {
           <div className="profile">
             <div className="details">
               <span>
-                <img src="../user-Image/Tafsir.png" alt="" />
-                <img src="../flags/aw.png" alt="" />
+                <img src="../user-Image/a1.png" alt="" />
+                <img src="../flags/br.png" alt="" />
               </span>
               <div className="name_bio">
-                <p>Yoram Abrahami</p>
-                <p>a tennis player</p>
+                <p>יורם אברהמי</p>
+                <p>שחקן טניס</p>
               </div>
             </div>
             <div className="cash">
-              <p>220 NIS</p>
-              <p>To be paid at PayBox</p>
+              <p>220 ש”ח בזכות</p>
+              <p>לתשלום ב-PayBox</p>
             </div>
           </div>
         </div>
         <div className="games_balances">
           <a href="">
-            <p>Games</p>
+            <p>משחקים</p>
           </a>
           <a href="">
-            <p>Balances</p>
+            <p>יתרות</p>
           </a>
         </div>
         <div className="container_body">
           <div className="body_heading">
-            <span>
-              <p>Date</p>
-              <p>Amount</p>
+            <span className="bodyHeadingInfo">
+              <p>תאריך</p>
+              <p>סכום</p>
+              <p>הערות</p>
             </span>
-            <p>Remarks</p>
           </div>
           {balancesData.map((item) => (
             <div className="body_data">
