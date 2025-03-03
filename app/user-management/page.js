@@ -132,7 +132,7 @@ const userManagement = ({}) => {
           onClick={() => router.push("/createprofile")}
           className="button"
         >
-          Add
+          הוספת משתמש
         </button>
       </div>
     </main>
