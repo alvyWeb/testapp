@@ -53,7 +53,7 @@ const Balances = ({ standings, setStandings }) => {
                 stroke-width="0.3"
               />
             </svg>
-            <p>Return</p>
+            <p>חזור</p>
           </Link>
           <div className="profile">
             <div className="details">
