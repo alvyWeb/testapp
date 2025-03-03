@@ -178,6 +178,7 @@ const Placement = ({ standings, setStandings }) => {
                   <option value="">10/04/2024</option>
                   <option value="">10/05/2024</option>
                 </select>
+                <img src="./placement/svg/bottom_arrow.svg" alt="" />
               </div>
             </div>
             <div className="date">
@@ -189,6 +190,7 @@ const Placement = ({ standings, setStandings }) => {
                   <option value="">20:00</option>
                   <option value="">20:00</option>
                 </select>
+                <img src="./placement/svg/bottom_arrow.svg" alt="" />
               </div>
             </div>
             <div className="location_court">
