@@ -5,11 +5,11 @@
   padding: 45px 20px;
 
   .topperBlock{
-    @include item_flex(flex, row, center, normal, 30px);
+    @include item_flex(flex, column, start, start, 30px);
   }
 
   .return {
-    @include item_flex(flex, row, center, normal, 15.75px);
+    @include item_flex(flex, row, start, start, 15.75px);
     text-decoration: none;
 
     img {
