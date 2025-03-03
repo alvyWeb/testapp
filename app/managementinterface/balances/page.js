@@ -40,7 +40,7 @@ const Balances = ({ standings, setStandings }) => {
         <div className="container_head">
           <Link className="return" href="/profile">
             <div className="lft_arro">
-              <img src="./placement/svg/left arrow.svg" alt="" />
+              <img src="../placement/svg/left arrow.svg" alt="" />
             </div>
             <p>חזור</p>
           </Link>
