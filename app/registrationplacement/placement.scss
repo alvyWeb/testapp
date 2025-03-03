@@ -457,8 +457,8 @@
         .game_heading {
           border-bottom: 1px solid var(--content-border);
           @include weight_height(100%, auto);
-          @include content_padd(16px, 28px, 8px, 28px);
-          @include item_flex(flex, column, flex-start, normal, 6px);
+          @include content_padd(15px, 15px, 5px, 15px);
+          @include item_flex(flex, column, flex-start, normal, 5px);
 
           p {
             color: var(--text-color);
