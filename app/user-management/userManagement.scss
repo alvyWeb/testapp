@@ -83,7 +83,7 @@
       tbody {
         padding-top: 10px;
         .table-data {
-          padding: 10px 5px;
+          padding: 7px 10px;
           border: 1px solid var(--content-border);
 
           .edit-pen {
@@ -94,12 +94,37 @@
           }
         }
         .user-data {
-          min-width: 160px;
+          padding: 0 10px;
+          // min-width: 160px;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 4px;
+
+          .user-imgs{
+            position: relative;
+            width: 34px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 0.8px solid #145E94;
+            border-radius: 50%;
+            padding: 1.5px;
+
+            .user-img {
+              border-radius: 50%;
+              display: block;
+            }
+
+            .country-img {
+              position: absolute;
+              bottom: -1px;
+              right: -1px;
+              display: block;
+              max-width: 16px;
+            }
+
+          }
 
           // .user-info {
           //   position: absolute;
