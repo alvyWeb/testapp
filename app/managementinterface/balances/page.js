@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./balances.scss";
 
 const Balances = ({ standings, setStandings }) => {
-
   const [activeTab, setActiveTab] = useState("games");
 
   const balancesData = [
@@ -38,6 +37,7 @@ const Balances = ({ standings, setStandings }) => {
       remarks: "משחק טניס ביום שני",
     },
   ];
+
   return (
     <main>
       <div className="games_container">
@@ -67,25 +67,26 @@ const Balances = ({ standings, setStandings }) => {
           </div>
         </div>
 
+        {/* Tabs for switching views */}
         <div className="games_balances">
-        <a
-          href="#"
-          className={activeTab === "games" ? "active" : ""}
-          onClick={() => setActiveTab("games")}
-        >
-          <p>משחקים</p>
-        </a>
-        <a
-          href="#"
-          className={activeTab === "balances" ? "active" : ""}
-          onClick={() => setActiveTab("balances")}
-        >
-          <p>יתרות</p>
-        </a>
-      </div>
-        
-        <div className="container_body">
-          <table className="commonTable">
+          <button
+            className={activeTab === "games" ? "active" : ""}
+            onClick={() => setActiveTab("games")}
+          >
+            <p>משחקים</p>
+          </button>
+          <button
+            className={activeTab === "balances" ? "active" : ""}
+            onClick={() => setActiveTab("balances")}
+          >
+            <p>יתרות</p>
+          </button>
+        </div>
+
+        {/* Show the table only when 'balances' is selected */}
+        {activeTab === "balances" && (
+          <div className="container_body">
+            <table className="commonTable">
               <thead>
                 <tr>
                   <th className="tableHeadingText">
@@ -100,22 +101,23 @@ const Balances = ({ standings, setStandings }) => {
                 </tr>
               </thead>
               <tbody>
-              {balancesData.map((item) => (
-                <tr>
-                  <td className="tablebodyText">
-                    <span>{item.date}</span>
-                  </td>
-                  <td className="tablebodyText">
-                    <span>{item.amount}</span>
-                  </td>
-                  <td className="tablebodyText">
-                    <span>{item.remarks}</span>
-                  </td>
-                </tr>
-              ))}
+                {balancesData.map((item, index) => (
+                  <tr key={index}>
+                    <td className="tablebodyText">
+                      <span>{item.date}</span>
+                    </td>
+                    <td className="tablebodyText">
+                      <span>{item.amount}</span>
+                    </td>
+                    <td className="tablebodyText">
+                      <span>{item.remarks}</span>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
-          </table>
-        </div>
+            </table>
+          </div>
+        )}
       </div>
     </main>
   );
