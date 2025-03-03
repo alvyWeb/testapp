@@ -88,6 +88,11 @@
           border: 1px solid var(--content-border);
           // text-align: center;
           white-space: nowrap;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          flex-direction: row;
 
           p{
             font-size: 14px;
