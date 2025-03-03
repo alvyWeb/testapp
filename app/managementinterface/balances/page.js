@@ -44,7 +44,7 @@ const Balances = ({ standings, setStandings }) => {
             </div>
             <p>חזור</p>
           </Link>
-          
+
           <div className="profile">
             <div className="details">
               <span>
