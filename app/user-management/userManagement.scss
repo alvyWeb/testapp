@@ -2,10 +2,11 @@
 
 // Scss Start.
 .management-container {
-  padding: 45px 20px;
+  padding: 45px 0;
 
   .topperBlock{
     @include item_flex(flex, column, start, start, 30px);
+    padding: 0 20px;
   }
 
   .return {
@@ -69,6 +70,7 @@
 
     table {
       border-collapse: collapse;
+      direction: rtl;
 
       thead {
         th {
