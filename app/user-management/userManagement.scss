@@ -100,7 +100,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 4px;
+          gap: 7px;
+          min-width: 135px;
 
           .user-imgs{
             position: relative;
@@ -114,6 +115,7 @@
             .user-img {
               border-radius: 50%;
               display: block;
+              width: 100%;
             }
 
             .country-img {
