@@ -29,7 +29,7 @@ const Placement = ({ standings, setStandings }) => {
         close: "./placement/svg/close.svg",
         myName: "פן נ.",
         myRank: "(פנתר)",
-        teaMateImg: "./user-Image/Sabbir Sagar.png",
+        teaMateImg: "./user-Image/g4.png",
         teaMateCountry: "./flags/br.png",
         teaMateName: "פן נ.",
         teaMateRank: "(פנתר)",
@@ -312,13 +312,11 @@ const Placement = ({ standings, setStandings }) => {
                   <div className="add_player">
                     <div className="teamate">
                       <img src="./placement/svg/add_player.svg" alt="" />
-                      <p>Penn N.</p>
-                      <p>(panther)</p>
+                      <p>פן נ. (פנתר)</p>
                     </div>
                     <div className="teamate">
                       <img src="./placement/svg/add_player.svg" alt="" />
-                      <p>Penn N.</p>
-                      <p>(panther)</p>
+                      <p>פן נ. (פנתר)</p>
                     </div>
                   </div>
                 </div>
