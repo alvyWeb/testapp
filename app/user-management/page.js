@@ -89,7 +89,7 @@ const userManagement = ({}) => {
                   <span className="edit-pen">
                     <LuPenLine />
                   </span>
-                  <p>Penn N. (panther)</p>
+                  <p>פן נ. (פנתר)</p>
 
                   <span className="user-info">
                     <div className="user-imgs">
