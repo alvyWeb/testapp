@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { useState } from "react";
 import "./balances.scss";
 
 const Balances = ({ standings, setStandings }) => {
-  const [activeTab, setActiveTab] = useState("games");
-
+  
   const balancesData = [
     {
       date: "02/24/2023",
@@ -33,11 +31,10 @@ const Balances = ({ standings, setStandings }) => {
     },
     {
       date: "02/24/2023",
-      amount: "200 ",
+      amount: "200",
       remarks: "משחק טניס ביום שני",
     },
   ];
-
   return (
     <main>
       <div className="games_container">
@@ -67,26 +64,17 @@ const Balances = ({ standings, setStandings }) => {
           </div>
         </div>
 
-        {/* Tabs for switching views */}
         <div className="games_balances">
-          <button
-            className={activeTab === "games" ? "active" : ""}
-            onClick={() => setActiveTab("games")}
-          >
+          <a href="" className="active">
             <p>משחקים</p>
-          </button>
-          <button
-            className={activeTab === "balances" ? "active" : ""}
-            onClick={() => setActiveTab("balances")}
-          >
+          </a>
+          <a href="">
             <p>יתרות</p>
-          </button>
+          </a>
         </div>
-
-        {/* Show the table only when 'balances' is selected */}
-        {activeTab === "balances" && (
-          <div className="container_body">
-            <table className="commonTable">
+        
+        <div className="container_body">
+          <table className="commonTable">
               <thead>
                 <tr>
                   <th className="tableHeadingText">
@@ -101,23 +89,22 @@ const Balances = ({ standings, setStandings }) => {
                 </tr>
               </thead>
               <tbody>
-                {balancesData.map((item, index) => (
-                  <tr key={index}>
-                    <td className="tablebodyText">
-                      <span>{item.date}</span>
-                    </td>
-                    <td className="tablebodyText">
-                      <span>{item.amount}</span>
-                    </td>
-                    <td className="tablebodyText">
-                      <span>{item.remarks}</span>
-                    </td>
-                  </tr>
-                ))}
+              {balancesData.map((item) => (
+                <tr>
+                  <td className="tablebodyText">
+                    <span>{item.date}</span>
+                  </td>
+                  <td className="tablebodyText">
+                    <span>{item.amount}</span>
+                  </td>
+                  <td className="tablebodyText">
+                    <span>{item.remarks}</span>
+                  </td>
+                </tr>
+              ))}
               </tbody>
-            </table>
-          </div>
-        )}
+          </table>
+        </div>
       </div>
     </main>
   );
