@@ -1,7 +1,11 @@
 import Link from "next/link";
+import { useState } from "react";
 import "./balances.scss";
 
 const Balances = ({ standings, setStandings }) => {
+
+  const [activeTab, setActiveTab] = useState("games");
+
   const balancesData = [
     {
       date: "02/24/2023",
@@ -64,13 +68,21 @@ const Balances = ({ standings, setStandings }) => {
         </div>
 
         <div className="games_balances">
-          <a href="" className="active">
-            <p>משחקים</p>
-          </a>
-          <a href="">
-            <p>יתרות</p>
-          </a>
-        </div>
+        <a
+          href="#"
+          className={activeTab === "games" ? "active" : ""}
+          onClick={() => setActiveTab("games")}
+        >
+          <p>משחקים</p>
+        </a>
+        <a
+          href="#"
+          className={activeTab === "balances" ? "active" : ""}
+          onClick={() => setActiveTab("balances")}
+        >
+          <p>יתרות</p>
+        </a>
+      </div>
         
         <div className="container_body">
           <table className="commonTable">
