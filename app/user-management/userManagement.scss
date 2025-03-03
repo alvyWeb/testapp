@@ -101,31 +101,31 @@
           align-items: center;
           gap: 4px;
 
-          .user-info {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 10px;
+          // .user-info {
+          //   position: absolute;
+          //   top: 50%;
+          //   transform: translateY(-50%);
+          //   right: 10px;
 
-            .user-imgs {
-              position: relative;
-              width: 30px;
-              height: 35px;
-              .user-img {
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-              }
-              .country-img {
-                position: absolute;
-                bottom: 5px;
-                right: 4px;
-                padding: 0px;
-                width: 14px;
-                height: 14px;
-              }
-            }
-          }
+          //   .user-imgs {
+          //     position: relative;
+          //     width: 30px;
+          //     height: 35px;
+          //     .user-img {
+          //       width: 30px;
+          //       height: 30px;
+          //       border-radius: 50%;
+          //     }
+          //     .country-img {
+          //       position: absolute;
+          //       bottom: 5px;
+          //       right: 4px;
+          //       padding: 0px;
+          //       width: 14px;
+          //       height: 14px;
+          //     }
+          //   }
+          // }
         }
       }
     }
