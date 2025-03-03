@@ -56,7 +56,7 @@ const userManagement = ({}) => {
             </tr>
           </thead>
           <tbody>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+            {[1, 2, 3, 4, 5, 6].map((item) => (
               <tr key={item}>
                 <td className="table-data">
                   <span>johndoe@gmail.com</span>
