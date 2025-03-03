@@ -104,25 +104,28 @@
     }
 
     .commonTable {
+        width: 100%;
+
         thead {
             th {
                 padding: 10px 18px;
                 border: 0px solid var(--content-border);
                 background: linear-gradient(189.11deg, rgba(71, 117, 169, 0.16) -3.79%, rgba(255, 255, 255, 0) 154.46%);
+                @include fix_font(14px, 500, 12.25px);
             }
         }
 
         tbody {
 
             .tablebodyText {
-                padding: 7px 10px;
+                padding: 15px 20px;
                 border: 1px solid var(--content-border);
 
                 span{
                     font-size: 14px;
                     line-height: 12.25px;
                     font-family: Rubik,serif;
-                    font-weight: 500;
+                    font-weight: 400;
                     white-space: nowrap;
                     display: block;
                 }
