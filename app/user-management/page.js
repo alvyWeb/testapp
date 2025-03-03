@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 const userManagement = ({}) => {
   const router = useRouter();
   return (
-    <main className="main-container">
+    <main className="management-container">
       <Link className="return" href="/profile">
         <div className="lft_arro">
           <img src="./placement/svg/left arrow.svg" alt="" />

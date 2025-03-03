@@ -1,11 +1,11 @@
 @import "../../styles/shared/var.scss";
 
 // Scss Start.
-.main-container {
-  padding-bottom: 100px;
+.management-container {
+  padding: 45px 20px;
+
   .return {
     @include item_flex(flex, row, center, normal, 15.75px);
-    padding: 20px;
     text-decoration: none;
 
     img {
