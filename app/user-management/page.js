@@ -86,11 +86,6 @@ const userManagement = ({}) => {
                   <ToggleSwitch />
                 </td>
                 <td className="table-data user-data">
-                  <span className="edit-pen">
-                    <LuPenLine />
-                  </span>
-                  <p>פן נ. (פנתר)</p>
-
                   <span className="user-info">
                     <div className="user-imgs">
                       <img
@@ -104,6 +99,10 @@ const userManagement = ({}) => {
                         className="country-img"
                       />
                     </div>
+                  </span>
+                  <p>פן נ. (פנתר)</p>
+                  <span className="edit-pen">
+                    <LuPenLine />
                   </span>
                 </td>
               </tr>
