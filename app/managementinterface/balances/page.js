@@ -64,7 +64,7 @@ const Balances = ({ standings, setStandings }) => {
         </div>
 
         <div className="games_balances">
-          <a href="">
+          <a href="" className="active">
             <p>משחקים</p>
           </a>
           <a href="">

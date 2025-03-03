@@ -81,6 +81,21 @@
 
     .games_balances{
         padding: 30px 20px 15px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 13px;
+
+        a{
+            border: 1px solid lightgray;
+            display: block;
+            border-radius: 26px;
+            padding: 11px 26px;
+            @include fix_font(14px, 400, 12.25px);
+            color: #B0AAAA;
+            text-decoration: none;
+            text-align: center;
+        }
     }
 
     .table-container {
