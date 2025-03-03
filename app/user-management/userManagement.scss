@@ -4,6 +4,10 @@
 .management-container {
   padding: 45px 20px;
 
+  .topperBlock{
+    @include item_flex(flex, row, center, normal, 30px);
+  }
+
   .return {
     @include item_flex(flex, row, center, normal, 15.75px);
     text-decoration: none;
