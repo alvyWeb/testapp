@@ -536,12 +536,15 @@
           .add_player {
             @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
+
             .teamate {
+                @include item_flex(flex, column, center, space-evenly, 11px);
+
               img {
-                padding: 18px 20px;
+                @include item_flex(flex, column, center, center, 0px);
                 border-radius: 50%;
                 border: 1px dotted var(--item-color);
-                @include weight_height(53px, 53px);
+                @include weight_height(57px, 57px);
               }
               :nth-child(2) {
                 color: var(--text-color);
