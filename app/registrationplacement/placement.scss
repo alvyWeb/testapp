@@ -477,7 +477,7 @@
 
         .game_body {
           @include weight_height(100%, auto);
-          @include content_padd(0px, 8px, 8px, 8px);
+          @include content_padd(0px, 10px, 10px, 10px);
           @include item_flex(flex, row-reverse, center, space-between, 0px);
 
           .my_team {
