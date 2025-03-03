@@ -6,32 +6,32 @@ const Balances = ({ standings, setStandings }) => {
     {
       date: "02/24/2023",
       amount: "200",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
     {
       date: "02/24/2023",
       amount: "100",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
     {
       date: "02/24/2023",
       amount: "300",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
     {
       date: "02/24/2023",
       amount: "200",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
     {
       date: "02/24/2023",
       amount: "100",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
     {
       date: "02/24/2023",
       amount: "200",
-      remarks: "Tennis game on Monday",
+      remarks: "משחק טניס ביום שני",
     },
   ];
   return (
