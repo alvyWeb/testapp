@@ -93,13 +93,15 @@
             line-height: 12.25px;
             font-family: Rubik,serif;
             font-weight: 500;
+            white-space: nowrap;
           }
 
           .edit-pen {
             color: var(--color-blue);
-            font-size: 12px;
-            padding-right: 3px;
+            font-size: 15px;
+            // padding-right: 3px;
             cursor: pointer;
+            display: block;
           }
         }
         .user-data {
