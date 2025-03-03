@@ -244,7 +244,7 @@ const Placement = ({ standings, setStandings }) => {
             </div>
           </div>
         </div>
-        {/* <div className="placing_match">
+        <div className="placing_match">
           <p className="placing_">שיבוץ משחקים</p>
           {placementProfile.previousMatch.map((item, index) => (
             <div className="bottom_content">
@@ -325,7 +325,7 @@ const Placement = ({ standings, setStandings }) => {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </main>
   );
