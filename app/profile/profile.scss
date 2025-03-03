@@ -86,7 +86,7 @@
           @include item_flex(flex, column, center, center, 0px);
         }
 
-        svg {
+        svg { 
           path {
             fill: var(--send-color);
           }

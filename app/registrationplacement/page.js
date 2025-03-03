@@ -129,7 +129,7 @@ const Placement = ({ standings, setStandings }) => {
             </div>
             <div className="days_choosedate">
               <p>שעות</p>
-              <div className="select_content">
+              <div className="select_content selectcontent2">
                 <select name="" id="">
                   <option value="">בחר שעה</option>
                   <option value="">02:30 AM</option>
@@ -141,7 +141,7 @@ const Placement = ({ standings, setStandings }) => {
             </div>
             <div className="days_choosedate">
               <p>רמה</p>
-              <div className="select_content">
+              <div className="select_content selectcontent2">
                 <select name="" id="">
                   <option value="">רמה</option>
                   <option value="">10 lv</option>
