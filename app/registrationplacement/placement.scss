@@ -479,18 +479,21 @@
           @include weight_height(100%, auto);
           @include content_padd(0px, 8px, 8px, 8px);
           @include item_flex(flex, row-reverse, center, space-between, 0px);
-          
+
           .my_team {
             @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-evenly, 0px);
             .me {
               span {
                 position: relative;
+                
                 :first-child {
                   padding: 2px;
                   border: 1px solid var(--item-color);
                   border-radius: 50%;
                   @include weight_height(57px, 57px);
+                  margin: auto;
+                  display: block;
                 }
 
                 :nth-child(2) {
