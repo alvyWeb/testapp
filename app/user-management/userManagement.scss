@@ -63,9 +63,9 @@
   }
   .table-container {
     margin: 18px 0;
-    // overflow-x: scroll;
+    overflow-x: scroll;
     // color: var(--text-color);
-    // text-align: center;
+    text-align: center;
     // padding: 0 16px;
 
     table {
@@ -86,7 +86,7 @@
         .table-data {
           padding: 7px 10px;
           border: 1px solid var(--content-border);
-          text-align: center;
+          // text-align: center;
           white-space: nowrap;
 
           p{
