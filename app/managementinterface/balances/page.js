@@ -81,20 +81,36 @@ const Balances = ({ standings, setStandings }) => {
           </a>
         </div>
         <div className="container_body">
-          <div className="body_heading">
-            <span className="bodyHeadingInfo">
-              <p>תאריך</p>
-              <p>סכום</p>
-              <p>הערות</p>
-            </span>
-          </div>
-          {balancesData.map((item) => (
-            <div className="body_data">
-              <p>{item.date}</p>
-              <p>{item.amount}</p>
-              <p>{item.remarks}</p>
-            </div>
-          ))}
+          <table className="commonTable">
+              <thead>
+                <tr>
+                  <th className="tableHeadingText">
+                    <span>תאריך</span>
+                  </th>
+                  <th className="tableHeadingText">
+                    <span>סכום</span>
+                  </th>
+                  <th className="tableHeadingText">
+                    <span>הערות</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              {balancesData.map((item) => (
+                <tr>
+                  <td className="tablebodyText">
+                    <span>{item.date}</span>
+                  </td>
+                  <td className="tablebodyText">
+                    <span>{item.amount}</span>
+                  </td>
+                  <td className="tablebodyText">
+                    <span>{item.remarks}</span>
+                  </td>
+                </tr>
+              ))}
+              </tbody>
+          </table>
         </div>
       </div>
     </main>
