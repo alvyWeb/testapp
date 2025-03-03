@@ -62,6 +62,7 @@ const Balances = ({ standings, setStandings }) => {
             </div>
           </div>
         </div>
+
         <div className="games_balances">
           <a href="">
             <p>משחקים</p>
@@ -70,6 +71,7 @@ const Balances = ({ standings, setStandings }) => {
             <p>יתרות</p>
           </a>
         </div>
+        
         <div className="container_body">
           <table className="commonTable">
               <thead>
