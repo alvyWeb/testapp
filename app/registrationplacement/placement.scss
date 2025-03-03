@@ -527,7 +527,7 @@
             }
           }
           .border {
-            @include item_flex(flex, column, center, normal, 0px);
+            @include item_flex(flex, column, center, normal, 10px);
 
             svg {
               fill: var(--content-border);
