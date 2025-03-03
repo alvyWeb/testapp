@@ -65,7 +65,7 @@
 
         .cash{
             text-align: left;
-            @include item_flex(flex, column, flex-start, normal, 5px);
+            @include item_flex(flex, column, flex-end, normal, 5px);
 
             :first-child {
                 color: var(--text-color);
