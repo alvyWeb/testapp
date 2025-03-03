@@ -281,6 +281,9 @@
           img {
             position: absolute;
             left: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
           }
 
         }
@@ -288,6 +291,7 @@
         .houre_select {
           background: var(--bg-color);
           @include weight_height(95px, auto);
+          position: relative;
 
           select {
             outline: none;
@@ -301,7 +305,18 @@
             @include weight_height(100%, auto);
 
             option {
+              color: var(--text-grey);
+              @include weight_height(100%, auto);
+              @include fix-font(14px, 400, 12.25px);
             }
+          }
+
+          img {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
           }
         }
       }
