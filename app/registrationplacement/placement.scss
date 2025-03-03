@@ -540,12 +540,19 @@
             .teamate {
                 @include item_flex(flex, column, center, space-evenly, 11px);
 
-              img {
-                @include item_flex(flex, column, center, center, 0px);
-                border-radius: 50%;
-                border: 1px dotted var(--item-color);
-                @include weight_height(57px, 57px);
-              }
+                .addImage{
+                  @include weight_height(57px, 57px);
+                  @include item_flex(flex, column, center, center, 0px);
+                  border-radius: 50%;
+                  border: 1px dotted var(--item-color);
+
+                  img {
+                    @include weight_height(20px, 20px);
+                    display: block;                
+                  }
+                }
+
+              
               :nth-child(2) {
                 color: var(--text-color);
                 @include fix-font(14px, 400, 12.25pxs);
