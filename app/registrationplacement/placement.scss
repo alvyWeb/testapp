@@ -177,12 +177,11 @@
         }
 
         .selectcontent2{
-          @include weight_height(95px, auto);
+            @include weight_height(95px, auto);
 
-          img {
-            left: 8px;
-          }
-        }
+            img {
+              left: 8px;
+            }
         }
       }
     }
