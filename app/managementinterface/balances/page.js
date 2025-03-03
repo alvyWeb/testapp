@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Link from "next/link";
 import "./balances.scss";
 
 const Balances = ({ standings, setStandings }) => {
-  
+  const [activeTab, setActiveTab] = useState("games"); // State to track active tab
+
   const balancesData = [
     {
       date: "02/24/2023",
@@ -35,6 +37,7 @@ const Balances = ({ standings, setStandings }) => {
       remarks: "משחק טניס ביום שני",
     },
   ];
+
   return (
     <main>
       <div className="games_container">
@@ -65,32 +68,40 @@ const Balances = ({ standings, setStandings }) => {
         </div>
 
         <div className="games_balances">
-          <a href="" className="active">
-            <p>משחקים</p>
+          <a
+            href="#"
+            className={activeTab === "games" ? "active" : ""}
+            onClick={() => setActiveTab("games")}
+          >
+          משחקים
           </a>
-          <a href="">
-            <p>יתרות</p>
+          <a
+            href="#"
+            className={activeTab === "balances" ? "active" : ""}
+            onClick={() => setActiveTab("balances")}
+          >
+          יתרות
           </a>
         </div>
-        
+
         <div className="container_body">
           <table className="commonTable">
-              <thead>
-                <tr>
-                  <th className="tableHeadingText">
-                    <span>תאריך</span>
-                  </th>
-                  <th className="tableHeadingText">
-                    <span>סכום</span>
-                  </th>
-                  <th className="tableHeadingText">
-                    <span>הערות</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-              {balancesData.map((item) => (
-                <tr>
+            <thead>
+              <tr>
+                <th className="tableHeadingText">
+                  <span>תאריך</span>
+                </th>
+                <th className="tableHeadingText">
+                  <span>סכום</span>
+                </th>
+                <th className="tableHeadingText">
+                  <span>הערות</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {balancesData.map((item, index) => (
+                <tr key={index}>
                   <td className="tablebodyText">
                     <span>{item.date}</span>
                   </td>
@@ -102,7 +113,7 @@ const Balances = ({ standings, setStandings }) => {
                   </td>
                 </tr>
               ))}
-              </tbody>
+            </tbody>
           </table>
         </div>
       </div>
