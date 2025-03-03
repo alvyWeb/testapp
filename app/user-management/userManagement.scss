@@ -94,13 +94,15 @@
             justify-content: center;
             align-items: center;
             gap: 5px;
-            flex-direction: row;
+            flex-direction: row-reverse;
+            font-size: 14px;
+            line-height: 12.25px;
+            font-family: Rubik,serif;
           }
           
 
           p{
             font-size: 14px;
-            line-height: 12.25px;
             line-height: 12.25px;
             font-family: Rubik,serif;
             font-weight: 500;
