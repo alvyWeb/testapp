@@ -4,21 +4,21 @@
   background: var(--item-bg);
   border-radius: 8px;
   border: 1px solid var(--content-border);
-  @include block_display(8px);
-  margin-top: 16px;
-  padding: 0px;
-  width: 345px;
+  // @include block_display(8px);
+  // margin-top: 16px;
+  // padding: 0px;
+  // width: 345px;
 
-  @media (min-width: 400px) {
-    .mybets_container {
-      width: 360px;
-    }
-  }
+  // @media (min-width: 400px) {
+  //   .mybets_container {
+  //     width: 360px;
+  //   }
+  // }
 
   .mybet_head {
     padding: 10px 8px;
     border-bottom: 1px solid var(--content-border);
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item-flex(flex, row, center, space-between, 0px);
 
     p.head_title {
@@ -34,11 +34,11 @@
 
   .mybet_body {
     padding: 0px 8px;
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item-flex(flex, column, flex-start, normal, 12px);
 
     .body_head {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item-flex(flex, row, center, space-between, 0px);
 
       .fteam {
@@ -130,7 +130,7 @@
     }
 
     .body_footer {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       @include item-flex(flex, row, center, space-between, 0px);
 
       .increase {
@@ -165,7 +165,7 @@
 
   .mybet_footer {
     border-top: 1px solid var(--content-border);
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item-flex(flex, row, center, space-between, 0px);
 
     .footer_score {
