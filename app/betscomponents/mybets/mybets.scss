@@ -93,7 +93,7 @@
           align-content: \\;
           align-items: center;
           padding: 6px;
-          
+
           svg {
             path {
               fill: var(--text-color);
@@ -101,9 +101,9 @@
           }
   
           p {
-            padding: 7px 14px;
-            border-radius: 26px;
-            border: 1px solid var(--content-border);
+            // padding: 7px 14px;
+            // border-radius: 26px;
+            // border: 1px solid var(--content-border);
             color: var(--text-color);
             @include fix-font(10.54px, 400, 9.22px);
           }

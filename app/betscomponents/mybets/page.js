@@ -39,14 +39,14 @@ const Mybets = ({ standings, setStandings }) => {
         increaseCash: "100",
       },
       {
-        headTitle: "February 24, Yarkon Park - Tel Aviv | 14:00",
-        edit: "edit",
-        fPlayerImg: "./user-Image/Tafsir.png",
-        fPCountry: "./flags/bi.png",
-        sPlayerImg: "./user-Image/Tafsir.png",
-        sPCountry: "./flags/bm.png",
-        fPlayerName: "Penn N. (panther)",
-        sPlayerName: "Goren S. (The Wiz)",
+        headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
+        edit: "עריכה",
+        fPlayerImg: "./user-Image/g3.png",
+        fPCountry: "./flags/br.png",
+        sPlayerImg: "./user-Image/g4.png",
+        sPCountry: "./flags/br.png",
+        fPlayerName: "פן נ. (פנתר)",
+        sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
           <svg
             width="24"
@@ -61,12 +61,12 @@ const Mybets = ({ standings, setStandings }) => {
             />
           </svg>
         ),
-        nTeam: "Penn N. (panther)",
-        lTeam: "Goren S. (The Wiz)",
-        nTeamImg: "./user-Image/Tafsir.png",
+        nTeam: "פן נ. (פנתר)",
+        lTeam: "וגורן ש. (קשה)",
+        nTeamImg: "./user-Image/g3.png",
         nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/Tafsir.png",
-        aTeamCountry: "./flags/bn.png",
+        aTeamImg: "./user-Image/g4.png",
+        aTeamCountry: "./flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -76,14 +76,14 @@ const Mybets = ({ standings, setStandings }) => {
     ],
     conatinerRead: [
       {
-        headTitle: "February 24, Yarkon Park - Tel Aviv | 14:00",
-        edit: "edit",
-        fPlayerImg: "./user-Image/Tafsir.png",
-        fPCountry: "./flags/bi.png",
-        sPlayerImg: "./user-Image/Tafsir.png",
-        sPCountry: "./flags/bm.png",
-        fPlayerName: "Penn N. (panther)",
-        sPlayerName: "Goren S. (The Wiz)",
+        headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
+        edit: "עריכה",
+        fPlayerImg: "./user-Image/g3.png",
+        fPCountry: "./flags/br.png",
+        sPlayerImg: "./user-Image/g4.png",
+        sPCountry: "./flags/br.png",
+        fPlayerName: "פן נ. (פנתר)",
+        sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
           <svg
             width="24"
@@ -98,12 +98,12 @@ const Mybets = ({ standings, setStandings }) => {
             />
           </svg>
         ),
-        nTeam: "Penn N. (panther)",
-        lTeam: "Goren S. (The Wiz)",
-        nTeamImg: "./user-Image/Tafsir.png",
+        nTeam: "פן נ. (פנתר)",
+        lTeam: "וגורן ש. (קשה)",
+        nTeamImg: "./user-Image/g3.png",
         nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/Tafsir.png",
-        aTeamCountry: "./flags/bn.png",
+        aTeamImg: "./user-Image/g4.png",
+        aTeamCountry: "./flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -114,14 +114,14 @@ const Mybets = ({ standings, setStandings }) => {
     ],
     conatinerGrey: [
       {
-        headTitle: "February 24, Yarkon Park - Tel Aviv | 14:00",
-        edit: "edit",
-        fPlayerImg: "./user-Image/Tafsir.png",
-        fPCountry: "./flags/bi.png",
-        sPlayerImg: "./user-Image/Tafsir.png",
-        sPCountry: "./flags/bm.png",
-        fPlayerName: "Penn N. (panther)",
-        sPlayerName: "Goren S. (The Wiz)",
+        headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
+        edit: "עריכה",
+        fPlayerImg: "./user-Image/g3.png",
+        fPCountry: "./flags/br.png",
+        sPlayerImg: "./user-Image/g4.png",
+        sPCountry: "./flags/br.png",
+        fPlayerName: "פן נ. (פנתר)",
+        sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
           <svg
             width="24"
@@ -136,12 +136,12 @@ const Mybets = ({ standings, setStandings }) => {
             />
           </svg>
         ),
-        nTeam: "Penn N. (panther)",
-        lTeam: "Goren S. (The Wiz)",
-        nTeamImg: "./user-Image/Tafsir.png",
+        nTeam: "פן נ. (פנתר)",
+        lTeam: "וגורן ש. (קשה)",
+        nTeamImg: "./user-Image/g3.png",
         nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/Tafsir.png",
-        aTeamCountry: "./flags/bn.png",
+        aTeamImg: "./user-Image/g4.png",
+        aTeamCountry: "./flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
