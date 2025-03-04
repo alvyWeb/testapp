@@ -161,8 +161,10 @@ const Bettingboard = ({ standings, setStandings }) => {
           betboard.map((item) => (
             <div className="bettingboard_body">
               <div className="profile">
-                <img src={item.profileImg} alt="" />
-                <img src={item.country} alt="" className='country' />
+                <div className="profileImage">
+                  <img src={item.profileImg} alt="" />
+                  <img src={item.country} alt="" className='country' />
+                </div>
                 <p>{item.name}</p>
               </div>
               <div className="board_det">
