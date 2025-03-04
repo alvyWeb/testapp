@@ -4,5 +4,50 @@
   max-width: 100%;
   padding: 25px 0;
 
-  
+  .table-container {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead{
+      background: linear-gradient(189.11deg, rgba(71, 117, 169, 0.16) -3.79%, rgba(255, 255, 255, 0) 154.46%);
+
+      th{
+          padding: 10px 13px 5px;
+
+          p{
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 12.25px;
+          }
+      }
+    }
+
+    tbody{
+
+      td{
+          padding: 10px 15px 5px;
+          border: 1px solid #eee;
+          text-align: center;
+
+          p{
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 10.5px;
+          }
+
+          &:nth-child(1){
+              text-align: right;
+          }
+      
+          &:nth-child(even){
+              background: #6CB7F012;
+          }
+
+      }
+    }
+
+
+  }
+
+
 }
