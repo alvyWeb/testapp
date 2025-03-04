@@ -200,7 +200,7 @@ export default function Home() {
     // <ProtectedRoute>
       <main>
         <div className="rank_container">
-          <table className="tableContainer">
+          <table className="table-container">
             <thead>
               <tr>
                 <th className="headingTitle"></th>
