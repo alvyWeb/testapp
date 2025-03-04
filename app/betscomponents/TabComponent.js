@@ -42,7 +42,7 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section1")}
         >
-          My bets
+          ההימורים שלי
         </button>
         <button
           id={
@@ -50,7 +50,7 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section2")}
         >
-          Betting board
+          לוח הימורים
         </button>
       </nav>
 
