@@ -24,7 +24,8 @@
     button {
       width: 50%;
       height: 40px;
-      border: 0.1px solid var(--bg-color);
+      border: 0px solid var(--bg-color);
+      border-bottom: 1px solid lightgray;
       background-color: var(--bg-color);
       padding: 0;
       margin: 0;
