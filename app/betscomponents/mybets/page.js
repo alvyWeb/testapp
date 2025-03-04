@@ -188,34 +188,18 @@ const Mybets = ({ standings, setStandings }) => {
                 </div>
                 <div className="fteam_img">
                   <span className="img_country">
-                    <img src={item.aTeamImg} alt="" />
-                    <img src={item.aTeamCountry} alt="" className="country" />
-                  </span>
-                  <span className="img_country">
                     <img src={item.nTeamImg} alt="" />
                     <img src={item.nTeamCountry} alt="" className="country" />
+                  </span>
+                  <span className="img_country">
+                    <img src={item.aTeamImg} alt="" />
+                    <img src={item.aTeamCountry} alt="" className="country" />
                   </span>
                 </div>
               </div>
             </div>
             <div className="body_footer">
-              <div className="increase">
-                <p>{item.increase}</p>
-                <svg
-                  width="8"
-                  height="11"
-                  viewBox="0 0 8 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.13205 0.144249L0.166063 2.71835C-0.0560883 2.91116 -0.0552616 3.22301 0.168002 3.41493C0.391236 3.60683 0.752308 3.60609 0.974487 3.41328L2.96544 1.68533L2.96544 10.5075C2.96544 10.7795 3.22075 11 3.53572 11C3.85068 11 4.10599 10.7795 4.10599 10.5075L4.10599 1.68535L6.09694 3.41326C6.31912 3.60607 6.68019 3.6068 6.90343 3.41491C7.12672 3.22299 7.12749 2.91111 6.90537 2.71832L3.93993 0.144667C3.71701 -0.0482388 3.35422 -0.0480664 3.13205 0.144249Z"
-                    fill="#60BF64"
-                  />
-                </svg>
-              </div>
               <div className="decrease">
-                <p>{item.decrease}</p>
                 <svg
                   width="8"
                   height="11"
@@ -228,13 +212,27 @@ const Mybets = ({ standings, setStandings }) => {
                     fill="#E44C4C"
                   />
                 </svg>
+                <p>{item.decrease}</p>
               </div>
+              <div className="increase">
+                <svg
+                  width="8"
+                  height="11"
+                  viewBox="0 0 8 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.13205 0.144249L0.166063 2.71835C-0.0560883 2.91116 -0.0552616 3.22301 0.168002 3.41493C0.391236 3.60683 0.752308 3.60609 0.974487 3.41328L2.96544 1.68533L2.96544 10.5075C2.96544 10.7795 3.22075 11 3.53572 11C3.85068 11 4.10599 10.7795 4.10599 10.5075L4.10599 1.68535L6.09694 3.41326C6.31912 3.60607 6.68019 3.6068 6.90343 3.41491C7.12672 3.22299 7.12749 2.91111 6.90537 2.71832L3.93993 0.144667C3.71701 -0.0482388 3.35422 -0.0480664 3.13205 0.144249Z"
+                    fill="#60BF64"
+                  />
+                </svg>
+                <p>{item.increase}</p>
+              </div>
+              
             </div>
           </div>
           <div className="mybet_footer">
-            <div className="footer_score">
-              <p>{item.winRate}</p>
-            </div>
             {/* GREEN */}
             <div className="footer_cash">
               <span className="f_money">
@@ -343,6 +341,9 @@ const Mybets = ({ standings, setStandings }) => {
                   />
                 </svg>
               </span>
+            </div>
+            <div className="footer_score">
+              <p>{item.winRate}</p>
             </div>
           </div>
         </div>

@@ -2,6 +2,11 @@
 
 .mainBetblock{
   padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
 
   .mybets_container {
     background: var(--item-bg);
@@ -19,7 +24,7 @@
     // }
   
     .mybet_head {
-      padding: 10px 8px;
+      padding: 9px;
       border-bottom: 1px solid var(--content-border);
       @include weight_height(100%, auto);
       @include item-flex(flex, row, center, space-between, 0px);
@@ -36,7 +41,7 @@
     }
   
     .mybet_body {
-      padding: 0px 8px;
+      padding: 9px 8px 6px;
       @include weight_height(100%, auto);
       @include item-flex(flex, column, flex-start, normal, 12px);
   
