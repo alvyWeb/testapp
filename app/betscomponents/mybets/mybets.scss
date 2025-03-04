@@ -198,7 +198,7 @@
       .footer_cash {
         padding: 8px 8px;
         @include weight_height(179px, auto);
-        @include item-flex(flex, row, center, center, 8px);
+        @include item-flex(flex, row-reverse, center, center, 8px);
   
         span.f_money {
           @include item-flex(flex, row-reverse, center, normal, 4px);
@@ -236,7 +236,7 @@
       .red_cash {
         padding: 8px 8px;
         @include weight_height(179px, auto);
-        @include item-flex(flex, row, center, center, 8px);
+        @include item-flex(flex, row-reverse, center, center, 8px);
   
         span.f_money {
           @include item-flex(flex, row-reverse, center, normal, 4px);
@@ -278,7 +278,7 @@
       .grey_cash {
         padding: 8px 8px;
         @include weight_height(179px, auto);
-        @include item-flex(flex, row, center, center, 8px);
+        @include item-flex(flex, row-reverse, center, center, 8px);
   
         span.f_money {
           @include item-flex(flex, row-reverse, center, normal, 4px);
