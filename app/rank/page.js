@@ -197,7 +197,7 @@ export default function Home() {
     },
   ];
   return (
-    <ProtectedRoute>
+    // <ProtectedRoute>
       <main>
         <div className="rank_container">
           <div className="head_container">
@@ -296,6 +296,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-    </ProtectedRoute>
+    // </ProtectedRoute>
   );
 }
