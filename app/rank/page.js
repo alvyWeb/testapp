@@ -297,28 +297,17 @@ export default function Home() {
             {rankList.map((item) => (
               <tr>
                 <td className="dataitems">
-                  <span className="text">
-                    <p>{item.lavel}</p>
-                  </span>
+                  <div className="profile">
+                    <div className="profileImage">
+                      <img className='photo' src={item.playerImg} alt="" />
+                      <img src={item.playerCountry} alt="" className='country' />
+                    </div>
+                    <p className='profileName'>{item.playerName}</p>
+                  </div>
                 </td>
                 <td className="dataitems">
                   <span className="text">
-                    <p>{item.percent}</p>
-                  </span>
-                </td>
-                <td className="dataitems">
-                  <span className="text">
-                    <p>{item.equal}</p>
-                  </span>
-                </td>
-                <td className="dataitems">
-                  <span className="text">
-                    <p>{item.dLike}</p>
-                  </span>
-                </td>
-                <td className="dataitems">
-                  <span className="text">
-                    <p>{item.toffee}</p>
+                    <p>{item.score}</p>
                   </span>
                 </td>
                 <td className="dataitems">
@@ -328,17 +317,28 @@ export default function Home() {
                 </td>
                 <td className="dataitems">
                   <span className="text">
-                    <p>{item.score}</p>
+                    <p>{item.toffee}</p>
                   </span>
                 </td>
                 <td className="dataitems">
-                  <div className="profile">
-                    <div className="profileImage">
-                      <img className='photo' src={item.playerImg} alt="" />
-                      <img src={item.playerCountry} alt="" className='country' />
-                    </div>
-                    <p className='profileName'>{item.playerName}</p>
-                  </div>
+                  <span className="text">
+                    <p>{item.dLike}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.equal}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.percent}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.lavel}</p>
+                  </span>
                 </td>
               </tr>
             ))}
