@@ -50,7 +50,7 @@
 body {
   margin: 0;
   padding: 0;
-  max-width: 390px;
+  max-width: 450px;
   margin: 0 auto;
   background-color: var(--bg-color);
   overflow: hidden;
