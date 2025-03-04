@@ -31,6 +31,11 @@
                     font-size: 12px;
                     line-height: 10.5px;
                 }
+            
+                &:nth-child(even){
+                    background: #6CB7F012;
+                }
+
             }
 
             .profile{
