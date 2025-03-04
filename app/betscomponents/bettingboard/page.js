@@ -6,7 +6,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -15,7 +15,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -24,7 +24,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -33,7 +33,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -42,7 +42,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -51,7 +51,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -60,7 +60,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -69,7 +69,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -78,7 +78,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -87,7 +87,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -96,7 +96,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -105,7 +105,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -114,7 +114,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
@@ -123,7 +123,7 @@ const Bettingboard = ({ standings, setStandings }) => {
       "profileImg": "./user-Image/a1.png",
       "country": "./flags/br.png",
       "name": "פן נ. (פנתר)",
-      "money": "99000000",
+      "money": "1000000",
       "toffee": "35",
       "dLike": "35",
       "open": "50000"
