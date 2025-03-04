@@ -5,6 +5,15 @@
     .table-container{
         width: 100%;
         border-collapse: collapse;
+
+        thead{
+            background: linear-gradient(189.11deg, rgba(71, 117, 169, 0.16) -3.79%, rgba(255, 255, 255, 0) 154.46%);
+
+            th{
+                padding: 10px 13px 5px;
+            }
+
+        }
     }   
 
 }
