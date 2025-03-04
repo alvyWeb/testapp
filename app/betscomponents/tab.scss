@@ -15,7 +15,7 @@
   nav {
     position: sticky;
     top: 0;
-    padding: 0;
+    padding-top: 20px;
     margin: 0;
     background-color: var(--bg-color);
     border-bottom: none;
@@ -28,7 +28,8 @@
       background-color: var(--bg-color);
       padding: 0;
       margin: 0;
-      font-size: 17px;
+      font-size: 16px;
+      line-height: 14px;
       color: rgba(200, 200, 200, 0.51);
       transition: color 1s, border-bottom 1s;
       display: block;
