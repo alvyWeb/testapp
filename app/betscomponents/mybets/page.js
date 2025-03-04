@@ -152,7 +152,7 @@ const Mybets = ({ standings, setStandings }) => {
     ],
   };
   return (
-    <main>
+    <main className="mainBetblock">
       {myBets.mainContainer.map((item) => (
         <div className="mybets_container">
           <div className="mybet_head">
