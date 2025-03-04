@@ -31,6 +31,8 @@
       font-size: 17px;
       color: rgba(200, 200, 200, 0.51);
       transition: color 1s, border-bottom 1s;
+      display: block;
+      
       &:hover {
         cursor: pointer;
       }
