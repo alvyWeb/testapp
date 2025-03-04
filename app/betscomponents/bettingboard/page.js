@@ -174,10 +174,10 @@ const Bettingboard = ({ standings, setStandings }) => {
               <td className='tableData'>
                 <div className="profile">
                   <div className="profileImage">
-                    <img src={item.profileImg} alt="" />
+                    <img className='photo' src={item.profileImg} alt="" />
                     <img src={item.country} alt="" className='country' />
                   </div>
-                  <p>{item.name}</p>
+                  <p className='profileName'>{item.name}</p>
                 </div>
               </td>
               <td className='tableData'>
