@@ -35,7 +35,7 @@ const TabComponent = () => {
 
   return (
     <div className="resultcontainer" {...handlers}>
-      <nav>
+      <nav className="betTabNav">
         <button
           id={
             activeSection === "section2" ? "worldbuttoonActive" : "worldbuttoon"
