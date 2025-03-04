@@ -427,10 +427,7 @@ const Mybets = ({ standings, setStandings }) => {
             </div>
           </div>
           <div className="mybet_footer">
-            <div className="footer_score">
-              <p>{item.winRate}</p>
-            </div>
-
+            
             {/* RED */}
 
             <div className="footer_cash red_cash">
@@ -498,6 +495,10 @@ const Mybets = ({ standings, setStandings }) => {
               <span className="smoney">
                 <p>100</p>
               </span>
+            </div>
+
+            <div className="footer_score">
+              <p>{item.winRate}</p>
             </div>
           </div>
         </div>
@@ -581,9 +582,7 @@ const Mybets = ({ standings, setStandings }) => {
             </div>
           </div>
           <div className="mybet_footer">
-            <div className="footer_score">
-              <p>{item.winRate}</p>
-            </div>
+            
             {/* GREY */}
             <div className="footer_cash grey_cash">
               <span className="f_money">
@@ -693,6 +692,10 @@ const Mybets = ({ standings, setStandings }) => {
                   />
                 </svg>
               </span>
+            </div>
+
+            <div className="footer_score">
+              <p>{item.winRate}</p>
             </div>
           </div>
         </div>
