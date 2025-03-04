@@ -37,6 +37,7 @@ const Mybets = ({ standings, setStandings }) => {
         winRate: "1.62",
         currentCash: "1.60x100",
         increaseCash: "100",
+        gameScore: "_-_",
       },
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
@@ -72,6 +73,7 @@ const Mybets = ({ standings, setStandings }) => {
         winRate: "1.62",
         currentCash: "1.60x100",
         increaseCash: "100",
+        gameScore: "1-3",
       },
     ],
     conatinerRead: [
@@ -109,7 +111,7 @@ const Mybets = ({ standings, setStandings }) => {
         winRate: "1.62",
         currentCash: "1.60x100",
         increaseCash: "100",
-        gameScore: "1-3",
+        gameScore: "3-0",
       },
     ],
     conatinerGrey: [
@@ -147,7 +149,7 @@ const Mybets = ({ standings, setStandings }) => {
         winRate: "1.62",
         currentCash: "1.60x100",
         increaseCash: "100",
-        gameScore: "1-3",
+        gameScore: "3-3",
       },
     ],
   };
@@ -178,8 +180,8 @@ const Mybets = ({ standings, setStandings }) => {
                 </div>
               </div>
               <div className="v_s">
-                {item.gameProcessing}
-                {/* <p>{item.gameScore}</p> */}
+                {/* {item.gameProcessing} */}
+                <p>{item.gameScore}</p>
               </div>
               <div className="steam">
                 <div className="playe_name">
@@ -394,7 +396,7 @@ const Mybets = ({ standings, setStandings }) => {
               </div>
             </div>
             <div className="body_footer">
-              <div className="increase">
+              {/* <div className="increase">
                 <p>{item.increase}</p>
                 <svg
                   width="8"
@@ -423,7 +425,7 @@ const Mybets = ({ standings, setStandings }) => {
                     fill="#E44C4C"
                   />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mybet_footer">
@@ -549,7 +551,7 @@ const Mybets = ({ standings, setStandings }) => {
               </div>
             </div>
             <div className="body_footer">
-              <div className="increase">
+              {/* <div className="increase">
                 <p>{item.increase}</p>
                 <svg
                   width="8"
@@ -578,7 +580,7 @@ const Mybets = ({ standings, setStandings }) => {
                     fill="#E44C4C"
                   />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mybet_footer">
