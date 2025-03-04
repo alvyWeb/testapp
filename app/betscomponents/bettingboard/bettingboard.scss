@@ -25,11 +25,16 @@
             td{
                 padding: 10px 15px 5px;
                 border: 1px solid #eee;
+                text-align: center;
 
                 p{
                     font-weight: 400;
                     font-size: 12px;
                     line-height: 10.5px;
+                }
+
+                &:nth-child(1){
+                    text-align: right;
                 }
             
                 &:nth-child(even){
