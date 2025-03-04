@@ -5,7 +5,7 @@ const Mybets = ({ standings, setStandings }) => {
     mainContainer: [
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
-        edit: "edit",
+        edit: "עריכה",
         fPlayerImg: "./user-Image/g3.png",
         fPCountry: "./flags/br.png",
         sPlayerImg: "./user-Image/g4.png",
