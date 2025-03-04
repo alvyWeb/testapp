@@ -6,7 +6,7 @@ import Mybets from "./mybets/page.js";
 import "./tab.scss"; // Import your CSS file
 const TabComponent = () => {
   const sections = ["section1", "section2"];
-  const [activeSection, setActiveSection] = useState("section1");
+  const [activeSection, setActiveSection] = useState("section2");
 
   const handleNavClick = (section) => {
     setActiveSection(section);
