@@ -496,6 +496,49 @@ const Mybets = ({ standings, setStandings }) => {
               </svg>
               <span className="smoney">
                 <p>100</p>
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.18531 6.92475C10.2862 6.92475 11.9893 6.16782 11.9893 5.2341C11.9893 4.30039 10.2862 3.54346 8.18531 3.54346C6.08444 3.54346 4.38135 4.30039 4.38135 5.2341C4.38135 6.16782 6.08444 6.92475 8.18531 6.92475Z"
+                    stroke="#60BF64"
+                    stroke-width="0.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4.38135 5.23389V10.3058C4.38135 11.2357 6.072 11.9965 8.18531 11.9965C10.2986 11.9965 11.9893 11.2357 11.9893 10.3058V5.23389"
+                    stroke="#60BF64"
+                    stroke-width="0.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.9892 7.77001C11.9892 8.69987 10.2986 9.46066 8.18525 9.46066C6.07194 9.46066 4.3813 8.69987 4.3813 7.77001M8.10072 1.85274C7.11295 1.24316 5.96317 0.948344 4.80396 1.00742C2.6991 1.00742 1 1.76821 1 2.69807C1 3.19681 1.49029 3.64483 2.26799 3.96605"
+                    stroke="#60BF64"
+                    stroke-width="0.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2.26799 9.03817C1.49029 8.71695 1 8.26893 1 7.77019V2.69824"
+                    stroke="#60BF64"
+                    stroke-width="0.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2.26838 6.50226C1.49044 6.18094 1 5.73278 1 5.23389"
+                    stroke="#60BF64"
+                    stroke-width="0.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </span>
             </div>
 
