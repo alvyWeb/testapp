@@ -11,9 +11,9 @@ export default function Home() {
       toffee: "50",
       ball: "50",
       score: "1",
-      playerName: "Penn N. (panther)",
-      playerImg: "./user-Image/Sabbir Sagar.png",
-      playerCountry: "./flags/bi.png",
+      playerName: "פן נ. (פנתר)",
+      playerImg: "./user-Image/a1.png",
+      playerCountry: "./flags/br.png",
     },
     {
       lavel: "1",
@@ -292,6 +292,57 @@ export default function Home() {
                 </th>
               </tr>
             </thead>
+
+            <tbody>
+            {rankList.map((item) => (
+              <tr>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.lavel}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.percent}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.equal}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.dLike}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.toffee}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.ball}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <span className="text">
+                    <p>{item.score}</p>
+                  </span>
+                </td>
+                <td className="dataitems">
+                  <div className="profile">
+                    <div className="profileImage">
+                      <img className='photo' src={item.playerImg} alt="" />
+                      <img src={item.playerCountry} alt="" className='country' />
+                    </div>
+                    <p className='profileName'>{item.playerName}</p>
+                  </div>
+                </td>
+              </tr>
+            ))}
+            </tbody>
           </table>
         </div>
       </main>
