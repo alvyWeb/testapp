@@ -201,7 +201,7 @@
         @include item-flex(flex, row, center, center, 8px);
   
         span.f_money {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: #60bf64;
@@ -220,7 +220,7 @@
         }
   
         span.smoney {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: #60bf64;
@@ -239,7 +239,7 @@
         @include item-flex(flex, row, center, center, 8px);
   
         span.f_money {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: #e44c4c;
@@ -261,7 +261,7 @@
         }
   
         span.smoney {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: #e44c4c;
@@ -281,7 +281,7 @@
         @include item-flex(flex, row, center, center, 8px);
   
         span.f_money {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: var(--text-grey);
@@ -303,7 +303,7 @@
         }
   
         span.smoney {
-          @include item-flex(flex, row, center, normal, 4px);
+          @include item-flex(flex, row-reverse, center, normal, 4px);
   
           p {
             color: var(--text-grey);
