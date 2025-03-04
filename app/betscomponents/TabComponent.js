@@ -38,20 +38,21 @@ const TabComponent = () => {
       <nav>
         <button
           id={
-            activeSection === "section1" ? "worldbuttoonActive" : "worldbuttoon"
-          }
-          onClick={() => handleNavClick("section1")}
-        >
-          ההימורים שלי
-        </button>
-        <button
-          id={
             activeSection === "section2" ? "worldbuttoonActive" : "worldbuttoon"
           }
           onClick={() => handleNavClick("section2")}
         >
           לוח הימורים
         </button>
+        <button
+          id={
+            activeSection === "section1" ? "worldbuttoonActive" : "worldbuttoon"
+          }
+          onClick={() => handleNavClick("section1")}
+        >
+          ההימורים שלי
+        </button>
+        
       </nav>
 
       <div
