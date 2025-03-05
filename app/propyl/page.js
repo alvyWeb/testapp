@@ -679,6 +679,20 @@ const Propyl = ({ standings, setStandings }) => {
             </div>
           </div>
 
+          <div className="winWith_blocks profileCommon">
+              <h2>בדרך כלל מנצח עם</h2>
+              <div className="itemlist">
+                {propylConent.winsWith.map((item) => (
+                  <div className="opponent_body">
+                    <img src={item.playerProfile} alt="" />
+                    <img src={item.playerCountry} alt="" />
+                    <p>{item.playerName}</p>
+                    <p>{item.wins}</p>
+                  </div>
+                ))}
+              </div>
+          </div>
+
         </div>
       </div>
     </main>
