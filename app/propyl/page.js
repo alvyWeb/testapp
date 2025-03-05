@@ -217,7 +217,6 @@ const Propyl = ({ standings, setStandings }) => {
           <div className="my_profile">
             <div className="main_profile">
               <div className="cash">
-                <p>200</p>
                 <svg
                   width="19"
                   height="19"
@@ -268,6 +267,7 @@ const Propyl = ({ standings, setStandings }) => {
                     </clipPath>
                   </defs>
                 </svg>
+                <p>200</p>
               </div>
               <div className="profile_img">
                 <img src="./propyl/png/profile_img.png" className="profile_img_m" />
