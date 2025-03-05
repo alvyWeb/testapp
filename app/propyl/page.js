@@ -1,3 +1,5 @@
+"use client"; 
+
 import "./propyl.scss";
 import "./skilbar.css";
 import { useState } from "react";
