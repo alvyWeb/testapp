@@ -269,7 +269,7 @@ const Propyl = ({ standings, setStandings }) => {
               </svg>
             </div>
             <div className="profile_img">
-              <img src="./user-Image/Profile.jpg" className="profile_img" />
+              <img src="./propyl/png/profile_img.png" className="profile_img" />
               <div className="add_profile">
                 <img src="./svg/Add-Profile.svg" />
               </div>
