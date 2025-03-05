@@ -412,17 +412,6 @@
                 width: 100%;
                 padding: 0 25px;
 
-                .closed{
-                    max-height: 0;
-                    opacity: 0;
-                    transition: max-height ease-in-out 0.5s;
-                }
-    
-                .open {
-                    max-height: auto; 
-                    opacity: 1;
-                }
-
                 .table-container {
                     width: 100%;
                     border-collapse: collapse;
@@ -493,6 +482,17 @@
                         }
                     }
                 }
+            }
+
+            .closed{
+                max-height: 0;
+                opacity: 0;
+                transition: max-height ease-in-out 0.5s;
+            }
+
+            .open {
+                max-height: auto; 
+                opacity: 1;
             }
         }
 
