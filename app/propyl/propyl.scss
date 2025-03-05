@@ -157,10 +157,15 @@
             justify-content: center;
             align-items: center;
             gap: 0;
+            flex-direction: row-reverse;
 
             div{
                 border-left: 1px solid #eee;
                 padding: 12px 20px;
+
+                &:nth-child(:last-child){
+                    border-left: 0;
+                }
             }
 
         }
