@@ -220,7 +220,12 @@
                 flex-direction: row-reverse;
 
                 div{
-                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+                    width: 100%;
+                    flex-direction: column;
 
                     p{
                         @include fix-font(12px, 400, 10.5px); 
