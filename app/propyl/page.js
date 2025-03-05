@@ -4,63 +4,67 @@ const Propyl = ({ standings, setStandings }) => {
   const propylConent = {
     profileBody: [
       {
-        name: "Victories",
+        name: "ניצחונות",
         counter: "33",
       },
       {
-        name: "Losses",
+        name: "הפסדים",
         counter: "8",
       },
       {
-        name: "Ties",
+        name: "תיקואים",
         counter: "6",
       },
       {
-        name: "Annual success rate",
+        name: "אחוז הצלחה שנתי",
         counter: "38%",
       },
       {
-        name: "Success percentage this month",
+        name: "אחוז הצלחה החודש",
         counter: "38%",
       },
       {
-        name: "Maximum positive rating",
+        name: "דירוג חיובי מקסימום",
         counter: "23",
       },
       {
-        name: "Minimum negative rating",
+        name: "דירוג שלילי מינימום",
         counter: "21",
       },
       {
-        name: "Backhand",
-        counter: "two hands",
+        name: "חבטת גב",
+        counter: "שתי ידיים",
       },
       {
-        name: "Game type",
-        counter: "Aggressive",
+        name: "סגנון משחק",
+        counter: "אגרסיבי",
       },
       {
-        name: "Annual balance",
+        name: "מאזן שנתי",
+        counter: "38/5",
+      },
+      {
+        name: "ניצחונות בשובר שוויון",
         counter: "3",
       },
       {
-        name: "Breakeven losses",
+        name: "הפסדים בשובר שוויון",
         counter: "3",
       },
       {
-        name: "Weeks with more than 2 games",
+        name: "שבועות עם מעל 2 משחקים",
         counter: "3",
       },
       {
-        name: "Winning tournaments",
+        name: "זכיות בטורנירים",
         counter: "3",
       },
       {
-        name: "Participation in tournaments",
+        name: "השתתפות בטורנירים",
         counter: "3",
       },
       {
-        name: "Amount of retirements",
+        name: "כמות פרישות",
         counter: "3",
       },
     ],
