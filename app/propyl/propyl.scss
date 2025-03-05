@@ -31,21 +31,27 @@
     }
 
     .my_account {
+        margin-top: -14px;
+        background: #fff;
+        position: relative;
+        border-radius: 25px 25px 0 0;
         
         .my_profile {
             @include weight_height(100%, auto);
 
             .main_profile {
                 @include item_flex(flex, row, center, center, 0);
+                position: relative;
     
                 .profile_img {
                     position: relative;
                     border: 7px solid #FCFCFC;
                     @include weight_height(125px, 125px);
-    
-                    .profile_img_m {
+                    border-radius: 50%;
+                    margin-top: -65px;
+
+                        .profile_img_m {
                         object-fit: cover;
-                        border-radius: 50%;
                         width: 100%;
                     }
     
@@ -93,7 +99,12 @@
                 }
     
                 .cash {
-                    @include item_flex(none, row, center, normal, 4px);
+                    @include item_flex(flex, row, center, normal, 4px);
+                    position: absolute;
+                    left: 24px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
     
                     p {
                         color: var(--text-color);
