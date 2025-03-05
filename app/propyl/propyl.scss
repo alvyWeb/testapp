@@ -528,6 +528,8 @@
                     border: 1px solid lightgray;
                     border-radius: 8px;
                     position: relative;
+                    overflow: hidden;
+                    min-width: 148px;
 
                     img{
                         display: block;
@@ -539,6 +541,14 @@
                         left: 7px;
                         max-width: 30px;
                     }
+                }
+
+                .bodyInfo{
+                    padding: 9px 9px 9px 20px;
+                    position: absolute;
+                    bottom: 0;
+                    background: #fff;
+                    width: 100%;
                 }
             }
 
