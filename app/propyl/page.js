@@ -270,7 +270,7 @@ const Propyl = ({ standings, setStandings }) => {
                 </svg>
               </div>
               <div className="profile_img">
-                <img src="./propyl/png/profile_img.png" className="profile_img" />
+                <img src="./propyl/png/profile_img.png" className="profile_img_m" />
                 <div className="add_profile">
                   <img src="./svg/Add-Profile.svg" />
                 </div>
@@ -283,7 +283,7 @@ const Propyl = ({ standings, setStandings }) => {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </main>

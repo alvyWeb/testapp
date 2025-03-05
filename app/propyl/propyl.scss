@@ -8,6 +8,7 @@
         .cover_img {
             object-fit: cover;
             @include weight_height(100%, 201px);
+            display: block;
         }
 
         .logo_go {
@@ -33,17 +34,16 @@
         
         .my_profile {
             @include weight_height(100%, auto);
-            
+
             .main_profile {
-                padding: 12px;
-                @include item_flex(flex, row, flex-end, normal, 44px);
+                @include item_flex(flex, row, center, center, 0);
     
                 .profile_img {
                     position: relative;
                     border: 7px solid #FCFCFC;
                     @include weight_height(125px, 125px);
     
-                    .profile_img {
+                    .profile_img_m {
                         object-fit: cover;
                         border-radius: 50%;
                         width: 100%;
@@ -93,7 +93,7 @@
                 }
     
                 .cash {
-                    @include item_flex(flex, row, center, normal, 4px);
+                    @include item_flex(none, row, center, normal, 4px);
     
                     p {
                         color: var(--text-color);
