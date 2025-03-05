@@ -436,12 +436,12 @@
                                 line-height: 10.5px;
                             }
 
-                            &:first-child {
+                            &:nth-child(1){
                                 text-align: right;
                             }
-
-                            :nth-child(even) {
-                                background: rgba(108,183,240,.071);
+                        
+                            &:nth-child(even){
+                                background: #6CB7F012;
                             }
                         }
 
