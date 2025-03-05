@@ -162,8 +162,24 @@
             div{
                 border-left: 1px solid #eee;
                 padding: 12px 20px;
+                text-align: center;
 
-                &:last-child{
+                h5{
+                    font-size: 14px;
+                    line-height: 12.25px;
+                    font-weight: 400;
+                    color: #145E94;
+                    padding-bottom: 12px;
+                }
+
+                p{
+                    font-size: 16px;
+                    line-height: 14px;
+                    color: #210C0C;
+                    font-weight: 500;
+                }
+
+                &:first-child{
                     border-left: 0;
                 }
             }

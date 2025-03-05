@@ -297,19 +297,19 @@ const Propyl = ({ standings, setStandings }) => {
           </div>
           <div className="rating_container">
             <div className="player_rating">
-              <p>דירוג ATPenn</p>
+              <h5>דירוג ATPenn</h5>
               <p>5</p>
             </div>
             <div className="player_ability">
-              <p>יד חזקה</p>
+              <h5>יד חזקה</h5>
               <p>ימין</p>
             </div>
             <div className="height">
-              <p>גובה</p>
+              <h5>גובה</h5>
               <p>1.75</p>
             </div>
             <div className="player_age">
-              <p>גיל</p>
+              <h5>גיל</h5>
               <p>33</p>
             </div>
           </div>
