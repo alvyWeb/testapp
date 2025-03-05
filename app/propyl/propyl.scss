@@ -163,7 +163,7 @@
                 border-left: 1px solid #eee;
                 padding: 12px 20px;
 
-                &:nth-child(:last-child){
+                &:last-child{
                     border-left: 0;
                 }
             }
