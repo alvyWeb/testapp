@@ -304,6 +304,10 @@
                     @include fix-font(16px, 400, 14px); 
                     color: #000000;
                 }
+
+                svg{
+                    transition: transform ease-in-out 0.5s;
+                }
             }
 
             .expanded{
@@ -358,6 +362,7 @@
             .closed{
                 max-height: 0;
                 opacity: 0;
+                transition: max-height ease-in-out 0.5s;
             }
 
             .open {
