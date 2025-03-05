@@ -231,43 +231,48 @@ const Propyl = ({ standings, setStandings }) => {
     ],
     winAinst: [
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
-      ,
     ],
     losesAgainst: [
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
       {
-        playerProfile: "./user-Image/Profile_state.jpg",
-        playerCountry: "./flags/al.png",
-        playerName: "Tomer Mandler",
-        wins: "10 wins",
+        playerProfile: "./propyl/png/comon.png",
+        playerCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        wins: "10 נצחונות",
       },
     ],
     mostAgainst: [
@@ -686,6 +691,38 @@ const Propyl = ({ standings, setStandings }) => {
               <h2>בדרך כלל מנצח עם</h2>
               <div className="itemlist">
                 {propylConent.winsWith.map((item) => (
+                  <div className="opponent_body">
+                    <img className="profilePlay" src={item.playerProfile} alt="" />
+                    <img className="profileCountry" src={item.playerCountry} alt="" />
+                    <div className="bodyInfo">
+                      <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
+                      <p className="profilePsta">{item.wins}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+          </div>
+
+          <div className="winvs_blocks profileCommon">
+              <h2>בדרך כלל מנצח מול</h2>
+              <div className="itemlist">
+                {propylConent.winAinst.map((item) => (
+                  <div className="opponent_body">
+                    <img className="profilePlay" src={item.playerProfile} alt="" />
+                    <img className="profileCountry" src={item.playerCountry} alt="" />
+                    <div className="bodyInfo">
+                      <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
+                      <p className="profilePsta">{item.wins}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+          </div>
+
+          <div className="loses_blocks profileCommon">
+              <h2>בדרך כלל מפסיד נגד</h2>
+              <div className="itemlist">
+                {propylConent.losesAgainst.map((item) => (
                   <div className="opponent_body">
                     <img className="profilePlay" src={item.playerProfile} alt="" />
                     <img className="profileCountry" src={item.playerCountry} alt="" />
