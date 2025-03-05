@@ -213,74 +213,77 @@ const Propyl = ({ standings, setStandings }) => {
             <img src="./propyl/svg/add_cover.svg" alt="" />
           </div>
         </div>
-        <div className="my_profile">
-          <div className="main_profile">
-            <div className="cash">
-              <p>200</p>
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 19 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_167_145)">
-                  <path
-                    d="M12.2141 10.1786C15.587 10.1786 18.3212 8.96334 18.3212 7.46429C18.3212 5.96523 15.587 4.75 12.2141 4.75C8.84119 4.75 6.10693 5.96523 6.10693 7.46429C6.10693 8.96334 8.84119 10.1786 12.2141 10.1786Z"
-                    stroke="black"
-                    stroke-width="0.95"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.10693 7.46436V15.6072C6.10693 17.1001 8.82122 18.3215 12.2141 18.3215C15.6069 18.3215 18.3212 17.1001 18.3212 15.6072V7.46436"
-                    stroke="black"
-                    stroke-width="0.95"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M18.3211 11.5356C18.3211 13.0284 15.6068 14.2498 12.2139 14.2498C8.82108 14.2498 6.10679 13.0284 6.10679 11.5356M12.0782 2.03556C10.4924 1.05689 8.64646 0.583572 6.78537 0.678415C3.40608 0.678415 0.678223 1.89984 0.678223 3.3927C0.678223 4.19341 1.46537 4.9127 2.71394 5.42841"
-                    stroke="black"
-                    stroke-width="0.95"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M2.71394 13.5711C1.46537 13.0554 0.678223 12.3361 0.678223 11.5354V3.39258"
-                    stroke="black"
-                    stroke-width="0.95"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M2.71394 9.50007C1.46537 8.98436 0.678223 8.26507 0.678223 7.46436"
-                    stroke="black"
-                    stroke-width="0.95"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_167_145">
-                    <rect width="19" height="19" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <div className="profile_img">
-              <img src="./propyl/png/profile_img.png" className="profile_img" />
-              <div className="add_profile">
-                <img src="./svg/Add-Profile.svg" />
+        <div className="my_account">
+          <div className="my_profile">
+            <div className="main_profile">
+              <div className="cash">
+                <p>200</p>
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_167_145)">
+                    <path
+                      d="M12.2141 10.1786C15.587 10.1786 18.3212 8.96334 18.3212 7.46429C18.3212 5.96523 15.587 4.75 12.2141 4.75C8.84119 4.75 6.10693 5.96523 6.10693 7.46429C6.10693 8.96334 8.84119 10.1786 12.2141 10.1786Z"
+                      stroke="black"
+                      stroke-width="0.95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.10693 7.46436V15.6072C6.10693 17.1001 8.82122 18.3215 12.2141 18.3215C15.6069 18.3215 18.3212 17.1001 18.3212 15.6072V7.46436"
+                      stroke="black"
+                      stroke-width="0.95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.3211 11.5356C18.3211 13.0284 15.6068 14.2498 12.2139 14.2498C8.82108 14.2498 6.10679 13.0284 6.10679 11.5356M12.0782 2.03556C10.4924 1.05689 8.64646 0.583572 6.78537 0.678415C3.40608 0.678415 0.678223 1.89984 0.678223 3.3927C0.678223 4.19341 1.46537 4.9127 2.71394 5.42841"
+                      stroke="black"
+                      stroke-width="0.95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.71394 13.5711C1.46537 13.0554 0.678223 12.3361 0.678223 11.5354V3.39258"
+                      stroke="black"
+                      stroke-width="0.95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.71394 9.50007C1.46537 8.98436 0.678223 8.26507 0.678223 7.46436"
+                      stroke="black"
+                      stroke-width="0.95"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_167_145">
+                      <rect width="19" height="19" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
-              <div className="add_toffe">
-                <img src="./svg/Toffee.svg" />
-              </div>
-              <div className="change_country">
-                <img src="./flags/ai.png" />
+              <div className="profile_img">
+                <img src="./propyl/png/profile_img.png" className="profile_img" />
+                <div className="add_profile">
+                  <img src="./svg/Add-Profile.svg" />
+                </div>
+                <div className="add_toffe">
+                  <img src="./svg/Toffee.svg" />
+                </div>
+                <div className="change_country">
+                  <img src="./flags/ai.png" />
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </main>
