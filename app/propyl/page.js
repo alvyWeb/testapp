@@ -315,7 +315,7 @@ const Propyl = ({ standings, setStandings }) => {
           </div>
 
           <div className="weekly_achievements_content">
-            <p>הישגים שבועיים</p>
+            <h4>הישגים שבועיים</h4>
             <div className="body ">
               <div className="victory _gap">
                 <p>ניצחון שחקן חזק</p>

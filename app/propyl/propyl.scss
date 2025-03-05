@@ -186,5 +186,24 @@
             }
 
         }
+
+        .weekly_achievements_content {
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background: #fff;
+            padding: 12px 28px 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            flex-direction: column;
+
+            h4{
+                @include fix-font(16px, 400, 145px);
+                text-align: center;
+                color: #000000;
+            }
+        }
     }
 }
