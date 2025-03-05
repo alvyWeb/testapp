@@ -295,7 +295,24 @@ const Propyl = ({ standings, setStandings }) => {
               {/* END */}
             </div>
           </div>
-
+          <div className="rating_container">
+            <div className="player_rating">
+              <p>ATPenn rating</p>
+              <p>5</p>
+            </div>
+            <div className="player_ability">
+              <p>strong hand</p>
+              <p>right</p>
+            </div>
+            <div className="height">
+              <p>height</p>
+              <p>1.75</p>
+            </div>
+            <div className="player_age">
+              <p>age</p>
+              <p>33</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
