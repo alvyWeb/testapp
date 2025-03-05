@@ -49,6 +49,7 @@
                     @include weight_height(125px, 125px);
                     border-radius: 50%;
                     margin-top: -65px;
+                    margin-bottom: 8px;
 
                         .profile_img_m {
                         object-fit: cover;
@@ -114,6 +115,23 @@
                     svg {
                         path {
                             stroke: var(--text-color);
+                        }
+                    }
+                }
+
+                .lavel_name {
+                    @include item_flex(flex, column, center, normal, 8px);
+    
+                    p {
+                        color: var(--text-color);
+                        @include fix-font(19px, 400, 16.63px);
+                    }
+    
+                    .container {
+                        ._flex {
+                            p {
+                                color: var(--text-grey);
+                            }
                         }
                     }
                 }
