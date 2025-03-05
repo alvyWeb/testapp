@@ -315,10 +315,10 @@ const Propyl = ({ standings, setStandings }) => {
           </div>
 
           <div className="weekly_achievements_content">
-            <p>Weekly achievements</p>
+            <p>הישגים שבועיים</p>
             <div className="body ">
               <div className="victory _gap">
-                <p>Strong player victory</p>
+                <p>ניצחון שחקן חזק</p>
                 <svg
                   width="15"
                   height="15"
@@ -333,7 +333,7 @@ const Propyl = ({ standings, setStandings }) => {
                 </svg>
               </div>
               <div className="victory">
-                <p>Bets</p>
+                <p>הימורים</p>
                 <span className="increase">
                   <svg
                     width="9"
@@ -348,11 +348,11 @@ const Propyl = ({ standings, setStandings }) => {
                     />
                   </svg>
 
-                  <p>38% less</p>
+                  <p>38% פחות</p>
                 </span>
               </div>
               <div className="victory">
-                <p>victories</p>
+                <p>ניצחונות</p>
                 <span className="decrease">
                   <svg
                     width="9"
@@ -367,7 +367,7 @@ const Propyl = ({ standings, setStandings }) => {
                     />
                   </svg>
 
-                  <p>38% more</p>
+                  <p>38% יותר</p>
                 </span>
               </div>
             </div>
