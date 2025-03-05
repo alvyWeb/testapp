@@ -687,10 +687,12 @@ const Propyl = ({ standings, setStandings }) => {
               <div className="itemlist">
                 {propylConent.winsWith.map((item) => (
                   <div className="opponent_body">
-                    <img src={item.playerProfile} alt="" />
-                    <img src={item.playerCountry} alt="" />
-                    <p>{item.playerName}</p>
-                    <p>{item.wins}</p>
+                    <img className="profilePlay" src={item.playerProfile} alt="" />
+                    <img className="profileCountry" src={item.playerCountry} alt="" />
+                    <div className="bodyInfo">
+                      <p className="profilePName">{item.playerName}</p>
+                      <p className="profilePsta">{item.wins}</p>
+                    </div>
                   </div>
                 ))}
               </div>
