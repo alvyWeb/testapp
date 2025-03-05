@@ -139,6 +139,10 @@
                             @include fix-font(14px, 400, 12.25px);
                         }
                     }
+
+                    .bar{
+                        direction: ltr;
+                    }
                 }
             }
         }
