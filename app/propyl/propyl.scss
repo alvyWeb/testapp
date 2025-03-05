@@ -198,15 +198,28 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0;
+            gap: 16px;
             flex-direction: column;
             width: 100%;
             max-width: calc(100% - 40px);
 
             h4{
-                @include fix-font(16px, 400, 145px);
+                @include fix-font(16px, 400, 14px);
                 text-align: center;
                 color: #000000;
+                padding-bottom: 8px;
+                border-bottom: 1px solid lightgray;
+            }
+
+            .body{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+                div{
+                    text-align: center;
+                }
             }
         }
     }
