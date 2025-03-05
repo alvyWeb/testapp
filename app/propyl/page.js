@@ -381,8 +381,8 @@ const Propyl = ({ standings, setStandings }) => {
             <div className="body_content">
               {propylConent.profileBody.map((item) => (
                 <div className="content">
-                  <p>{item.name}</p>
-                  <p>{item.counter}</p>
+                  <p className="itemName">{item.name}</p>
+                  <p className="itemvalue">{item.counter}</p>
                 </div>
               ))}
             </div>

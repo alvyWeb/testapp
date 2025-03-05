@@ -254,9 +254,34 @@
             border: 1px solid #ddd;
             border-radius: 25px;
             background: #fff;
-            padding: 20px 26px;
+            padding: 10px 26px;
             width: 100%;
             max-width: calc(100% - 40px);
+
+            .body_content{
+
+                .content{
+                    padding: 11px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid lightgray;
+
+                    .itemName{
+                        @include fix-font(16px, 400, 14px); 
+                        color: #000000;
+                    }
+
+                    .itemvalue{
+                        @include fix-font(16px, 400, 14px); 
+                        color: #145E94;
+                    }
+
+                    &:last-child{
+                        border-bottom: 0;
+                    }
+                }
+            }
         }
     }
 }
