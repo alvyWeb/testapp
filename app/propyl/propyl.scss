@@ -153,6 +153,15 @@
             border-radius: 25px;
             background: #fff;
             padding: 12px 6px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+
+            div{
+                border-left: 1px solid #eee;
+                padding: 12px 20px;
+            }
 
         }
     }
