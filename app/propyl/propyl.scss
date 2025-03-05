@@ -323,6 +323,22 @@
 
                     p{
                         @include fix-font(14px, 400, 12.25px);
+                        color: #B0AAAA;
+                    }
+
+                    img{
+                        filter: grayscale(100%);
+                    }
+
+                    &:first-child {
+
+                        p{
+                            color: #000000;
+                        }
+
+                        img{
+                            filter: grayscale(0%);
+                        }
                     }
                 }
             }
