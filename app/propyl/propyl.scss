@@ -57,8 +57,8 @@
     
                     .add_profile {
                         position: absolute;
-                        top: 8px;
-                        right: 12px;
+                        top: 0;
+                        right: 0;
                         border-radius: 50%;
                         border: 1px solid #000000;
                         background: #FCFCFC;
@@ -72,8 +72,8 @@
     
                     .add_toffe {
                         position: absolute;
-                        bottom: 8px;
-                        left: 8px;
+                        bottom: 0px;
+                        left: 0px;
                         border-radius: 50%;
                         border: 1px solid #EEEEEE;
                         background: #FCFCFC;
@@ -87,8 +87,8 @@
     
                     .change_country {
                         position: absolute;
-                        bottom: 8px;
-                        right: 12px;
+                        bottom: 0px;
+                        right: 0px;
     
                         img {
                             object-fit: fill;
