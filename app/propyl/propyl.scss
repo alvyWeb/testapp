@@ -403,6 +403,51 @@
                     transform: rotate(180deg);
                 }
             }
+
+            .statheadbody{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 25px;
+
+                .table-container {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    thead {
+                        background: linear-gradient(189.11deg,rgba(71,117,169,.16) -3.79%,hsla(0,0%,100%,0) 154.46%);
+
+                        th {
+                            padding: 10px 13px 5px;
+                        }
+                    }
+
+                    tbody{
+
+                        td {
+                            padding: 10px 5px 5px;
+                            border: 1px solid #eee;
+                            text-align: center;
+
+                            p {
+                                font-weight: 400;
+                                font-size: 12px;
+                                line-height: 10.5px;
+                            }
+
+                            &:first-child {
+                                text-align: right;
+                            }
+
+                            :nth-child(even) {
+                                background: rgba(108,183,240,.071);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }
