@@ -278,7 +278,7 @@ const Propyl = ({ standings, setStandings }) => {
                   <img src="./svg/Toffee.svg" />
                 </div>
                 <div className="change_country">
-                  <img src="./flags/ai.png" />
+                  <img src="./flags/br.png" />
                 </div>
               </div>
             </div>
