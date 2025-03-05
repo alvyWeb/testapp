@@ -425,7 +425,6 @@
                     }
 
                     tbody{
-
                         td {
                             padding: 10px 5px 5px;
                             border: 1px solid #eee;
@@ -443,6 +442,42 @@
 
                             :nth-child(even) {
                                 background: rgba(108,183,240,.071);
+                            }
+                        }
+
+                        .profile {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            gap: 5px;
+
+                            .profileImage {
+                                position: relative;
+                                width: 29px;
+                                height: 29px;
+                                border-radius: 50%;
+                                border: 1px solid #145e94;
+                                padding: 1px;
+
+                                .photo {
+                                    width: 100%;
+                                    display: block;
+                                }
+
+                                .country {
+                                    position: absolute;
+                                    display: block;
+                                    width: 14px;
+                                    height: auto;
+                                    bottom: 0;
+                                    right: 0;
+                                }
+                            }
+
+                            .profileName {
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 10.5px;
                             }
                         }
                     }
