@@ -502,11 +502,15 @@
         }
 
         .profileCommon{
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            flex-direction: column;
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
             width: 100%;
+            max-width: calc(100% - 40px);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             gap: 12px;
 
             h2{
