@@ -35,6 +35,7 @@
         background: #FCFAFA;
         position: relative;
         border-radius: 25px 25px 0 0;
+        @include item_flex(flex, column, center, center, 20px);
         
         .my_profile {
             @include weight_height(100%, auto);
@@ -131,7 +132,7 @@
 
                 .container {
                     max-width: 285px;
-                    padding-bottom: 40px;
+                    padding-bottom: 20px;
 
                     ._flex {
                         p {
