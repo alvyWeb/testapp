@@ -248,5 +248,15 @@
                 }
             }
         }
+
+        .profiles_bodys{
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background: #fff;
+            padding: 20px 26px;
+            width: 100%;
+            max-width: calc(100% - 40px);
+        }
     }
 }

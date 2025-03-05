@@ -373,6 +373,17 @@ const Propyl = ({ standings, setStandings }) => {
             </div>
           </div>
 
+          <div className="profiles_bodys">
+            <div className="body_content">
+              {propylConent.profileBody.map((item) => (
+                <div className="content">
+                  <p>{item.name}</p>
+                  <p>{item.counter}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
     </main>
