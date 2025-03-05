@@ -159,6 +159,8 @@
             align-items: center;
             gap: 0;
             flex-direction: row-reverse;
+            width: 100%;
+            max-width: calc(100% - 40px);
 
             div{
                 border-left: 1px solid #eee;
@@ -198,6 +200,8 @@
             align-items: center;
             gap: 0;
             flex-direction: column;
+            width: 100%;
+            max-width: calc(100% - 40px);
 
             h4{
                 @include fix-font(16px, 400, 145px);
