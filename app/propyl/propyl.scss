@@ -371,5 +371,39 @@
             }
         }
 
+        .statics_blocks{
+            margin: 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            width: 100%;
+            max-width: calc(100% - 40px);
+
+            .headpart{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 20px 25px;
+                cursor: pointer;
+
+                p{
+                    @include fix-font(16px, 400, 14px); 
+                    color: #000000;
+                }
+
+                svg{
+                    transition: transform ease-in-out 0.5s;
+                }
+            }
+
+            .expanded{
+
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
     }
 }
