@@ -207,8 +207,8 @@ const Propyl = ({ standings, setStandings }) => {
           <img src="./propyl/png/cover_img.png" alt="" className="cover_img" />
           <div className="logo_go">
             <div className="cover_head">
-              <img src="./propyl/svg/peen_logo.svg" alt="" />
               <img src="./propyl/svg/left_arrow.svg" alt="" />
+              <img src="./propyl/svg/peen_logo.svg" alt="" />
             </div>
             <img src="./propyl/svg/add_cover.svg" alt="" />
           </div>

@@ -20,7 +20,7 @@
             padding: 26px 20px 12px;
             height: 100%;
             margin: auto;
-            @include item_flex(flex, column, flex-end, space-between, 0px);
+            @include item_flex(flex, column, flex-start, space-between, 0px);
 
             .cover_head{
                 @include item_flex(flex, row, center, space-between, 0px);
