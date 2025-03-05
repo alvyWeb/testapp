@@ -205,7 +205,7 @@ const Propyl = ({ standings, setStandings }) => {
       <div className="propyl_container">
         <div className="cover_container">
           <img
-            src="./user-Image/Cover-Image.jpg"
+            src="./propyl/png/cover_img.png"
             alt=""
             className="cover_img"
           />
