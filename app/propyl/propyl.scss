@@ -119,19 +119,20 @@
                     }
                 }
 
-                .lavel_name {
-                    @include item_flex(flex, column, center, normal, 8px);
-    
-                    p {
-                        color: var(--text-color);
-                        @include fix-font(19px, 400, 16.63px);
-                    }
-    
-                    .container {
-                        ._flex {
-                            p {
-                                color: var(--text-grey);
-                            }
+            }
+
+            .lavel_name {
+                @include item_flex(flex, column, center, normal, 8px);
+
+                p {
+                    color: var(--text-color);
+                    @include fix-font(19px, 400, 16.63px);
+                }
+
+                .container {
+                    ._flex {
+                        p {
+                            color: var(--text-grey);
                         }
                     }
                 }

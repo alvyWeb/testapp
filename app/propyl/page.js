@@ -281,21 +281,21 @@ const Propyl = ({ standings, setStandings }) => {
                   <img src="./flags/br.png" />
                 </div>
               </div>
-
-              <div className="lavel_name">
-                <p>נועם פן (פנתר)</p>
-                {/* SKILLBAR */}{" "}
-                <div class="container">
-                  <div className="_flex">
-                    <p>רמה 1</p>
-                    <p>26/100</p>
-                  </div>
-                  <div class="bar front advanced"></div>
+            </div>
+            <div className="lavel_name">
+              <p>נועם פן (פנתר)</p>
+              {/* SKILLBAR */}{" "}
+              <div class="container">
+                <div className="_flex">
+                  <p>רמה 1</p>
+                  <p>26/100</p>
                 </div>
-                {/* END */}
+                <div class="bar front advanced"></div>
               </div>
+              {/* END */}
             </div>
           </div>
+
         </div>
       </div>
     </main>
