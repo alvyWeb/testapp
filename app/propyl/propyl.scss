@@ -3,9 +3,23 @@
 .propyl_container {
     
     .cover_container {
+        position: relative;
+
         .cover_img {
             object-fit: cover;
             @include weight_height(100%, 201px);
+        }
+
+        .logo_go {
+            position: absolute;
+            top: 26px;
+            left: 0;
+            right: 0;
+            display: flex;
+            width: 100%;
+            padding: 0 20px;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
