@@ -306,6 +306,13 @@
                 }
             }
 
+            .expanded{
+
+                svg{
+                    transform: translate(-1);
+                }
+            }
+
             .headbody{
                 display: flex;
                 justify-content: center;
