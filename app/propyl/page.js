@@ -690,7 +690,7 @@ const Propyl = ({ standings, setStandings }) => {
                     <img className="profilePlay" src={item.playerProfile} alt="" />
                     <img className="profileCountry" src={item.playerCountry} alt="" />
                     <div className="bodyInfo">
-                      <p className="profilePName">{item.playerName}</p>
+                      <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
                       <p className="profilePsta">{item.wins}</p>
                     </div>
                   </div>
