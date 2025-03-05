@@ -7,7 +7,7 @@
 
         .cover_img {
             object-fit: cover;
-            @include weight_height(100%, 201px);
+            @include weight_height(100%, 217px);
             display: block;
         }
 
@@ -18,7 +18,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            padding: 26px 20px 12px;
+            padding: 26px 20px;
             height: 100%;
             margin: auto;
             @include item_flex(flex, column, flex-start, space-between, 0px);
