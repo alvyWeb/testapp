@@ -12,14 +12,20 @@
 
         .logo_go {
             position: absolute;
-            top: 26px;
+            top: 0;
             left: 0;
             right: 0;
-            display: flex;
+            bottom: 0;
             width: 100%;
-            padding: 0 20px;
-            justify-content: space-between;
-            align-items: center;
+            padding: 26px 20px 12px;
+            height: 100%;
+            margin: auto;
+            @include item_flex(flex, column, flex-end, space-between, 0px);
+
+            .cover_head{
+                @include item_flex(flex, row, center, space-between, 0px);
+                width: 100%;
+            }
         }
     }
 }
