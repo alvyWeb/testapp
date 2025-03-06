@@ -983,17 +983,24 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={propylConent.winloss} margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
-                <XAxis dataKey="month" />
-                <YAxis />
-                <Tooltip />
-                {/* <Legend /> */}
-                <Bar dataKey="הפסדים" fill="#4774A9" />
-                <Bar dataKey="נצחונות" fill="#8D77D1" />
-                <Bar dataKey="שיוויונות" fill="#45BB9E" />
-              </BarChart>
-            </ResponsiveContainer>
+            <div style={{ width: '100%', overflowX: 'auto' }}>
+              <ResponsiveContainer width={800} height={300}>
+                <BarChart
+                  data={data}
+                  margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
+                  barCategoryGap={0} // No gap between bars in a month
+                  barSize={10} // Bar width is 10px
+                >
+                  <XAxis dataKey="month" />
+                  <YAxis orientation="right" />
+                  <Tooltip />
+                  {/* <Legend /> */}
+                  <Bar dataKey="נצחונות" fill="#8D77D1" />
+                  <Bar dataKey="הפסדים" fill="#4774A9" />
+                  <Bar dataKey="שיוויונות" fill="#45BB9E" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
 
         </div>
