@@ -624,12 +624,14 @@
 
                     &:after{
                         content: "";
-                        width: 110px;
-                        height: 100%;
-                        background-color: lightgray;
+                        width: 118px;
+                        height: 118px;
+                        background-color: var(--bg-color);
                         position: absolute;
-                        top: 0;
-                        right: 0;
+                        top: -13px;
+                        right: -10px;
+                        border-radius: 50% 0 0 50%;
+                        border-left: 1px solid lightgray;
                     }
                     
                     .headInfop {
