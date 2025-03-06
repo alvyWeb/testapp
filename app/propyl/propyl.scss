@@ -695,9 +695,42 @@
                     display: flex;
                     justify-content: space-between;
                     gap: 13px;
+                    background-color: #fff;
+
+                    .headInfop {
+                        img{
+                            border-radius: 12px;
+                        }
+                    }
     
                     .bodyInfo{
                         position: unset;
+                        padding: 0;
+                        gap: 10px;
+
+                        .profilePName{
+                            @include fix-font(16px, 400, 14px);
+                        }
+
+                        .otherInfo{
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            flex-direction: row;
+                            gap: 10px;
+
+                            .otherInfoItem{
+                                display: flex;
+                                justify-content: start;
+                                align-items: center;
+                                flex-direction: row;
+                                gap: 5px;
+
+                                p{
+                                    @include fix-font(14px, 400, 12px);
+                                }
+                            }
+                        }
                     }
                 }
             }
