@@ -427,6 +427,23 @@ const Propyl = ({ standings, setStandings }) => {
         שיוויונות: 18 
       },
     ],
+    pieData: [
+      { 
+        name: "הפסדים", 
+        value: 33, 
+        color: '#4774A9',
+      },
+      { 
+        name: "נצחונות", 
+        value: 33, 
+        color: '#8A42FF',
+      },
+      { 
+        name: "שוויונות", 
+        value: 33, 
+        color: '#41B8A6',
+      },
+    ],
   };
   return (
     <main>
@@ -986,20 +1003,12 @@ const Propyl = ({ standings, setStandings }) => {
             <motion.div>
               <div className="pie-chart-container">
                 <PieChart width={200} height={200}>
-                  <Pie data={propylConent.winloss} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
-                    {propylConent.winloss.map((entry, index) => (
+                  <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
+                    {propylConent.pieData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
                 </PieChart>
-
-                <div className="legend">
-                  {propylConent.winloss.map((entry, index) => (
-                    <p key={index} style={{ color: entry.color }}>
-                      {entry.value} {entry.name}
-                    </p>
-                  ))}
-                </div>
               </div>
             </motion.div>
           </div>
