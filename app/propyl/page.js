@@ -1001,7 +1001,7 @@ const Propyl = ({ standings, setStandings }) => {
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
             <PieChart width={730} height={250}>
-              <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="color" label />
+              <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fillKey="color" label />
             </PieChart>
           </div>
 
