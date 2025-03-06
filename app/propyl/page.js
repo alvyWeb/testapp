@@ -431,17 +431,17 @@ const Propyl = ({ standings, setStandings }) => {
       { 
         name: "הפסדים", 
         value: 33, 
-        color: '#4774A9',
+        fill: '#4774A9',
       },
       { 
         name: "נצחונות", 
         value: 33, 
-        color: '#8A42FF',
+        fill: '#8A42FF',
       },
       { 
         name: "שוויונות", 
         value: 33, 
-        color: '#41B8A6',
+        fill: '#41B8A6',
       },
     ],
   };
@@ -1001,7 +1001,7 @@ const Propyl = ({ standings, setStandings }) => {
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
             <PieChart width={105} height={105}>
-              <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="color"/>
+              <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
             </PieChart>
           </div>
 
