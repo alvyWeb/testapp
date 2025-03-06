@@ -619,7 +619,19 @@
                     align-items: center;
                     gap: 14px;
                     background-color: #fff;
+                    position: relative;
+                    border: 1px solid lightgray;
 
+                    &:after{
+                        content: "";
+                        width: 110px;
+                        height: 100%;
+                        background-color: lightgray;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                    
                     .headInfop {
                         position: relative;
                         width: 95px;
