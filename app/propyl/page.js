@@ -766,7 +766,7 @@ const Propyl = ({ standings, setStandings }) => {
                   <img className="profileImage" src={item.closeImg} alt="" />
                 </div>
                 <div className="bodyInfo">
-                  <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
+                  <p className="profilePName">{item.titile}</p>
                   <span className="otherInfo">
                     <figure className="otherInfoItem">
                       <svg
