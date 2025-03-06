@@ -986,7 +986,7 @@ const Propyl = ({ standings, setStandings }) => {
             <div style={{ width: '100%', overflowX: 'auto' }}>
               <ResponsiveContainer width={800} height={300}>
                 <BarChart
-                  data={data}
+                  data={propylConent.winloss}
                   margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
                   barCategoryGap={0} // No gap between bars in a month
                   barSize={10} // Bar width is 10px
