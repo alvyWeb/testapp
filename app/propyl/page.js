@@ -742,8 +742,10 @@ const Propyl = ({ standings, setStandings }) => {
               <div className="itemlist">
                 {propylConent.mostAgainst.map((item) => (
                   <div className="opponent_body">
-                    <img className="profilePlay" src={item.headImg} alt="" />
-                    <img className="profileCountry" src={item.headCountry} alt="" />
+                    <div className="headInfop">
+                      <img className="profilePlay" src={item.headImg} alt="" />
+                      <img className="profileCountry" src={item.headCountry} alt="" />
+                    </div>
                     <div className="bodyInfo">
                       <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
                       <p className="profilePsta">{item.match}</p>
