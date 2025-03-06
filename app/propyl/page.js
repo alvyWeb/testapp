@@ -277,20 +277,22 @@ const Propyl = ({ standings, setStandings }) => {
     ],
     mostAgainst: [
       {
-        headImg: "./user-Image/Profile_state.jpg",
-        headCountry: "./flags/hm.png",
-        playerName: "Tomer Mandler",
-        match: "10 Games",
-        win: "5 Victories",
-        losses: "5 Losses",
+        headImg: "./propyl/png/comon.png",
+        headCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        match: "10 משחקים",
+        win: "5 נצחונות",
+        losses: "5 הפסדים",
       },
       {
-        headImg: "./user-Image/Profile_state.jpg",
-        headCountry: "./flags/hm.png",
-        playerName: "Tomer Mandler",
-        match: "10 Games",
-        win: "5 Victories",
-        losses: "5 Losses",
+        headImg: "./propyl/png/comon.png",
+        headCountry: "./flags/br.png",
+        playerName: "תומר מנדלר",
+        playerSur: "(מוצקין)",
+        match: "10 משחקים",
+        win: "5 נצחונות",
+        losses: "5 הפסדים",
       },
     ],
     closeMatch: [
@@ -729,6 +731,24 @@ const Propyl = ({ standings, setStandings }) => {
                     <div className="bodyInfo">
                       <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
                       <p className="profilePsta">{item.wins}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+          </div>
+
+          <div className="against_blocks profileCommon">
+              <h2>שיחק הכי הרבה מול</h2>
+              <div className="itemlist">
+                {propylConent.mostAgainst.map((item) => (
+                  <div className="opponent_body">
+                    <img className="profilePlay" src={item.headImg} alt="" />
+                    <img className="profileCountry" src={item.headCountry} alt="" />
+                    <div className="bodyInfo">
+                      <p className="profilePName">{item.playerName} <span>{item.playerSur}</span></p>
+                      <p className="profilePsta">{item.match}</p>
+                      <p className="profilePsta">{item.win}</p>
+                      <p className="profilePsta">{item.losses}</p>
                     </div>
                   </div>
                 ))}
