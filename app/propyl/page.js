@@ -976,7 +976,7 @@ const Propyl = ({ standings, setStandings }) => {
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
-                {/* <Legend /> */}
+                <Legend />
                 <Bar dataKey="הפסדים" fill="#4774A9" />
                 <Bar dataKey="נצחונות" fill="#8D77D1" />
                 <Bar dataKey="שיוויונות" fill="#45BB9E" />
