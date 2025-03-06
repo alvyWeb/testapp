@@ -26,7 +26,7 @@
   }
 
   .everything_body {
-      width: 350px;
+      width: calc(100% - 40px);
       height: auto;
       margin: 0 auto 20px;
 
@@ -43,7 +43,7 @@
       border: 1px solid var(--content-border);
       border-bottom: none;
       box-sizing: border-box;
-      @include weight_height(350px, auto);
+      @include weight_height(100%, auto);
       @include content_padd(14px, 12px, 12px, 20px);
       @include item_flex(flex, column, normal, normal, 8px);
 
@@ -109,7 +109,7 @@
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
 
-      @include weight_height(350px, auto);
+      @include weight_height(100%, auto);
 
       // @include weight_height(fill, auto);
 

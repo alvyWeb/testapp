@@ -812,7 +812,7 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div class="lastgame_block">
             <h2>משחקים אחרונים</h2>
-            <div className="gameitem">
+            <div className="gameitemlist">
               {propylConent.lastMatch.map((item) => (
               <div className="everything_body">
                 <div className="everything_head_body">
