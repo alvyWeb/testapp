@@ -1002,13 +1002,24 @@ const Propyl = ({ standings, setStandings }) => {
             <h2>מאזן נצחונות והפסדים</h2>
             <motion.div>
               <div className="pie-chart-container">
-                <PieChart width={200} height={200}>
-                  <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart width={105} height={105}>
+                  <Pie
+                    data={propylConent.pieData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={renderCustomizedLabel}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    dataKey="value"
+                  >
                     {propylConent.pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
                 </PieChart>
+              </ResponsiveContainer>
               </div>
             </motion.div>
           </div>
