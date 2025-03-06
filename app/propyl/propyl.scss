@@ -775,6 +775,15 @@
                     border-radius: 8px;
                     position: relative;
                     overflow: hidden;
+
+                    .head_body{
+                        @include item_flex(flex, row, center, space-between, 0px);
+                        padding: 12px 15px 11px 10px;
+
+                        span{
+                            @include item_flex(flex, row, center, space-between, 0px);
+                        }
+                    }
                 }
     
             }
