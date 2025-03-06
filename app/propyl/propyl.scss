@@ -797,14 +797,14 @@
                     .everything_main_body{
                         padding: 15px 11px 20px;
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: row-reverse;
                         align-items: center;
                         justify-content: space-around;
                         gap: 0;
 
                         .f_team {
                             display: flex;
-                            flex-direction: row;
+                            flex-direction: row-reverse;
                             align-items: center;
                             justify-content: normal;
                             gap: 10px;
@@ -812,7 +812,7 @@
 
                         .s_team {
                             display: flex;
-                            flex-direction: row-reverse;
+                            flex-direction: row;
                             align-items: center;
                             justify-content: center;
                             gap: 10px;
