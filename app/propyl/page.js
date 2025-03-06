@@ -986,15 +986,15 @@ const Propyl = ({ standings, setStandings }) => {
             <motion.div>
               <div className="pie-chart-container">
                 <PieChart width={200} height={200}>
-                  <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
-                    {pieData.map((entry, index) => (
+                  <Pie data={propylConent.winloss} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
+                    {propylConent.winloss.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
                 </PieChart>
 
                 <div className="legend">
-                  {pieData.map((entry, index) => (
+                  {propylConent.winloss.map((entry, index) => (
                     <p key={index} style={{ color: entry.color }}>
                       {entry.value} {entry.name}
                     </p>
