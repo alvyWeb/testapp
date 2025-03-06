@@ -894,7 +894,12 @@
         }
 
         .winlossgraph{
-            flex-direction: row-reverse;
+
+            .itemlist{
+                .opponent_body{
+                    flex-direction: row-reverse;
+                }
+            }
 
             &:after{
                 right: unset;
