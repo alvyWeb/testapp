@@ -374,45 +374,45 @@ const Propyl = ({ standings, setStandings }) => {
     winloss: [
       { 
         month: "ינואר", 
-        wins: 20, 
-        losses: 25, 
-        draws: 15,
+        נצחונות: 20, 
+        הפסדים: 25, 
+        שיוויונות: 15,
       },
       { 
         month: "פברואר", 
-        wins: 18, 
-        losses: 22, 
-        draws: 14, 
+        נצחונות: 18, 
+        הפסדים: 22, 
+        שיוויונות: 14, 
       },
       { 
         month: "מרץ", 
-        wins: 15, 
-        losses: 18, 
-        draws: 10 
+        נצחונות: 15, 
+        הפסדים: 18, 
+        שיוויונות: 10 
       },
       { 
         month: "אפריל", 
-        wins: 12, 
-        losses: 15, 
-        draws: 8 
+        נצחונות: 12, 
+        הפסדים: 15, 
+        שיוויונות: 8 
       },
       { 
         month: "מאי", 
-        wins: 5, 
-        losses: 8, 
-        draws: 4 
+        נצחונות: 5, 
+        הפסדים: 8, 
+        שיוויונות: 4 
       },
       { 
         month: "יוני", 
-        wins: 25, 
-        losses: 30, 
-        draws: 20 
+        נצחונות: 25, 
+        הפסדים: 30, 
+        שיוויונות: 20 
       },
       { 
         month: "יולי", 
-        wins: 22, 
-        losses: 28, 
-        draws: 18 
+        נצחונות: 22, 
+        הפסדים: 28, 
+        שיוויונות: 18 
       },
     ],
   };
@@ -976,7 +976,7 @@ const Propyl = ({ standings, setStandings }) => {
                 <XAxis dataKey="month" />
                 <YAxis />
                 <Tooltip />
-                <Legend />
+                {/* <Legend /> */}
                 <Bar dataKey="הפסדים" fill="#4774A9" />
                 <Bar dataKey="נצחונות" fill="#8D77D1" />
                 <Bar dataKey="שיוויונות" fill="#45BB9E" />
