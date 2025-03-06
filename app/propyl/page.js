@@ -983,8 +983,8 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
-            <div style={{ width: '100%', overflowX: 'auto' }}>
-              <ResponsiveContainer width={800} height={300}>
+            <div style={{ width: '100%', overflowX: 'auto', overflowY: 'hidden' }}>
+              <ResponsiveContainer width={450} height={290}>
                 <BarChart
                   data={propylConent.winloss}
                   margin={{ top: 10, right: 20, left: 0, bottom: 30 }}
