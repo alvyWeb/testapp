@@ -870,11 +870,9 @@ const Propyl = ({ standings, setStandings }) => {
                         <span>
                           <img src={item.opPlayerImg} />
                           <img src={item.opPlayerCountryImg} />
-                          <img src={item.toffeeIcon} />
                         </span>
                       </span>
                       <p className="_name">
-                        <img src={item.cIcon} />
                         {item.opPlayerName}
                       </p>
                       <p className="_ranking">{item.opPlayerRank}</p>
@@ -884,8 +882,7 @@ const Propyl = ({ standings, setStandings }) => {
                         <span>
                           <img src={item.opTeaMateImg} />
                           <img src={item.opTeaMateCountryImg} />
-                          <img src={item.tennisIcon} />
-                        </span>
+                       </span>
                       </span>
                       <p className="_name">{item.opTeaMateName}</p>
                       <p className="_ranking">{item.opTeaMateRank}</p>
