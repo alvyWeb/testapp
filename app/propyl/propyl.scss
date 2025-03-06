@@ -208,7 +208,7 @@
                 text-align: center;
                 color: #000000;
                 padding-bottom: 8px;
-                border-bottom: 1px solid lightgray;
+                border-bottom: 1px solid #eee;
             }
 
             .body{
@@ -265,7 +265,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    border-bottom: 1px solid lightgray;
+                    border-bottom: 1px solid #eee;
 
                     .itemName{
                         @include fix-font(16px, 400, 14px); 
@@ -533,7 +533,7 @@
                 }
 
                 .opponent_body{
-                    border: 1px solid lightgray;
+                    border: 1px solid #eee;
                     border-radius: 8px;
                     position: relative;
                     overflow: hidden;
@@ -620,7 +620,7 @@
                     gap: 14px;
                     background-color: #fff;
                     position: relative;
-                    border: 1px solid lightgray;
+                    border: 1px solid #eee;
                     border-radius: 8px;
 
                     &:after{
@@ -632,7 +632,7 @@
                         top: -13px;
                         right: -10px;
                         border-radius: 50% 0 0 50%;
-                        border-left: 1px solid lightgray;
+                        border-left: 1px solid #eee;
                     }
                     
                     .headInfop {
@@ -771,7 +771,7 @@
                 .everything_body{
                     min-width: 350px;
                     background-color: #fff;
-                    border: 1px solid #d3d3d3;
+                    border: 1px solid #eee;
                     border-radius: 8px;
                     position: relative;
                     overflow: hidden;
@@ -779,7 +779,7 @@
                     .head_body{
                         @include item_flex(flex, row, center, space-between, 12px);
                         padding: 12px 10px 11px 10px;
-                        border-bottom: 1px solid #d3d3d3;
+                        border-bottom: 1px solid #eee;
 
                         p{
                             @include fix-font(16px, 400, 14px);
@@ -792,6 +792,11 @@
                                 @include fix-font(14px, 400, 12px);
                             }
                         }
+                    }
+
+                    .everything_main_body{
+                        padding: 15px 11px 20px;
+
                     }
                 }
     
