@@ -872,16 +872,16 @@ const Propyl = ({ standings, setStandings }) => {
                   <div className="f_team">
                     <div className="_player">
                       <span>
-                        <img src={item.myImg} />
-                        <img src={item.myCountryImg} />
+                        <img className="teamIamge" src={item.myImg} />
+                        <img className="teamflag" src={item.myCountryImg} />
                       </span>
                       <p className="_name">{item.myName}</p>
                       <p className="_ranking">{item.myRank}</p>
                     </div>
                     <div className="_player">
                       <span>
-                        <img src={item.myTeaMateImg} />
-                        <img src={item.myTeaMateCountryImg} />
+                        <img className="teamIamge" src={item.myTeaMateImg} />
+                        <img className="teamflag" src={item.myTeaMateCountryImg} />
                       </span>
                       <p className="_name">{item.myTeaMateName}</p>
                       <p className="_ranking">{item.myTeaMateRank}</p>
@@ -897,8 +897,8 @@ const Propyl = ({ standings, setStandings }) => {
                     <div className="_player">
                       <span className="_win">
                         <span>
-                          <img src={item.opPlayerImg} />
-                          <img src={item.opPlayerCountryImg} />
+                          <img className="teamIamge" src={item.opPlayerImg} />
+                          <img className="teamflag" src={item.opPlayerCountryImg} />
                         </span>
                       </span>
                       <p className="_name">
@@ -909,8 +909,8 @@ const Propyl = ({ standings, setStandings }) => {
                     <div className="_player">
                       <span className="_win">
                         <span>
-                          <img src={item.opTeaMateImg} />
-                          <img src={item.opTeaMateCountryImg} />
+                          <img className="teamIamge" src={item.opTeaMateImg} />
+                          <img className="teamflag" src={item.opTeaMateCountryImg} />
                        </span>
                       </span>
                       <p className="_name">{item.opTeaMateName}</p>
