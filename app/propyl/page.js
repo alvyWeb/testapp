@@ -983,23 +983,24 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
-            <motion.div style={{ width: '100%', overflowX: 'auto', overflowY: 'hidden' }}>
-              <ResponsiveContainer width={450} height={290}>
-                <BarChart
-                  data={propylConent.winloss}
-                  margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-                  barCategoryGap={0} // No gap between bars in a month
-                  barSize={10} // Bar width is 10px
-                >
-                  <XAxis dataKey="month" />
-                  <YAxis orientation="right" />
-                  <Tooltip />
-                  {/* <Legend /> */}
-                  <Bar dataKey="נצחונות" fill="#8D77D1" />
-                  <Bar dataKey="הפסדים" fill="#4774A9" />
-                  <Bar dataKey="שיוויונות" fill="#45BB9E" />
-                </BarChart>
-              </ResponsiveContainer>
+            <motion.div>
+              <div className="pie-chart-container">
+                <PieChart width={200} height={200}>
+                  <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50}>
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                </PieChart>
+
+                <div className="legend">
+                  {pieData.map((entry, index) => (
+                    <p key={index} style={{ color: entry.color }}>
+                      {entry.value} {entry.name}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
 
