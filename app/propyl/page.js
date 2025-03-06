@@ -1013,7 +1013,7 @@ const Propyl = ({ standings, setStandings }) => {
                     <div className="list1">
                         <ul>
                         {propylConent.pieData.map((item) => (
-                          <li>{item.name}</li>
+                          <li><span className="color"></span>{item.name}</li>
                         ))}
                         </ul>
                     </div>

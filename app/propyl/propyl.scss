@@ -898,16 +898,74 @@
             .itemlist{
                 .opponent_body{
                     flex-direction: row-reverse;
+                    min-width: 100%;
+
+                    &:after{
+                        right: unset;
+                        left: -10px;
+                        border-radius: 0 50% 50% 0;
+                        border-left: 0;
+                        border-right: 1px solid #eee;
+                    }
+
+                    .bodyInfo{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 40px;
+                        padding: 20px 38px;
+
+                        ul{
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 15px;
+
+                            li{
+                                list-style-type: none;
+                                @include fix-font(14px, 400, 12px);
+                                color: #B0AAAA;
+                            }
+                        }
+
+                        .list2{
+                            li{
+                                color: #000000;
+                            }
+                        }
+
+                        .list1{
+                            li{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 6px;
+
+                                span{
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 50%;
+                                    background-color: #4774A9;
+                                }
+
+                                &:nth-child(2){
+                                    span{
+                                        background-color: #8D77D1;
+                                    }
+                                }
+
+                                &:nth-child(3){
+                                    span{
+                                        background-color: #45BB9E;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            &:after{
-                right: unset;
-                left: -10px;
-                border-radius: 0 50% 50% 0;
-                border-left: 0;
-                border-right: 1px solid #eee;
-            }
+            
         }
 
 
