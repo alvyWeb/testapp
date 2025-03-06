@@ -2,6 +2,8 @@
 
 import "./propyl.scss";
 import "./skilbar.css";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Propyl = ({ standings, setStandings }) => {
@@ -367,6 +369,50 @@ const Propyl = ({ standings, setStandings }) => {
         tennisIcon: "../Stock/futuregamesmine/svg/toffee.svg",
         opTeaMateName: "גורן ש.",
         opTeaMateRank: "(מוצקין)",   
+      },
+    ],
+    winloss: [
+      { 
+        month: "ינואר", 
+        wins: 20, 
+        losses: 25, 
+        draws: 15,
+      },
+      { 
+        month: "פברואר", 
+        wins: 18, 
+        losses: 22, 
+        draws: 14, 
+      },
+      { 
+        month: "מרץ", 
+        wins: 15, 
+        losses: 18, 
+        draws: 10 
+      },
+      { 
+        month: "אפריל", 
+        wins: 12, 
+        losses: 15, 
+        draws: 8 
+      },
+      { 
+        month: "מאי", 
+        wins: 5, 
+        losses: 8, 
+        draws: 4 
+      },
+      { 
+        month: "יוני", 
+        wins: 25, 
+        losses: 30, 
+        draws: 20 
+      },
+      { 
+        month: "יולי", 
+        wins: 22, 
+        losses: 28, 
+        draws: 18 
       },
     ],
   };
@@ -922,6 +968,11 @@ const Propyl = ({ standings, setStandings }) => {
               ))}
             </div>
           </div>
+
+          <div className="winlossgraph">
+            <h2>מאזן נצחונות והפסדים</h2>
+          </div>
+
         </div>
       </div>
     </main>
