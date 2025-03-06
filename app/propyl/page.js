@@ -975,7 +975,7 @@ const Propyl = ({ standings, setStandings }) => {
               <BarChart data={propylConent.winloss} margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
                 <XAxis dataKey="month" />
                 <YAxis />
-                {/* <Tooltip /> */}
+                <Tooltip />
                 {/* <Legend /> */}
                 <Bar dataKey="הפסדים" fill="#4774A9" />
                 <Bar dataKey="נצחונות" fill="#8D77D1" />
