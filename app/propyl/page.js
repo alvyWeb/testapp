@@ -971,6 +971,17 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={propylConent.winloss} margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="losses" fill="#4073FF" />
+                <Bar dataKey="wins" fill="#8A42FF" />
+                <Bar dataKey="draws" fill="#41B8A6" />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
 
         </div>
