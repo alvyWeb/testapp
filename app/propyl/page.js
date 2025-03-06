@@ -975,11 +975,11 @@ const Propyl = ({ standings, setStandings }) => {
               <BarChart data={propylConent.winloss} margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
                 <XAxis dataKey="month" />
                 <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="losses" fill="#4073FF" />
-                <Bar dataKey="wins" fill="#8A42FF" />
-                <Bar dataKey="draws" fill="#41B8A6" />
+                {/* <Tooltip /> */}
+                {/* <Legend /> */}
+                <Bar dataKey="הפסדים" fill="#4774A9" />
+                <Bar dataKey="נצחונות" fill="#8D77D1" />
+                <Bar dataKey="שיוויונות" fill="#45BB9E" />
               </BarChart>
             </ResponsiveContainer>
           </div>
