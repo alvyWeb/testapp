@@ -737,7 +737,7 @@ const Propyl = ({ standings, setStandings }) => {
               </div>
           </div>
 
-          <div className="against_blocks profileCommon">
+          <div className="against_blocks profileCommonO">
               <h2>שיחק הכי הרבה מול</h2>
               <div className="itemlist">
                 {propylConent.mostAgainst.map((item) => (
