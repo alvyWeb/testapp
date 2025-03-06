@@ -614,12 +614,23 @@
 
                 .opponent_body{
                     min-width: 275px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 14px;
+                    background-color: #fff;
 
                     .headInfop {
                         position: relative;
+                        width: 95px;
+                        height: 95px;
 
                         img{
                             display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            border-radius: 50%;
                         }
     
                         .profileCountry{
