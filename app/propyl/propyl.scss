@@ -647,10 +647,12 @@
                         flex-direction: column;
                         justify-content: start;
                         align-items: normal;
-                        gap: 5px;
+                        gap: 7px;
+                        min-width: 150px;
+                        padding: 12px 17px;
    
                         .profilePName{
-                            @include fix-font(14px, 400, 12.25px);
+                            @include fix-font(16px, 400, 14px);
                             color: #000000; 
     
                             span{
