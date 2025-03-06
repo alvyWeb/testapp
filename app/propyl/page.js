@@ -983,7 +983,7 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph">
             <h2>מאזן נצחונות והפסדים</h2>
-            <div style={{ width: '100%', overflowX: 'auto', overflowY: 'hidden' }}>
+            <motion.div style={{ width: '100%', overflowX: 'auto', overflowY: 'hidden' }}>
               <ResponsiveContainer width={450} height={290}>
                 <BarChart
                   data={propylConent.winloss}
@@ -1000,7 +1000,7 @@ const Propyl = ({ standings, setStandings }) => {
                   <Bar dataKey="שיוויונות" fill="#45BB9E" />
                 </BarChart>
               </ResponsiveContainer>
-            </div>
+            </motion.div>
           </div>
 
         </div>
