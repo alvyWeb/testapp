@@ -811,6 +811,10 @@ const Propyl = ({ standings, setStandings }) => {
             </div>
           </div>
 
+          <div class="lastgame_block">
+            <h2>משחקים אחרונים</h2>
+          </div>
+
         </div>
       </div>
     </main>
