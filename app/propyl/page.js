@@ -1004,7 +1004,7 @@ const Propyl = ({ standings, setStandings }) => {
                 <div className="opponent_body">
                   <div className="headInfop">
                     <motion.div>
-                      <PieChart width={105} height={105}>
+                      <PieChart width={125} height={125} left={17} top={-17}>
                         <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
                       </PieChart>
                     </motion.div>
