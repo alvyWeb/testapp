@@ -444,6 +444,7 @@ const Propyl = ({ standings, setStandings }) => {
         color: '#41B8A6',
       },
     ],
+    COLORS: ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"],
   };
   return (
     <main>
@@ -1002,24 +1003,24 @@ const Propyl = ({ standings, setStandings }) => {
             <h2>מאזן נצחונות והפסדים</h2>
             <motion.div>
               <div className="pie-chart-container">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart width={105} height={105}>
-                  <Pie
-                    data={propylConent.pieData}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    label={renderCustomizedLabel}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                  >
-                    {propylConent.pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart width={105} height={105}>
+                    <Pie
+                      data={propylConent.pieData}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      label={renderCustomizedLabel}
+                      outerRadius={80}
+                      fill="#8884d8"
+                      dataKey="value"
+                    >
+                      {propylConent.pieData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={propylConent.COLORS[index % propylConent.COLORS.length]} />
+                      ))}
+                    </Pie>
+                  </PieChart>
+                </ResponsiveContainer>
               </div>
             </motion.div>
           </div>
