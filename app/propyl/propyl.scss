@@ -894,18 +894,14 @@
         }
 
         .winlossgraph{
-            margin: 0 20px;
-            width: 100%;
-            max-width: calc(100% - 40px);
-            display: flex;
-            justify-content: flex-start;
-            align-items: normal;
-            gap: 12px;
-            flex-direction: column;
+            flex-direction: row-reverse;
 
-            h2{
-                @include fix-font(18px, 400, 15.75px); 
-                color: #000000;
+            &:after{
+                right: unset;
+                left: -10px;
+                border-radius: 0 50% 50% 0;
+                border-left: 0;
+                border-right: 1px solid #eee;
             }
         }
 

@@ -1012,14 +1012,14 @@ const Propyl = ({ standings, setStandings }) => {
                   <div className="bodyInfo">
                     <div className="list1">
                         <ul>
-                        {propylConent.mostAgainst.map((item) => (
+                        {propylConent.pieData.map((item) => (
                           <li>{item.name}</li>
                         ))}
                         </ul>
                     </div>
                     <div className="list2">
                       <ul>
-                        {propylConent.mostAgainst.map((item) => (
+                        {propylConent.pieData.map((item) => (
                           <li>{item.name} {item.value}</li>
                         ))}
                         </ul>
