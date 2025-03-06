@@ -998,11 +998,35 @@ const Propyl = ({ standings, setStandings }) => {
             </div>
           </div>
 
-          <div className="winlossgraph">
+          <div className="winlossgraph profileCommonO">
             <h2>מאזן נצחונות והפסדים</h2>
-            <PieChart width={105} height={105}>
-              <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
-            </PieChart>
+            <div className="itemlist">
+                <div className="opponent_body">
+                  <div className="headInfop">
+                    <motion.div>
+                      <PieChart width={105} height={105}>
+                        <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
+                      </PieChart>
+                    </motion.div>
+                  </div>
+                  <div className="bodyInfo">
+                    <div className="list1">
+                        <ul>
+                        {propylConent.mostAgainst.map((item) => (
+                          <li>{item.name}</li>
+                        ))}
+                        </ul>
+                    </div>
+                    <div className="list2">
+                      <ul>
+                        {propylConent.mostAgainst.map((item) => (
+                          <li>{item.name} {item.value}</li>
+                        ))}
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
 
         </div>
