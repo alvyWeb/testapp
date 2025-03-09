@@ -155,7 +155,7 @@
       .current_player {
         @include item_flex(flex, row-reverse, center, center, 8px);
 
-        ._kabir {
+        .doubleOne {
           @include item_flex(flex, column, center, center, 8px);
 
           span {
@@ -196,7 +196,7 @@
           }
         }
 
-        ._jone {
+        .doubleTwo {
           @include item_flex(flex, column, center, center, 8px);
 
           span {

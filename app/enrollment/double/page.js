@@ -152,7 +152,7 @@ export default function Home(props) {
               </div>
               <div className="container_body doublegames">
                 <div className="current_player">
-                  <div className="_kabir">
+                  <div className="_kabir doubleOne">
                     <span>
                       <img src={item.myImg} />
                       <img src={item.myCountryImg} />
@@ -160,7 +160,7 @@ export default function Home(props) {
                     <p className="_name">{item.myName}</p>
                     <p className="_rank">{item.myRank}</p>
                   </div>
-                  <div className="_jone">
+                  <div className="_jone doubleTwo">
                     <span>
                       <img src={item.teaMateImg} />
                       <img src={item.teaMateCountryImg} />
