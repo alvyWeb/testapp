@@ -264,7 +264,7 @@
         background: var(--item-bg);
         @include content_padd(0px, 0px, 0px, 8px);
         @include weight_height(128px, 25px);
-        @include item_flex(flex, row, center, space-between, 0px);
+        @include item_flex(flex, row-reverse, center, space-between, 0px);
 
         .score {
           border: 1px solid var(--content-border);
@@ -296,7 +296,7 @@
         background: var(--item-bg);
         @include content_padd(0px, 0px, 0px, 8px);
         @include weight_height(128px, 25px);
-        @include item_flex(flex, row, center, space-between, 0px);
+        @include item_flex(flex, row-reverse, center, space-between, 0px);
 
         .score {
           border: 1px solid var(--content-border);
