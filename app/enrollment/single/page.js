@@ -1,6 +1,6 @@
 import "./single.scss";
 
-export default function singleGames {
+const singleGames = ({ standings, setStandings }) => {
   const Single = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",
@@ -187,4 +187,6 @@ export default function singleGames {
       </div>
     </main>
   );
-}
+};
+
+export default singleGames;
