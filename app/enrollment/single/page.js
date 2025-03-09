@@ -78,13 +78,13 @@ export default function Home(props) {
             </svg>
 
             <span className="dtae_hour">
-              <p>Date | Hour</p>
-              <img src="./Stock/enrollment/svg/bottom arrow.svg" alt="" />
+              <p>תאריך | שעה | מיקום</p>
+              <img src="./placement/svg/bottom_arrow.svg" alt="" />
             </span>
           </div>
           <div className="head_body_bottom">
-            <p className="d_games">Doubles games</p>
-            <p className="s_games">Singles games</p>
+            <p className="d_games">משחקי זוגות</p>
+            <p className="s_games">משחקי יחידים</p>
           </div>
         </div>
         {
