@@ -1,18 +1,19 @@
 @import "../../../styles/shared/var.scss";
 
 .enrollment {
+  padding: 20px 20px 60px;
   .enrollment_head {
-    // max-width: 390px;
+    // width: 390px;
     height: auto;
     box-sizing: border-box;
 
     .head_body {
-      margin-top: 24px;
+      // margin-top: 24px;
       border-bottom: 1px solid var(--content-border);
-      @include weight_height(fill, auto);
-      @include content_padd(0px, 20px, 13px, 20px);
-      @include weight_height(fill, auto);
-      @include item_flex(flex, row, center, normal, 8px);
+      @include weight_height(100%, auto);
+      @include content_padd(0px, 0, 13px, 0);
+      // @include weight_height(fill, auto);
+      @include item_flex(flex, row, center, normal, 16px);
 
       span.dtae_hour {
         border: 1px solid var(--content-border);
@@ -36,7 +37,7 @@
     }
 
     .head_body_bottom {
-      @include content_padd(13px, 20px, 0px, 20px);
+      @include content_padd(13px, 0, 0px, 0);
       @include item_flex(flex, row, center, normal, 8px);
 
       .d_games {
@@ -44,7 +45,7 @@
         border: 1px solid #03506f;
         background: var(--item-bg);
         padding: 12px;
-        color: var(--text-color);
+        color: #03506f;
         @include fix-font(14px, 400, 12.25px);
         @include item_flex(flex, row, center, center, 0px);
       }
@@ -57,6 +58,7 @@
         color: var(--text-grey);
         @include fix-font(14px, 400, 12.25px);
         @include item_flex(flex, row, center, center, 0px);
+        text-decoration: none;
       }
     }
   }
