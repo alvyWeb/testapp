@@ -201,25 +201,30 @@
 
           span {
             position: relative;
+            width: 57px;
+            height: 57px;
+            border: 1px solid var(--item-color);
+            border-radius: 50%;
+            padding: 2px;
+            display: block;
 
             :first-child {
-              padding: 2px;
               object-fit: cover;
-              border-radius: 50%;
               background: var(--item-bg);
-              border: 2px solid var(--color-blue);
-              @include weight_height(51.57px, 51.57px);
+              // border: 1px solid var(--item-color);
+              @include weight_height(100%, auto);
+              display: block;
+              border-radius: 50%;
             }
 
             :last-child {
               position: absolute;
-              bottom: 4px;
-              right: 8px;
+              bottom: 0;
+              right: 0;
               border-radius: 2px;
-              @include weight_height(19px, 14.38px);
+              @include weight_height(19px, auto);
             }
           }
-
           ._name {
             color: var(--text-color);
             @include fix-font(14px, 400px, 12.25px);
