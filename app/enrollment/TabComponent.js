@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import single from "./single/page.js";
+import singleGames from "./single/page.js";
 import "./tab.scss"; // Import your CSS file
-import double from "./double/page.js";
+import doubleGames from "./double/page.js";
 const TabComponent = () => {
   const sections = ["section1", "section2"];
   const [activeSection, setActiveSection] = useState("section1");
@@ -54,8 +54,8 @@ const TabComponent = () => {
       </nav>
 
       <div className="sectionActive">
-        {activeSection === "section1" && <single />}
-        {activeSection === "section2" && <double />}
+        {activeSection === "section1" && <singleGames />}
+        {activeSection === "section2" && <doubleGames />}
       </div>
       {/* {activeSection === "section2" && (
         <div

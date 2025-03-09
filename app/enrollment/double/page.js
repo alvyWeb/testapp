@@ -1,6 +1,6 @@
 import "./double.scss";
 
-export default function Home(props) {
+export default function doubleGames {
   const enrollment = [
     {
       "headTitle": "Yarkon Park, Tel Aviv | Court #2",
