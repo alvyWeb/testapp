@@ -154,10 +154,10 @@
         background: var(--item-bg);
 
         @include weight_height(fill, auto);
-        @include item_flex(flex, row, center, space-between, 0px);
+        @include item_flex(flex, row-reverse, center, space-between, 0px);
 
         .f_team {
-          @include item_flex(flex, row, center, normal, 10px);
+          @include item_flex(flex, row-reverse, center, normal, 10px);
 
           ._player {
             @include item_flex(flex, column, center, normal, 4px);
@@ -202,7 +202,7 @@
         }
 
         .s_team {
-          @include item_flex(flex, row, center, normal, 10px);
+          @include item_flex(flex, row-reverse, center, normal, 10px);
 
           ._player {
             @include item_flex(flex, column, center, normal, 4px);
@@ -255,7 +255,7 @@
       }
     }
     .container_bottom_body {
-      @include item_flex(flex, row, center, space-between, 12px);
+      @include item_flex(flex, row-reverse, center, space-between, 12px);
       padding-top: 12px;
 
       .f_team {
