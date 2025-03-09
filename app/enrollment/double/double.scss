@@ -275,7 +275,7 @@
     }
 
     .doublegames{
-      @include item_flex(flex, row-reverse, center, space-around, 0px) !important;
+      flex-direction: row-reverse !important;
     }
 
     .container_footer {
