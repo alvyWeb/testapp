@@ -64,8 +64,8 @@
   }
 
   .enrollment_container {
-    @include weight_height(360px, auto);
-    margin: 16px auto;
+    // @include weight_height(360px, auto);
+    margin: 20px auto;
     box-sizing: border-box;
     background: var(--item-bg);
 
@@ -74,19 +74,18 @@
       border-top-right-radius: 8px;
       border-top-left-radius: 8px;
       background: var(--item-bg);
-      @include weight_height(fill, auto);
-      @include content_padd(16px, 12px, 12px, 20px);
+      @include weight_height(100%, auto);
+      @include content_padd(13px, 12px, 12px, 12px);
       @include item_flex(flex, column, flex-start, normal, 8px);
 
       .container_top_head {
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include item_flex(flex, row, center, space-between, 0px);
 
         p {
-          color: var(--text-color);
-          @include fix-font(16px, 400px, 14px);
+          color: var(--item-color);
+          @include fix-font(16px, 400, 14px);
         }
-
         svg {
           path {
             fill: var(--item-color);
@@ -95,17 +94,16 @@
       }
 
       .container_bottom_head {
-        @include weight_height(fill, auto);
-        @include item_flex(flex, row, center, normal, 12px);
+        @include weight_height(100%, auto);
+        @include item_flex(flex, row, center, normal, 9px);
 
         ._calender {
-          @include item_flex(flex, row, center, normal, 4px);
+          @include item_flex(flex, row, center, normal, 5px);
 
           p {
             color: var(--text-grey);
-            @include fix-font(14px, 400px, 12.25px);
+            @include fix-font(14px, 400, 12.25px);
           }
-
           svg {
             path {
               fill: var(--item-color);
@@ -121,7 +119,6 @@
             color: var(--text-grey);
             @include fix-font(14px, 400px, 12.25px);
           }
-
           svg {
             path {
               fill: var(--item-color);
@@ -136,7 +133,6 @@
             color: var(--text-grey);
             @include fix-font(14px, 400px, 12.25px);
           }
-
           svg {
             path {
               stroke: var(--item-color);
@@ -150,8 +146,8 @@
       border-left: 1px solid var(--content-border);
       border-right: 1px solid var(--content-border);
       background: var(--item-bg);
-      @include content_padd(16px, 16px, 14px, 16px);
-      @include item_flex(flex, row, center, space-between, 0px);
+      @include content_padd(15px, 16px, 15px, 16px);
+      @include item_flex(flex, row, center, space-around, 0px);
 
       .current_player {
         @include item_flex(flex, row, center, center, 8px);
@@ -161,33 +157,39 @@
 
           span {
             position: relative;
+            width: 57px;
+            height: 57px;
+            border: 1px solid var(--item-color);
+            border-radius: 50%;
+            padding: 2px;
+            display: block;
 
             :first-child {
-              padding: 2px;
               object-fit: cover;
-              border-radius: 50%;
               background: var(--item-bg);
-              border: 1px solid var(--item-color);
-              @include weight_height(51.57px, 51.57px);
+              // border: 1px solid var(--item-color);
+              @include weight_height(100%, auto);
+              display: block;
+              border-radius: 50%;
             }
 
             :last-child {
               position: absolute;
-              bottom: 4px;
-              right: 8px;
+              bottom: 0;
+              right: 0;
               border-radius: 2px;
-              @include weight_height(19px, 14.38px);
+              @include weight_height(19px, auto);
             }
           }
 
           ._name {
             color: var(--text-color);
-            @include fix-font(14px, 400px, 12.25px);
+            @include fix-font(14px, 400, 12.25px);
           }
 
           ._rank {
             color: var(--text-grey);
-            @include fix-font(12px, 400px, 10.5px);
+            @include fix-font(12px, 400, 10.5px);
           }
         }
 
@@ -202,7 +204,7 @@
               object-fit: cover;
               border-radius: 50%;
               background: var(--item-bg);
-              border: 1px solid var(--item-color);
+              border: 2px solid var(--color-blue);
               @include weight_height(51.57px, 51.57px);
             }
 
@@ -271,14 +273,17 @@
 
     .container_footer {
       border: 1px solid var(--content-border);
-      padding-left: 20px;
+      // padding-left: 20px;
       background: var(--item-bg);
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      // border-bottom-left-radius: 8px;
+      // border-bottom-right-radius: 8px;
       @include item_flex(flex, row, center, space-between, 0px);
 
       ._item {
         @include item_flex(flex, column, flex-start, normal, 4px);
+        padding-right: 16px;
 
         .precipitation {
           @include item_flex(flex, row, center, normal, 4px);
@@ -287,7 +292,6 @@
             color: var(--text-grey);
             @include fix-font(14px, 400, 12.25px);
           }
-
           svg {
             path {
               fill: var(--item-color);
@@ -302,7 +306,6 @@
             color: var(--text-grey);
             @include fix-font(14px, 400, 12.25px);
           }
-
           svg {
             path {
               fill: var(--item-color);
@@ -312,20 +315,20 @@
       }
 
       a {
-        border-bottom-right-radius: 6px;
-        background: linear-gradient(to right, #3498db, #34506d);
+        // border-bottom-right-radius: 6px;
+        background: linear-gradient(to right, #34506d, #3498db);
 
         button {
           border: none;
           color: #ffffff;
-          border-bottom-right-radius: 8px;
-          @include weight_height(130px, 52px);
+          // border-bottom-left-radius: 8px;
+          @include weight_height(140px, 52px);
           @include fix-font(16px, 400, 14px);
+          padding: 12px;
           background: none;
+          cursor: pointer;
         }
       }
     }
   }
-
-  padding-bottom: 65px;
 }
