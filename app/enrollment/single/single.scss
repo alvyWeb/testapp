@@ -1,6 +1,7 @@
 @import "../../../styles/shared/var.scss";
 
 .enrollment {
+  padding: 20px 60px;
   .enrollment_head {
     // width: 390px;
     height: auto;
@@ -62,7 +63,7 @@
   }
 
   .enrollment_container {
-    @include weight_height(360px, auto);
+    // @include weight_height(360px, auto);
     margin: 16px auto;
     box-sizing: border-box;
     background: var(--item-bg);
