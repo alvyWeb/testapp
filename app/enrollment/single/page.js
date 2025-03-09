@@ -1,6 +1,7 @@
 import "./single.scss";
+import { Link } from "react-router-dom";
 
-const singleGames = () => {
+export default function SingleGame(props) {
   const Single = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",
@@ -82,7 +83,7 @@ const singleGames = () => {
             </span>
           </div>
           <div className="head_body_bottom">
-            <p className="d_games">זוגות</p>
+            <Link to="../double/page" className="d_games">זוגות</Link>
             <p className="s_games">יחידים</p>
           </div>
         </div>
@@ -187,6 +188,4 @@ const singleGames = () => {
       </div>
     </main>
   );
-};
-
-export default singleGames;
+}

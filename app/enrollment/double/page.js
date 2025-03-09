@@ -1,6 +1,6 @@
 import "./double.scss";
 
-const doubleGames = () => {
+export default function Home(props) {
   const enrollment = [
     {
       "headTitle": "Yarkon Park, Tel Aviv | Court #2",
@@ -237,6 +237,4 @@ const doubleGames = () => {
       </div>
     </main>
   );
-};
-
-export default doubleGames;
+}
