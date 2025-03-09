@@ -3,7 +3,7 @@ import "./single.scss";
 export default function Home(props) {
   const Single = [
     {
-      "headTitle": "Yarkon Park, Tel Aviv | Court #2",
+      "headTitle": "Yarkon Park, Tel Aviv | Court #23",
       "date": "02/24/2023",
       "time": "14:00",
       "comments": "26 message",
