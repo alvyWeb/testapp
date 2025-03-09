@@ -83,8 +83,8 @@ export default function Home(props) {
             </span>
           </div>
           <div className="head_body_bottom">
-            <p className="d_games">משחקי זוגות</p>
             <p className="s_games">משחקי יחידים</p>
+            <p className="d_games">משחקי זוגות</p>
           </div>
         </div>
         {
