@@ -52,7 +52,7 @@ body {
   padding: 0;
   max-width: 450px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto !important;
   background-color: var(--bg-color);
   overflow: hidden;
   overflow-y: scroll;
