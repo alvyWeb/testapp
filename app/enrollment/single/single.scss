@@ -145,7 +145,7 @@
       border-left: 1px solid var(--content-border);
       border-right: 1px solid var(--content-border);
       background: var(--item-bg);
-      @include content_padd(16px, 16px, 14px, 16px);
+      @include content_padd(15px, 16px, 15px, 16px);
       @include item_flex(flex, row, center, space-around, 0px);
 
       .current_player {
@@ -266,10 +266,11 @@
 
     .container_footer {
       border: 1px solid var(--content-border);
-      padding-left: 20px;
+      // padding-left: 20px;
       background: var(--item-bg);
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+      border-radius: 0 0 8px 0;
+      // border-bottom-left-radius: 8px;
+      // border-bottom-right-radius: 8px;
       @include item_flex(flex, row, center, space-between, 0px);
 
       ._item {

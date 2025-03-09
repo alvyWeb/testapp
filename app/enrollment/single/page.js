@@ -137,7 +137,7 @@ export default function Home(props) {
                   </div>
                 </div>
                 <span>
-                  <p>VS.</p>
+                  <p>.VS</p>
                 </span>
                 <div className="add_player">
                   <div className="_add">
