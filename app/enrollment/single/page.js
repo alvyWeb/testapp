@@ -1,5 +1,5 @@
 import "./single.scss";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function SingleGame(props) {
   const Single = [
