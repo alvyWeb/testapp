@@ -84,7 +84,7 @@ export default function SingleGame(props) {
           </div>
           <div className="head_body_bottom">
             <Link href="/enrollment/double" className="d_games">זוגות</Link>
-            <p className="s_games">יחידים</p>
+            <p className="s_games active">יחידים</p>
           </div>
         </div>
         {

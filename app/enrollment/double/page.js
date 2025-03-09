@@ -4,14 +4,14 @@ import Link from "next/link";
 export default function Home(props) {
   const enrollment = [
     {
-      "headTitle": "Yarkon Park, Tel Aviv | Court #2",
+      "headTitle": "פארק הירקון, תל אביב | מגרש #2",
       "date": "02/24/2023",
       "time": "14:00",
-      "comments": "26 message",
-      "myName": "Mandler T.",
-      "myRank": "(PRO)",
-      "myImg": "../user-Image/Noam-Peen.png",
-      "myCountryImg": "../flags/ag.png",
+      "comments": "26 הודעות",
+      "myName": "מנדלר ת.",
+      "myRank": "(פרו)",
+      "myImg": "../user-Image/g3.png",
+      "myCountryImg": "../flags/br.png",
       "teaMateImg": "../user-Image/Tafsir.png",
       "teaMateCountryImg": "../flags/ag.png",
       "teaMateName": "Mandler T.",
@@ -99,7 +99,7 @@ export default function Home(props) {
             </span>
           </div>
           <div className="head_body_bottom">
-          <p className="d_games">זוגות</p>
+          <p className="d_games active">זוגות</p>
           <Link href="/enrollment/single" className="s_games">יחידים</Link>
           </div>
         </div>
