@@ -150,7 +150,7 @@ export default function Home(props) {
                   </span>
                 </div>
               </div>
-              <div className="container_body">
+              <div className="container_body doublegames">
                 <div className="current_player">
                   <div className="_kabir">
                     <span>

@@ -274,6 +274,10 @@
       }
     }
 
+    .doublegames{
+      @include item_flex(flex, row-reverse, center, space-around, 0px);
+    }
+
     .container_footer {
       border: 1px solid var(--content-border);
       // padding-left: 20px;
