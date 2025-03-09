@@ -56,7 +56,7 @@
         border: 1px solid #03506f;
         background: var(--item-bg);
         padding: 12px;
-        color: var(--text-color);
+        color: #03506f;
         @include fix-font(14px, 400, 12.25px);
         @include item_flex(flex, row, center, center, 0px);
       }
