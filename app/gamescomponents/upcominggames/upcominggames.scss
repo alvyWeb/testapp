@@ -251,7 +251,7 @@
         border-radius: 8px;
         background: var(--item-bg);
         @include weight_height(fill, auto);
-        @include item_flex(flex, row, center, space-around, 0px);
+        @include item_flex(flex, row-reverse, center, space-around, 0px);
       }
     }
     .container_bottom_body {
