@@ -100,7 +100,7 @@ export default function Home(props) {
           </div>
           <div className="head_body_bottom">
           <p className="d_games">זוגות</p>
-          <Link href="./single" className="s_games">יחידים</Link>
+          <Link href="/enrollment/single" className="s_games">יחידים</Link>
           </div>
         </div>
         {
