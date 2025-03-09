@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import Completedgames from "./single/page.js";
+import single from "./single/page.js";
 import "./tab.scss"; // Import your CSS file
-import Upcominggames from "./double/page.js";
+import double from "./double/page.js";
 const TabComponent = () => {
   const sections = ["section1", "section2"];
   const [activeSection, setActiveSection] = useState("section1");
@@ -41,7 +41,7 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section1")}
         >
-          משחקים עתידיים
+          יחידים
         </button>
         <button
           id={
@@ -49,13 +49,13 @@ const TabComponent = () => {
           }
           onClick={() => handleNavClick("section2")}
         >
-          משחקים שנגמרו
+          זוגות
         </button>
       </nav>
 
       <div className="sectionActive">
-        {activeSection === "section1" && <Upcominggames />}
-        {activeSection === "section2" && <Completedgames />}
+        {activeSection === "section1" && <single />}
+        {activeSection === "section2" && <double />}
       </div>
       {/* {activeSection === "section2" && (
         <div
