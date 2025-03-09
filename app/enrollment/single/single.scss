@@ -74,7 +74,7 @@
       border-top-left-radius: 8px;
       background: var(--item-bg);
       @include weight_height(100%, auto);
-      @include content_padd(16px, 12px, 12px, 20px);
+      @include content_padd(13px, 12px, 12px, 12px);
       @include item_flex(flex, column, flex-start, normal, 8px);
 
       .container_top_head {
@@ -83,7 +83,7 @@
 
         p {
           color: var(--item-color);
-          @include fix-font(16px, 400px, 14px);
+          @include fix-font(16px, 400, 14px);
         }
         svg {
           path {
@@ -94,14 +94,14 @@
 
       .container_bottom_head {
         @include weight_height(100%, auto);
-        @include item_flex(flex, row, center, normal, 12px);
+        @include item_flex(flex, row, center, normal, 9px);
 
         ._calender {
-          @include item_flex(flex, row, center, normal, 4px);
+          @include item_flex(flex, row, center, normal, 5px);
 
           p {
             color: var(--text-grey);
-            @include fix-font(14px, 400px, 12.25px);
+            @include fix-font(14px, 400, 12.25px);
           }
           svg {
             path {
