@@ -162,7 +162,7 @@
     width: 100px;
     height: auto;
     img {
-      width: 100%;
+      width: 100px;
       height: 100%;
       border-radius: 12px;
       object-fit: cover;
@@ -172,7 +172,7 @@
   .container_sm_heading_text {
     @include flex_column;
     gap: 7px;
-    width: 240px;
+    // width: 240px;
     height: auto;
     .container_heading_sm_text {
       @include font_lg_sm(16px, 19px, 400);
