@@ -83,7 +83,7 @@ export default function SingleGame(props) {
             </span>
           </div>
           <div className="head_body_bottom">
-            <Link href="../double/page" className="d_games">זוגות</Link>
+            <Link href="../double" className="d_games">זוגות</Link>
             <p className="s_games">יחידים</p>
           </div>
         </div>
