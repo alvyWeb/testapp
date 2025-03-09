@@ -11,27 +11,6 @@ const TabComponent = () => {
     setActiveSection(section);
   };
 
-  // const goToNextSection = () => {
-  //   const currentIndex = sections.indexOf(activeSection);
-  //   if (currentIndex < sections.length - 1) {
-  //     setActiveSection(sections[currentIndex + 1]);
-  //   }
-  // };
-
-  // const goToPreviousSection = () => {
-  //   const currentIndex = sections.indexOf(activeSection);
-  //   if (currentIndex > 0) {
-  //     setActiveSection(sections[currentIndex - 1]);
-  //   }
-  // };
-
-  // const handlers = useSwipeable({
-  //   onSwipedLeft: () => goToNextSection(),
-  //   onSwipedRight: () => goToPreviousSection(),
-  //   preventDefaultTouchmoveEvent: true,
-  //   trackMouse: true,
-  // });
-
   return (
     <div className="resultcontainer">
       <nav>

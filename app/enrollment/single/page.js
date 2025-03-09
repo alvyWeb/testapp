@@ -1,6 +1,6 @@
 import "./single.scss";
 
-const singleGames = ({ standings, setStandings }) => {
+const singleGames = () => {
   const Single = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",

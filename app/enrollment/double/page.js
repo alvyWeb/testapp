@@ -1,6 +1,6 @@
 import "./double.scss";
 
-const doubleGames = ({ standings, setStandings }) => {
+const doubleGames = () => {
   const enrollment = [
     {
       "headTitle": "Yarkon Park, Tel Aviv | Court #2",
