@@ -48,6 +48,7 @@
         color: var(--text-grey);
         @include fix-font(14px, 400, 12.25px);
         @include item_flex(flex, row, center, center, 0px);
+        text-decoration: none;
       }
 
       .s_games {
