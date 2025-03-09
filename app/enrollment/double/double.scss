@@ -58,7 +58,7 @@
         @include item_flex(flex, row, center, center, 0px);
         text-decoration: none;
       }
-      
+
       .active{
         border: 1px solid #03506f;
         color: #03506f;
@@ -150,10 +150,10 @@
       border-right: 1px solid var(--content-border);
       background: var(--item-bg);
       @include content_padd(15px, 16px, 15px, 16px);
-      @include item_flex(flex, row, center, space-around, 0px);
+      @include item_flex(flex, row-reverse, center, space-around, 0px);
 
       .current_player {
-        @include item_flex(flex, row, center, center, 8px);
+        @include item_flex(flex, row-reverse, center, center, 8px);
 
         ._kabir {
           @include item_flex(flex, column, center, center, 8px);
