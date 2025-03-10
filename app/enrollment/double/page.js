@@ -1,3 +1,4 @@
+"use client";
 import "./double.scss";
 import Link from "next/link";
 import Double from "@/components/modal/registration/double";
