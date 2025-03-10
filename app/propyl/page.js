@@ -1010,7 +1010,7 @@ const Propyl = ({ standings, setStandings }) => {
                     margin={{
                       top: 0,
                       right: 0,
-                      left: -30,
+                      left: 0,
                       bottom: 0,
                     }}
                   >
