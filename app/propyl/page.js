@@ -5,6 +5,7 @@ import "./skilbar.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import React, { PureComponent } from 'react';
 
 const Propyl = ({ standings, setStandings }) => {
 
