@@ -4,9 +4,9 @@ import Link from "next/link";
 import Double from "@/components/modal/registration/double";
 import ModalDialog from "@/components/common/ModalDialog";
 import { useRouter } from "next/navigation";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 import { useContext, useState } from "react";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 export default function Home(props) {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -110,10 +110,8 @@ export default function Home(props) {
   ]
 
   const router = useRouter();
-  const handleClick = (buttonText) => {
-    if (buttonText.includes("הירשם")) { // Adjust based on your needs
-      handleModalOpen("double"); // Open the correct modal
-    }
+  const handleClick = () => {
+    handleModalOpen("double"); // Open the correct modal
   };
   return (
     <main>
@@ -251,7 +249,7 @@ export default function Home(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" href="#" onClick={(e) => { e.preventDefault(); handleClick(item.buttontext); }}>
+                <Link className="butn_ne" href="#" onClick={handleClick}>
                     {item.buttontext}
                 </Link>
               </div>
