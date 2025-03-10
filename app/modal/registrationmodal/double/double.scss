@@ -1,2 +1,12 @@
 @import '../../../../styles/shared/var.scss';
 
+.double_container{
+    margin: 20px auto;
+    box-sizing: border-box;
+    background: var(--item-bg);
+
+    .container{
+        
+    }
+}
+

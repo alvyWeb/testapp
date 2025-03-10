@@ -1,7 +1,26 @@
 import "./double.scss";
 import Link from "next/link";
+import MessageModal from "@/components/modal/registration/double";
+import ModalDialog from "@/components/common/ModalDialog";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import { useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Home(props) {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [modalType, setModalType] = useState("");
+
+  const handleModalOpen = (type) => {
+    setIsOpenModal(true);
+    setModalType(type);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpenModal(false);
+    setModalType("");
+  };
+
   const enrollment = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",
@@ -92,6 +111,13 @@ export default function Home(props) {
       "buttontext": 'הירשם',
     },
   ]
+
+  const router = useRouter();
+  const handleClick = (buttonText) => {
+    if (buttonText.includes("הירשם")) { // Adjust based on your needs
+      handleModalOpen("double"); // Open the correct modal
+    }
+  };
   return (
     <main>
       <div className="enrollment">
@@ -229,7 +255,9 @@ export default function Home(props) {
                   </div>
                 </div>
                 <a href={item.buttonLink}>
-                  <button>{item.buttontext}</button>
+                  <Link href="#" onClick={(e) => { e.preventDefault(); handleClick(item.buttontext); }}>
+                      {item.buttontext}
+                  </Link>
                 </a>
               </div>
             </div>
