@@ -326,20 +326,19 @@
         }
       }
 
-      a {
+      .butn_ne {
         // border-bottom-right-radius: 6px;
         background: linear-gradient(to right, #34506d, #3498db);
-
-        button {
-          border: none;
-          color: #ffffff;
-          // border-bottom-left-radius: 8px;
-          @include weight_height(140px, 52px);
-          @include fix-font(16px, 400, 14px);
-          padding: 12px;
-          background: none;
-          cursor: pointer;
-        }
+        border: none;
+        color: #ffffff;
+        // border-bottom-left-radius: 8px;
+        @include weight_height(140px, 52px);
+        @include fix-font(16px, 400, 14px);
+        padding: 12px;
+        background: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
       }
     }
   }

@@ -42,7 +42,6 @@ export default function Home(props) {
       "opTeaMateRank": "(כינוי )",
       "precipitation": "25% משקעים צפוי",
       "weather": "מזג אוויר צפוי- מעונן",
-      "buttonLink": '#',
       "buttontext": 'הירשם (רמה A)',
     },
     {
@@ -64,7 +63,6 @@ export default function Home(props) {
       "opTeaMateRank": "(כינוי )",
       "precipitation": "25% משקעים צפוי",
       "weather": "מזג אוויר צפוי- מעונן",
-      "buttonLink": '#',
       "buttontext": 'הירשם',
     },
     {
@@ -86,7 +84,6 @@ export default function Home(props) {
       "opTeaMateRank": "(כינוי )",
       "precipitation": "25% משקעים צפוי",
       "weather": "מזג אוויר צפוי- מעונן",
-      "buttonLink": '#',
       "buttontext": 'הירשם (רמה A)',
     },
     {
@@ -108,7 +105,6 @@ export default function Home(props) {
       "opTeaMateRank": "(כינוי )",
       "precipitation": "25% משקעים צפוי",
       "weather": "מזג אוויר צפוי- מעונן",
-      "buttonLink": '#',
       "buttontext": 'הירשם',
     },
   ]
@@ -255,11 +251,9 @@ export default function Home(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <a href={item.buttonLink}>
-                  <Link href="#" onClick={(e) => { e.preventDefault(); handleClick(item.buttontext); }}>
-                      {item.buttontext}
-                  </Link>
-                </a>
+                <Link className="butn_ne" href="#" onClick={(e) => { e.preventDefault(); handleClick(item.buttontext); }}>
+                    {item.buttontext}
+                </Link>
               </div>
             </div>
           ))}
