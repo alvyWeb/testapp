@@ -1003,28 +1003,34 @@ const Propyl = ({ standings, setStandings }) => {
             <h2>מאזן נצחונות והפסדים</h2>
             <div class="barlist">
               <div>
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart
-                    width={450}
-                    height={290}
-                    data={propylConent.winloss}
-                    margin={{
-                      top: 0,
-                      right: 0,
-                      left: 0,
-                      bottom: 0,
-                    }}
-                  >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="month" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="הפסדים" fill="#4774A9" />
-                    <Bar dataKey="נצחונות" fill="#8D77D1" />
-                    <Bar dataKey="שיוויונות" fill="#45BB9E" />
-                  </BarChart>
-                </ResponsiveContainer>
+              <ResponsiveContainer width={"100%"} height={300}>
+                <BarChart
+                  data={propylConent.winloss}
+                  margin={{
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="month" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar
+                    dataKey="נצחונות"
+                    fill="#8D77D1"
+                  />
+                  <Bar
+                    dataKey="הפסדים"
+                    fill="#4774A9"
+                  />
+                  <Bar
+                    dataKey="שיוויונות"
+                    fill="#45BB9E"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
               </div>
             </div>
             <div className="itemlist">
