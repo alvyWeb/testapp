@@ -256,7 +256,7 @@ export default function Home(props) {
             </div>
           ))}
       </div>
-      {isOpenModal && modalType === "הירשם" && (
+      {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
           <Double />
         </ModalDialog>
