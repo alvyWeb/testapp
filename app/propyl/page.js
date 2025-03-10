@@ -1001,11 +1001,11 @@ const Propyl = ({ standings, setStandings }) => {
           <div className="winlossgraph profileCommonO">
             <h2>מאזן נצחונות והפסדים</h2>
             <div class="barlist">
-              <div dir="rtl" style={{ width: "100%", height: 400 }}>
+              <div dir="rtl" style={{ width: "100%", height: "290" }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
-                    width={500}
-                    height={300}
+                    width={100%}
+                    height={290}
                     data={propylConent.winloss}
                     margin={{
                       top: 0,
