@@ -1000,33 +1000,49 @@ const Propyl = ({ standings, setStandings }) => {
 
           <div className="winlossgraph profileCommonO">
             <h2>מאזן נצחונות והפסדים</h2>
+            <div class="barlist">
+              <div dir="rtl" style={{ width: "100%", height: 400 }}>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={propylConent.winloss} layout="vertical">
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis type="number" />
+                      <YAxis dataKey="month" type="category" />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="הפסדים" fill="#4774A9" />
+                      <Bar dataKey="נצחונות" fill="#8D77D1" />
+                      <Bar dataKey="שיוויונות" fill="#45BB9E" />
+                    </BarChart>
+                  </ResponsiveContainer>
+              </div>
+            </div>
             <div className="itemlist">
-                <div className="opponent_body">
-                  <div className="headInfop">
-                    <motion.div>
-                      <PieChart width={125} height={125}>
-                        <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
-                      </PieChart>
-                    </motion.div>
-                  </div>
-                  <div className="bodyInfo">
-                    <div className="list1">
-                        <ul>
+              <div className="opponent_body">
+                <div className="headInfop">
+                  <motion.div>
+                    <PieChart width={125} height={125}>
+                      <Pie data={propylConent.pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" fillKey="fill"/>
+                    </PieChart>
+                  </motion.div>
+                </div>
+                <div className="bodyInfo">
+                  <div className="list1">
+                      <ul>
                         {propylConent.pieData.map((item) => (
                           <li><span className="color"></span>{item.name}</li>
                         ))}
-                        </ul>
-                    </div>
-                    <div className="list2">
-                      <ul>
-                        {propylConent.pieData.map((item) => (
-                          <li>{item.value} {item.name}</li>
-                        ))}
-                        </ul>
-                    </div>
+                      </ul>
+                  </div>
+                  <div className="list2">
+                    <ul>
+                      {propylConent.pieData.map((item) => (
+                        <li>{item.value} {item.name}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
 
         </div>
