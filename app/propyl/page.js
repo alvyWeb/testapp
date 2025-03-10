@@ -1003,7 +1003,7 @@ const Propyl = ({ standings, setStandings }) => {
             <div class="barlist">
               <div dir="rtl" style={{ width: "100%", height: 400 }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={propylConent.winloss} layout="vertical">
+                    <BarChart data={propylConent.winloss}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis type="number" />
                       <YAxis dataKey="month" type="category" />
