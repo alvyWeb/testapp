@@ -1015,7 +1015,7 @@ const Propyl = ({ standings, setStandings }) => {
                     }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <YAxis position="right" />
+                    <YAxis />
                     <XAxis dataKey="month" />
                     
                     <Tooltip />
