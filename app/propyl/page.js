@@ -1004,7 +1004,7 @@ const Propyl = ({ standings, setStandings }) => {
             <div class="barlist">
               <div>
               <motion.div>
-                <ResponsiveContainer width={"100%"} height={300}>
+                <ResponsiveContainer width={"450"} height={300}>
                   <BarChart
                     data={propylConent.winloss}
                     margin={{
