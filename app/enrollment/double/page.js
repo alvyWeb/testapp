@@ -1,6 +1,6 @@
 import "./double.scss";
 import Link from "next/link";
-import MessageModal from "@/components/modal/registration/double";
+import Double from "@/components/modal/registration/double";
 import ModalDialog from "@/components/common/ModalDialog";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
@@ -265,7 +265,7 @@ export default function Home(props) {
       </div>
       {isOpenModal && modalType === "הירשם" && (
         <ModalDialog onClose={handleCloseModal}>
-          <MessageModal />
+          <Double />
         </ModalDialog>
       )}
     </main>
