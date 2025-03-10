@@ -1001,7 +1001,7 @@ const Propyl = ({ standings, setStandings }) => {
           <div className="winlossgraph profileCommonO">
             <h2>מאזן נצחונות והפסדים</h2>
             <div class="barlist">
-              <div style={{ width: "100%", height: "290" }}>
+              <div style={{ width: "450", height: "290" }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
                     width={450}
@@ -1015,7 +1015,7 @@ const Propyl = ({ standings, setStandings }) => {
                     }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
+                    <XAxis dataKey="month" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
