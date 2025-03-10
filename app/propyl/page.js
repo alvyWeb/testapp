@@ -1004,8 +1004,6 @@ const Propyl = ({ standings, setStandings }) => {
               <div dir="rtl" style={{ width: "100%", height: "290" }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
-                    width={100%}
-                    height={290}
                     data={propylConent.winloss}
                     margin={{
                       top: 0,
