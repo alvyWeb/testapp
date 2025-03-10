@@ -263,6 +263,11 @@ export default function Home(props) {
             </div>
           ))}
       </div>
+      {isOpenModal && modalType === "הירשם" && (
+        <ModalDialog onClose={handleCloseModal}>
+          <Double />
+        </ModalDialog>
+      )}
     </main>
   );
 }
