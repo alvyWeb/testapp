@@ -327,18 +327,19 @@
       }
 
       .butn_ne {
-        // border-bottom-right-radius: 6px;
-        background: linear-gradient(to right, #34506d, #3498db);
+        background: linear-gradient(90deg,#34506d,#3498db);
         border: none;
-        color: #ffffff;
-        // border-bottom-left-radius: 8px;
-        @include weight_height(140px, 52px);
-        @include fix-font(16px, 400, 14px);
+        color: #fff;
+        width: 140px;
+        height: 52px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
         padding: 12px;
-        background: none;
         cursor: pointer;
         text-decoration: none;
         display: block;
+        text-align: center;
       }
     }
   }
