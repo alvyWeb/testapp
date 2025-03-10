@@ -7,7 +7,7 @@ const Double = () => {
             <div className="double_container">
                 <div className="container">
                     <div className="head">
-                        <p>Yarkon Park, Tel Aviv | Plot #2</p>
+                        <p>פארק הירקון, תל אביב | מגרש #2</p>
                         <span className="day_time">
                             <span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ const Double = () => {
                                     <path d="M7 13C8.18669 13 9.34672 12.6481 10.3334 11.9888C11.3201 11.3295 12.0891 10.3925 12.5433 9.2961C12.9974 8.19974 13.1162 6.99335 12.8847 5.82946C12.6532 4.66557 12.0818 3.59648 11.2426 2.75736C10.4035 1.91825 9.33443 1.3468 8.17054 1.11529C7.00665 0.88378 5.80025 1.0026 4.7039 1.45673C3.60754 1.91085 2.67047 2.67989 2.01118 3.66658C1.35189 4.65328 1 5.81331 1 7C1 7.992 1.24 8.92667 1.66667 9.75133L1 13L4.24867 12.3333C5.07267 12.7593 6.00867 13 7 13Z" stroke="#145E94" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
 
-                                <p>26 Comments</p>
+                                <p>26 הודעות</p>
                             </span>
                         </span>
                     </div>
@@ -36,44 +36,44 @@ const Double = () => {
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/Noam-Peen.png" />
-                                    <img src="../../flags/do.png" />
+                                    <img src="../../user-Image/g3.png" />
+                                    <img src="../../flags/br.png" />
                                 </span>
-                                <p>Noam Peen</p>
-                                <p>(PRO)</p>
+                                <p>מנדלר ת.</p>
+                                <p>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/Noam-Peen.png" />
-                                    <img src="../../flags/do.png" />
+                                    <img src="../../user-Image/g3.png" />
+                                    <img src="../../flags/br.png" />
                                 </span>
-                                <p>Maya Peen</p>
-                                <p>(PRO)</p>
+                                <p>מנדלר ת.</p>
+                                <p>(פרו )</p>
                             </div>
                         </div>
-                        <p>VS.</p>
+                        <p>.VS</p>
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/Noam-Peen.png" />
-                                    <img src="../../flags/do.png" />
+                                    <img src="../../user-Image/g3.png" />
+                                    <img src="../../flags/br.png" />
                                 </span>
-                                <p>Sabbir Sagar</p>
-                                <p>(PRO)</p>
+                                <p>מנדלר ת.</p>
+                                <p>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/Noam-Peen.png" />
-                                    <img src="../../flags/do.png" />
+                                    <img src="../../user-Image/g3.png" />
+                                    <img src="../../flags/br.png" />
                                 </span>
-                                <p>Tafsir</p>
-                                <p>(PRO)</p>
+                                <p>מנדלר ת.</p>
+                                <p>(פרו )</p>
                             </div>
                         </div>
                     </div>
                     <div className="bottom">
                         <a>
-                            <button>Confirm registration</button>
+                            <button>אשר הרשמה</button>
                         </a>
                     </div>
                 </div>
