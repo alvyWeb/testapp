@@ -70,6 +70,14 @@
                             height: auto;
                         }
                     }
+
+                    p{
+                        @include fix-font(14px, 400, 12.25px);
+                    }
+
+                    .tag{
+                        color: #B0AAAA;
+                    }
                 }
             }
         }

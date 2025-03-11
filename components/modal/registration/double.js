@@ -38,16 +38,16 @@ const Double = () => {
                                     <img className='profileImg' src="../../user-Image/g3.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
-                                <p>מנדלר ת.</p>
-                                <p>(פרו )</p>
+                                <p className='name'>מנדלר ת.</p>
+                                <p className='tag'>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
                                     <img className='profileImg' src="../../user-Image/g3.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
-                                <p>מנדלר ת.</p>
-                                <p>(פרו )</p>
+                                <p className='name'>מנדלר ת.</p>
+                                <p className='tag'>(פרו )</p>
                             </div>
                         </div>
                         <p>.VS</p>
@@ -57,16 +57,16 @@ const Double = () => {
                                     <img className='profileImg' src="../../user-Image/g3.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
-                                <p>מנדלר ת.</p>
-                                <p>(פרו )</p>
+                                <p className='name'>מנדלר ת.</p>
+                                <p className='tag'>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
                                     <img className='profileImg' src="../../user-Image/g3.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
-                                <p>מנדלר ת.</p>
-                                <p>(פרו )</p>
+                                <p className='name'>מנדלר ת.</p>
+                                <p className='tag'>(פרו )</p>
                             </div>
                         </div>
                     </div>
