@@ -123,7 +123,11 @@ export default function Home(props) {
             </svg>
 
             <span className="dtae_hour">
-              <p>תאריך | שעה | מיקום...</p>
+              <select className="datachoossingle">
+                <option>תאריך | שעה | מיקום</option>
+                <option>תאריך | שעה | מיקום</option>
+                <option>תאריך | שעה | מיקום</option>
+              </select>
               <img src="../placement/svg/bottom_arrow.svg" alt="" />
             </span>
           </div>
