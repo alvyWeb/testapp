@@ -22,6 +22,7 @@
         // @include weight_height(182px, auto);
         // @include content_padd(8px, 12px, 8px, 20px);
         @include item_flex(flex, row, center, space-between, 10px);
+        width: 100%;
 
         select {
           border: 1px solid var(--content-border);
@@ -31,6 +32,14 @@
           @include weight_height(100px, auto);
           @include content_padd(10px, 12px, 10px, 12px);
           @include fix-font(12px, 400, 10px);
+        }
+
+        button{
+          background-color: transparent;
+          cursor: pointer;
+          border: 0;
+          color: #3498db;
+          @include fix-font(14px, 400, 12px);
         }
       }
 
