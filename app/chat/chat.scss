@@ -83,11 +83,11 @@
 
         .team_text {
             @include weight_height(100%, auto);
-            @include item_flex(flex, row-reverse, flex-end, normal, 4px);
+            @include item_flex(flex, row-reverse, flex-end, normal, 12px);
             img {
                 border-radius: 50%;
                 object-fit: cover;
-                @include weight_height(28px, 28px);
+                @include weight_height(40px, 40px);
             }
 
             .text {
@@ -119,11 +119,11 @@
         }
         .my_text{
             @include weight_height(fill, auto);
-            @include item_flex(flex, row, flex-end, normal, 4px);
+            @include item_flex(flex, row, flex-end, normal, 12px);
             img{
                 border-radius: 50%;
                 object-fit: cover;
-                @include weight_height(28px, 28px);
+                @include weight_height(40px, 40px);
             }
             .text {
                 padding: 12px;
