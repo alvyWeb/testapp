@@ -97,7 +97,7 @@
                 position: relative;
                 background: var(--item-bg);
                 border: 1px solid var(--content-border);
-                @include weight_height(241.25px, auto);
+                // @include weight_height(241.25px, auto);
                 @include item_flex(flex, column, flex-start, normal, 12px);
                 :first-child {
                     color: var(--text-color);
@@ -133,7 +133,7 @@
                 border: 1px solid var(--content-border);
                 background: var(--chat-bg);
                 @include item_flex(flex, column, flex-start, normal, 12px);
-                @include weight_height(241.25px, auto);
+                // @include weight_height(241.25px, auto);
                 :first-child {
                     color: #FCFCFC;
                     @include fix-font(16px, 500, 18px);
@@ -175,7 +175,7 @@
         }
 
         .message_send {
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
             @include item_flex(flex, row, center, space-between, 8px);
 
             input {
