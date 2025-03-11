@@ -16,15 +16,20 @@
       @include item_flex(flex, row, center, normal, 16px);
 
       span.dtae_hour {
-        border: 1px solid var(--content-border);
-        border-radius: 48px;
-        background: var(--item-bg);
-        @include weight_height(182px, auto);
-        @include content_padd(8px, 12px, 8px, 20px);
-        @include item_flex(flex, row, center, space-between, 0px);
+        // border: 1px solid var(--content-border);
+        // border-radius: 48px;
+        // background: var(--item-bg);
+        // @include weight_height(182px, auto);
+        // @include content_padd(8px, 12px, 8px, 20px);
+        @include item_flex(flex, row, center, space-between, 10px);
 
-        p {
+        select {
+          border: 1px solid var(--content-border);
+          border-radius: 25px;
           color: var(--text-color);
+          background: var(--item-bg);
+          @include weight_height(182px, auto);
+          @include content_padd(8px, 12px, 8px, 20px);
           @include fix-font(14px, 400, 12.25px);
         }
       }
