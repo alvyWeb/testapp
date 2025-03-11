@@ -30,7 +30,7 @@
         }
         .head_body {
             padding: 0px 24px;
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
             @include item_flex(flex, row, center, flex-start, 0px);
 
             svg {
