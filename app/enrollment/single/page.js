@@ -77,7 +77,7 @@ export default function SingleGame(props) {
       "buttontext": 'הירשם (רמה A)',
     },
     {
-      "headTitle": "פארק הירקון, תל אביב | מגרש #5",
+      "headTitle": "פארק הירקון, תל אביב | מגרש #2",
       "date": "05/24/2023",
       "time": "12:00",
       "comments": "26 הודעות",
