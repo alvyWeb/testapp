@@ -119,8 +119,12 @@
 
                 svg{
                     position: absolute;
-                    bottom: 0;
-                    right:100%;   
+                    bottom: -4px;
+                    right: 98%;
+                    transform: rotate(-45.41deg);
+                    path{
+                        fill: #fff;
+                    } 
                 }
             }
 
@@ -161,8 +165,9 @@
 
                 svg{
                     position: absolute;
-                    bottom: 0;
-                    left: 100%;
+                    bottom: -4px;
+                    left: 98%;
+                    transform: rotate(-45.41deg);
                     path{
                         fill: #3498db;
                     }
