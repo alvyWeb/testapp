@@ -35,7 +35,7 @@ const SingleGameN = () => {
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='profileImg' src="../../user-Image/g4.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p className='name'>מנדלר ת.</p>
@@ -46,7 +46,7 @@ const SingleGameN = () => {
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='profileImg' src="../../user-Image/g4.png" />
                                     <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p className='name'>מנדלר ת.</p>
