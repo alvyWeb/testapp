@@ -144,6 +144,15 @@ export default function SingleGame(props) {
                   ))}
                 </select>
 
+                <button onClick={() => { 
+                    setSelectedDate(""); 
+                    setSelectedTime(""); 
+                    setSelectedHeadTitle("");
+                  }}
+                >
+                  נקה
+                </button>
+
               {/* <img src="../placement/svg/bottom_arrow.svg" alt="" /> */}
             </span>
           </div>
