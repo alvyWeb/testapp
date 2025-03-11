@@ -152,10 +152,10 @@ export default function SingleGame(props) {
             <p className="s_games active">יחידים</p>
           </div>
         </div>
-        {
-          Single.map((item) => (
+        {/* {
+          // Single.map((item) => ( */}
             {filteredGames.length > 0 ? (
-              filteredGames.map((game, index) => (
+              filteredGames.map((item, index) => (
 <div className="enrollment_container">
               <div className="container_heading">
                 <div className="container_top_head">
@@ -255,7 +255,7 @@ export default function SingleGame(props) {
             ) : (
               <p>לא נמצאו תוצאות</p>
             )}
-          ))}
+          {/* ))} */}
       </div>
       {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
