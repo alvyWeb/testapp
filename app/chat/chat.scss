@@ -128,6 +128,8 @@
         .my_text{
             @include weight_height(fill, auto);
             @include item_flex(flex, row, flex-end, normal, 12px);
+            position: relative;
+
             img{
                 border-radius: 50%;
                 object-fit: cover;
@@ -164,6 +166,12 @@
                         fill: #3498DB;
                     }
                 }
+            }
+
+            svg{
+                position: absolute;
+                bottom: 0;
+                left:100%;   
             }
         }
     }
