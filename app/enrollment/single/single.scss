@@ -30,7 +30,7 @@
           background: var(--item-bg);
           @include weight_height(100px, auto);
           @include content_padd(10px, 12px, 10px, 12px);
-          @include fix-font(14px, 400, 12.25px);
+          @include fix-font(12px, 400, 10px);
         }
       }
 
