@@ -168,7 +168,7 @@
 
         svg {
             @include weight_height(18px, 18px);
-            transform: translate(-1);
+            transform: translateX(-1px);
             path{
                 fill: var(--item-color);
             }
