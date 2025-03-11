@@ -7,13 +7,12 @@
         width: 360px;
         margin: auto;
         background-color: #fff;
-        padding: 16px 20px;
         border-radius: 12px;
         border: 1px solid lightgray;
 
         .head{
             @include item_flex(flex, column, start, normal, 7px);
-            padding-bottom: 15px;
+            padding: 16px 20px;
             border-bottom: 1px solid lightgray;
 
             p{
