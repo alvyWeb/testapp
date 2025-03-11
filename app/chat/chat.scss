@@ -117,7 +117,7 @@
                     @include fix-font(12px, 400, 10.5px);
                 }
 
-                ::before{
+                &::before{
                     content: "";
                     background: var(--item-bg);
                     border-radius: 12px;
