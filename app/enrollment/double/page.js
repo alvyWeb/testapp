@@ -22,6 +22,10 @@ export default function Home(props) {
     setModalType("");
   };
 
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedHeadTitle, setSelectedHeadTitle] = useState("");
+
   const enrollment = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",
@@ -109,6 +113,19 @@ export default function Home(props) {
     },
   ]
 
+  // Get unique values for filtering
+  const uniqueDates = [...new Set(enrollment.map((item) => item.date))];
+  const uniqueTimes = [...new Set(enrollment.map((item) => item.time))];
+  const uniqueHeadTitles = [...new Set(enrollment.map((item) => item.headTitle))];
+
+  const filteredGames = enrollment.filter((game) => {
+    return (
+      (!selectedDate || game.date === selectedDate) &&
+      (!selectedTime || game.time === selectedTime) &&
+      (!selectedHeadTitle || game.headTitle === selectedHeadTitle)
+    );
+  });
+
   const router = useRouter();
   const handleClick = () => {
     handleModalOpen("double"); // Open the correct modal
@@ -123,12 +140,36 @@ export default function Home(props) {
             </svg>
 
             <span className="dtae_hour">
-              <select className="datachoossingle">
-                <option>תאריך | שעה | מיקום</option>
-                <option>תאריך | שעה | מיקום</option>
-                <option>תאריך | שעה | מיקום</option>
+              <select onChange={(e) => setSelectedDate(e.target.value)} value={selectedDate}>
+                <option value="">בחר תאריך</option>
+                {uniqueDates.map((date) => (
+                  <option key={date} value={date}>{date}</option>
+                ))}
               </select>
-              <img src="../placement/svg/bottom_arrow.svg" alt="" />
+
+              <select onChange={(e) => setSelectedTime(e.target.value)} value={selectedTime}>
+                <option value="">בחר שעה</option>
+                {uniqueTimes.map((time) => (
+                  <option key={time} value={time}>{time}</option>
+                ))}
+              </select>
+
+              <select onChange={(e) => setSelectedHeadTitle(e.target.value)} value={selectedHeadTitle}>
+                <option value="">בחר מיקום</option>
+                {uniqueHeadTitles.map((title) => (
+                  <option key={title} value={title}>{title}</option>
+                ))}
+              </select>
+
+              <button onClick={() => { 
+                  setSelectedDate(""); 
+                  setSelectedTime(""); 
+                  setSelectedHeadTitle("");
+                }}
+              >
+                נקה
+              </button>
+              {/* <img src="../placement/svg/bottom_arrow.svg" alt="" /> */}
             </span>
           </div>
           <div className="head_body_bottom">
@@ -136,8 +177,9 @@ export default function Home(props) {
           <Link href="/enrollment/single" className="s_games">יחידים</Link>
           </div>
         </div>
-        {
-          enrollment.map((item) => (
+        {/* { enrollment.map((item) => ( */}
+        {filteredGames.length > 0 ? (
+              filteredGames.map((item, index) => (
             <div className="enrollment_container">
               <div className="container_heading">
                 <div className="container_top_head">
@@ -258,7 +300,11 @@ export default function Home(props) {
                 </Link>
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <p>לא נמצאו תוצאות</p>
+        )}
+      {/* ))} */}
       </div>
       {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
