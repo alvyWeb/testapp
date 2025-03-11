@@ -19,10 +19,10 @@
             }
 
             .day_time{
-                @include item_flex(flex, row, start, normal, 9px);
+                @include item_flex(flex, row, center, normal, 9px);
 
                 span{
-                    @include item_flex(flex, row, start, normal, 5px);
+                    @include item_flex(flex, row, center, normal, 5px);
 
                     p{
                         @include fix-font(14px, 400, 12.25px);
