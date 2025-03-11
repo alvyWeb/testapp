@@ -139,10 +139,10 @@ const Chat = ({ standings, setStandings }) => {
                 <p>{item.playerName}</p>
                 <p>{item.typeText}</p>
                 <p>{item.time}</p>
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M-3.38182e-05 17.0755C5.63601 13.2266 8.80669 6.59186 8.16016 0L19.8507 5.10407C19.8507 5.10407 13.5892 18.2065 -3.38182e-05 17.0755Z" fill="white"/>
+                </svg>
               </div>
-              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-3.38182e-05 17.0755C5.63601 13.2266 8.80669 6.59186 8.16016 0L19.8507 5.10407C19.8507 5.10407 13.5892 18.2065 -3.38182e-05 17.0755Z" fill="white"/>
-              </svg>
             </div>
           ))}
           {message.myMessage.map((item) => (
@@ -152,10 +152,10 @@ const Chat = ({ standings, setStandings }) => {
                 <p>{item.playerName}</p>
                 <p>{item.typeText}</p>
                 <p>{item.time}</p>
+                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.8516 17.0755C14.2156 13.2266 11.0449 6.59186 11.6914 0L0.000893858 5.10407C0.000893858 5.10407 6.26237 18.2065 19.8516 17.0755Z" fill="#3498DB"/>
+                </svg>
               </div>
-              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.8516 17.0755C14.2156 13.2266 11.0449 6.59186 11.6914 0L0.000893858 5.10407C0.000893858 5.10407 6.26237 18.2065 19.8516 17.0755Z" fill="#3498DB"/>
-              </svg>
             </div>
           ))}
         </div>
