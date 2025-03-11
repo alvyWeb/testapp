@@ -163,7 +163,7 @@
         background: var(--bg-color);
         border-top: 1px solid var(--content-border);
         @include weight_height(100%, auto);
-        @include content_padd(8px, 24px, 0px, 24px);
+        @include content_padd(17px, 20px, 0px, 20px);
         @include item_flex(flex, row, center, normal, 12px);
 
         svg {
