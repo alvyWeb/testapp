@@ -4,23 +4,23 @@ const Chat = ({ standings, setStandings }) => {
   const message = {
     playerMessage: [
       {
-        playerImg: "./user-Image/Sabbir Sagar.png",
-        playerName: "Penn N. (panther)",
-        typeText: "Hey guys, thanks a lot for the impressive game, it was fun!",
+        playerImg: "./user-Image/g3.png",
+        playerName: "פן נ. (פנתר)",
+        typeText: "היי חבר’ה, תודה רבה על המשחק המרשים, היה כיף!",
         time: "20:00",
       },
       {
-        playerImg: "./user-Image/Sabbir Sagar.png",
-        playerName: "Penn N. (panther)",
-        typeText: "Hey guys, thanks a lot for the impressive game, it was fun!",
+        playerImg: "./user-Image/g3.png",
+        playerName: "פן נ. (פנתר)",
+        typeText: "התמסרות הכדור הייתה מהממת.רואים שהשתפרת.",
         time: "20:00",
       },
     ],
     myMessage: [
       {
-        playerImg: "./user-Image/Sabbir Sagar.png",
-        playerName: "Penn N. (panther)",
-        typeText: "Hey guys, thanks a lot for the impressive game, it was fun!",
+        playerImg: "./user-Image/g3.png",
+        playerName: "פן נ. (פנתר)",
+        typeText: "אני מחזיק אצבעות שהמשחק הבא יהיה לא פחות ממשוגע!",
         time: "20:00",
       },
     ],
@@ -167,7 +167,7 @@ const Chat = ({ standings, setStandings }) => {
             />
           </svg>
           <div className="message_send">
-            <input type="text" placeholder="Add a comment..." />
+            <input type="text" placeholder="הוסף תגובה..." />
             <span>
               <svg
                 width="16"
