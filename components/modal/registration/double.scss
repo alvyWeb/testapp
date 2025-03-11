@@ -1,1 +1,14 @@
 @import "../../../styles/shared/var.scss";
+
+.double_container{
+    max-width: 360px;
+    margin: auto;
+
+    .container{
+        width: 100%;
+        background-color: #fff;
+        padding: 16px 20px;
+        border-radius: 12px;
+        border: 1px solid lightgray;
+    }
+}
