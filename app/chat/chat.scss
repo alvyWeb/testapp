@@ -162,12 +162,13 @@
     .chat_footer_content {
         background: var(--bg-color);
         border-top: 1px solid var(--content-border);
-        @include weight_height(fill, auto);
+        @include weight_height(100%, auto);
         @include content_padd(8px, 24px, 0px, 24px);
         @include item_flex(flex, row, center, normal, 12px);
 
         svg {
             @include weight_height(18px, 18px);
+            transform: translate(-1);
             path{
                 fill: var(--item-color);
             }
