@@ -28,7 +28,7 @@
           border-radius: 25px;
           color: var(--text-color);
           background: var(--item-bg);
-          @include weight_height(182px, auto);
+          @include weight_height(100px, auto);
           @include content_padd(8px, 12px, 8px, 20px);
           @include fix-font(14px, 400, 12.25px);
         }

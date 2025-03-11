@@ -117,7 +117,7 @@ export default function SingleGame(props) {
                 <option>מיקום</option>
               </select>
 
-              <img src="../placement/svg/bottom_arrow.svg" alt="" />
+              {/* <img src="../placement/svg/bottom_arrow.svg" alt="" /> */}
             </span>
           </div>
           <div className="head_body_bottom">
