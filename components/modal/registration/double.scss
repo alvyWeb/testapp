@@ -50,6 +50,8 @@
                         border: 1px solid #145E94;
                         padding: 3px;
                         border-radius: 50%;
+                        display: block;
+                        margin-bottom: 8px;
 
                         .profileImg{
                             display: block;
@@ -57,6 +59,15 @@
                             height: 100%;
                             object-fit: cover;
                             border-radius: 50%;
+                        }
+
+                        .flagImg{
+                            position: absolute;
+                            bottom: 4px;
+                            right: 0;
+                            width: 19px;
+                            display: block;
+                            height: auto;
                         }
                     }
                 }
