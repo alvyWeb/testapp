@@ -30,7 +30,6 @@ const Chat = ({ standings, setStandings }) => {
       <div className="chat_container">
         <div className="chat_head_content">
           <div className="chat_head">
-            <p>Monday, February 23 | 14:00 - Tel Aviv</p>
             <svg
               width="11"
               height="20"
@@ -43,8 +42,7 @@ const Chat = ({ standings, setStandings }) => {
                 fill="black"
               />
             </svg>
-          </div>
-          <div className="head_body">
+            <p>יום שני, 23 בפברואר | 14:00 - ת”א</p>
             <svg
               width="25"
               height="27"
@@ -57,6 +55,9 @@ const Chat = ({ standings, setStandings }) => {
                 fill="#210C0C"
               />
             </svg>
+          </div>
+          <div className="head_body">
+            
             <div className="active_player">
               <div className="player">
                 <img src="./user-Image/Sabbir Sagar.png" alt="" />
