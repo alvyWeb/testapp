@@ -22,6 +22,10 @@ export default function SingleGame(props) {
     setModalType("");
   };
 
+  const [selectedDate, setSelectedDate] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedHeadTitle, setSelectedHeadTitle] = useState("");
+
 
   const Single = [
     {
@@ -90,6 +94,19 @@ export default function SingleGame(props) {
     },
   ]
 
+  // Get unique values for filtering
+  const uniqueDates = [...new Set(Single.map((item) => item.date))];
+  const uniqueTimes = [...new Set(Single.map((item) => item.time))];
+  const uniqueHeadTitles = [...new Set(Single.map((item) => item.headTitle))];
+
+  const filteredGames = Single.filter((game) => {
+    return (
+      (!selectedDate || game.date === selectedDate) &&
+      (!selectedTime || game.time === selectedTime) &&
+      (!selectedHeadTitle || game.headTitle === selectedHeadTitle)
+    );
+  });
+
   const router = useRouter();
   const handleClick = () => {
     handleModalOpen("Single"); // Open the correct modal
@@ -105,17 +122,28 @@ export default function SingleGame(props) {
             </svg>
 
             <span className="dtae_hour">
-              <select className="dateChoose">
-                <option>תאריך</option>
-              </select>
-              
-              <select className="timeChoose">
-                <option>שעה</option>
-              </select>
+              <div className="filters">
+                <select onChange={(e) => setSelectedDate(e.target.value)} value={selectedDate}>
+                  <option value="">בחר תאריך</option>
+                  {uniqueDates.map((date) => (
+                    <option key={date} value={date}>{date}</option>
+                  ))}
+                </select>
 
-              <select className="locationChoose">
-                <option>מיקום</option>
-              </select>
+                <select onChange={(e) => setSelectedTime(e.target.value)} value={selectedTime}>
+                  <option value="">בחר שעה</option>
+                  {uniqueTimes.map((time) => (
+                    <option key={time} value={time}>{time}</option>
+                  ))}
+                </select>
+
+                <select onChange={(e) => setSelectedHeadTitle(e.target.value)} value={selectedHeadTitle}>
+                  <option value="">בחר מיקום</option>
+                  {uniqueHeadTitles.map((title) => (
+                    <option key={title} value={title}>{title}</option>
+                  ))}
+                </select>
+              </div>
 
               {/* <img src="../placement/svg/bottom_arrow.svg" alt="" /> */}
             </span>
@@ -127,7 +155,9 @@ export default function SingleGame(props) {
         </div>
         {
           Single.map((item) => (
-            <div className="enrollment_container">
+            {filteredGames.length > 0 ? (
+              filteredGames.map((game, index) => (
+<div className="enrollment_container">
               <div className="container_heading">
                 <div className="container_top_head">
                   <p>{item.headTitle}</p>
@@ -222,6 +252,10 @@ export default function SingleGame(props) {
                 </Link>
               </div>
             </div>
+              ))
+            ) : (
+              <p>לא נמצאו תוצאות</p>
+            )}
           ))}
       </div>
       {isOpenModal && (
