@@ -39,6 +39,10 @@
 
             .myteam{
                 @include item_flex(flex, row, center, center, 11px);
+
+                ._player{
+                    max-width: 57px;
+                }
             }
         }
     }
