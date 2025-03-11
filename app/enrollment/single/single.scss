@@ -39,7 +39,7 @@
           cursor: pointer;
           border: 0;
           color: #3498db;
-          @include fix-font(14px, 400, 12px);
+          @include fix-font(12px, 400, 10px);
         }
       }
 
