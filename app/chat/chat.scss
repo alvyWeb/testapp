@@ -122,6 +122,7 @@
                     bottom: -4px;
                     right: 98%;
                     transform: rotate(45.41deg);
+                    z-index: -1;
                     path{
                         fill: #fff;
                     } 
@@ -168,6 +169,7 @@
                     bottom: -4px;
                     left: 98%;
                     transform: rotate(-45.41deg);
+                    z-index: -1;
                     path{
                         fill: #3498db;
                     }
