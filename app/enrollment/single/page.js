@@ -1,7 +1,28 @@
+"use client";
 import "./single.scss";
 import Link from "next/link";
+import Single from "@/components/modal/registration/single";
+import ModalDialog from "@/components/common/ModalDialog";
+import { useRouter } from "next/navigation";
+// import Cookies from "js-cookie";
+import { useContext, useState } from "react";
+// import { toast } from "react-toastify";
 
 export default function SingleGame(props) {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [modalType, setModalType] = useState("");
+
+  const handleModalOpen = (type) => {
+    setIsOpenModal(true);
+    setModalType(type);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpenModal(false);
+    setModalType("");
+  };
+
+
   const Single = [
     {
       "headTitle": "פארק הירקון, תל אביב | מגרש #2",
@@ -68,6 +89,12 @@ export default function SingleGame(props) {
       "buttontext": 'הירשם',
     },
   ]
+
+  const router = useRouter();
+  const handleClick = () => {
+    handleModalOpen("single"); // Open the correct modal
+  };
+
   return (
     <main>
       <div className="enrollment">
@@ -179,13 +206,18 @@ export default function SingleGame(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <a href={item.buttonLink}>
-                  <button>{item.buttontext}</button>
-                </a>
+                <Link className="butn_ne" href="#" onClick={handleClick}>
+                    {item.buttontext}
+                </Link>
               </div>
             </div>
           ))}
       </div>
+      {isOpenModal && (
+        <ModalDialog onClose={handleCloseModal}>
+          <Single />
+        </ModalDialog>
+      )}
     </main>
   );
 }
