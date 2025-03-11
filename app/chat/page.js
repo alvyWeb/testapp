@@ -61,7 +61,7 @@ const Chat = ({ standings, setStandings }) => {
             <div className="active_player">
               <p>שחקנים:</p>
               <div className="player">
-                <img src="./user-Image/Sabbir Sagar.png" alt="" />
+                <img src="./user-Image/g3.png" alt="" />
                 <svg
                   width="9"
                   height="9"
@@ -78,7 +78,7 @@ const Chat = ({ standings, setStandings }) => {
                 </svg>
               </div>
               <div className="player">
-                <img src="./user-Image/Sabbir Sagar.png" alt="" />
+                <img src="./user-Image/g3.png" alt="" />
                 <svg
                   width="9"
                   height="9"
@@ -95,7 +95,7 @@ const Chat = ({ standings, setStandings }) => {
                 </svg>
               </div>
               <div className="player">
-                <img src="./user-Image/Sabbir Sagar.png" alt="" />
+                <img src="./user-Image/g3.png" alt="" />
                 <svg
                   width="9"
                   height="9"
@@ -112,7 +112,7 @@ const Chat = ({ standings, setStandings }) => {
                 </svg>
               </div>
               <div className="player">
-                <img src="./user-Image/Sabbir Sagar.png" alt="" />
+                <img src="./user-Image/g3.png" alt="" />
                 <svg
                   width="9"
                   height="9"
