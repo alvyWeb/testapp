@@ -104,12 +104,14 @@
                     color: var(--text-color);
                     @include fix-font(14px, 400, 12.25px);
                     position: relative;
+                    z-index: 3;
                 }
 
                 :nth-child(2) {
                     color: var(--text-color);
                     @include fix-font(14px, 300, 18px);
                     position: relative;
+                    z-index: 3;
                 }
 
                 :nth-child(3) {
@@ -118,6 +120,7 @@
                     // @include weight_height(fill, auto);
                     @include fix-font(12px, 400, 10.5px);
                     position: relative;
+                    z-index: 3;
                 }
 
                 &::before{
