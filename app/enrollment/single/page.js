@@ -92,7 +92,7 @@ export default function SingleGame(props) {
 
   const router = useRouter();
   const handleClick = () => {
-    handleModalOpen("single"); // Open the correct modal
+    handleModalOpen("Single"); // Open the correct modal
   };
 
   return (

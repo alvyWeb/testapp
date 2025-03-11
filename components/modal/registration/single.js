@@ -3,7 +3,7 @@ import './single.scss';
 const Single = () => {
     return (
         <main>
-            <div className="double_container">
+            <div className="single_container">
                 <div className="container">
                     <div className="head">
                         <p>פארק הירקון, תל אביב | מגרש #2</p>
