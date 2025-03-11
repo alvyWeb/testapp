@@ -13,8 +13,22 @@
         border: 1px solid lightgray;
 
         .head{
+            @include item_flex(flex, column, start, normal, 7px);
+
             p{
                 @include fix-font(16px, 400, 14px);
+            }
+
+            .day_time{
+                @include item_flex(flex, row, start, normal, 9px);
+
+                span{
+                    @include item_flex(flex, row, start, normal, 5px);
+
+                    p{
+                        @include fix-font(14px, 400, 12.25px);
+                    }
+                }
             }
         }
     }
