@@ -1,7 +1,7 @@
 "use client";
 import "./single.scss";
 import Link from "next/link";
-import SingleGame from "@/components/modal/registration/single";
+import SingleGameN from "@/components/modal/registration/single";
 import ModalDialog from "@/components/common/ModalDialog";
 import { useRouter } from "next/navigation";
 // import Cookies from "js-cookie";

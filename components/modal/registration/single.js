@@ -1,6 +1,6 @@
 import './single.scss';
 
-const SingleGame = () => {
+const SingleGameN = () => {
     return (
         <main>
             <div className="single_container">
@@ -64,4 +64,4 @@ const SingleGame = () => {
         </main>
     )
 }
-export default SingleGame;
+export default SingleGameN;
