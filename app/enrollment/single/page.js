@@ -215,7 +215,7 @@ export default function SingleGame(props) {
       </div>
       {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
-          <SingleGame />
+          <SingleGameN />
         </ModalDialog>
       )}
     </main>
