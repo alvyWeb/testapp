@@ -59,6 +59,7 @@ const Chat = ({ standings, setStandings }) => {
           <div className="head_body">
             
             <div className="active_player">
+              <p>שחקנים:</p>
               <div className="player">
                 <img src="./user-Image/Sabbir Sagar.png" alt="" />
                 <svg
