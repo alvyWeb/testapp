@@ -105,9 +105,18 @@ export default function SingleGame(props) {
             </svg>
 
             <span className="dtae_hour">
-              <select className="dateChoose"></select>
-              <select className="timeChoose"></select>
-              <select className="locationChoose"></select>
+              <select className="dateChoose">
+                <option>תאריך</option>
+              </select>
+              
+              <select className="timeChoose">
+                <option>שעה</option>
+              </select>
+
+              <select className="locationChoose">
+                <option>מיקום</option>
+              </select>
+
               <img src="../placement/svg/bottom_arrow.svg" alt="" />
             </span>
           </div>
