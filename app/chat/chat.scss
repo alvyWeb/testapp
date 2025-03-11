@@ -43,6 +43,13 @@
                 @include weight_height(fill, auto);
                 @include item_flex(flex, row, center, center, 8px);
 
+                p{
+                    font-size: 16px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    padding-left: 5px;
+                }
+
                 .player {
                     position: relative;
 
