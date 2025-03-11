@@ -1,19 +1,19 @@
 @import '../../styles/shared/var.scss';
 
 .chat_container {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, normal, 12px);
 
     .chat_head_content {
         background: var(--bg-color);
         border-bottom: 1px solid var(--content-border);
-        @include weight_height(fill, auto);
-        @include content_padd(24px, 0px, 8px, 0px);
+        @include weight_height(100%, auto);
+        @include content_padd(40px, 20px, 8px, 20px);
         @include item_flex(flex, column, center, normal, 12px);
 
         .chat_head {
             border-bottom: 1px solid var(--content-border);
-            @include weight_height(fill, auto);
+            @include weight_height(100%, auto);
             @include content_padd(8px, 24px, 8px, 24px);
             @include item_flex(flex, row, center, space-between, 8px);
 
