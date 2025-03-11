@@ -13,6 +13,8 @@
 
         .head{
             @include item_flex(flex, column, start, normal, 7px);
+            padding-bottom: 15px;
+            border-bottom: 1px solid lightgray;
 
             p{
                 @include fix-font(16px, 400, 14px);
