@@ -141,7 +141,7 @@
                 border-bottom-right-radius: 0px;
                 position: relative;
                 border: 1px solid var(--content-border);
-                background: var(--chat-bg);
+                background: linear-gradient(270deg,#3498db,#34506d);
                 @include item_flex(flex, column, flex-start, normal, 12px);
                 // @include weight_height(241.25px, auto);
                 :first-child {
@@ -158,13 +158,13 @@
                     color: #FCFCFC;
                     @include fix-font(12px, 400, 10.5px);
                 }
-                
+
                 svg{
                     position: absolute;
-                    bottom: -14px;
-                    right: -8px;
+                    bottom: 0;
+                    left: 100%;
                     path{
-                        fill: #3498DB;
+                        fill: #3498db;
                     }
                 }
             }
