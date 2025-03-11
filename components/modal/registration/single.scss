@@ -35,7 +35,7 @@
 
         .body{
             padding: 15px;
-            @include item_flex(flex, row, center, center, 13px);
+            @include item_flex(flex, row, center, center, 35px);
 
             .myteam{
                 @include item_flex(flex, row, center, center, 11px);
