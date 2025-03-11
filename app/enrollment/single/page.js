@@ -122,7 +122,7 @@ export default function SingleGame(props) {
             </svg>
 
             <span className="dtae_hour">
-              <div className="filters">
+              
                 <select onChange={(e) => setSelectedDate(e.target.value)} value={selectedDate}>
                   <option value="">בחר תאריך</option>
                   {uniqueDates.map((date) => (
@@ -143,7 +143,6 @@ export default function SingleGame(props) {
                     <option key={title} value={title}>{title}</option>
                   ))}
                 </select>
-              </div>
 
               {/* <img src="../placement/svg/bottom_arrow.svg" alt="" /> */}
             </span>
