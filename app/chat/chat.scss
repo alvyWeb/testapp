@@ -8,13 +8,13 @@
         background: var(--bg-color);
         border-bottom: 1px solid var(--content-border);
         @include weight_height(100%, auto);
-        @include content_padd(40px, 20px, 8px, 20px);
+        @include content_padd(40px, 0, 8px, 0);
         @include item_flex(flex, column, center, normal, 12px);
 
         .chat_head {
             border-bottom: 1px solid var(--content-border);
             @include weight_height(100%, auto);
-            @include content_padd(0, 0, 15px, 0);
+            @include content_padd(0, 20px, 15px, 20px);
             @include item_flex(flex, row, center, space-between, 8px);
 
             p {
