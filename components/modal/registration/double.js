@@ -35,16 +35,16 @@ const Double = () => {
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/g3.png" />
-                                    <img src="../../flags/br.png" />
+                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p>מנדלר ת.</p>
                                 <p>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/g3.png" />
-                                    <img src="../../flags/br.png" />
+                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p>מנדלר ת.</p>
                                 <p>(פרו )</p>
@@ -54,16 +54,16 @@ const Double = () => {
                         <div className="myteam">
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/g3.png" />
-                                    <img src="../../flags/br.png" />
+                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p>מנדלר ת.</p>
                                 <p>(פרו )</p>
                             </div>
                             <div className="_player">
                                 <span>
-                                    <img src="../../user-Image/g3.png" />
-                                    <img src="../../flags/br.png" />
+                                    <img className='profileImg' src="../../user-Image/g3.png" />
+                                    <img className='flagImg' src="../../flags/br.png" />
                                 </span>
                                 <p>מנדלר ת.</p>
                                 <p>(פרו )</p>
