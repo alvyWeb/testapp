@@ -1,7 +1,7 @@
 "use client";
 import "./single.scss";
 import Link from "next/link";
-import Single from "@/components/modal/registration/single";
+import SingleGame from "@/components/modal/registration/single";
 import ModalDialog from "@/components/common/ModalDialog";
 import { useRouter } from "next/navigation";
 // import Cookies from "js-cookie";
@@ -215,7 +215,7 @@ export default function SingleGame(props) {
       </div>
       {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
-          <Single />
+          <SingleGame />
         </ModalDialog>
       )}
     </main>
