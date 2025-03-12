@@ -62,7 +62,7 @@ const groupregulations = ({ standings, setStandings }) => {
   return (
     <main>
       <div className="groupregulations_contanier">
-        <p>תקנון הקבוצה</p>
+        <h4>תקנון הקבוצה</h4>
         {bodyData.map((item) => (
           <div className="groupregulations_body">
             <p>{item.bodyData}</p>

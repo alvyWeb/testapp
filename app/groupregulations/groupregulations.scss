@@ -4,7 +4,7 @@
   padding: 60px 20px;
   // @include block_display(16px);
 
-  p {
+  h4 {
     text-align: center;
     color: var(--item-color);
     padding-bottom: 25px;
@@ -14,9 +14,9 @@
 
   .groupregulations_body {
     p {
-      text-align: start;
+      // text-align: start;
       color: var(--text-color);
-      @include fix-font(16px, 400, 19.36px);
+      @include fix-font(16px, 400, 19px);
     }
   }
 
