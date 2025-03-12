@@ -62,15 +62,15 @@ const groupregulations = ({ standings, setStandings }) => {
   return (
     <main>
       <div className="groupregulations_contanier">
-        <p>Group regulations</p>
+        <p>תקנון הקבוצה</p>
         {bodyData.map((item) => (
           <div className="groupregulations_body">
             <p>{item.bodyData}</p>
           </div>
         ))}
         <div className="groupregulations_confirm">
-          <p>אני מאשר שקראתי את כל התקנון.</p>
           <input type="checkbox" />
+          <p>אני מאשר שקראתי את כל התקנון.</p>  
         </div>
         <div className="groupregulations_button">
           <Link href="/news">
