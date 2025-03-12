@@ -22,8 +22,8 @@
   }
 
   .groupregulations_confirm {
-    @include weight_height(fill, auto);
-    @include item_flex(flex, row, flex-start, space-between, 0px);
+    @include weight_height(100%, auto);
+    @include item_flex(flex, row, flex-start, normal, 8px);
     p {
       text-align: start;
       color: var(--text-color);
@@ -37,7 +37,7 @@
   }
 
   .groupregulations_button {
-    @include weight_height(fill, auto);
+    @include weight_height(100%, auto);
     @include item_flex(flex, column, flex-start, space-between, 8px);
     a {
       @include weight_height(fill, auto);
