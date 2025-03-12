@@ -7,7 +7,7 @@
   p {
     text-align: center;
     color: var(--item-color);
-    padding-bottom: 25px
+    padding-bottom: 25px;
     // @include weight_height(fill, auto);
     @include fix-font(26px, 400, 22.76px);
   }
