@@ -37,10 +37,13 @@
   }
 
   .groupregulations_button {
-    @include weight_height(100%, auto);
-    @include item_flex(flex, column, flex-start, space-between, 8px);
+    // @include weight_height(100%, auto);
+    // @include item_flex(flex, column, flex-start, space-between, 8px);
+    padding-top: 20px;
     a {
-      @include weight_height(fill, auto);
+      // @include weight_height(fill, auto);
+      display: block;
+      width: 100%;
     }
 
     button {
