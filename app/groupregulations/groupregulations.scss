@@ -1,12 +1,14 @@
 @import "../../styles/shared/var.scss";
 
 .groupregulations_contanier {
-  padding: 24px 10px !important;
-  @include block_display(16px);
+  padding: 60px 20px;
+  // @include block_display(16px);
+
   p {
     text-align: center;
     color: var(--item-color);
-    @include weight_height(fill, auto);
+    padding-bottom: 25px
+    // @include weight_height(fill, auto);
     @include fix-font(26px, 400, 22.76px);
   }
 
