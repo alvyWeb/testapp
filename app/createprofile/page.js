@@ -32,7 +32,7 @@ const CreateProfile = ({ standings, setStandings }) => {
   const [previewProfile, setPreviewProfile] = useState(
     "./user-Image/Tafsir.png"
   );
-  const [coverPreview, setCoverPreview] = useState("./user-Image/cover.png");
+  const [coverPreview, setCoverPreview] = useState("./bgN.png");
 
   const handleInput = (e) => {
     setUser({
