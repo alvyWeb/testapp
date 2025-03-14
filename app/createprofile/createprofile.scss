@@ -154,7 +154,7 @@
           padding-bottom: 8px;
           border-bottom: 1px solid var(--item-color);
 
-          @include weight_height(fill, auto);
+          @include weight_height(100%, auto);
           @include item_flex(flex, column, flex-start, normal, 8px);
 
           label {
@@ -178,7 +178,7 @@
               outline: none;
               background: none;
               color: var(--text-color);
-              @include weight_height(fill, auto);
+              @include weight_height(100%, auto);
             }
 
             img {
