@@ -11,6 +11,8 @@
       img {
         object-fit: cover;
         width: 100%;
+        display: block;
+        max-height: 217px;
         // @include weight_height(fill, auto);
       }
 
