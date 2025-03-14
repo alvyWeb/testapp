@@ -117,7 +117,8 @@ const CreateProfile = ({ standings, setStandings }) => {
                 </svg>
                 <p>חזור</p>
               </div>
-              <div
+            </div>
+            <div
                 className="add_cover"
                 onClick={() =>
                   document.getElementById("fileInputCover").click()
@@ -131,7 +132,6 @@ const CreateProfile = ({ standings, setStandings }) => {
                   onChange={(e) => handleFileUpload("cover", e)}
                 />
               </div>
-            </div>
           </div>
           <div className="profile">
             <img src={previewProfile} alt="" />
