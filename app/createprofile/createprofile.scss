@@ -19,7 +19,7 @@
         position: absolute;
         top: 0px;
         @include weight_height(100%, auto);
-        @include item_flex(flex, column, flex-end, space-between, 0px);
+        @include item_flex(flex, column, flex-start, space-between, 0px);
 
         .return {
           @include item_flex(flex, row, center, normal, 12px);
