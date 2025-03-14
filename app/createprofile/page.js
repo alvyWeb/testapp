@@ -154,26 +154,26 @@ const CreateProfile = ({ standings, setStandings }) => {
         <div className="createprofile_body">
           <div className="f_n_name">
             <div className="label_input">
-              <label htmlFor="">Full Name</label>
+              <label htmlFor="">שם פרטי</label>
               <input
                 onChange={handleInput}
                 name="fullName"
                 type="text"
-                placeholder="enter name..."
+                placeholder="הכנס שם..."
               />
             </div>
             <div className="label_input">
-              <label htmlFor="">Nickname</label>
+              <label htmlFor="">כינוי</label>
               <input
                 onChange={handleInput}
                 name="nickName"
                 type="text"
-                placeholder="nickname..."
+                placeholder="יינתן לך בהמשך..."
               />
             </div>
           </div>
           <div className="calender">
-            <p>Date of birth</p>
+            <p>תאריך לידה</p>
             <div className="date_input">
               <input onChange={handleInput} name="birthday" type="date" />
             </div>
@@ -181,30 +181,30 @@ const CreateProfile = ({ standings, setStandings }) => {
           <div className="body_datils">
             <div className="country_height">
               <div className="label_input">
-                <label htmlFor="">Country</label>
+                <label htmlFor="">מולדת</label>
                 <span>
                   <input onChange={handleInput} name="country" type="text" />
                   <img src="./flags/ae.png" alt="" />
                 </span>
               </div>
               <div className="label_input">
-                <label htmlFor="">City</label>
+                <label htmlFor="">גובה</label>
                 <input onChange={handleInput} name="city" type="text" />
               </div>
             </div>
             <div className="country_height">
               <div className="label_input">
-                <label htmlFor="">height</label>
+                <label htmlFor="">יד חזקה</label>
                 <input onChange={handleInput} name="height" type="text" />
               </div>
               <div className="label_input">
-                <label htmlFor="">strong hand</label>
+                <label htmlFor="">יד חזקה</label>
                 <input onChange={handleInput} name="strongHand" type="text" />
               </div>
             </div>
             <div className="country_height">
               <div className="label_input">
-                <label htmlFor="">Backhand</label>
+                <label htmlFor="">חבטת גב</label>
                 <input onChange={handleInput} name="backhand" type="text" />
               </div>
             </div>
