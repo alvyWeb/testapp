@@ -51,8 +51,8 @@
         position: absolute;
         border-radius: 50%;
         bottom: -50px;
-        border: 8px solid var(--content-border);
-        @include weight_height(118.14px, 118.14px);
+        // border: 8px solid var(--content-border);
+        @include weight_height(126px, 126px);
       }
 
       .add-profile img {
