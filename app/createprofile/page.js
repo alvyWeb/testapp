@@ -123,7 +123,7 @@ const CreateProfile = ({ standings, setStandings }) => {
                   document.getElementById("fileInputCover").click()
                 }
               >
-                <img src="./user-Image/add.svg" alt="Add Cover" />
+                <img src="./addS.png" alt="Add Cover" />
                 <input
                   type="file"
                   id="fileInputCover"
@@ -141,7 +141,7 @@ const CreateProfile = ({ standings, setStandings }) => {
               }
               className="add-profile"
             >
-              <img src="./user-Image/add.svg" alt="" />
+              <img src="./addS.png" alt="" />
               <input
                 type="file"
                 id="fileInputProfile"
