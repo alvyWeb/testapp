@@ -1,12 +1,12 @@
 @import "../../styles/shared/var.scss";
 
 .createprofile_container {
-  @include weight_height(fill, auto);
+  @include weight_height(100%, auto);
 
   .cover_profile {
     .cover {
       position: relative;
-      max-width: 390px;
+      max-width: 100%;
 
       img {
         object-fit: cover;
@@ -18,7 +18,7 @@
         padding: 24px 24px;
         position: absolute;
         top: 0px;
-        @include weight_height(fill, fill);
+        @include weight_height(100%, auto);
         @include item_flex(flex, column, flex-end, space-between, 0px);
 
         .return {
