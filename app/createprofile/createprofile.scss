@@ -32,11 +32,14 @@
 
         .add_cover {
           img {
-            padding: 4px 6px;
-            border-radius: 50%;
-            background: none;
-            border: 1px solid #000000;
-            @include weight_height(13px, 17px);
+            // padding: 4px 6px;
+            // border-radius: 50%;
+            // background: none;
+            // border: 1px solid #000000;
+            // @include weight_height(13px, 17px);
+            position: absolute;
+            bottom: 9px;
+            right: 20px;
           }
         }
       }
