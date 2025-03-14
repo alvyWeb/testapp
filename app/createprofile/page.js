@@ -210,7 +210,7 @@ const CreateProfile = ({ standings, setStandings }) => {
             </div>
           </div>
           <div className="create_button">
-            <button type="submit">Save and continue</button>
+            <button type="submit">שמור והמשך</button>
           </div>
         </div>
       </div>
