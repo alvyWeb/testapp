@@ -35,6 +35,11 @@
         position: absolute;
         bottom: 9px;
         right: 20px;
+        cursor: pointer;
+
+        img{
+          display: block
+        }
       }
     }
 
@@ -51,15 +56,15 @@
         @include weight_height(126px, 126px);
       }
 
-      .add-profile img {
-        padding: 4px 6px;
-        border-radius: 50%;
+      .add-profile{
         position: absolute;
-        right: 150px;
-        bottom: -50px;
-        background: #fcfcfc;
-        border: 1px solid #000000;
-        @include weight_height(13px, 17px);
+        bottom: 8px;
+        right: 13px;
+        cursor: pointer;
+
+        img{
+          display: block
+        }
       }
     }
   }
