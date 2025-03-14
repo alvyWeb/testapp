@@ -144,7 +144,7 @@
 
     .body_datils {
       @include weight_height(100%, auto);
-      @include item_flex(flex, column, flex-start, space-between, 12px);
+      @include item_flex(flex, column, flex-start, space-between, 20px);
 
       .country_height {
         @include weight_height(100%, auto);
