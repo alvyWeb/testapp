@@ -50,7 +50,8 @@
       // @include item_flex(flex, row, center, center, 12px);
       @include weight_height(126px, 126px);
       border-radius: 50%;
-      bottom: -50px;
+      bottom: 70px;
+      margin: auto;
 
       :first-child {
         // object-fit: cover;
