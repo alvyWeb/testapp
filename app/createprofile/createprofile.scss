@@ -79,17 +79,22 @@
     // @include block_display(20px);
     padding: 0px 20px;
     margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 
     .f_n_name {
       @include weight_height(100%, auto);
-      @include item_flex(flex, row, center, normal, 16px);
+      @include item_flex(flex, row, center, normal, 20px);
 
       .label_input {
         padding-bottom: 4px;
         color: var(--text-grey);
         border-bottom: 1px solid var(--item-color);
         @include weight_height(100%, auto);
-        @include item_flex(flex, column, flex-start, normal, 4px);
+        @include item_flex(flex, column, flex-start, normal, 12px);
 
         label {
           @include fix-font(14px, 400, 12.25px);
@@ -115,7 +120,7 @@
       @include item_flex(flex, column, flex-start, normal, 8px);
 
       p {
-        color: var(--text-color);
+        color: #B0AAAA;
         @include fix-font(14px, 400, 12.25px);
       }
 
@@ -132,7 +137,7 @@
           color: var(--text-color);
           @include weight_height(100%, auto);
           @include fix-font(16px, 400, 14px);
-          @include content_padd(8px, 8px, 9px, 8px);
+          @include content_padd(15px, 15px, 15px, 15px);
         }
       }
     }
@@ -177,7 +182,7 @@
             }
 
             img {
-              @include weight_height(20px, 14px);
+              @include weight_height(20px, auto);
             }
           }
         }

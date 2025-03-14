@@ -184,7 +184,7 @@ const CreateProfile = ({ standings, setStandings }) => {
                 <label htmlFor="">מולדת</label>
                 <span>
                   <input onChange={handleInput} name="country" type="text" />
-                  <img src="./flags/ae.png" alt="" />
+                  <img src="./flags/il.png" alt="" />
                 </span>
               </div>
               <div className="label_input">
@@ -195,14 +195,8 @@ const CreateProfile = ({ standings, setStandings }) => {
             <div className="country_height">
               <div className="label_input">
                 <label htmlFor="">יד חזקה</label>
-                <input onChange={handleInput} name="height" type="text" />
-              </div>
-              <div className="label_input">
-                <label htmlFor="">יד חזקה</label>
                 <input onChange={handleInput} name="strongHand" type="text" />
               </div>
-            </div>
-            <div className="country_height">
               <div className="label_input">
                 <label htmlFor="">חבטת גב</label>
                 <input onChange={handleInput} name="backhand" type="text" />
