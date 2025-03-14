@@ -30,7 +30,7 @@ const CreateProfile = ({ standings, setStandings }) => {
   const [profileImg, setProfileImg] = useState("");
   const [coverImg, setCoverImg] = useState("");
   const [previewProfile, setPreviewProfile] = useState(
-    "./user-Image/Tafsir.png"
+    "./user-Image/pUser.png"
   );
   const [coverPreview, setCoverPreview] = useState("./bgN.png");
 
