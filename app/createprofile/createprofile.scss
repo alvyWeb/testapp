@@ -47,15 +47,17 @@
 
     .profile {
       position: relative;
-      @include item_flex(flex, row, center, center, 12px);
+      // @include item_flex(flex, row, center, center, 12px);
+      @include weight_height(126px, 126px);
+      border-radius: 50%;
+      bottom: -50px;
 
       :first-child {
-        object-fit: cover;
-        position: absolute;
-        border-radius: 50%;
-        bottom: -50px;
+        // object-fit: cover;
+        // position: absolute;
+        display: block;
         // border: 8px solid var(--content-border);
-        @include weight_height(126px, 126px);
+        
       }
 
       .add-profile{
