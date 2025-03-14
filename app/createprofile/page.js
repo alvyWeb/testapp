@@ -102,7 +102,6 @@ const CreateProfile = ({ standings, setStandings }) => {
             <img src={coverPreview} alt="" />
             <div className="body_cover">
               <div className="return">
-                <p>return</p>
                 <svg
                   width="13"
                   height="24"
@@ -116,6 +115,7 @@ const CreateProfile = ({ standings, setStandings }) => {
                     fill="white"
                   />
                 </svg>
+                <p>חזור</p>
               </div>
               <div
                 className="add_cover"
