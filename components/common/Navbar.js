@@ -11,9 +11,9 @@ const Navbar = ({ light }) => {
   const router = useRouter();
   const activePath = usePathname(); 
 
-  useEffect(() => {
-    setActivePath(window.location.pathname || "/home"); // Set initial active hash
-  }, []);
+  // useEffect(() => {
+  //   setActivePath(window.location.pathname || "/home"); // Set initial active hash
+  // }, []);
 
   const menus = [
     {
