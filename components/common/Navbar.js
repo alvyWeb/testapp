@@ -1,8 +1,7 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 import { MainContext } from "@/context";
-import { useContext, useState, useEffect } from "react";
-import NavbarButtonHover from "./NavbarButtonHover";
+import { useContext } from "react";
 import "./nabvar.scss";
 
 const Navbar = ({ light }) => {
@@ -10,10 +9,6 @@ const Navbar = ({ light }) => {
   const authenticateUser = user?.data;
   const router = useRouter();
   const activePath = usePathname(); 
-
-  // useEffect(() => {
-  //   setActivePath(window.location.pathname || "/home"); // Set initial active hash
-  // }, []);
 
   const menus = [
     {
@@ -50,20 +45,20 @@ const Navbar = ({ light }) => {
 
   const handleNavClick = (path) => {
     if (activePath !== path) {
-      router.push(path); // Navigate without page refresh
+      router.push(path);
     }
   };
 
   return (
     <div className="navbar-container">
       <div className="navbar">
-        {menus?.map((menu) => {
-          const isActive = activePath === menu.path;
+        {menus.map((menu) => {
+          const isActive = activePath === menu.hash; // Fix: use menu.hash
           return (
             <button
               key={menu.name}
               className={`nav-menu ${isActive ? "active" : ""}`}
-              onClick={() => handleNavClick(menu.path)}
+              onClick={() => handleNavClick(menu.hash)} // Fix: use menu.hash
             >
               <div className="menu-img">
                 <img src={isActive ? menu.activeIcon : menu.icon} alt={menu.name} />
@@ -77,4 +72,4 @@ const Navbar = ({ light }) => {
   );
 };
 
-export default Navbar; 
+export default Navbar;
