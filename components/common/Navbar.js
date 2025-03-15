@@ -13,7 +13,7 @@ const Navbar = ({ light }) => {
   const menus = [
     {
       name: "חדשות",
-      hash: "/home",
+      hash: "/",
       icon: `/NavIcons/news-white.svg`,
       activeIcon: `/NavIcons/news-active.svg`,
     },
