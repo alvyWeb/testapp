@@ -49,9 +49,10 @@ const Navbar = ({ light }) => {
   ];
 
   const handleNavClick = (path) => {
-    if (window.location.pathname !== path) {
-      router.push(path); // Navigate without reloading
+    if (activePath !== path) {
+      router.push(path); // Navigate without page refresh
     }
+  };
   };
 
   return (
