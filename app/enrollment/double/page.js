@@ -280,7 +280,7 @@ export default function Home(props) {
                   </div>
                 </div>
               </div>
-              <div className="container_footer">
+              <div className="container_footer2">
                 <div className="_item">
                   <div className="precipitation">
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
