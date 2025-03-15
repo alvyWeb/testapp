@@ -1,9 +1,10 @@
 @import "../../styles/shared/var.scss";
 
 .profile_container {
-  @include item_flex(flex, column, center, normal, 0px);
+  // @include item_flex(flex, column, center, normal, 0px);
   //   @include weight_height(390px, auto);
   // max-width: 390px;
+  width: 100%;
 
   .cover_img {
     position: relative;
