@@ -10,13 +10,13 @@ const Navbar = ({ light }) => {
   const [activeHash, setActiveHash] = useState("");
 
   useEffect(() => {
-    setActivePath(window.location.pathname || "/"); // Set initial active hash
+    setActivePath(window.location.pathname || "/home"); // Set initial active hash
   }, []);
 
   const menus = [
     {
       name: "חדשות",
-      hash: "/",
+      hash: "/home",
       icon: `/NavIcons/news-white.svg`,
       activeIcon: `/NavIcons/news-active.svg`,
     },
