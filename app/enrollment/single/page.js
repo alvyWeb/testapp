@@ -202,7 +202,7 @@ export default function SingleGame(props) {
                   </span>
                 </div>
               </div>
-              <div className="container_body">
+              <div className="container_body1">
                 <div className="current_player">
                   <div className="_kabir">
                     <span>
