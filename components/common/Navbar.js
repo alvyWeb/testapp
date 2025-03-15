@@ -53,7 +53,6 @@ const Navbar = ({ light }) => {
       router.push(path); // Navigate without page refresh
     }
   };
-  };
 
   return (
     <div className="navbar-container">
