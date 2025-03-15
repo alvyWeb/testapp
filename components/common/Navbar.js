@@ -1,4 +1,5 @@
 "use client";
+import { usePathname, useRouter } from "next/navigation";
 import { MainContext } from "@/context";
 import { useContext, useState, useEffect } from "react";
 import NavbarButtonHover from "./NavbarButtonHover";
@@ -7,7 +8,8 @@ import "./nabvar.scss";
 const Navbar = ({ light }) => {
   const { user } = useContext(MainContext);
   const authenticateUser = user?.data;
-  const [activeHash, setActiveHash] = useState("");
+  const router = useRouter();
+  const activePath = usePathname(); 
 
   useEffect(() => {
     setActivePath(window.location.pathname || "/home"); // Set initial active hash
