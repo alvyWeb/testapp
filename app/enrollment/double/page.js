@@ -241,7 +241,7 @@ export default function Home(props) {
                 </span>
                 <div className="add_player">
                   <div className="_add">
-                    <span>
+                    <span onClick={handleClick}>
                       <svg
                         width="16"
                         height="16"
@@ -260,7 +260,7 @@ export default function Home(props) {
                     <p className="_rank">{item.opRank}</p>
                   </div>
                   <div className="_add">
-                    <span>
+                    <span onClick={handleClick}>
                       <svg
                         width="16"
                         height="16"
@@ -295,7 +295,7 @@ export default function Home(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" onClick={handleClick}>
+                <Link className="butn_ne" href="" onClick={handleClick}>
                     {item.buttontext}
                 </Link>
               </div>
