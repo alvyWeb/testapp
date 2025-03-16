@@ -54,6 +54,7 @@
                         border-radius: 50%;
                         display: block;
                         margin-bottom: 8px;
+                        cursor: pointer;
 
                         .profileImg{
                             display: block;
@@ -75,6 +76,7 @@
 
                     p{
                         @include fix-font(14px, 400, 12.25px);
+                        color: var(--text-color);
                     }
 
                     .tag{

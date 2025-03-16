@@ -295,7 +295,7 @@ export default function Home(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" href="#" onClick={handleClick}>
+                <Link className="butn_ne" onClick={handleClick}>
                     {item.buttontext}
                 </Link>
               </div>
