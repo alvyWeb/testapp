@@ -241,7 +241,7 @@ export default function Home(props) {
                 </span>
                 <div className="add_player">
                   <div className="_add">
-                    <span onClick={handleClick}>
+                    <span>
                       <svg
                         width="16"
                         height="16"
@@ -260,7 +260,7 @@ export default function Home(props) {
                     <p className="_rank">{item.opRank}</p>
                   </div>
                   <div className="_add">
-                    <span onClick={handleClick}>
+                    <span>
                       <svg
                         width="16"
                         height="16"
