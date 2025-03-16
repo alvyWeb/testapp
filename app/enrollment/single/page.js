@@ -218,7 +218,7 @@ export default function SingleGame(props) {
                 </span>
                 <div className="add_player">
                   <div className="_add">
-                    <span>
+                    <span onClick={handleClick}>
                       <svg
                         width="16"
                         height="16"
@@ -255,7 +255,7 @@ export default function SingleGame(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" href="#" onClick={handleClick}>
+                <Link className="butn_ne" href="" onClick={handleClick}>
                     {item.buttontext}
                 </Link>
               </div>
