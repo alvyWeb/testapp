@@ -130,6 +130,12 @@ export default function Home(props) {
   const handleClick = () => {
     handleModalOpen("double"); // Open the correct modal
   };
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/profile");
+  };
+  
   return (
     <main>
       <div className="enrollment">
@@ -220,7 +226,7 @@ export default function Home(props) {
               <div className="doublegames_body">
                 <div className="current_player">
                   <div className="doubleOne">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.myImg} />
                       <img src={item.myCountryImg} />
                     </span>
@@ -228,7 +234,7 @@ export default function Home(props) {
                     <p className="_rank">{item.myRank}</p>
                   </div>
                   <div className="doubleTwo">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.teaMateImg} />
                       <img src={item.teaMateCountryImg} />
                     </span>

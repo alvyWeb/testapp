@@ -112,6 +112,11 @@ export default function SingleGame(props) {
     handleModalOpen("Single"); // Open the correct modal
   };
 
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/profile");
+  };
+
   return (
     <main>
       <div className="enrollment">
@@ -205,7 +210,7 @@ export default function SingleGame(props) {
               <div className="container_body1">
                 <div className="current_player">
                   <div className="_kabir">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.myImg} />
                       <img src={item.myCountryImg} />
                     </span>
