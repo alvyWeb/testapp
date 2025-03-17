@@ -10,6 +10,11 @@ const CreateProfile = ({ standings, setStandings }) => {
     user: { data },
   } = useContext(MainContext);
 
+  const handleProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/profile");
+  };
+
   const initialUser = {
     id: data?.uid,
     fullName: data?.displayName,
@@ -131,7 +136,10 @@ const CreateProfile = ({ standings, setStandings }) => {
                   style={{ display: "none" }}
                   onChange={(e) => handleFileUpload("cover", e)}
                 />
-              </div>
+            </div>
+            <div className="managerlink" onClick={handleProfile}>
+              <p>ניהול</p>
+            </div>
           </div>
           <div className="profile">
             <img src={previewProfile} alt="" />
