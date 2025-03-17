@@ -5,7 +5,7 @@ import "./upcominggames.scss";
 const Upcoming = ({ standings, setStandings }) => {
   const [game, setGame] = useState("mine");
 
-  const handleProfile = () => {
+  const handleMyProfile = () => {
     // Navigate to the profile page when the avatar is clicked
     router.push("/propyl");
   };
@@ -242,7 +242,7 @@ const Upcoming = ({ standings, setStandings }) => {
                   <div className="everything_main_body">
                     <div className="f_team">
                       <div className="_player">
-                        <span onClick={handleProfile}>
+                        <span onClick={handleMyProfile}>
                           <img src={item.fPlayerImg} />
                           <img src={item.fPlayerCountry} alt="" />
                         </span>
@@ -250,7 +250,7 @@ const Upcoming = ({ standings, setStandings }) => {
                         <p className="_ranking">{item.mandlerRank}</p>
                       </div>
                       <div className="_player">
-                        <span onClick={handleProfile}>
+                        <span onClick={handleMyProfile}>
                           <img src={item.sPlayerImg} />
                           <img src={item.sPlayerCountry} />
                         </span>
@@ -264,7 +264,7 @@ const Upcoming = ({ standings, setStandings }) => {
                     <div className="s_team">
                       <div className="_player">
                         <span className="_win">
-                          <span onClick={handleProfile}>
+                          <span onClick={handleMyProfile}>
                             <img src={item.tPlayerImg} />
                             <img src={item.tPlayerCountry} />
                             <img src={item.playerToffee} />
@@ -278,7 +278,7 @@ const Upcoming = ({ standings, setStandings }) => {
                       </div>
                       <div className="_player">
                         <span className="_win">
-                          <span onClick={handleProfile}>
+                          <span onClick={handleMyProfile}>
                             <img src={item.rPlayerImg} />
                             <img src={item.rPlayerCountry} alt="" />
                             <img src={item.toffee} />
@@ -441,7 +441,7 @@ const Upcoming = ({ standings, setStandings }) => {
                   <div className="everything_main_body solo">
                     <div className="f_team">
                       <div className="_player">
-                        <span>
+                        <span onClick={handleMyProfile}>
                           <img src={item.solofImg} />
                           <img src={item.soloFCountry} />
                         </span>
@@ -455,7 +455,7 @@ const Upcoming = ({ standings, setStandings }) => {
                     <div className="s_team">
                       <div className="_player">
                         <span className="_win">
-                          <span>
+                          <span onClick={handleMyProfile}>
                             <img src={item.soloPlayerImg} />
                             <img src={item.soloPlayerCountry} alt="" />
                             <img src={item.soloPlayerToffee} alt="" />
