@@ -114,7 +114,7 @@ export default function SingleGame(props) {
 
   const handleMyProfile = () => {
     // Navigate to the profile page when the avatar is clicked
-    router.push("/profile");
+    router.push("/propyl");
   };
 
   return (
