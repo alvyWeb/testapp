@@ -1,9 +1,18 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import "./completedgames.scss";
 
 const Complete = ({ standings, setStandings }) => {
   const [game, setGame] = useState("mine");
+
+  const router = useRouter();
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   const everyThing = [
     {
       /*SQUAD*/
@@ -304,7 +313,7 @@ const Complete = ({ standings, setStandings }) => {
               <div className="everything_main_body">
                 <div className="f_team">
                   <div className="_player">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.myImg} />
                       <img src={item.myCountryImg} />
                     </span>
@@ -312,7 +321,7 @@ const Complete = ({ standings, setStandings }) => {
                     <p className="_ranking">{item.myRank}</p>
                   </div>
                   <div className="_player">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.myTeaMateImg} />
                       <img src={item.myTeaMateCountryImg} />
                     </span>
@@ -329,7 +338,7 @@ const Complete = ({ standings, setStandings }) => {
                 <div className="s_team">
                   <div className="_player">
                     <span className="_win">
-                      <span>
+                      <span onClick={handleMyProfile}>
                         <img src={item.opPlayerImg} />
                         <img src={item.opPlayerCountryImg} />
                         <img src={item.toffeeIcon} />
@@ -343,7 +352,7 @@ const Complete = ({ standings, setStandings }) => {
                   </div>
                   <div className="_player">
                     <span className="_win">
-                      <span>
+                      <span onClick={handleMyProfile}>
                         <img src={item.opTeaMateImg} />
                         <img src={item.opTeaMateCountryImg} />
                         <img src={item.tennisIcon} />
@@ -444,7 +453,7 @@ const Complete = ({ standings, setStandings }) => {
               <div className="everything_main_body space_around">
                 <div className="f_team">
                   <div className="_player">
-                    <span>
+                    <span onClick={handleMyProfile}>
                       <img src={item.soloPlayerImg} />
                       <img src={item.soloPlayerCountry} />
                     </span>
@@ -461,7 +470,7 @@ const Complete = ({ standings, setStandings }) => {
                 <div className="s_team">
                   <div className="_player">
                     <span className="_win">
-                      <span>
+                      <span onClick={handleMyProfile}>
                         <img src={item.soloOpPlayerImg} />
                         <img src={item.soloOpPlayerCountryImg} />
                         <img src={item.tennisIcon} />
