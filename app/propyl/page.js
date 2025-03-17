@@ -5,14 +5,12 @@ import "./skilbar.css";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import React, { PureComponent } from 'react';
 
 const Propyl = ({ standings, setStandings }) => {
 
   const [isAwardOpen, setIsAwardOpen] = useState(false);
   const [isStaticsOpen, setIsStaticsOpen] = useState(false);
-  const navigate = useNavigate();
 
   const propylConent = {
     profileBody: [
@@ -455,7 +453,7 @@ const Propyl = ({ standings, setStandings }) => {
           <img src="./propyl/png/cover_img.png" alt="" className="cover_img" />
           <div className="logo_go">
             <div className="cover_head">
-              <img className="arrow" src="./propyl/svg/left_arrow.svg" alt="" onClick={() => navigate(-1)} />
+              <img className="arrow" src="./propyl/svg/left_arrow.svg" alt="" onClick={() => window.history.back()} />
               <img src="./propyl/svg/peen_logo.svg" alt="" />
             </div>
             <img src="./propyl/svg/add_cover.svg" alt="" />
