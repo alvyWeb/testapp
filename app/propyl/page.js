@@ -450,13 +450,13 @@ const Propyl = ({ standings, setStandings }) => {
     <main>
       <div className="propyl_container">
         <div className="cover_container">
-          <img src="./propyl/png/cover_img.png" alt="" className="cover_img" />
+          <img src="/propyl/png/cover_img.png" alt="" className="cover_img" />
           <div className="logo_go">
             <div className="cover_head">
-              <img className="arrow" src="./propyl/svg/left_arrow.svg" alt="" onClick={() => window.history.back()} />
-              <img src="./propyl/svg/peen_logo.svg" alt="" />
+              <img className="arrow" src="/propyl/svg/left_arrow.svg" alt="" onClick={() => window.history.back()} />
+              <img src="/propyl/svg/peen_logo.svg" alt="" />
             </div>
-            <img src="./propyl/svg/add_cover.svg" alt="" />
+            <img src="/propyl/svg/add_cover.svg" alt="" />
           </div>
         </div>
         <div className="my_account">
@@ -516,15 +516,15 @@ const Propyl = ({ standings, setStandings }) => {
                 <p>200</p>
               </div>
               <div className="profile_img">
-                <img src="./propyl/png/profile_img.png" className="profile_img_m" />
+                <img src="/propyl/png/profile_img.png" className="profile_img_m" />
                 <div className="add_profile">
-                  <img src="./svg/Add-Profile.svg" />
+                  <img src="/svg/Add-Profile.svg" />
                 </div>
                 <div className="add_toffe">
-                  <img src="./svg/Toffee.svg" />
+                  <img src="/svg/Toffee.svg" />
                 </div>
                 <div className="change_country">
-                  <img src="./flags/br.png" />
+                  <img src="/flags/br.png" />
                 </div>
               </div>
             </div>
