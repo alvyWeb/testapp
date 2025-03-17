@@ -264,7 +264,7 @@ const Upcoming = ({ standings, setStandings }) => {
                     <div className="s_team">
                       <div className="_player">
                         <span className="_win">
-                          <span>
+                          <span onClick={handleProfile}>
                             <img src={item.tPlayerImg} />
                             <img src={item.tPlayerCountry} />
                             <img src={item.playerToffee} />
@@ -278,7 +278,7 @@ const Upcoming = ({ standings, setStandings }) => {
                       </div>
                       <div className="_player">
                         <span className="_win">
-                          <span>
+                          <span onClick={handleProfile}>
                             <img src={item.rPlayerImg} />
                             <img src={item.rPlayerCountry} alt="" />
                             <img src={item.toffee} />
