@@ -6,6 +6,8 @@ import "./upcominggames.scss";
 const Upcoming = ({ standings, setStandings }) => {
   const [game, setGame] = useState("mine");
 
+  const router = useRouter();
+
   const handleMyProfile = () => {
     // Navigate to the profile page when the avatar is clicked
     router.push("/propyl");
