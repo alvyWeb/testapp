@@ -4,6 +4,12 @@ import "./upcominggames.scss";
 
 const Upcoming = ({ standings, setStandings }) => {
   const [game, setGame] = useState("mine");
+
+  const handleProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   const upGames = [
     {
       squadTitle: "פארק הירקון, תל אביב | מגרש #2",
@@ -236,7 +242,7 @@ const Upcoming = ({ standings, setStandings }) => {
                   <div className="everything_main_body">
                     <div className="f_team">
                       <div className="_player">
-                        <span>
+                        <span onClick={handleProfile}>
                           <img src={item.fPlayerImg} />
                           <img src={item.fPlayerCountry} alt="" />
                         </span>
@@ -244,7 +250,7 @@ const Upcoming = ({ standings, setStandings }) => {
                         <p className="_ranking">{item.mandlerRank}</p>
                       </div>
                       <div className="_player">
-                        <span>
+                        <span onClick={handleProfile}>
                           <img src={item.sPlayerImg} />
                           <img src={item.sPlayerCountry} />
                         </span>
