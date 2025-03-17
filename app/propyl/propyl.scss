@@ -26,6 +26,10 @@
             .cover_head{
                 @include item_flex(flex, row, center, space-between, 0px);
                 width: 100%;
+
+                .arrow{
+                    cursor: pointer;
+                }
             }
         }
     }
