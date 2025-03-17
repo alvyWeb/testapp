@@ -50,6 +50,7 @@
         left: 20px;
         cursor: pointer;
         border: 1px solid var(--text-grey);
+        border-radius: 10px;
 
         p{
           @include fix-font(14px, 400, 12px);
