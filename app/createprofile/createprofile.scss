@@ -43,6 +43,20 @@
           display: block
         }
       }
+
+      .managerlink{
+        position: absolute;
+        bottom: 9px;
+        left: 20px;
+        cursor: pointer;
+        border: 1px solid var(--text-grey);
+
+        p{
+          @include fix-font(14px, 400, 12px);
+          padding: 5px 10px;
+          color: #ffffff;
+        }
+      }
     }
 
     .profile {
