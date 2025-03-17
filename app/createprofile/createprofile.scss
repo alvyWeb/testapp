@@ -25,6 +25,7 @@
 
         .return {
           @include item_flex(flex, row, center, normal, 12px);
+          cursor: pointer;
 
           p {
             color: #ffffff;
