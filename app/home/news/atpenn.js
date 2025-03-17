@@ -1,9 +1,12 @@
 import React from "react";
 import "./atpenn.css";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faClock } from '@fortawesome/free-solid-svg-icons';
 
 const AtPennMessage = () => {
+    const router = useRouter();
+
     const matchInfo = {
         location: "פארק הירקון, תל אביב | מגרש #1",
         date: "02/24/2023",
@@ -40,6 +43,13 @@ const AtPennMessage = () => {
         score: "3 - 1",
         rounds: ["0 - 1", "2 - 1", "3 - 4"],
     };
+
+    const handleMyProfile = () => {
+        // Navigate to the profile page when the avatar is clicked
+        router.push("/propyl");
+    };
+
+
     return (
         <div className="matchleadinfo bg-white p-4 rounded-xl shadow-md w-full max-w-lg mx-auto">
             <div className="matchleadInfoSingle">
@@ -121,7 +131,7 @@ const AtPennMessage = () => {
                     <div className="flex space-x-2">
                         {matchInfo.players.slice(0, 2).map((player, index) => (
                             <div key={index} className="text-center">
-                                <div className="relative">
+                                <div className="relative" onClick={handleMyProfile}>
                                     <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
                                     <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
                                 </div>
@@ -141,7 +151,7 @@ const AtPennMessage = () => {
                     <div className="flex space-x-2">
                         {matchInfo.players.slice(2, 4).map((player, index) => (
                             <div key={index} className="text-center">
-                                <div className="relative">
+                                <div className="relative" onClick={handleMyProfile}>
                                     <img className="w-12 h-12 userImg rounded-full border-2 border-gray-200" src={player.img} alt={player.name} />
                                     <img className="absolute flagImg bottom-0 right-0 w-4 h-4" src={player.flag} alt="flag" />
                                 </div>

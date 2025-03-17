@@ -2,6 +2,7 @@
 import RankLoader from "@/components/common/loader/RankLoader";
 import { useDebounce } from "@/hooks";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import RankRow from "./RankRow";
 import "./atprank.scss";
 
@@ -10,6 +11,8 @@ const ATPRank = ({ data, activeRank, setActiveRank }) => {
   const [searchData, setSearchData] = useState([]);
   // const [activeRank, setActiveRank] = useState("atp");
   // const { ranks: rankData, isLoading } = useRanks({ rank: activeRank });
+
+  const router = useRouter();
 
   const rankData = data?.ranks;
   const isLoading = data?.isLoading;
@@ -30,6 +33,11 @@ const ATPRank = ({ data, activeRank, setActiveRank }) => {
     );
     setSearchData(filteredRanks);
   }, 500);
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
 
   return (
     <main className="atprank_app">
