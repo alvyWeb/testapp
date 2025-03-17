@@ -20,7 +20,7 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
 
   const handleProfile = () => {
     // Navigate to the profile page when the avatar is clicked
-    router.push("/profile");
+    router.push("/propyl");
   };
 
   return (
