@@ -182,9 +182,8 @@ const Profile = ({ standings, setStandings }) => {
       <div className="profile_container">
         <div className="cover_img">
           <img src="./profile/png/cover.png" alt="" />
-          <div className="cover_d">
+          <div className="cover_d" onClick={() => window.history.back()}>
             <svg
-              onClick={() => router.push("/")}
               width="14"
               height="25"
               viewBox="0 0 14 25"
