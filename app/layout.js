@@ -16,6 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/layouts/Layout.module.scss";
 import "./global.css";
 import "./layout.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -93,6 +94,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
+    <AnimatePresence mode="wait">
     <html lang="en">
       <head>
         <title>ATPenn</title>
@@ -166,5 +168,6 @@ export default function RootLayout({ children }) {
         </MainProvider>
       </body>
     </html>
+    </AnimatePresence>
   );
 }

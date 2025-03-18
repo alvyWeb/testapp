@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from "react";
 import TabComponent from "./home/TabComponent";
 import Register from "./regsiterTabComponents/TabComponent";
 import Games from "./gamescomponents/TabComponent";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
   const { user } = useContext(MainContext);
@@ -31,6 +32,7 @@ export default function Home() {
   }, []);
 
   return (
+    <AnimatePresence mode="wait">
     <main>
       {authenticateUser ? (
         <Games /> // Always show Games if user is authenticated
@@ -42,5 +44,6 @@ export default function Home() {
         </>
       )}
     </main>
+    </AnimatePresence>
   );
 }
