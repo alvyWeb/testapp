@@ -33,7 +33,7 @@ const TabComponent = () => {
   // });
 
   return (
-    <div className="resultcontainer">
+    <div className="resultcontainer1">
       <nav>
         <button
           id={

@@ -135,7 +135,7 @@ const Upcoming = ({ standings, setStandings }) => {
   ];
   return (
     <main>
-      <div className="enrollment">
+      <div className="enrollment1">
         <div className="enrollment_head">
           <div className="head_body_bottom">
             <button
