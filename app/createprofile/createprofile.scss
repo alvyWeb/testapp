@@ -58,12 +58,16 @@
         p{
           @include fix-font(14px, 400, 12px);
           padding: 5px 10px;
-          color: #ffffff;
+          color: var(--text-color);
         }
 
         &:hover{
           background-color: var(--text-color);
           border-color: var(--text-color);
+
+          p{
+            color: #fff;
+          }
         }
       }
     }
