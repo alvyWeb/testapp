@@ -44,7 +44,7 @@ const Propyl = ({ standings, setStandings }) => {
       },
       {
         name: "סגנון Serve",
-        counter: "לורם",
+        counter: "סלייס לבקהאנד",
       },
       {
         name: "חבטת גב יד",
