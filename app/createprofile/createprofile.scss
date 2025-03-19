@@ -53,6 +53,7 @@
         border: 1px solid var(--text-grey);
         border-radius: 5px;
         transition: all ease-in-out 0.5s;
+        background-color: #fcfcfc;
 
         p{
           @include fix-font(14px, 400, 12px);
@@ -74,6 +75,7 @@
       border-radius: 50%;
       bottom: 70px;
       margin: auto;
+      overflow: hidden;
 
       :first-child {
         // object-fit: cover;
