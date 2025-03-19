@@ -43,7 +43,11 @@ const Propyl = ({ standings, setStandings }) => {
         counter: "21",
       },
       {
-        name: "חבטת גב",
+        name: "סגנון Serve",
+        counter: "לורם",
+      },
+      {
+        name: "חבטת גב יד",
         counter: "שתי ידיים",
       },
       {
