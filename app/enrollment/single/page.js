@@ -271,7 +271,7 @@ export default function SingleGame(props) {
       </div>
       {modalData && (
         <div className="modal">
-          <div className="modal-content">
+          <div className="modal-dialog">
             <SinglGameN {...modalData} closeModal={closeModal} />
           </div>
         </div>
