@@ -262,7 +262,7 @@
       }
     }
     .container_bottom_body {
-      @include item_flex(flex, row-reverse, center, space-between, 12px);
+      @include item_flex(flex, row-reverse, center, space-around, 12px);
       padding-top: 12px;
 
       .f_team {
