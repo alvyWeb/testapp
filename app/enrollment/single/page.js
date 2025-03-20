@@ -269,10 +269,12 @@ export default function SingleGame(props) {
             )}
           {/* ))} */}
       </div>
-      {isOpenModal && (
-        <ModalDialog onClose={handleCloseModal}>
-          <SingleGameN {...modalData} closeModal={closeModal}/>
-        </ModalDialog>
+      {modalData && (
+        <div className="modal">
+          <div className="modal-content">
+            <SinglGameN {...modalData} closeModal={closeModal} />
+          </div>
+        </div>
       )}
     </main>
   );
