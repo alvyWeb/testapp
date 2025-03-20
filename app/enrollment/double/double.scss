@@ -275,8 +275,8 @@
             border-radius: 50%;
             background: var(--item-bg);
             border: 1px dotted var(--item-color);
-            @include weight_height(51.57px, 51.57px);
-            @include weight_height(51.57px, 51.57px);
+            @include weight_height(57px, 57px);
+            // @include weight_height(51.57px, 51.57px);
             @include item_flex(flex, column, center, center, 0px);
           }
 
