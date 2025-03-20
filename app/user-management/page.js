@@ -8,6 +8,12 @@ import { useRouter } from "next/navigation";
 
 const userManagement = ({}) => {
   const router = useRouter();
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   return (
     <main className="management-container">
       <div className="topperBlock">
@@ -74,7 +80,7 @@ const userManagement = ({}) => {
                   </div>
                 </span>
                 <p>פן נ. (פנתר)</p>
-                <span className="edit-pen">
+                <span className="edit-pen" onClick={handleMyProfile}>
                   <LuPenLine />
                 </span>
               </td>
