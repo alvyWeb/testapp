@@ -243,7 +243,7 @@
 
             ._name {
               color: var(--text-color);
-              @include item_flex(flex, row, center, normal, 4px);
+              @include item_flex(flex, row-reverse, center, normal, 4px);
               @include fix-font(14px, 400, 12.25px);
             }
 
