@@ -68,4 +68,4 @@ const SinglGameN = ({ headTitle, date, time, comments}) => {
     );
 };
 
-export default SingleGameN;
+export default SinglGameN;
