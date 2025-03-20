@@ -105,9 +105,14 @@
         bottom: 8px;
         right: 13px;
         cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
 
         img{
-          display: block
+          display: block;
+          width: 100%;
+          height: auto;
         }
       }
     }
