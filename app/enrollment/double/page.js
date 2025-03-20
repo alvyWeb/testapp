@@ -1,5 +1,6 @@
 "use client";
 import "./double.scss";
+import "../modal.scss";
 import Link from "next/link";
 import Double from "@/components/modal/registration/double";
 import ModalDialog from "@/components/common/ModalDialog";
@@ -10,16 +11,14 @@ import { useContext, useState } from "react";
 
 export default function Home(props) {
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [modalType, setModalType] = useState("");
+  const [modalData, setModalData] = useState(null);
 
-  const handleModalOpen = (type) => {
-    setIsOpenModal(true);
-    setModalType(type);
+  const openModal = (data) => {
+    setModalData(data);
   };
 
-  const handleCloseModal = () => {
-    setIsOpenModal(false);
-    setModalType("");
+  const closeModal = () => {
+    setModalData(null);
   };
 
   const [selectedDate, setSelectedDate] = useState("");
@@ -301,9 +300,9 @@ export default function Home(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" href="" onClick={handleClick}>
-                    {item.buttontext}
-                </Link>
+                <button className="butn_ne" onClick={() => openModal(item)}>
+                      {item.buttontext}
+                </button>
               </div>
             </div>
           ))
@@ -312,10 +311,14 @@ export default function Home(props) {
         )}
       {/* ))} */}
       </div>
-      {isOpenModal && (
-        <ModalDialog onClose={handleCloseModal}>
-          <Double />
-        </ModalDialog>
+      {modalData && (
+        <div className="modal">
+          <div className="model-dialog">
+            <div className="modal-content">
+              <Double {...modalData} closeModal={closeModal} />
+            </div>
+          </div>
+        </div>
       )}
     </main>
   );

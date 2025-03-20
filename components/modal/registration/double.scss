@@ -32,6 +32,22 @@
                     }
                 }
             }
+
+            .closeButton{
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                cursor: pointer;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
         }
 
         .body{
