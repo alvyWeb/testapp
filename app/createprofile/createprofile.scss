@@ -86,6 +86,7 @@
       bottom: 70px;
       margin: auto;
       // overflow: hidden;
+      border: 10px solid #fff;
 
       :first-child {
         // object-fit: cover;
@@ -103,7 +104,7 @@
       .add-profile{
         position: absolute;
         bottom: 8px;
-        right: 13px;
+        right: 0;
         cursor: pointer;
         width: 30px;
         height: 30px;
