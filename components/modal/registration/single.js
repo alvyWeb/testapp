@@ -1,6 +1,6 @@
 import './single.scss';
 
-const SingleGameN = () => {
+const SinglGameN = ({ headTitle, date, time, comments}) => {
     return (
         <main>
             <div className="single_container">
