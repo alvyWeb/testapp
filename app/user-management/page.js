@@ -30,28 +30,28 @@ const userManagement = ({}) => {
           <thead>
             <tr>
               <th>
-                <span>אימייל</span>
-              </th>
-              <th>
-                <span>טלפון</span>
-              </th>
-              <th>
-                <span>כדורים</span>
-              </th>
-              <th>
-                <span>רמה</span>
-              </th>
-              <th>
-                <span>דירוג</span>
-              </th>
-              <th>
-                <span>קפטן</span>
+                <span>משתמשים</span>
               </th>
               <th>
                 <span>פעיל</span>
               </th>
               <th>
-                <span>משתמשים</span>
+                <span>קפטן</span>
+              </th>
+              <th>
+                <span>דירוג</span>
+              </th>
+              <th>
+                <span>רמה</span>
+              </th>
+              <th>
+                <span>כדורים</span>
+              </th>
+              <th>
+                <span>טלפון</span>
+              </th>
+              <th>
+                <span>אימייל</span>
               </th>
             </tr>
           </thead>
