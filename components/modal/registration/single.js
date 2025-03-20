@@ -1,4 +1,5 @@
 import './single.scss';
+import '././modal.scss';
 
 const SinglGameN = ({ headTitle, date, time, comments}) => {
     return (
