@@ -1,5 +1,6 @@
 "use client";
 import "./single.scss";
+import "../modal.scss";
 import Link from "next/link";
 import SinglGameN from "@/components/modal/registration/single";
 // import ModalDialog from "@/components/common/ModalDialog";
