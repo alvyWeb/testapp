@@ -64,7 +64,7 @@ const userManagement = ({}) => {
           <tbody>
             {[1, 2, 3, 4, 5, 6].map((item) => (
             <tr key={item}>
-              <td className="table-data user-data">
+              <td className="table-data user-data"  onClick={handleMyProfile}>
                 <span className="user-info">
                   <div className="user-imgs">
                     <img
@@ -80,7 +80,7 @@ const userManagement = ({}) => {
                   </div>
                 </span>
                 <p>פן נ. (פנתר)</p>
-                <span className="edit-pen" onClick={handleMyProfile}>
+                <span className="edit-pen">
                   <LuPenLine />
                 </span>
               </td>
