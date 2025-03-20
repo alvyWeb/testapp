@@ -149,13 +149,13 @@
     display: block !important;
 
     .container_head_body {
-      @include weight_height(fill, auto);
+      @include weight_height(100%, auto);
       .everything_main_body {
         border-radius: 8px;
         background: var(--item-bg);
 
-        @include weight_height(fill, auto);
-        @include item_flex(flex, row-reverse, center, space-between, 0px);
+        @include weight_height(100%, auto);
+        @include item_flex(flex, row-reverse, center, space-around, 0px);
 
         .f_team {
           @include item_flex(flex, row-reverse, center, normal, 10px);
