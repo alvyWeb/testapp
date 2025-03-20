@@ -126,6 +126,7 @@
 
           span {
             position: relative;
+            display: block;
 
             :first-child {
               padding: 2px;
@@ -133,12 +134,13 @@
               border-radius: 50%;
               border: 1px solid var(--item-color);
               @include weight_height(53px, 53px);
+              display: block;
             }
 
             :nth-child(2) {
               position: absolute;
-              bottom: 4px;
-              right: 8px;
+              bottom: 0px;
+              right: 0px;
               border-radius: 2px;
               @include weight_height(21px, 15.89px);
             }
@@ -184,6 +186,7 @@
           ._win {
             span {
               position: relative;
+              display: block;
 
               :first-child {
                 padding: 2px;
@@ -191,19 +194,20 @@
                 border-radius: 50%;
                 border: 1px solid var(--item-color);
                 @include weight_height(53px, 53px);
+                display: block;
               }
 
               :nth-child(2) {
                 position: absolute;
-                bottom: 4px;
-                right: 8px;
+                bottom: 0px;
+                right: 0px;
                 border-radius: 2px;
                 @include weight_height(21px, 15.89px);
               }
 
               :last-child {
                 position: absolute;
-                top: -48px;
+                top: 0px;
                 right: 2px;
                 border-radius: 2px;
                 @include weight_height(21px, 15.89px);
@@ -213,7 +217,7 @@
 
           ._name {
             color: var(--text-color);
-            @include item_flex(flex, row, center, normal, 4px);
+            @include item_flex(flex, row-reverse, center, normal, 4px);
             @include fix-font(14px, 400, 12.25px);
           }
 
