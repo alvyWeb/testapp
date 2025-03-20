@@ -65,6 +65,7 @@ const SinglGameN = ({ headTitle, date, time, comments}) => {
                 </div>
             </div>
         </main>
-    )
-}
+    );
+};
+
 export default SingleGameN;

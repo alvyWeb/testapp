@@ -2,7 +2,7 @@
 import "./single.scss";
 import Link from "next/link";
 import SingleGameN from "@/components/modal/registration/single";
-import ModalDialog from "@/components/common/ModalDialog";
+// import ModalDialog from "@/components/common/ModalDialog";
 import { useRouter } from "next/navigation";
 // import Cookies from "js-cookie";
 import { useContext, useState } from "react";
