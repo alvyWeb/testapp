@@ -30,6 +30,9 @@ const SingleGameN = () => {
                                 <p>26 הודעות</p>
                             </span>
                         </span>
+                        <div class="closeButton">
+                            <img className='closeImg' src="../../close.png" />
+                        </div>
                     </div>
                     <div className="body">
                         <div className="myteam">
