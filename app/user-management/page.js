@@ -57,69 +57,69 @@ const userManagement = ({}) => {
           </thead>
           <tbody>
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <tr key={item}>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <span>johndoe@gmail.com</span>
+            <tr key={item}>
+              <td className="table-data user-data">
+                <span className="user-info">
+                  <div className="user-imgs">
+                    <img
+                      className="user-img"
+                      src="/user-Image/a1.png"
+                      alt=""
+                    />
+                    <img
+                      src="./flags/br.png"
+                      alt=""
+                      className="country-img"
+                    />
                   </div>
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <span>0524876588</span>
-                  </div>
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <span className="edit-pen">
-                      <LuPenLine />
-                    </span>
-                    <span>1</span>
-                  </div>
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <span>1</span>
-                  </div> 
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <span className="edit-pen">
-                      <LuPenLine />
-                    </span>
-                    <span>#1</span>
-                  </div>
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <ToggleSwitch />
-                  </div>
-                </td>
-                <td className="table-data">
-                  <div className="dateInfo">
-                    <ToggleSwitch />
-                  </div>
-                </td>
-                <td className="table-data user-data">
-                  <span className="user-info">
-                    <div className="user-imgs">
-                      <img
-                        className="user-img"
-                        src="/user-Image/a1.png"
-                        alt=""
-                      />
-                      <img
-                        src="./flags/br.png"
-                        alt=""
-                        className="country-img"
-                      />
-                    </div>
-                  </span>
-                  <p>פן נ. (פנתר)</p>
+                </span>
+                <p>פן נ. (פנתר)</p>
+                <span className="edit-pen">
+                  <LuPenLine />
+                </span>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <ToggleSwitch />
+                </div>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <ToggleSwitch />
+                </div>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
                   <span className="edit-pen">
                     <LuPenLine />
                   </span>
-                </td>
-              </tr>
+                  <span>#1</span>
+                </div>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <span>1</span>
+                </div> 
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <span className="edit-pen">
+                    <LuPenLine />
+                  </span>
+                  <span>1</span>
+                </div>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <span>0524876588</span>
+                </div>
+              </td>
+              <td className="table-data">
+                <div className="dateInfo">
+                  <span>johndoe@gmail.com</span>
+                </div>
+              </td>
+            </tr> 
             ))}
           </tbody>
         </table>
