@@ -1,6 +1,6 @@
 import './single.scss';
 
-const SinglGameN = ({ headTitle, date, time, comments}) => {
+const SinglGameN = ({ headTitle, date, time, comments, closeModal}) => {
     return (
         <main>
             <div className="single_container">
@@ -30,7 +30,7 @@ const SinglGameN = ({ headTitle, date, time, comments}) => {
                                 <p>{comments}</p>
                             </span>
                         </span>
-                        <div class="closeButton">
+                        <div class="closeButton" onClick={closeModal}>
                             <img className='closeImg' src="../../close.png" />
                         </div>
                     </div>
