@@ -164,12 +164,15 @@
             @include item_flex(flex, column, center, normal, 4px);
             span {
               position: relative;
+              display: block;
+              
               :first-child {
                 padding: 2px;
                 object-fit: cover;
                 border-radius: 50%;
                 border: 1px solid var(--item-color);
                 @include weight_height(53px, 53px);
+                display: block;
               }
               :nth-child(2) {
                 position: absolute;
@@ -211,12 +214,15 @@
             ._win {
               span {
                 position: relative;
+                display: block;
+
                 :first-child {
                   padding: 2px;
                   object-fit: cover;
                   border-radius: 50%;
                   border: 1px solid var(--item-color);
                   @include weight_height(53px, 53px);
+                  display: block;
                 }
                 :nth-child(2) {
                   position: absolute;
