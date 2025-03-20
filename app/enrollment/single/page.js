@@ -10,16 +10,14 @@ import { useContext, useState } from "react";
 
 export default function SingleGame(props) {
   const [isOpenModal, setIsOpenModal] = useState(false);
-  const [modalType, setModalType] = useState("");
+  const [modalData, setModalData] = useState(null);
 
-  const handleModalOpen = (type) => {
-    setIsOpenModal(true);
-    setModalType(type);
+  const openModal = (data) => {
+    setModalData(data);
   };
 
-  const handleCloseModal = () => {
-    setIsOpenModal(false);
-    setModalType("");
+  const closeModal = () => {
+    setModalData(null);
   };
 
   const [selectedDate, setSelectedDate] = useState("");
@@ -260,9 +258,9 @@ export default function SingleGame(props) {
                     <p>{item.weather}</p>
                   </div>
                 </div>
-                <Link className="butn_ne" href="" onClick={handleClick}>
+                <button className="butn_ne" onClick={() => openModal({ ...Single[0] })}>
                     {item.buttontext}
-                </Link>
+                </button>
               </div>
             </div>
               ))
@@ -273,7 +271,7 @@ export default function SingleGame(props) {
       </div>
       {isOpenModal && (
         <ModalDialog onClose={handleCloseModal}>
-          <SingleGameN />
+          <SingleGameN {...modalData} closeModal={closeModal}/>
         </ModalDialog>
       )}
     </main>
