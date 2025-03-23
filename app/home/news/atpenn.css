@@ -30,6 +30,10 @@
     color: var(--color-light);
 }
 
+.shareC{
+    cursor: pointer;
+}
+
 .infoFlex{
     justify-content: start;
     padding: 0 15px 10px;

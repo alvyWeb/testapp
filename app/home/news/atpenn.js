@@ -58,6 +58,7 @@ const AtPennMessage = () => {
                 <div className="flex headerflex items-center justify-between text-gray-700">
                     <h2 className="text-lg font-semibold">{matchInfo.location}</h2>
                     <svg
+                        className="shareC"
                         width="18"
                         height="19"
                         viewBox="0 0 18 19"

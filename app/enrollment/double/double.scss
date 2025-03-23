@@ -104,6 +104,7 @@
           @include fix-font(16px, 400, 14px);
         }
         svg {
+          cursor: pointer;
           path {
             fill: var(--item-color);
           }
