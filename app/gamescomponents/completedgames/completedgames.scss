@@ -133,7 +133,7 @@
               object-fit: cover;
               border-radius: 50%;
               border: 1px solid var(--item-color);
-              @include weight_height(53px, 53px);
+              @include weight_height(57px, 57px);
               display: block;
             }
 
@@ -193,7 +193,7 @@
                 object-fit: cover;
                 border-radius: 50%;
                 border: 1px solid var(--item-color);
-                @include weight_height(53px, 53px);
+                @include weight_height(57px, 57px);
                 display: block;
               }
 
