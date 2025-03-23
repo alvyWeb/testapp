@@ -2,7 +2,7 @@ import './bettingboard.scss';
 import { useRouter } from "next/navigation";
 
 const Bettingboard = ({ standings, setStandings }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const betboard = [
     {
@@ -187,10 +187,10 @@ const Bettingboard = ({ standings, setStandings }) => {
     },
   ];
 
-  const handleMyProfile = () => {
-    // Navigate to the profile page when the avatar is clicked
-    router.push("/propyl");
-  };
+  // const handleMyProfile = () => {
+  //   // Navigate to the profile page when the avatar is clicked
+  //   router.push("/propyl");
+  // };
   return (
     <main>
       <div className="bettingboard_container">
