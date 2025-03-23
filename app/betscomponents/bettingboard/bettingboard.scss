@@ -45,16 +45,13 @@
 
             }
 
-            .tableData{
-                cursor: pointer;
-            }
-
             .profile{
                 display: flex;
                 justify-content: start;
                 align-items: center;
                 gap: 5px;
                 min-width: 100px;
+                cursor: pointer;
                 
                 .profileImage{
                     position: relative;
