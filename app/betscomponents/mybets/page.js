@@ -1,15 +1,24 @@
+"use client";
 import "./mybets.scss";
+import { useRouter } from "next/navigation";
 
 const Mybets = ({ standings, setStandings }) => {
+  const router = useRouter();
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   const myBets = {
     mainContainer: [
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
         edit: "עריכה",
-        fPlayerImg: "./user-Image/g3.png",
-        fPCountry: "./flags/br.png",
-        sPlayerImg: "./user-Image/g4.png",
-        sPCountry: "./flags/br.png",
+        fPlayerImg: "../user-Image/g3.png",
+        fPCountry: "../flags/br.png",
+        sPlayerImg: "../user-Image/g4.png",
+        sPCountry: "../flags/br.png",
         fPlayerName: "פן נ. (פנתר)",
         sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
@@ -28,10 +37,10 @@ const Mybets = ({ standings, setStandings }) => {
         ),
         nTeam: "פן נ. (פנתר)",
         lTeam: "וגורן ש. (קשה)",
-        nTeamImg: "./user-Image/g3.png",
-        nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/g4.png",
-        aTeamCountry: "./flags/br.png",
+        nTeamImg: "../user-Image/g3.png",
+        nTeamCountry: "../flags/br.png",
+        aTeamImg: "../user-Image/g4.png",
+        aTeamCountry: "../flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -42,10 +51,10 @@ const Mybets = ({ standings, setStandings }) => {
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
         edit: "עריכה",
-        fPlayerImg: "./user-Image/g3.png",
-        fPCountry: "./flags/br.png",
-        sPlayerImg: "./user-Image/g4.png",
-        sPCountry: "./flags/br.png",
+        fPlayerImg: "../user-Image/g3.png",
+        fPCountry: "../flags/br.png",
+        sPlayerImg: "../user-Image/g4.png",
+        sPCountry: "../flags/br.png",
         fPlayerName: "פן נ. (פנתר)",
         sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
@@ -64,10 +73,10 @@ const Mybets = ({ standings, setStandings }) => {
         ),
         nTeam: "פן נ. (פנתר)",
         lTeam: "וגורן ש. (קשה)",
-        nTeamImg: "./user-Image/g3.png",
-        nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/g4.png",
-        aTeamCountry: "./flags/br.png",
+        nTeamImg: "../user-Image/g3.png",
+        nTeamCountry: "../flags/br.png",
+        aTeamImg: "../user-Image/g4.png",
+        aTeamCountry: "../flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -80,10 +89,10 @@ const Mybets = ({ standings, setStandings }) => {
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
         edit: "עריכה",
-        fPlayerImg: "./user-Image/g3.png",
-        fPCountry: "./flags/br.png",
-        sPlayerImg: "./user-Image/g4.png",
-        sPCountry: "./flags/br.png",
+        fPlayerImg: "../user-Image/g3.png",
+        fPCountry: "../flags/br.png",
+        sPlayerImg: "../user-Image/g4.png",
+        sPCountry: "../flags/br.png",
         fPlayerName: "פן נ. (פנתר)",
         sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
@@ -102,10 +111,10 @@ const Mybets = ({ standings, setStandings }) => {
         ),
         nTeam: "פן נ. (פנתר)",
         lTeam: "וגורן ש. (קשה)",
-        nTeamImg: "./user-Image/g3.png",
-        nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/g4.png",
-        aTeamCountry: "./flags/br.png",
+        nTeamImg: "../user-Image/g3.png",
+        nTeamCountry: "../flags/br.png",
+        aTeamImg: "../user-Image/g4.png",
+        aTeamCountry: "../flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -118,10 +127,10 @@ const Mybets = ({ standings, setStandings }) => {
       {
         headTitle: "24 בפברואר, פארק הירקון - תל אביב | 14:00",
         edit: "עריכה",
-        fPlayerImg: "./user-Image/g3.png",
-        fPCountry: "./flags/br.png",
-        sPlayerImg: "./user-Image/g4.png",
-        sPCountry: "./flags/br.png",
+        fPlayerImg: "../user-Image/g3.png",
+        fPCountry: "../flags/br.png",
+        sPlayerImg: "../user-Image/g4.png",
+        sPCountry: "../flags/br.png",
         fPlayerName: "פן נ. (פנתר)",
         sPlayerName: "וגורן ש. (קשה)",
         gameProcessing: (
@@ -140,10 +149,10 @@ const Mybets = ({ standings, setStandings }) => {
         ),
         nTeam: "פן נ. (פנתר)",
         lTeam: "וגורן ש. (קשה)",
-        nTeamImg: "./user-Image/g3.png",
-        nTeamCountry: "./flags/br.png",
-        aTeamImg: "./user-Image/g4.png",
-        aTeamCountry: "./flags/br.png",
+        nTeamImg: "../user-Image/g3.png",
+        nTeamCountry: "../flags/br.png",
+        aTeamImg: "../user-Image/g4.png",
+        aTeamCountry: "../flags/br.png",
         increase: "38%",
         decrease: "12%",
         winRate: "1.62",
@@ -165,11 +174,11 @@ const Mybets = ({ standings, setStandings }) => {
             <div className="body_head">
               <div className="fteam">
                 <div className="fteam_img">
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.fPlayerImg} alt="" />
                     <img src={item.fPCountry} alt="" className="country" />
                   </span>
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.sPlayerImg} alt="" />
                     <img src={item.sPCountry} alt="" className="country" />
                   </span>
@@ -189,11 +198,11 @@ const Mybets = ({ standings, setStandings }) => {
                   <p>{item.lTeam}</p>
                 </div>
                 <div className="fteam_img">
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.nTeamImg} alt="" />
                     <img src={item.nTeamCountry} alt="" className="country" />
                   </span>
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.aTeamImg} alt="" />
                     <img src={item.aTeamCountry} alt="" className="country" />
                   </span>
@@ -360,11 +369,11 @@ const Mybets = ({ standings, setStandings }) => {
             <div className="body_head">
               <div className="fteam">
                 <div className="fteam_img">
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.fPlayerImg} alt="" />
                     <img src={item.fPCountry} alt="" className="country" />
                   </span>
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.sPlayerImg} alt="" />
                     <img src={item.sPCountry} alt="" className="country" />
                   </span>
@@ -384,11 +393,11 @@ const Mybets = ({ standings, setStandings }) => {
                   <p>{item.lTeam}</p>
                 </div>
                 <div className="fteam_img">
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.aTeamImg} alt="" />
                     <img src={item.aTeamCountry} alt="" className="country" />
                   </span>
-                  <span className="img_country">
+                  <span className="img_country" onClick={handleMyProfile}>
                     <img src={item.nTeamImg} alt="" />
                     <img src={item.nTeamCountry} alt="" className="country" />
                   </span>
