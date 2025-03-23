@@ -234,7 +234,7 @@ const Bettingboard = ({ standings, setStandings }) => {
           { betboard.map((item) => (
             <tr>
               <td className='tableData'>
-                <div className="profile" onClick={handleMyProfile}>
+                <div className="profile">
                   <div className="profileImage">
                     <img className='photo' src={item.profileImg} alt="" />
                     <img src={item.country} alt="" className='country' />
