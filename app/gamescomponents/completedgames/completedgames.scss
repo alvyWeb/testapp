@@ -44,7 +44,7 @@
       border-bottom: none;
       box-sizing: border-box;
       @include weight_height(100%, auto);
-      @include content_padd(14px, 12px, 12px, 20px);
+      @include content_padd(16px, 12px, 12px, 20px);
       @include item_flex(flex, column, normal, normal, 8px);
 
       .head_body {
