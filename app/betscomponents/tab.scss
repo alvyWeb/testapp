@@ -1,7 +1,7 @@
 .resultcontainer1 {
   width: 100%;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding: 0;
   margin: 0;
 
@@ -17,7 +17,7 @@
     top: 0;
     padding: 20px 0 30px;
     margin: 0;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-bottom: none;
     z-index: 99;
     
@@ -26,8 +26,7 @@
       height: 40px;
       border: 0px solid var(--bg-color);
       border-bottom: 1px solid lightgray;
-      // background-color: var(--bg-color);
-      background-color: #fff;
+      background-color: var(--bg-color);
       padding: 0;
       margin: 0;
       font-size: 16px;
