@@ -35,9 +35,9 @@ const CreateProfile = ({ standings, setStandings }) => {
   const [profileImg, setProfileImg] = useState("");
   const [coverImg, setCoverImg] = useState("");
   const [previewProfile, setPreviewProfile] = useState(
-    "./user-Image/pUser.png"
+    "../user-Image/pUser.png"
   );
-  const [coverPreview, setCoverPreview] = useState("./bgN.png");
+  const [coverPreview, setCoverPreview] = useState("../bgN.png");
 
   const handleInput = (e) => {
     setUser({
@@ -128,7 +128,7 @@ const CreateProfile = ({ standings, setStandings }) => {
                   document.getElementById("fileInputCover").click()
                 }
               >
-                <img src="./addS.png" alt="Add Cover" />
+                <img src="../addS.png" alt="Add Cover" />
                 <input
                   type="file"
                   id="fileInputCover"
@@ -148,7 +148,7 @@ const CreateProfile = ({ standings, setStandings }) => {
               }
               className="add-profile"
             >
-              <img src="./addS.png" alt="" />
+              <img src="../addS.png" alt="" />
               <input
                 type="file"
                 id="fileInputProfile"
