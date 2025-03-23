@@ -159,6 +159,7 @@ const Upcoming = ({ standings, setStandings }) => {
                 <div className="container_top_head">
                   <p>{item.squadTitle}</p>
                   <svg
+                    className="shareI"
                     width="18"
                     height="19"
                     viewBox="0 0 18 19"

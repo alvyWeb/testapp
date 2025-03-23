@@ -34,7 +34,7 @@ const TabComponent = () => {
   });
 
   return (
-    <div className="resultcontainer" {...handlers}>
+    <div className="resultcontainer1" {...handlers}>
       <nav className="betTabNav">
         <button
           id={
