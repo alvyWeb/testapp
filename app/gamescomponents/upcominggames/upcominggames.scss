@@ -162,9 +162,11 @@
 
           ._player {
             @include item_flex(flex, column, center, normal, 4px);
+
             span {
               position: relative;
               display: block;
+              cursor: pointer;
 
               :first-child {
                 padding: 2px;
@@ -215,6 +217,7 @@
               span {
                 position: relative;
                 display: block;
+                cursor: pointer;
 
                 :first-child {
                   padding: 2px;

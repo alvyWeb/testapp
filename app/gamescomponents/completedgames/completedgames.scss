@@ -127,6 +127,7 @@
           span {
             position: relative;
             display: block;
+            cursor: pointer;
 
             :first-child {
               padding: 2px;
@@ -187,6 +188,7 @@
             span {
               position: relative;
               display: block;
+              cursor: pointer;
 
               :first-child {
                 padding: 2px;
@@ -231,29 +233,29 @@
   }
 }
 
-@media (max-width: 400px) {
-  .everything_conatiner {
-    @include weight_height(340px, auto);
+// @media (max-width: 400px) {
+//   .everything_conatiner {
+//     @include weight_height(340px, auto);
 
-    ._player {
-      span {
-        :first-child {
-          @include weight_height(40px !important, 40px !important);
-        }
-        :nth-child(2) {
-          position: absolute;
-          @include weight_height(15px !important, 12px !important);
-        }
-      }
-      ._win {
-        span {
-          :last-child {
-            position: absolute;
-            top: -34px !important;
-            @include weight_height(21px, 15.89px);
-          }
-        }
-      }
-    }
-  }
-}
+//     ._player {
+//       span {
+//         :first-child {
+//           @include weight_height(40px !important, 40px !important);
+//         }
+//         :nth-child(2) {
+//           position: absolute;
+//           @include weight_height(15px !important, 12px !important);
+//         }
+//       }
+//       ._win {
+//         span {
+//           :last-child {
+//             position: absolute;
+//             top: -34px !important;
+//             @include weight_height(21px, 15.89px);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
