@@ -180,6 +180,7 @@
             border-radius: 50%;
             padding: 2px;
             display: block;
+            cursor: pointer;
 
             :first-child {
               object-fit: cover;
@@ -221,6 +222,7 @@
             border-radius: 50%;
             padding: 2px;
             display: block;
+            cursor: pointer;
 
             :first-child {
               object-fit: cover;
@@ -253,6 +255,7 @@
 
       span {
         position: relative;
+        cursor: pointer;
 
         p {
           position: absolute;
@@ -278,6 +281,7 @@
             @include weight_height(57px, 57px);
             // @include weight_height(51.57px, 51.57px);
             @include item_flex(flex, column, center, center, 0px);
+            cursor: pointer;
           }
 
           ._name {
