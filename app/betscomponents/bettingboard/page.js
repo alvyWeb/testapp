@@ -1,10 +1,18 @@
 import './bettingboard.scss';
+import { useRouter } from "next/navigation";
 
 const Bettingboard = ({ standings, setStandings }) => {
+  const router = useRouter();
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   const betboard = [
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -12,8 +20,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -21,8 +29,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -30,8 +38,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -39,8 +47,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -48,8 +56,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -57,8 +65,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -66,8 +74,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -75,8 +83,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -84,8 +92,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -93,8 +101,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -102,8 +110,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -111,8 +119,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -120,8 +128,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -129,8 +137,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -138,8 +146,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -147,8 +155,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -156,8 +164,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -165,8 +173,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -174,8 +182,8 @@ const Bettingboard = ({ standings, setStandings }) => {
       "open": "50000"
     },
     {
-      "profileImg": "./user-Image/a1.png",
-      "country": "./flags/br.png",
+      "profileImg": "../user-Image/a1.png",
+      "country": "../flags/br.png",
       "name": "פן נ. (פנתר)",
       "money": "1000000",
       "toffee": "35",
@@ -225,7 +233,7 @@ const Bettingboard = ({ standings, setStandings }) => {
           <tbody>
           { betboard.map((item) => (
             <tr>
-              <td className='tableData'>
+              <td className='tableData' onClick={handleMyProfile}>
                 <div className="profile">
                   <div className="profileImage">
                     <img className='photo' src={item.profileImg} alt="" />
