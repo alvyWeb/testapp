@@ -62,14 +62,15 @@
               img {
                 border-radius: 50%;
                 @include weight_height(29px, 29px);
+                display: block;
               }
   
               img.country {
                 position: absolute;
-                top: 16px;
+                bottom: 0px;
                 right: 2px;
                 border-radius: 2px;
-                @include weight_height(8.18px, 6.19px);
+                @include weight_height(10px, auto);
               }
             }
           }
@@ -122,14 +123,15 @@
               img {
                 border-radius: 50%;
                 @include weight_height(29px, 29px);
+                display: block;
               }
   
               img.country {
                 position: absolute;
-                top: 16px;
+                bottom: 0px;
                 right: 2px;
                 border-radius: 2px;
-                @include weight_height(8.18px, 6.19px);
+                @include weight_height(10px, auto);
               }
             }
           }
