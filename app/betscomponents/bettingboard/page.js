@@ -4,11 +4,6 @@ import { useRouter } from "next/navigation";
 const Bettingboard = ({ standings, setStandings }) => {
   const router = useRouter();
 
-  const handleMyProfile = () => {
-    // Navigate to the profile page when the avatar is clicked
-    router.push("/propyl");
-  };
-
   const betboard = [
     {
       "profileImg": "../user-Image/a1.png",
@@ -190,7 +185,12 @@ const Bettingboard = ({ standings, setStandings }) => {
       "dLike": "35",
       "open": "50000"
     },
-  ]
+  ];
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
   return (
     <main>
       <div className="bettingboard_container">
