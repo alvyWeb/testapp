@@ -38,7 +38,7 @@
 
   .profile_d {
     @include block_display(20px);
-    max-width: 300px;
+    max-width: calc(100% - 40px);
     width: 100%;
     padding: 0;
     position: relative;
