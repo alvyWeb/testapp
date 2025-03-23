@@ -1,7 +1,16 @@
+"use client";
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import "./rank.scss";
 export default function Home() {
+  const router = useRouter();
+
+  const handleMyProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/propyl");
+  };
+
   const rankList = [
     {
       lavel: "1",
@@ -12,8 +21,8 @@ export default function Home() {
       ball: "50",
       score: "1",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "2",
@@ -24,8 +33,8 @@ export default function Home() {
       ball: "50",
       score: "2",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "3",
@@ -36,8 +45,8 @@ export default function Home() {
       ball: "50",
       score: "3",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "4",
@@ -48,8 +57,8 @@ export default function Home() {
       ball: "50",
       score: "4",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "5",
@@ -60,8 +69,8 @@ export default function Home() {
       ball: "50",
       score: "5",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "6",
@@ -72,8 +81,8 @@ export default function Home() {
       ball: "50",
       score: "6",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "7",
@@ -84,8 +93,8 @@ export default function Home() {
       ball: "50",
       score: "7",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "8",
@@ -96,8 +105,8 @@ export default function Home() {
       ball: "50",
       score: "8",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "9",
@@ -108,8 +117,8 @@ export default function Home() {
       ball: "50",
       score: "9",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "10",
@@ -120,8 +129,8 @@ export default function Home() {
       ball: "50",
       score: "10",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "11",
@@ -132,8 +141,8 @@ export default function Home() {
       ball: "50",
       score: "11",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "12",
@@ -144,8 +153,8 @@ export default function Home() {
       ball: "50",
       score: "12",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "13",
@@ -156,8 +165,8 @@ export default function Home() {
       ball: "50",
       score: "13",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "14",
@@ -168,8 +177,8 @@ export default function Home() {
       ball: "50",
       score: "14",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "15",
@@ -180,8 +189,8 @@ export default function Home() {
       ball: "50",
       score: "15",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
     {
       lavel: "16",
@@ -192,8 +201,8 @@ export default function Home() {
       ball: "50",
       score: "16",
       playerName: "פן נ. (פנתר)",
-      playerImg: "./user-Image/a1.png",
-      playerCountry: "./flags/br.png",
+      playerImg: "../user-Image/a1.png",
+      playerCountry: "../flags/br.png",
     },
   ];
   return (
@@ -297,7 +306,7 @@ export default function Home() {
             {rankList.map((item) => (
               <tr>
                 <td className="dataitems">
-                  <div className="profile">
+                  <div className="profile" onClick={handleMyProfile}>
                     <div className="profileImage">
                       <img className='photo' src={item.playerImg} alt="" />
                       <img src={item.playerCountry} alt="" className='country' />
