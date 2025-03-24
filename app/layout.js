@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
     const path = window.location.pathname;
     const hash = window.location.hash;
 
-    if (hash === "#0" || path === "/login" || path === "/registerTab") {
+    if (path === "/login" || path === "/registerTab") {
       setShowProfileHeader(false);
     } else {
       setShowProfileHeader(true);
@@ -94,7 +94,6 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <AnimatePresence mode="wait">
     <html lang="en">
       <head>
         <title>ATPenn</title>
@@ -168,6 +167,5 @@ export default function RootLayout({ children }) {
         </MainProvider>
       </body>
     </html>
-    </AnimatePresence>
   );
 }
