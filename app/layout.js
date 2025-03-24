@@ -83,14 +83,12 @@ export default function RootLayout({ children }) {
   const [showProfileHeader, setShowProfileHeader] = useState(true);
 
   useEffect(() => {
-    const path = window.location.pathname;
-    
-    if (path === "/login" || path === "/registerTab") {
+    if (pathname === "/login" || pathname === "/registerTab") {
       setShowProfileHeader(false);
     } else {
       setShowProfileHeader(true);
     }
-  }, []);
+  }, [pathname]);
 
   return (
     <html lang="en">
