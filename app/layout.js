@@ -17,6 +17,7 @@ import styles from "../styles/layouts/Layout.module.scss";
 import "./global.css";
 import "./layout.css";
 
+
 const rubik = Rubik({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -79,11 +80,11 @@ export default function RootLayout({ children }) {
     );
   }, [dark]);
 
-  const showProfileHeader = user && !["/login", "/registerTab"].includes(pathname);
+  const [showProfileHeader, setShowProfileHeader] = useState(true);
 
   useEffect(() => {
     const path = window.location.pathname;
-
+    
     if (path === "/login" || path === "/registerTab") {
       setShowProfileHeader(false);
     } else {
