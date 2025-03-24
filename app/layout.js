@@ -16,7 +16,6 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/layouts/Layout.module.scss";
 import "./global.css";
 import "./layout.css";
-import { AnimatePresence, motion } from "framer-motion";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -80,11 +79,10 @@ export default function RootLayout({ children }) {
     );
   }, [dark]);
 
-  const [showProfileHeader, setShowProfileHeader] = useState(true);
+  const showProfileHeader = user && !["/login", "/registerTab"].includes(pathname);
 
   useEffect(() => {
     const path = window.location.pathname;
-    const hash = window.location.hash;
 
     if (path === "/login" || path === "/registerTab") {
       setShowProfileHeader(false);
