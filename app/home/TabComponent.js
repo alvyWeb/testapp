@@ -1,4 +1,5 @@
 "use client";
+import ProtectedRoute from "@/components/common/ProtectedRoute";
 import useNews from "@/api/useNews";
 import useRanks from "@/api/useRanks";
 import useTournaments from "@/api/useTournaments";
@@ -34,12 +35,14 @@ const TabComponent = () => {
   // }, [activeSection]);
 
   return (
-    <div className="container">
-      <div className="sectionActive">
-        <News newsData={newsData} />
+    <ProtectedRoute>
+      <div className="container">
+        <div className="sectionActive">
+          <News newsData={newsData} />
+        </div>
+        <SystemMessage />
       </div>
-      <SystemMessage />
-    </div>
+    </ProtectedRoute>
   );
 };
 

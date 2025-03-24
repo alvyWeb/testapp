@@ -206,7 +206,7 @@ export default function Home() {
     },
   ];
   return (
-    // <ProtectedRoute>
+    <ProtectedRoute>
       <main>
         <div className="rank_container">
           <table className="table-container">
@@ -355,6 +355,6 @@ export default function Home() {
           </table>
         </div>
       </main>
-    // </ProtectedRoute>
+    </ProtectedRoute>
   );
 }
