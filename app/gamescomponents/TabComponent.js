@@ -37,7 +37,7 @@ const TabComponent = () => {
       <nav>
         <button
           id={
-            activeSection === "section1" ? "worldbuttoonActive" : "worldbuttoon"
+            activeSection === "section1" ? "worldbuttoonActive1" : "worldbuttoon"
           }
           onClick={() => handleNavClick("section1")}
         >
@@ -45,7 +45,7 @@ const TabComponent = () => {
         </button>
         <button
           id={
-            activeSection === "section2" ? "worldbuttoonActive" : "worldbuttoon"
+            activeSection === "section2" ? "worldbuttoonActive1" : "worldbuttoon"
           }
           onClick={() => handleNavClick("section2")}
         >
