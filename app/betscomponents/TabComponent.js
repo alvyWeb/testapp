@@ -38,7 +38,7 @@ const TabComponent = () => {
       <nav className="betTabNav">
         <button
           id={
-            activeSection === "section2" ? "worldbuttoonActive" : "worldbuttoon"
+            activeSection === "section2" ? "worldbuttoonActive2" : "worldbuttoon"
           }
           onClick={() => handleNavClick("section2")}
         >
@@ -46,7 +46,7 @@ const TabComponent = () => {
         </button>
         <button
           id={
-            activeSection === "section1" ? "worldbuttoonActive" : "worldbuttoon"
+            activeSection === "section1" ? "worldbuttoonActive2" : "worldbuttoon"
           }
           onClick={() => handleNavClick("section1")}
         >
