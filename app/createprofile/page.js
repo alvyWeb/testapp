@@ -4,6 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useContext, useState } from "react";
 import "./createprofile.scss";
+
 const CreateProfile = ({ standings, setStandings }) => {
   const router = useRouter();
   const {

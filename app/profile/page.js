@@ -181,7 +181,7 @@ const Profile = ({ standings, setStandings }) => {
     <>
       <div className="profile_container">
         <div className="cover_img">
-          <img src="./profile/png/cover.png" alt="" />
+          <img src="../profile/png/cover.png" alt="" />
           <div className="cover_d" onClick={() => window.history.back()}>
             <svg
               width="14"
@@ -204,7 +204,7 @@ const Profile = ({ standings, setStandings }) => {
         </div>
         <div className="profile_d">
           <div className="profileIntro">
-            <img src={`${avatar ?? "./user-Image/profileN.png"}`} alt="" />
+            <img src={`${avatar ?? "../user-Image/profileN.png"}`} alt="" />
             <p>
               {firstName || lastName ? `${firstName || ""} ${lastName || ""}`.trim() : "נועם פן"}
             </p>
