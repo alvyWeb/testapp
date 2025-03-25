@@ -62,7 +62,7 @@ const Register = ({ standins, setStandings }) => {
               type="email"
               id="email"
               className="input_area _email"
-              placeholder="Tal.ashkenazi1@gmail.com"
+              placeholder="הזן את המייל שלך"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
