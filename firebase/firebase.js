@@ -21,7 +21,7 @@ const registerWithEmailAndPassword = async (email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    toast.success("Signup successful");
+    toast.success("ההרשמה הצליחה");
     return user;
   } catch (error) {
     toast.warn(error?.message);
@@ -32,7 +32,7 @@ const registerWithEmailAndPassword = async (email, password) => {
 const loginWithEmailAndPassword = async (email, password) => {
   try {
     const response = await signInWithEmailAndPassword(auth, email, password);
-    toast.success("Login successful");
+    toast.success("הכניסה מוצלחת");
     return response;
   } catch (error) {
     toast.warn(error?.message);
