@@ -11,11 +11,11 @@ const CreateProfile = ({ standings, setStandings }) => {
     user: { data },
   } = useContext(MainContext);
 
-  useEffect(() => {
-    if (!user?.data?.uid) {
-      router.push("/login");
-    }
-  }, [user, router]);
+  // useEffect(() => {
+  //   if (!user?.data?.uid) {
+  //     router.push("/login");
+  //   }
+  // }, [user, router]);
 
 
   const handleProfile = () => {
@@ -110,7 +110,7 @@ const CreateProfile = ({ standings, setStandings }) => {
 
   const handleSubmit = async (event) => { 
     event.preventDefault();
-    
+
     const firestoreData = {
       fields: {
         id: { stringValue: userData.id },
