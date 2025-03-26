@@ -84,7 +84,8 @@ const CreateProfile = ({ standings, setStandings }) => {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
+        "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
+        // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
         formData,
         {
           headers: {
