@@ -1,9 +1,8 @@
 "use client";
-import { getAuth } from "firebase/auth";
 import { MainContext } from "@/context";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import "./createprofile.scss";
 
 const CreateProfile = ({ standings, setStandings }) => {
@@ -12,10 +11,12 @@ const CreateProfile = ({ standings, setStandings }) => {
     user: { data },
   } = useContext(MainContext);
 
-  const auth = getAuth();
-  if (!auth.currentUser) {
-    console.error("User not logged in!");
-  }
+  useEffect(() => {
+    if (!user?.data?.uid) {
+      router.push("/login");
+    }
+  }, [user, router]);
+
 
   const handleProfile = () => {
     // Navigate to the profile page when the avatar is clicked
