@@ -12,11 +12,11 @@ const CreateProfile = ({ standings, setStandings }) => {
   } = useContext(MainContext);
 
   // Redirect if user is not authenticated
-  useEffect(() => {
-    if (!user?.data?.uid) {
-      router.push("/login");
-    }
-  }, [user, router]);
+  // useEffect(() => {
+  //   if (!user?.data?.uid) {
+  //     router.push("/login");
+  //   }
+  // }, [user, router]);
 
 
   const handleProfile = () => {
