@@ -131,7 +131,7 @@ const CreateProfile = ({ standings, setStandings }) => {
     console.log("Server Response:", response.data);
   } catch (error) {
     console.error("Firestore Error:", error.response?.data || error.message);
-  }
+  };
   
 
   return (
