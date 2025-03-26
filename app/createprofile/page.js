@@ -110,6 +110,7 @@ const CreateProfile = ({ standings, setStandings }) => {
 
   const handleSubmit = async (event) => { 
     event.preventDefault();
+    
     const firestoreData = {
       fields: {
         id: { stringValue: userData.id },
