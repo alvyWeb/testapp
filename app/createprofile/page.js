@@ -39,7 +39,7 @@ const CreateProfile = ({ standings, setStandings }) => {
     role: "user",
   };
 
-  const [user, setUser] = useState(initialUser);
+  const [userData, setUser] = useState(initialUser);
   const [profileImg, setProfileImg] = useState("");
   const [coverImg, setCoverImg] = useState("");
   const [previewProfile, setPreviewProfile] = useState(
