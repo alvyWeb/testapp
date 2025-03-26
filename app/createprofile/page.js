@@ -64,42 +64,75 @@ const CreateProfile = ({ standings, setStandings }) => {
     }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault();
 
-    const formData = new FormData();
-    formData.append("id", user.id);
-    formData.append("fullName", user.fullName);
-    formData.append("nickName", user.nickName);
-    formData.append("birthday", user.birthday);
-    formData.append("email", user.email);
-    formData.append("country", user.country);
-    formData.append("city", user.city);
-    formData.append("height", user.height);
-    formData.append("strongHand", user.strongHand);
-    formData.append("backhand", user.backhand);
-    formData.append("role", user.role);
-    formData.append("profileImg", profileImg);
-    formData.append("coverImg", coverImg);
+  //   const formData = new FormData();
+  //   formData.append("id", user.id);
+  //   formData.append("fullName", user.fullName);
+  //   formData.append("nickName", user.nickName);
+  //   formData.append("birthday", user.birthday);
+  //   formData.append("email", user.email);
+  //   formData.append("country", user.country);
+  //   formData.append("city", user.city);
+  //   formData.append("height", user.height);
+  //   formData.append("strongHand", user.strongHand);
+  //   formData.append("backhand", user.backhand);
+  //   formData.append("role", user.role);
+  //   formData.append("profileImg", profileImg);
+  //   formData.append("coverImg", coverImg);
 
-    try {
-      const response = await axios.post(
-        "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
-        // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+  //   try {
+  //     const response = await axios.post(
+  //       "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
+  //       // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
+  //       formData,
+  //       {
+  //         headers: {
+  //           "Content-Type": "multipart/form-data",
+  //         },
+  //       }
+  //     );
 
-      console.log("Server Response:", response.data);
-    } catch (error) {
-      // nothing
-      console.log(error);
-    }
+  //     console.log("Server Response:", response.data);
+  //   } catch (error) {
+  //     // nothing
+  //     console.log(error);
+  //   }
+  // };
+
+  const firestoreData = {
+    fields: {
+      id: { stringValue: user.id },
+      fullName: { stringValue: user.fullName },
+      nickName: { stringValue: user.nickName },
+      birthday: { stringValue: user.birthday },
+      email: { stringValue: user.email },
+      country: { stringValue: user.country },
+      city: { stringValue: user.city },
+      height: { stringValue: user.height },
+      strongHand: { stringValue: user.strongHand },
+      backhand: { stringValue: user.backhand },
+      role: { stringValue: user.role },
+    },
   };
+  
+  try {
+    const response = await axios.post(
+      "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
+      firestoreData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+  
+    console.log("Server Response:", response.data);
+  } catch (error) {
+    console.error("Firestore Error:", error.response?.data || error.message);
+  }
+  
 
   return (
     <form onSubmit={handleSubmit}>
