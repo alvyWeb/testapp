@@ -112,19 +112,34 @@ const CreateProfile = ({ standings, setStandings }) => {
     event.preventDefault();
     const firestoreData = {
       fields: {
-        id: { stringValue: user.id },
-        fullName: { stringValue: user.fullName },
-        nickName: { stringValue: user.nickName },
-        birthday: { stringValue: user.birthday },
-        email: { stringValue: user.email },
-        country: { stringValue: user.country },
-        city: { stringValue: user.city },
-        height: { stringValue: user.height },
-        strongHand: { stringValue: user.strongHand },
-        backhand: { stringValue: user.backhand },
-        role: { stringValue: user.role },
+        id: { stringValue: userData.id },
+        metadata: {
+          mapValue: {
+            fields: {
+              createdAt: { timestampValue: new Date().toISOString() },
+              updatedAt: { timestampValue: new Date().toISOString() },
+            },
+          },
+        },
+        schemaVersion: { stringValue: "1.0" }, // Change version as needed
+        UserInfo: {
+          mapValue: {
+            fields: {
+              avatar: { stringValue: previewProfile }, // URL of profile image
+              backhandStyle: { stringValue: userData.backhand },
+              city: { stringValue: userData.city },
+              country: { stringValue: userData.country },
+              dateOfBirth: { stringValue: userData.birthday },
+              firstName: { stringValue: userData.fullName.split(" ")[0] || "" },
+              lastName: { stringValue: userData.fullName.split(" ")[1] || "" },
+              height: { stringValue: userData.height },
+              sex: { stringValue: userData.sex || "unspecified" }, // Default to 'unspecified' if not provided
+            },
+          },
+        },
       },
     };
+    
     
     try {
       const response = await axios.post(
