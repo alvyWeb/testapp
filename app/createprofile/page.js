@@ -11,7 +11,6 @@ const CreateProfile = ({ standings, setStandings }) => {
     user: { data },
   } = useContext(MainContext);
 
-  // Redirect if user is not authenticated
   // useEffect(() => {
   //   if (!user?.data?.uid) {
   //     router.push("/login");
@@ -25,13 +24,13 @@ const CreateProfile = ({ standings, setStandings }) => {
   };
 
   const initialUser = {
-    id: user?.data?.uid || "",
-    fullName: user?.data?.displayName || "",
+    id: data?.uid,
+    fullName: data?.displayName,
     nickName: "",
     birthday: "",
     avatar: "",
     coverImg: "",
-    email: user?.data?.email || "",
+    email: data?.email,
     country: "",
     city: "",
     height: "",
