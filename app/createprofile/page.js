@@ -101,36 +101,39 @@ const CreateProfile = ({ standings, setStandings }) => {
   //   }
   // };
 
-  const firestoreData = {
-    fields: {
-      id: { stringValue: user.id },
-      fullName: { stringValue: user.fullName },
-      nickName: { stringValue: user.nickName },
-      birthday: { stringValue: user.birthday },
-      email: { stringValue: user.email },
-      country: { stringValue: user.country },
-      city: { stringValue: user.city },
-      height: { stringValue: user.height },
-      strongHand: { stringValue: user.strongHand },
-      backhand: { stringValue: user.backhand },
-      role: { stringValue: user.role },
-    },
-  };
-  
-  try {
-    const response = await axios.post(
-      "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
-      firestoreData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-  
-    console.log("Server Response:", response.data);
-  } catch (error) {
-    console.error("Firestore Error:", error.response?.data || error.message);
+  const handleSubmit = async (event) => { 
+    event.preventDefault();
+    const firestoreData = {
+      fields: {
+        id: { stringValue: user.id },
+        fullName: { stringValue: user.fullName },
+        nickName: { stringValue: user.nickName },
+        birthday: { stringValue: user.birthday },
+        email: { stringValue: user.email },
+        country: { stringValue: user.country },
+        city: { stringValue: user.city },
+        height: { stringValue: user.height },
+        strongHand: { stringValue: user.strongHand },
+        backhand: { stringValue: user.backhand },
+        role: { stringValue: user.role },
+      },
+    };
+    
+    try {
+      const response = await axios.post(
+        "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
+        firestoreData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    
+      console.log("Server Response:", response.data);
+    } catch (error) {
+      console.error("Firestore Error:", error.response?.data || error.message);
+    }
   };
   
 
