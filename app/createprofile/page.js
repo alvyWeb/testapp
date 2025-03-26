@@ -7,7 +7,7 @@ import "./createprofile.scss";
 
 const CreateProfile = ({ standings, setStandings }) => {
   const router = useRouter();
-  const { user } = useContext(MainContext);
+  const {user} = useContext(MainContext);
 
   // Redirect if user is not authenticated
   useEffect(() => {
