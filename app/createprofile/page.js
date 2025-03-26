@@ -7,15 +7,14 @@ import "./createprofile.scss";
 
 const CreateProfile = ({ standings, setStandings }) => {
   const router = useRouter();
-  const {
-    user: { data },
-  } = useContext(MainContext);
+  const { user } = useContext(MainContext);
 
-  // useEffect(() => {
-  //   if (!user?.data?.uid) {
-  //     router.push("/login");
-  //   }
-  // }, [user, router]);
+  // Redirect if user is not authenticated
+  useEffect(() => {
+    if (!user?.data?.uid) {
+      router.push("/login");
+    }
+  }, [user, router]);
 
 
   const handleProfile = () => {
@@ -24,13 +23,13 @@ const CreateProfile = ({ standings, setStandings }) => {
   };
 
   const initialUser = {
-    id: data?.uid,
-    fullName: data?.displayName,
+    id: user?.data?.uid || "",
+    fullName: user?.data?.displayName || "",
     nickName: "",
     birthday: "",
     avatar: "",
     coverImg: "",
-    email: data?.email,
+    email: user?.data?.email || "",
     country: "",
     city: "",
     height: "",
@@ -49,7 +48,7 @@ const CreateProfile = ({ standings, setStandings }) => {
 
   const handleInput = (e) => {
     setUser({
-      ...user,
+      ...userData,
       [e.target.name]: e.target.value,
     });
   };
