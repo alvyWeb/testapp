@@ -84,7 +84,7 @@ const CreateProfile = ({ standings, setStandings }) => {
 
     try {
       const response = await axios.post(
-        "https://atpenn-4fc94-default-rtdb.asia-southeast1.firebasedatabase.app/users",
+        "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
         formData,
         {
           headers: {
