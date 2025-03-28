@@ -4,6 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useContext, useState, useEffect } from "react";
 import "./createprofile.scss";
+import ProtectedRoute from "@/components/common/ProtectedRoute";
 
 const CreateProfile = ({ standings, setStandings }) => {
   const router = useRouter();
@@ -161,6 +162,7 @@ const CreateProfile = ({ standings, setStandings }) => {
   
 
   return (
+    <ProtectedRoute>
     <form onSubmit={handleSubmit}>
       <div className="createprofile_container">
         <div className="cover_profile">
@@ -277,6 +279,7 @@ const CreateProfile = ({ standings, setStandings }) => {
         </div>
       </div>
     </form>
+    </ProtectedRoute>
   );
 };
 export default CreateProfile;
