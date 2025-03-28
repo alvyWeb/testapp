@@ -122,7 +122,7 @@ const CreateProfile = ({ standings, setStandings }) => {
             },
           },
         },
-        schemaVersion: { stringValue: "1.0" }, // Change version as needed
+        schemaVersion: { stringValue: "2.0" }, // Change version as needed
         UserInfo: {
           mapValue: {
             fields: {
