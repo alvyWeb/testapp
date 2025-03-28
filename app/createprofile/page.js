@@ -114,7 +114,7 @@ const CreateProfile = ({ standings, setStandings }) => {
 
     const firestoreData = {
       fields: {
-        id: { stringValue: userData.id },
+        id: userData.id,
         metadata: {
           mapValue: {
             fields: {
@@ -123,19 +123,19 @@ const CreateProfile = ({ standings, setStandings }) => {
             },
           },
         },
-        schemaVersion: { stringValue: "2.0" }, // Change version as needed
+        schemaVersion: "2.0", // Change version as needed
         UserInfo: {
           mapValue: {
             fields: {
-              avatar: { stringValue: previewProfile }, // URL of profile image
-              backhandStyle: { stringValue: userData.backhand },
-              city: { stringValue: userData.city },
-              country: { stringValue: userData.country },
-              dateOfBirth: { stringValue: userData.birthday },
-              firstName: { stringValue: userData.fullName.split(" ")[0] || "" },
-              lastName: { stringValue: userData.fullName.split(" ")[1] || "" },
-              height: { stringValue: userData.height },
-              sex: { stringValue: userData.sex || "unspecified" }, // Default to 'unspecified' if not provided
+              avatar: previewProfile, // URL of profile image
+              backhandStyle: userData.backhand,
+              city: userData.city,
+              country: userData.country,
+              dateOfBirth: userData.birthday,
+              firstName: userData.fullName.split(" ")[0] || "",
+              lastName: userData.fullName.split(" ")[1] || "",
+              height: userData.height ,
+              sex: userData.sex || "unspecified" , // Default to 'unspecified' if not provided
             },
           },
         },
