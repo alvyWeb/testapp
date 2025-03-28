@@ -72,94 +72,43 @@ const CreateProfile = ({ standings, setStandings }) => {
     }
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append("id", user.id);
-  //   formData.append("fullName", user.fullName);
-  //   formData.append("nickName", user.nickName);
-  //   formData.append("birthday", user.birthday);
-  //   formData.append("email", user.email);
-  //   formData.append("country", user.country);
-  //   formData.append("city", user.city);
-  //   formData.append("height", user.height);
-  //   formData.append("strongHand", user.strongHand);
-  //   formData.append("backhand", user.backhand);
-  //   formData.append("role", user.role);
-  //   formData.append("profileImg", profileImg);
-  //   formData.append("coverImg", coverImg);
-
-  //   try {
-  //     const response = await axios.post(
-  //       "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
-  //       // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
-  //       formData,
-  //       {
-  //         headers: {
-  //           "Content-Type": "multipart/form-data",
-  //         },
-  //       }
-  //     );
-
-  //     console.log("Server Response:", response.data);
-  //   } catch (error) {
-  //     // nothing
-  //     console.log(error);
-  //   }
-  // };
-
-  const handleSubmit = async (event) => { 
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const firestoreData = {
-      fields: {
-        id: userData.id,
-        metadata: {
-          mapValue: {
-            fields: {
-              createdAt: { timestampValue: new Date().toISOString() },
-              updatedAt: { timestampValue: new Date().toISOString() },
-            },
-          },
-        },
-        schemaVersion: "2.0", // Change version as needed
-        UserInfo: {
-          mapValue: {
-            fields: {
-              avatar: previewProfile, // URL of profile image
-              backhandStyle: userData.backhand,
-              city: userData.city,
-              country: userData.country,
-              dateOfBirth: userData.birthday,
-              firstName: userData.fullName.split(" ")[0] || "",
-              lastName: userData.fullName.split(" ")[1] || "",
-              height: userData.height ,
-              sex: userData.sex || "unspecified" , // Default to 'unspecified' if not provided
-            },
-          },
-        },
-      },
-    };
-    
-    
+    const formData = new FormData();
+    formData.append("id", userData.id);
+    formData.append("fullName", userData.fullName);
+    formData.append("nickName", userData.nickName);
+    formData.append("birthday", userData.birthday);
+    formData.append("email", userData.email);
+    formData.append("country", userData.country);
+    formData.append("city", userData.city);
+    formData.append("height", userData.height);
+    formData.append("strongHand", userData.strongHand);
+    formData.append("backhand", userData.backhand);
+    formData.append("role", userData.role);
+    formData.append("profileImg", profileImg);
+    formData.append("coverImg", coverImg);
+
     try {
       const response = await axios.post(
         "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
-        firestoreData,
+        // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
+        formData,
         {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "multipart/form-data",
           },
         }
       );
-    
+
       console.log("Server Response:", response.data);
     } catch (error) {
-      console.error("Firestore Error:", error.response?.data || error.message);
+      // nothing
+      console.log(error);
     }
   };
-  
+
 
   return (
     <ProtectedRoute>
