@@ -2,36 +2,22 @@
 import { MainContext } from "@/context";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import "./createprofile.scss";
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 
-const CreateProfile = ({ standings, setStandings }) => {
+const CreateProfile = () => {
   const router = useRouter();
-  const {
-    user: { data },
-  } = useContext(MainContext);
-
-  // useEffect(() => {
-  //   if (!user?.data?.uid) {
-  //     router.push("/login");
-  //   }
-  // }, [user, router]);
-
-
-  const handleProfile = () => {
-    // Navigate to the profile page when the avatar is clicked
-    router.push("/profile");
-  };
+  const { user } = useContext(MainContext);
 
   const initialUser = {
-    id: data?.uid,
-    fullName: data?.displayName,
+    id: user?.data?.uid || "",
+    fullName: user?.data?.displayName || "",
     nickName: "",
     birthday: "",
     avatar: "",
     coverImg: "",
-    email: data?.email,
+    email: user?.data?.email || "",
     country: "",
     city: "",
     height: "",
@@ -40,35 +26,30 @@ const CreateProfile = ({ standings, setStandings }) => {
     role: "user",
   };
 
-  const [userData, setUser] = useState(initialUser);
-  const [profileImg, setProfileImg] = useState("");
-  const [coverImg, setCoverImg] = useState("");
-  const [previewProfile, setPreviewProfile] = useState(
-    "../user-Image/pUser.png"
-  );
-  const [coverPreview, setCoverPreview] = useState("../bgN.png");
+  const [userData, setUserData] = useState(initialUser);
+  const [profileImg, setProfileImg] = useState(null);
+  const [coverImg, setCoverImg] = useState(null);
+  const [previewProfile, setPreviewProfile] = useState("/user-Image/pUser.png");
+  const [coverPreview, setCoverPreview] = useState("/bgN.png");
 
   const handleInput = (e) => {
-    setUser({
-      ...userData,
-      [e.target.name]: e.target.value,
-    });
+    setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
   const handleFileUpload = (type, e) => {
     const file = e.target.files[0];
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      type === "profile"
-        ? setPreviewProfile(reader.result)
-        : setCoverPreview(reader.result);
-    };
-    reader.readAsDataURL(file);
-
-    if (type === "profile") {
-      setProfileImg(file);
-    } else {
-      setCoverImg(file);
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        if (type === "profile") {
+          setPreviewProfile(reader.result);
+          setProfileImg(file);
+        } else {
+          setCoverPreview(reader.result);
+          setCoverImg(file);
+        }
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -76,36 +57,23 @@ const CreateProfile = ({ standings, setStandings }) => {
     event.preventDefault();
 
     const formData = new FormData();
-    formData.append("id", userData.id);
-    formData.append("fullName", userData.fullName);
-    formData.append("nickName", userData.nickName);
-    formData.append("birthday", userData.birthday);
-    formData.append("email", userData.email);
-    formData.append("country", userData.country);
-    formData.append("city", userData.city);
-    formData.append("height", userData.height);
-    formData.append("strongHand", userData.strongHand);
-    formData.append("backhand", userData.backhand);
-    formData.append("role", userData.role);
-    formData.append("profileImg", profileImg);
-    formData.append("coverImg", coverImg);
+    Object.keys(userData).forEach((key) => {
+      formData.append(key, userData[key]);
+    });
+
+    if (profileImg) formData.append("profileImg", profileImg);
+    if (coverImg) formData.append("coverImg", coverImg);
 
     try {
       const response = await axios.post(
         "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
-        // "http://127.0.0.1:5001/atpenn-4fc94/europe-west1/api/users",
         formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
+        { headers: { "Content-Type": "multipart/form-data" } }
       );
-
-      console.log("Server Response:", response.data);
+      console.log("Profile Created:", response.data);
+      router.push("/profile");
     } catch (error) {
-      // nothing
-      console.log(error);
+      console.error("Error creating profile:", error);
     }
   };
 
