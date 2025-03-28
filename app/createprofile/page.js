@@ -10,6 +10,11 @@ const CreateProfile = () => {
   const router = useRouter();
   const { user } = useContext(MainContext);
 
+  const handleProfile = () => {
+    // Navigate to the profile page when the avatar is clicked
+    router.push("/profile");
+  };
+
   const initialUser = {
     id: user?.data?.uid || "",
     fullName: user?.data?.displayName || "",
