@@ -108,12 +108,6 @@ const CreateProfile = () => {
     signOut(auth);
   };
 
-  // Handle profile management click
-  const handleProfile = () => {
-    // Redirect or handle profile management logic
-    console.log("Managing profile...");
-  };
-
   return (
     <ProtectedRoute>
       <form onSubmit={handleSubmit}>
