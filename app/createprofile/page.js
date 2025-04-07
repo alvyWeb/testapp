@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { auth, db } from "../../utils/firebaseN";
+import { auth, db } from "../../utils/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { MainContext } from "@/context";
