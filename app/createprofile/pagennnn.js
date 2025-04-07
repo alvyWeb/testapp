@@ -1,126 +1,95 @@
 "use client";
-import { useState, useEffect } from "react";
-import { auth, db } from "../../utils/firebaseN";
-import { doc, getDoc, setDoc } from "firebase/firestore";
-import { onAuthStateChanged, signOut } from "firebase/auth";
 import { MainContext } from "@/context";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { useContext, useState } from "react";
 import "./createprofile.scss";
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 
 const CreateProfile = () => {
   const router = useRouter();
-    // const { user } = useContext(MainContext);
+  const { user } = useContext(MainContext);
 
   const handleProfile = () => {
     // Navigate to the profile page when the avatar is clicked
     router.push("/profile");
   };
 
-  const [user, setUser] = useState(null);
-  const [formData, setFormData] = useState({
-    fullName: "",
+  const initialUser = {
+    id: user?.data?.uid || "",
+    fullName: user?.data?.displayName || "",
     nickName: "",
     birthday: "",
+    avatar: "",
+    coverImg: "",
+    email: user?.data?.email || "",
     country: "",
     city: "",
+    height: "",
     strongHand: "",
     backhand: "",
-    coverImage: "",
-    profileImage: "",
-  });
-
-  const [coverPreview, setCoverPreview] = useState("");
-  const [previewProfile, setPreviewProfile] = useState("");
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-  
-        const docRef = doc(db, "users", currentUser.uid);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          // Set the user data including all fields
-          const userData = docSnap.data();
-          setFormData({
-            fullName: userData.fullName || "",
-            nickName: userData.nickName || "",
-            birthday: userData.birthday || "",
-            country: userData.country || "",
-            city: userData.city || "",
-            strongHand: userData.strongHand || "",
-            backhand: userData.backhand || "",
-            coverImage: userData.coverImage || "",
-            profileImage: userData.profileImage || "",
-          });
-          setCoverPreview(userData.coverImage || "");
-          setPreviewProfile(userData.profileImage || "");
-        }
-      }
-    });
-  
-    return () => unsubscribe();
-  }, []);
-
-  // Handle input changes (text/select)
-  const handleInput = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    role: "user",
   };
 
-  // Handle image upload and convert to base64
+  const [userData, setUserData] = useState(initialUser);
+  const [profileImg, setProfileImg] = useState(null);
+  const [coverImg, setCoverImg] = useState(null);
+  const [previewProfile, setPreviewProfile] = useState("/user-Image/pUser.png");
+  const [coverPreview, setCoverPreview] = useState("/bgN.png");
+
+  const handleInput = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+
   const handleFileUpload = (type, e) => {
     const file = e.target.files[0];
-    const reader = new FileReader();
-
-    reader.onloadend = () => {
-      if (type === "cover") {
-        setCoverPreview(reader.result);
-        setFormData((prev) => ({ ...prev, coverImage: reader.result }));
-      } else if (type === "profile") {
-        setPreviewProfile(reader.result);
-        setFormData((prev) => ({ ...prev, profileImage: reader.result }));
-      }
-    };
-
     if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        if (type === "profile") {
+          setPreviewProfile(reader.result);
+          setProfileImg(file);
+        } else {
+          setCoverPreview(reader.result);
+          setCoverImg(file);
+        }
+      };
       reader.readAsDataURL(file);
     }
   };
 
-  // Save or update user profile in Firestore
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!user) return alert("Login required");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData();
+    Object.keys(userData).forEach((key) => {
+      formData.append(key, userData[key]);
+    });
+
+    if (profileImg) formData.append("profileImg", profileImg);
+    if (coverImg) formData.append("coverImg", coverImg);
 
     try {
-      await setDoc(doc(db, "users", user.uid), formData);
-      alert("Profile updated successfully!");
-    } catch (err) {
-      console.error("Error saving data:", err);
-      alert("Error saving data");
+      const response = await axios.post(
+        "https://firestore.googleapis.com/v1/projects/atpenn-4fc94/databases/(default)/documents/users",
+        formData,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
+      console.log("Profile Created:", response.data);
+      router.push("/profile");
+    } catch (error) {
+      console.error("Error creating profile:", error);
     }
   };
 
-  // Logout function
-  const handleLogout = () => {
-    signOut(auth);
-  };
-
-  // Handle profile management click
-  const handleProfile = () => {
-    // Redirect or handle profile management logic
-    console.log("Managing profile...");
-  };
 
   return (
     <ProtectedRoute>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div className="createprofile_container">
         <div className="cover_profile">
           <div className="cover">
-            <img src={coverPreview} alt="Cover" />
+            <img src={coverPreview} alt="" />
             <div className="body_cover">
               <div className="return" onClick={() => window.history.back()}>
                 <svg
@@ -139,40 +108,41 @@ const CreateProfile = () => {
               </div>
             </div>
             <div
-              className="add_cover"
-              onClick={() => document.getElementById("fileInputCover").click()}
-            >
-              <img src="../addS.png" alt="Add Cover" />
-              <input
-                type="file"
-                id="fileInputCover"
-                name="fileInputCover"
-                style={{ display: "none" }}
-                onChange={(e) => handleFileUpload("cover", e)}
-              />
+                className="add_cover"
+                onClick={() =>
+                  document.getElementById("fileInputCover").click()
+                }
+              >
+                <img src="../addS.png" alt="Add Cover" />
+                <input
+                  type="file"
+                  id="fileInputCover"
+                  style={{ display: "none" }}
+                  onChange={(e) => handleFileUpload("cover", e)}
+                />
             </div>
             <div className="managerlink" onClick={handleProfile}>
               <p>ניהול</p>
             </div>
           </div>
           <div className="profile">
-            <img src={previewProfile} alt="Profile" />
+            <img src={previewProfile} alt="" />
             <div
-              onClick={() => document.getElementById("fileInputProfile").click()}
+              onClick={() =>
+                document.getElementById("fileInputProfile").click()
+              }
               className="add-profile"
             >
-              <img src="../addS.png" alt="Add Profile" />
+              <img src="../addS.png" alt="" />
               <input
                 type="file"
                 id="fileInputProfile"
-                name="fileInputProfile"
                 style={{ display: "none" }}
                 onChange={(e) => handleFileUpload("profile", e)}
               />
             </div>
           </div>
         </div>
-
         <div className="createprofile_body">
           <div className="f_n_name">
             <div className="label_input">
@@ -182,7 +152,6 @@ const CreateProfile = () => {
                 name="fullName"
                 type="text"
                 placeholder="הכנס שם..."
-                value={formData.fullName}
               />
             </div>
             <div className="label_input">
@@ -192,52 +161,47 @@ const CreateProfile = () => {
                 name="nickName"
                 type="text"
                 placeholder="יינתן לך בהמשך..."
-                value={formData.nickName}
               />
             </div>
           </div>
-
           <div className="calender">
             <p>תאריך לידה</p>
             <div className="date_input">
-              <input onChange={handleInput} name="birthday" type="date" value={formData.birthday}/>
+              <input onChange={handleInput} name="birthday" type="date" />
             </div>
           </div>
-
           <div className="body_datils">
             <div className="country_height">
               <div className="label_input">
                 <label htmlFor="">מולדת</label>
                 <span>
-                  <input onChange={handleInput} name="country" type="text" value={formData.country}/>
+                  <input onChange={handleInput} name="country" type="text" />
                   <img src="./flags/il.png" alt="" />
                 </span>
               </div>
               <div className="label_input">
                 <label htmlFor="">גובה</label>
-                <input onChange={handleInput} name="city" type="text" value={formData.city}/>
+                <input onChange={handleInput} name="city" type="text" />
               </div>
             </div>
             <div className="country_height">
               <div className="label_input">
                 <label htmlFor="">יד חזקה</label>
-                <input onChange={handleInput} name="strongHand" type="text" value={formData.strongHand}/>
+                <input onChange={handleInput} name="strongHand" type="text" />
               </div>
               <div className="label_input">
                 <label htmlFor="">חבטת גב</label>
-                <input onChange={handleInput} name="backhand" type="text" value={formData.backhand}/>
+                <input onChange={handleInput} name="backhand" type="text" />
               </div>
             </div>
           </div>
-
           <div className="create_button">
             <button type="submit">שמור והמשך</button>
           </div>
         </div>
       </div>
-    </form>  
+    </form>
     </ProtectedRoute>
-  )
-
+  );
 };
 export default CreateProfile;
