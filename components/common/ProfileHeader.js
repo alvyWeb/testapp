@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { auth, db } from "../../utils/firebase";
 import { useRouter } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import styles from "../../styles/common/ProfileHeader.module.scss";
 
 const Navbar = ({ dark, setDark, rtl, setRtl }) => {
@@ -11,7 +12,7 @@ const Navbar = ({ dark, setDark, rtl, setRtl }) => {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
         // Fetch user data from Firestore (assuming user has a document in Firestore)
         const userRef = doc(db, "users", user.uid); // Change "users" to the actual collection name
