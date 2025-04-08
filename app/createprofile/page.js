@@ -96,10 +96,10 @@ const CreateProfile = () => {
 
     try {
       await setDoc(doc(db, "users", user.uid), formData);
-      alert("Profile updated successfully!");
+      alert("הפרופיל עודכן בהצלחה!");
     } catch (err) {
       console.error("Error saving data:", err);
-      alert("Error saving data");
+      alert("שגיאה בשמירת נתונים");
     }
   };
 
