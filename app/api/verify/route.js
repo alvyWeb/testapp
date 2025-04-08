@@ -49,7 +49,7 @@ export async function POST(req) {
     return NextResponse.json({ success: true, uid, email: decodedToken.email });
   } catch (error) {
     console.error("Error updating or saving user data:", error);
-    return NextResponse.json({ error: "Failed to update or fetch user data" }, { status: 500 });
+    return NextResponse.json({ error: "לא הצליח לעדכן או לשלוף את נתוני המשתמש" }, { status: 500 });
   }
 }
 
@@ -66,13 +66,13 @@ export async function GET(req) {
     const userDoc = await getDoc(userRef);
 
     if (!userDoc.exists()) {
-      return NextResponse.json({ error: "User not found" }, { status: 404 });
+      return NextResponse.json({ error: "המשתמש לא נמצא" }, { status: 404 });
     }
 
     return NextResponse.json({ success: true, data: userDoc.data() });
   } catch (error) {
     console.error("Error fetching user data:", error);
-    return NextResponse.json({ error: "Failed to fetch user data" }, { status: 500 });
+    return NextResponse.json({ error: "לא הצליח לשלוף את נתוני המשתמש" }, { status: 500 });
   }
 }
 
