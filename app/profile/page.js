@@ -37,6 +37,8 @@ const Profile = ({ standings, setStandings }) => {
     setModalType("");
   };
 
+  const [userData, setUserData] = useState(null);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
