@@ -2,21 +2,27 @@
 import ModalDialog from "@/components/common/ModalDialog";
 import ChangePassword from "@/components/modal/ChangePassword";
 import MessageModal from "@/components/modal/MessageModal";
-import { MainContext } from "@/context";
-import { auth } from "@/firebase/firebase";
-import { signOut } from "firebase/auth";
+// import { MainContext } from "@/context";
+// import { auth } from "@/firebase/firebase";
+// import { signOut } from "firebase/auth";
+// import { useRouter } from "next/navigation";
+// import { useContext, useState } from "react";
+import { useState, useEffect } from "react";
+import { auth, db } from "../../utils/firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import ProtectedRoute from "@/components/common/ProtectedRoute";
 import "./profile.scss";
 
 const Profile = ({ standings, setStandings }) => {
-  const {
-    user: { data },
-    onLogin,
-  } = useContext(MainContext);
+  // const {
+  //   user: { data },
+  //   onLogin,
+  // } = useContext(MainContext);
 
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [modalType, setModalType] = useState("");
@@ -31,13 +37,43 @@ const Profile = ({ standings, setStandings }) => {
     setModalType("");
   };
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        // Fetch user data from Firestore (assuming user has a document in Firestore)
+        const userRef = doc(db, "users", user.uid); // Change "users" to the actual collection name
+        getDoc(userRef).then((docSnap) => {
+          if (docSnap.exists()) {
+            const { fullName, profileImage, coverImage } = docSnap.data();
+            setUserData({
+              fullName: fullName || null,
+              profileImage: profileImage || null,
+              coverImage: coverImage || null,
+            });
+          } else {
+            setUserData(null);
+          }
+        });
+      } else {
+        setUserData(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+  
+  const defaultName = "נועם פן";
+  const defaultAvatar = "../user-Image/profileN.png";
+  const defaultcover = "../profile/png/cover.png";
+
+
   // const { firstName, lastName, avatar, role } = data?.data || {};
-  const {
-    displayName: firstName,
-    lastName,
-    photoURL: avatar,
-    role,
-  } = data || {};
+  // const {
+  //   displayName: firstName,
+  //   lastName,
+  //   photoURL: avatar,
+  //   role,
+  // } = data || {};
   const profileManager = [
     {
       message: "צור הודעת מערכת",
@@ -177,11 +213,11 @@ const Profile = ({ standings, setStandings }) => {
   };
 
   return (
-    // <ProtectedRoute>
+    <ProtectedRoute>
     <>
       <div className="profile_container">
         <div className="cover_img">
-          <img src="../profile/png/cover.png" alt="" />
+          <img src={userData?.coverImage || defaultcover} alt="" />
           <div className="cover_d" onClick={() => window.history.back()}>
             <svg
               width="14"
@@ -204,9 +240,9 @@ const Profile = ({ standings, setStandings }) => {
         </div>
         <div className="profile_d">
           <div className="profileIntro">
-            <img src={`${avatar ?? "../user-Image/profileN.png"}`} alt="" />
+            <img src={userData?.profileImage || defaultAvatar} alt="" />
             <p>
-              {firstName || lastName ? `${firstName || ""} ${lastName || ""}`.trim() : "נועם פן"}
+              {userData?.fullName || defaultName}
             </p>
             <p className="_bio">{`${role ?? "מנהל"}`}</p>
           </div>
@@ -236,7 +272,7 @@ const Profile = ({ standings, setStandings }) => {
         </ModalDialog>
       )}
     </>
-    // </ProtectedRoute>
+    </ProtectedRoute>
   );
 };
 
