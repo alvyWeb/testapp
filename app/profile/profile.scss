@@ -10,6 +10,7 @@
     position: relative;
     // max-width: 390px;
     // @include weight_height(390px, 217px);
+    border-bottom: 1px solid var(--gray-200);
 
     :first-child {
       width: 100%;
