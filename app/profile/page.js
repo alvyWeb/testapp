@@ -67,6 +67,7 @@ const Profile = ({ standings, setStandings }) => {
   const defaultName = "נועם פן";
   const defaultAvatar = "../user-Image/profileN.png";
   const defaultcover = "../profile/png/cover.png";
+  const role = "מנהל";
 
 
   // const { firstName, lastName, avatar, role } = data?.data || {};
