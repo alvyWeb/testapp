@@ -74,7 +74,9 @@ const StatNews = () => {
                                         </defs>
                                     </svg>
                                     <span className="timeInfo">
-                                        {article.time}
+                                        {timeDifference(
+                                            article.timestamp?.toDate ? article.timestamp.toDate() : article.timestamp
+                                        )}
                                     </span>
                                 </span>
 
