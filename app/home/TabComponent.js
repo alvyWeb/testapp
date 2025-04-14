@@ -1,6 +1,7 @@
 "use client";
 
 import ProtectedRoute from "@/components/common/ProtectedRoute";
+import useNews from "@/api/useNews";
 import News from "./news/news.js";
 import Article from "./news/Article.js";
 import SystemMessage from "./news/system";
