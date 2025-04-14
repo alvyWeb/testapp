@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../utils/firebase";
+import { db } from "../../../utils/firebase";
 
 // import NewsPageLoader from "@/components/common/loader/NewsPageLoader";
 import Article from "./Article";
