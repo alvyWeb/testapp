@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { db } from "../../../utils/firebase";
-import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { collection, getDocs, doc, setDoc, serverTimestamp } from "firebase/firestore";
 import "./news.scss";
 // import Link from "next/link";
 
@@ -10,16 +10,20 @@ const StatNews = () => {
     const [articles, setArticles] = useState([]);
   
     useEffect(() => {
-      const fetchNews = async () => {
-        const querySnapshot = await getDocs(collection(db, "news"));
-        const newsData = querySnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setArticles(newsData);
-      };
-  
-      fetchNews();
+        const fetchNews = async () => {
+          try {
+            const querySnapshot = await getDocs(collection(db, "news"));
+            const newsData = querySnapshot.docs.map(doc => ({
+              id: doc.id,
+              ...doc.data(),
+            }));
+            setArticles(newsData);
+          } catch (error) {
+            console.error("Error fetching news:", error);
+          }
+        };
+      
+        fetchNews();
     }, []);
   
     const timeDifference = (timestamp) => {
