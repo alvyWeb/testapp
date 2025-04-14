@@ -1,6 +1,6 @@
 .b_border{
     padding-top: 20px;
-    width: calc(100% - 40px);
+    width: 100%;
     margin: auto;
     border-top: 1px solid #EEEEEE;
 } 
