@@ -54,7 +54,7 @@ const staticArticles = [
     // Add more static articles as needed
 ];
 
-const StatNews = ({ offset = 0, limit = 2 }) => {
+const StatNews = () => {
     return (
         <div className="static-news-container">
             {/* Slice the static articles based on offset and limit */}
