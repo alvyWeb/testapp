@@ -4,7 +4,7 @@ import { auth, db } from "../../utils/firebase";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
-// import "./uploadnews.scss"; // Rename your SCSS file to match
+import "./updatenews.scss"; // Rename your SCSS file to match
 
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 
