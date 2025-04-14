@@ -1,61 +1,137 @@
-import { useState } from "react";
-import { db } from "../../utils/firebase";
-import { storage } from "../../utils/firebase"; // add this
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { collection, addDoc } from "firebase/firestore";
+"use client";
+import { useState, useEffect } from "react";
+import { auth, db } from "../../utils/firebase";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import "./uploadnews.scss"; // Rename your SCSS file to match
+
+import ProtectedRoute from "@/components/common/ProtectedRoute";
 
 const UploadNews = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [link, setLink] = useState("");
-  const [imageFile, setImageFile] = useState(null);
-  const [uploading, setUploading] = useState(false);
+  const router = useRouter();
+  const [user, setUser] = useState(null);
 
-  const handleUpload = async (e) => {
+  const [formData, setFormData] = useState({
+    title: "",
+    description: "",
+    date: "",
+    image: "",
+  });
+
+  const [imagePreview, setImagePreview] = useState("");
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+      } else {
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const handleInput = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileUpload = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setImagePreview(reader.result);
+      setFormData((prev) => ({ ...prev, image: reader.result }));
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!imageFile) return alert("Please select an image.");
-
-    setUploading(true);
+    if (!user) return alert("Login required");
 
     try {
-      // 1. Upload image to storage
-      const imageRef = ref(storage, `newsImages/${imageFile.name}`);
-      await uploadBytes(imageRef, imageFile);
-      const imageUrl = await getDownloadURL(imageRef);
-
-      // 2. Save document to Firestore
-      await addDoc(collection(db, "news"), {
-        title,
-        description,
-        url: link,
-        image: imageUrl,
-        source: "אדמין",
-        message: "0 תגובות",
-        publishedAt: new Date().toISOString(),
+      const newsId = Date.now().toString(); // You can use UUID instead
+      await setDoc(doc(db, "news", newsId), {
+        ...formData,
+        author: user.uid,
+        createdAt: serverTimestamp(),
       });
-
-      alert("News uploaded successfully!");
-      setTitle("");
-      setDescription("");
-      setLink("");
-      setImageFile(null);
+      alert("החדשות נוספו בהצלחה!");
+      setFormData({ title: "", description: "", date: "", image: "" });
+      setImagePreview("");
     } catch (err) {
-      console.error("Upload error:", err);
-      alert("Upload failed.");
-    } finally {
-      setUploading(false);
+      console.error("Error uploading news:", err);
+      alert("שגיאה בהעלאת חדשות");
     }
   };
 
   return (
-    <form onSubmit={handleUpload}>
-      <input type="text" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} required />
-      <textarea placeholder="Description" value={description} onChange={e => setDescription(e.target.value)} required />
-      <input type="text" placeholder="Link URL" value={link} onChange={e => setLink(e.target.value)} required />
-      <input type="file" accept="image/*" onChange={e => setImageFile(e.target.files[0])} required />
-      <button type="submit" disabled={uploading}>{uploading ? "Uploading..." : "Upload News"}</button>
-    </form>
+    <ProtectedRoute>
+      <form onSubmit={handleSubmit}>
+        <div className="uploadnews_container">
+          <div className="header">
+            <h2>העלה חדשות</h2>
+            <button onClick={() => signOut(auth)}>התנתק</button>
+          </div>
+
+          <div className="form_group">
+            <label>כותרת</label>
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleInput}
+              placeholder="הכנס כותרת..."
+            />
+          </div>
+
+          <div className="form_group">
+            <label>תיאור</label>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleInput}
+              placeholder="הכנס תיאור..."
+            ></textarea>
+          </div>
+
+          <div className="form_group">
+            <label>תאריך</label>
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleInput}
+            />
+          </div>
+
+          <div className="form_group">
+            <label>תמונה</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileUpload}
+            />
+            {imagePreview && (
+              <img
+                src={imagePreview}
+                alt="News Preview"
+                style={{ width: "300px", marginTop: "10px" }}
+              />
+            )}
+          </div>
+
+          <button type="submit" className="submit_button">
+            שמור חדשות
+          </button>
+        </div>
+      </form>
+    </ProtectedRoute>
   );
 };
 
