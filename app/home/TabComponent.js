@@ -2,7 +2,7 @@
 
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 import useNews from "@/api/useNews";
-import News from "./news/news.js";
+import StateNews from "./news/statNews";
 import Article from "./news/Article.js";
 import SystemMessage from "./news/system";
 
@@ -19,7 +19,7 @@ const TabComponent = () => {
           </div>
         )}
         <div className="sectionActive">
-          <News newsData={newsData} />
+        <StateNews />
         </div>
         <SystemMessage />
       </div>
