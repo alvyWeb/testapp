@@ -62,7 +62,7 @@ const News = ({ newsData }) => {
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const querySnapshot = await getDocs(collection(db, "your_news_collection"));
+      const querySnapshot = await getDocs(collection(db, "news"));
       const now = new Date();
 
       const fetchedArticles = [];
