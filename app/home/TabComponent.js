@@ -6,6 +6,7 @@ import Article from "./news/Article.js";
 import SystemMessage from "./news/system";
 
 const TabComponent = () => {
+  const newsData = useNews() || {};
   return (
     <ProtectedRoute>
       <div className="container">
