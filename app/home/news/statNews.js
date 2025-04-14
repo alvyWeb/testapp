@@ -1,58 +1,40 @@
-import React from "react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { db } from "../../../utils/firebase";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import "./news.scss";
 // import Link from "next/link";
 
-const staticArticles = [
-    {
-        title: "1 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    {
-        title: "2 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    {
-        title: "3 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    {
-        title: "4 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    {
-        title: "5 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    {
-        title: "6 לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים",
-        image: "/home/news/Rectangle491.png",
-        url: "#",
-        source: "אדמין",
-        message: "26 תגובות",
-        publishedAt: "לפני שעה",
-    },
-    // Add more static articles as needed
-];
+const StatNews = () => {
+    const [articles, setArticles] = useState([]);
+  
+    useEffect(() => {
+      const fetchNews = async () => {
+        const querySnapshot = await getDocs(collection(db, "news"));
+        const newsData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setArticles(newsData);
+      };
+  
+      fetchNews();
+    }, []);
+  
+    const timeDifference = (timestamp) => {
+      const now = new Date();
+      const publishedTime = new Date(timestamp);
+      const diffInMs = now - publishedTime;
+      const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+      const diffInHours = Math.floor(diffInMs / (1000 * 60 * 60));
+      const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+  
+      if (diffInMinutes < 1) return "הרגע";
+      if (diffInMinutes < 60) return `${diffInMinutes} דקות`;
+      if (diffInHours < 24) return `${diffInHours} שעות`;
+      return `${diffInDays} ימים`;
+    };
 
 const StatNews = () => {
     return (
@@ -109,7 +91,7 @@ const StatNews = () => {
                                         />
                                     </svg>
                                     <span className="commentInfo">
-                                        {article.message}
+                                        {article.comment} תגובות
                                     </span>
                                 </span>
                             </p>
