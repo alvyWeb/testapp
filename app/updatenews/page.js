@@ -76,7 +76,6 @@ const UploadNews = () => {
         <div className="uploadnews_container">
           <div className="header">
             <h2>העלה חדשות</h2>
-            <button onClick={() => signOut(auth)}>התנתק</button>
           </div>
 
           <div className="form_group">
