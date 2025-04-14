@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../utils/firebase";
 
-
 import NewsPageLoader from "@/components/common/loader/NewsPageLoader";
 import "./news.scss";
 import AtPennMessage from "./atpenn";
@@ -56,22 +55,13 @@ const News = ({ newsData }) => {
     <main className="news_app">
       <div className="main_container_app">
         {loading ? (
-          <NewsPageLoader />
-        ) : articles.length > 0 ? (
           <div className="container">
-            {articles.map((article, index) => (
-              <div key={article.id || index}>
-                <Article article={article} index={index} />
+            {(index + 1) % 2 === 0 && (
+                <StateNews key={`stat-${index}`} offset={index + 1} limit={2} />
+            )}
 
-                {/* Insert StateNews every 2 articles */}
-                {(index + 1) % 2 === 0 && (
-                  <StateNews key={`stat-${index}`} offset={index + 1} limit={2} />
-                )}
-
-                {/* Insert AtPennMessage every 3 articles */}
-                {(index + 1) % 3 === 0 && <AtPennMessage key={`atpenn-${index}`} />}
-              </div>
-            ))}
+            {/* Insert AtPennMessage every 3 articles */}
+            {(index + 1) % 3 === 0 && <AtPennMessage key={`atpenn-${index}`} />}
           </div>
         ) : (
           <p>אין חדשות זמינות</p>
