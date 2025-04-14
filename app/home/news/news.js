@@ -54,18 +54,18 @@ const News = ({ newsData }) => {
 
   return (
     <main className="news_app">
-      <div className="main_container">
+      <div className="main_container_app">
         {staticArticles.length > 0 ? (
           <div className="container">
             {/* Display first article normally if articleData is not available */}
 
-            {newsData?.news?.length > 0 && (
+            {/* {newsData?.news?.length > 0 && (
               <div className="containerInner">
                 {newsData?.news?.map((article, index) => (
                   <Article article={article} key={article?.uri} index={index} />
                 ))}
               </div>
-            )}
+            )} */}
 
             {/* Loop through static articles in chunks of two */}
             {staticArticles.slice(1).map((article, index) => (

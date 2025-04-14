@@ -10,9 +10,15 @@ const TabComponent = () => {
   const newsData = useNews() || {};
   return (
     <ProtectedRoute>
-      <div className="container">
+      <div className="container main_container">
+        {newsData?.news?.length > 0 && (
+          <div className="containerInner">
+            {newsData?.news?.map((article, index) => (
+              <Article article={article} key={article?.uri} index={index} />
+            ))}
+          </div>
+        )}
         <div className="sectionActive">
-          <Article/>
           <News newsData={newsData} />
         </div>
         <SystemMessage />
