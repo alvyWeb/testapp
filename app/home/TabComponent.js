@@ -3,7 +3,7 @@
 import ProtectedRoute from "@/components/common/ProtectedRoute";
 import useNews from "@/api/useNews";
 import StateNews from "./news/statNews";
-import Article from "./news/Article.js";
+import Article from "./news/Article";
 import SystemMessage from "./news/system";
 
 const TabComponent = () => {

@@ -36,7 +36,6 @@ const StatNews = () => {
       return `${diffInDays} ימים`;
     };
 
-const StatNews = () => {
     return (
         <div className="static-news-container">
             {/* Slice the static articles based on offset and limit */}
