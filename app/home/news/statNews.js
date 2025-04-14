@@ -39,7 +39,7 @@ const StatNews = () => {
     return (
         <div className="static-news-container">
             {/* Slice the static articles based on offset and limit */}
-            {staticArticles.map((article, index) => (
+            {articles.map((article, index) => (
                 <div className="container_sm_heading" key={index}>
                     <div className="container_sm_heading_text">
                         <div className="container_heading_sm_text">
