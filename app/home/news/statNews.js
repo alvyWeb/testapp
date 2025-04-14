@@ -26,20 +26,6 @@ const StatNews = () => {
         fetchNews();
     }, []);
   
-    const timeDifference = (timestamp) => {
-      const now = new Date();
-      const publishedTime = new Date(timestamp);
-      const diffInMs = now - publishedTime;
-      const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
-      const diffInHours = Math.floor(diffInMs / (1000 * 60 * 60));
-      const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
-  
-      if (diffInMinutes < 1) return "הרגע";
-      if (diffInMinutes < 60) return `${diffInMinutes} דקות`;
-      if (diffInHours < 24) return `${diffInHours} שעות`;
-      return `${diffInDays} ימים`;
-    };
-
     return (
         <div className="static-news-container">
             {/* Slice the static articles based on offset and limit */}
@@ -74,9 +60,7 @@ const StatNews = () => {
                                         </defs>
                                     </svg>
                                     <span className="timeInfo">
-                                        {timeDifference(
-                                            article.timestamp?.toDate ? article.timestamp.toDate() : article.timestamp
-                                        )}
+                                        {article.time}
                                     </span>
                                 </span>
 
