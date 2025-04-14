@@ -89,7 +89,7 @@ const StatNews = ({ offset = 0, limit = 2 }) => {
                                         </defs>
                                     </svg>
                                     <span className="timeInfo">
-                                        {article.publishedAt}
+                                        {article.time}
                                     </span>
                                 </span>
 
