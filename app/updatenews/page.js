@@ -80,7 +80,7 @@ const UploadNews = () => {
           </div>
 
           <div className="form_group">
-            <label>כותרת</label>
+            <label className="label_input">כותרת</label>
             <input
               type="text"
               name="title"
@@ -91,7 +91,7 @@ const UploadNews = () => {
           </div>
 
           <div className="form_group">
-            <label>תיאור</label>
+            <label className="label_input">תיאור</label>
             <textarea
               name="description"
               value={formData.description}
@@ -101,7 +101,7 @@ const UploadNews = () => {
           </div>
 
           <div className="form_group">
-            <label>תאריך</label>
+            <label className="label_input">תאריך</label>
             <input
               type="date"
               name="date"
@@ -111,7 +111,7 @@ const UploadNews = () => {
           </div>
 
           <div className="form_group">
-            <label>תמונה</label>
+            <label className="label_input">תמונה</label>
             <input
               type="file"
               accept="image/*"
