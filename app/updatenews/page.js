@@ -17,6 +17,8 @@ const UploadNews = () => {
     description: "",
     date: "",
     image: "",
+    time: "",
+    comment: "",
   });
 
   const [imagePreview, setImagePreview] = useState("");
@@ -61,8 +63,8 @@ const UploadNews = () => {
         author: user.uid,
         createdAt: serverTimestamp(),
       });
-      alert("החדשות נוספו בהצלחה!");
-      setFormData({ title: "", description: "", date: "", image: "" });
+      alert("Update");
+      setFormData({ title: "", description: "", date: "", time: "", comment: "",image: "" });
       setImagePreview("");
     } catch (err) {
       console.error("Error uploading news:", err);
@@ -102,6 +104,15 @@ const UploadNews = () => {
             <input
               type="date"
               name="date"
+              onChange={handleInput}
+            />
+          </div>
+
+          <div className="form_group">
+            <label className="label_input">Time</label>
+            <input
+              type="time"
+              name="time"
               onChange={handleInput}
             />
           </div>
