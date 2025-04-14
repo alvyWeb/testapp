@@ -2,17 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { auth, db } from "../../utils/firebase";
+import { db } from "../../utils/firebase";
 
-import NewsPageLoader from "@/components/common/loader/NewsPageLoader";
+// import NewsPageLoader from "@/components/common/loader/NewsPageLoader";
 import Article from "./Article";
 import "./news.scss";
 import AtPennMessage from "./atpenn";
 import StateNews from "./statNews";
 
 const News = ({ newsData }) => {
-  const [newsData, setNewsData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [articles, setArticles] = useState([]);
 
   // const staticArticles = [
   //   {
@@ -62,55 +61,41 @@ const News = ({ newsData }) => {
   // const articleData = null; // Replace with actual data or null if no data is available
 
   useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const snapshot = await getDocs(collection(db, "news"));
-        const articles = snapshot.docs.map((doc) => {
-          const data = doc.data();
-          const fullDateTime = new Date(`${data.date}T${data.time}:00`);
-          return {
-            id: doc.id,
-            ...data,
-            fullDateTime,
-          };
+    const fetchArticles = async () => {
+      const querySnapshot = await getDocs(collection(db, "your_news_collection"));
+      const now = new Date();
+
+      const fetchedArticles = [];
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+
+        // Combine date and time to a Date object
+        const dateTimeStr = `${data.date} ${data.time}`;
+        const articleDateTime = new Date(dateTimeStr);
+
+        fetchedArticles.push({
+          id: doc.id,
+          ...data,
+          articleDateTime,
         });
+      });
 
-        // Get current time
-        const now = new Date();
+      // Sort by closest future time to now
+      const sortedArticles = fetchedArticles
+        .filter(article => article.articleDateTime >= now) // only future or current articles
+        .sort((a, b) => a.articleDateTime - b.articleDateTime); // ASC
 
-        // Sort articles by how close the time is to now (future times first)
-        const sortedArticles = articles.sort((a, b) => {
-          const aDiff = a.fullDateTime - now;
-          const bDiff = b.fullDateTime - now;
-
-          // Prioritize future articles over past ones
-          const aAbs = aDiff >= 0 ? aDiff : Infinity;
-          const bAbs = bDiff >= 0 ? bDiff : Infinity;
-
-          // If both are in the future, sort by soonest
-          if (aAbs !== bAbs) return aAbs - bAbs;
-
-          // If both are past, sort by recent past
-          return a.fullDateTime - b.fullDateTime;
-        });
-
-        setNewsData(sortedArticles);
-      } catch (error) {
-        console.error("Error fetching news:", error);
-      } finally {
-        setLoading(false);
-      }
+      setArticles(sortedArticles);
     };
 
-    fetchNews();
+    fetchArticles();
   }, []);
 
   return (
     <main className="news_app">
       <div className="main_container">
-        {loading ?  (
-          <NewsPageLoader />
-        ) : newsData.length > 0 ? (
+        {newsData.length > 0 ? (
           <div className="container">
             {/* Display first article normally if articleData is not available */}
 
