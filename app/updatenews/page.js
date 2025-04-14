@@ -66,7 +66,7 @@ const UploadNews = () => {
       setImagePreview("");
     } catch (err) {
       console.error("Error uploading news:", err);
-      alert("שגיאה בהעלאת חדשות");
+    //   alert("שגיאה בהעלאת חדשות");
     }
   };
 
@@ -79,32 +79,38 @@ const UploadNews = () => {
           </div>
 
           <div className="form_group">
-            <label className="label_input">כותרת</label>
+            <label className="label_input">Title</label>
             <input
               type="text"
               name="title"
-              value={formData.title}
               onChange={handleInput}
               placeholder="הכנס כותרת..."
             />
           </div>
 
           <div className="form_group">
-            <label className="label_input">תיאור</label>
+            <label className="label_input">Description</label>
             <textarea
               name="description"
-              value={formData.description}
               onChange={handleInput}
               placeholder="הכנס תיאור..."
             ></textarea>
           </div>
 
           <div className="form_group">
-            <label className="label_input">תאריך</label>
+            <label className="label_input">Date</label>
             <input
               type="date"
               name="date"
-              value={formData.date}
+              onChange={handleInput}
+            />
+          </div>
+
+          <div className="form_group">
+            <label className="label_input">Comment</label>
+            <input
+              type="text"
+              name="comment"
               onChange={handleInput}
             />
           </div>
