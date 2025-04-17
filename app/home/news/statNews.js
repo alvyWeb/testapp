@@ -22,7 +22,7 @@ const StatNews = () => {
           } catch (error) {
             console.error("Error fetching news:", error);
           } finally {
-            setLoading(true); // Important!
+            setLoading(false); // Important!
           }
         };
       

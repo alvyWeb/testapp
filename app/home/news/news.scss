@@ -176,6 +176,8 @@
     gap: 7px;
     // width: 240px;
     height: auto;
+    width: 100%;
+
     .container_heading_sm_text {
       @include font_lg_sm(16px, 19px, 400);
     }
