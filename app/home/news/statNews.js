@@ -34,8 +34,8 @@ const StatNews = () => {
             <div className="container_sm_heading skeleton" key={index}>
                 <div className="container_sm_heading_text">
                     <div className="container_heading_sm_text">
-                        <span className="newTag">חדשות</span>
-                        <p className="skeleton-box" style={{ width: '70%' }}></p>
+                        <span className="skeleton-box" style={{ width: '50px' }}></span>
+                        <p className="skeleton-box" style={{ width: '100%' }}></p>
                     </div>
                     <div className="container_heading_sm_sm_text">
                         <p className="container_heading_sm_info">
