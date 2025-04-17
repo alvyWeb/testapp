@@ -58,7 +58,7 @@ const StatNews = () => {
                 <div className="container_sm_heading" key={index}>
                     <div className="container_sm_heading_text">
                         <div className="container_heading_sm_text">
-                            <span className="newTag">חדשות</span>
+                            <span className="newTag">{article.category}</span>
                             <p>
                                 {article.title.slice(0, 60)}
                                 {article.title.length > 60 && "..."}

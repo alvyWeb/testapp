@@ -19,6 +19,7 @@ const UploadNews = () => {
     image: "",
     time: "",
     comment: "",
+    category: "",
   });
 
   const [imagePreview, setImagePreview] = useState("");
@@ -64,7 +65,7 @@ const UploadNews = () => {
         createdAt: serverTimestamp(),
       });
       alert("Update");
-      setFormData({ title: "", description: "", date: "", time: "", comment: "",image: "" });
+      setFormData({ title: "", description: "", date: "", time: "", comment: "",image: "", category: "" });
       setImagePreview("");
     } catch (err) {
       console.error("Error uploading news:", err);
@@ -97,6 +98,16 @@ const UploadNews = () => {
               onChange={handleInput}
               placeholder="הכנס תיאור..."
             ></textarea>
+          </div>
+
+          <div className="form_group">
+            <label className="label_input">Category</label>
+            <input
+              type="text"
+              name="category"
+              onChange={handleInput}
+              placeholder="שם הקטגוריה"
+            />
           </div>
 
           <div className="form_group">
