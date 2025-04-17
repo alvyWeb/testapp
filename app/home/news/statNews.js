@@ -8,6 +8,7 @@ import "./news.scss";
 
 const StatNews = () => {
     const [articles, setArticles] = useState([]);
+    const [loading, setLoading] = useState(true);
   
     useEffect(() => {
         const fetchNews = async () => {
@@ -20,16 +21,40 @@ const StatNews = () => {
             setArticles(newsData);
           } catch (error) {
             console.error("Error fetching news:", error);
+          } finally {
+            setLoading(false); // Important!
           }
         };
       
         fetchNews();
     }, []);
+
+    const renderSkeleton = () => {
+        return Array.from({ length: 4 }).map((_, index) => (
+            <div className="container_sm_heading skeleton" key={index}>
+                <div className="container_sm_heading_text">
+                    <div className="container_heading_sm_text">
+                        <span className="newTag">חדשות</span>
+                        <p className="skeleton-box" style={{ width: '70%' }}></p>
+                    </div>
+                    <div className="container_heading_sm_sm_text">
+                        <p className="container_heading_sm_info">
+                            <span className="skeleton-box" style={{ width: '50px' }}></span>
+                            <span className="skeleton-box" style={{ width: '70px', marginLeft: '10px' }}></span>
+                        </p>
+                    </div>
+                </div>
+                <div className="container_sm_heading_img">
+                    <div className="skeleton-img"></div>
+                </div>
+            </div>
+        ));
+    };
   
     return (
         <div className="static-news-container">
             {/* Slice the static articles based on offset and limit */}
-            {articles.map((article, index) => (
+            {loading ? renderSkeleton() : articles.map((article, index) => (
                 <div className="container_sm_heading" key={index}>
                     <div className="container_sm_heading_text">
                         <div className="container_heading_sm_text">
