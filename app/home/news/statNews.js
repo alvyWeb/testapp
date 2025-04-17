@@ -35,7 +35,7 @@ const StatNews = () => {
                 <div className="container_sm_heading_text">
                     <div className="container_heading_sm_text">
                         <span className="skeleton-box" style={{ width: '50px' }}></span>
-                        <p className="skeleton-box" style={{ width: '100%' }}></p>
+                        <p className="skeleton-box" style={{ width: '150px' }}></p>
                     </div>
                     <div className="container_heading_sm_sm_text">
                         <p className="container_heading_sm_info">
